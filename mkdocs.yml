@@ -2,7 +2,8 @@ site_name: Documentation for kluster.ai
 site_url: https://docs.kluster.ai/
 home_url: https://kluster.ai/
 home_name: kluster.ai
-docs_dir: kluster-docs
+site_dir: /var/www/kluster-docs-static
+docs_dir: docs
 copyright: © 2024 kluster.ai. All rights reserved.
 theme:
   name: material
