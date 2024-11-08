@@ -24,7 +24,7 @@ For everything to work correctly, the file structure needs to be as follows:
 ```text
 kluster-mkdocs
 |--- /material-overrides/ (folder)
-|--- /docs/ (folder)
+|--- /kluster-docs/ (folder)
 |--- mkdocs.yml
 ```
 
@@ -36,11 +36,11 @@ To set up the structure, follow these steps:
     git clone https://github.com/papermoonio/kluster-mkdocs
     ```
 
-2. Inside the folder just created, clone the [docs repository](https://github.com/kluster-ai/docs):
+2. Inside the folder just created, clone the [docs repository](https://github.com/kluster-ai/docs), **note that we force the output to be kluster-docs**:
 
     ```bash
     cd kluster-mkdocs
-    git clone https://github.com/kluster-ai/docs
+    git clone https://github.com/kluster-ai/docs kluster-docs
     ```
 
 3. In the `kluster-mkdocs` folder (which should be the current one), you can build the site by running:
