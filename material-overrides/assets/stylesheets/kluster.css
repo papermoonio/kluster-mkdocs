@@ -338,9 +338,26 @@ li > nav.md-nav[data-md-level='4'] {
 
 /* Add background for required parameters */
 .md-typeset .required kbd {
-  background-color: rgb(255, 0, 0, .33);
+  background-color: rgb(255, 0, 0, .2);
   text-transform: capitalize;
   padding-left: .6666666667em;
+  border: .1px solid rgb(255, 0, 0);
+}
+
+/* Add background for unsupported parameters */
+.md-typeset .not-supported kbd {
+  background-color: rgba(255, 220, 0, 0.3);
+  text-transform: capitalize;
+  padding-left: .6666666667em;
+  border: .1px solid rgb(255, 210, 0);
+}
+
+/* Add background for future enhancement parameters */
+.md-typeset .future kbd {
+  background-color: rgb(0, 128, 0, .2);
+  text-transform: capitalize;
+  padding-left: .6666666667em;
+  border: .1px solid rgb(0, 128, 0);
 }
 
 /* Child adomonition styling */
