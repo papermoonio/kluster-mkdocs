@@ -1,0 +1,137 @@
+/* Styles for the hero section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Center everything for mobile */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 100vh;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  width: 75%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.1em;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin: 1em 0 1em;
+}
+
+.button-wrapper {
+  display: flex;
+  width: max-content;
+  margin: auto;
+}
+
+.button-wrapper .md-button {
+  margin-right: 1em;
+}
+
+/* Styles for the featured content section */
+.featured-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 1rem;
+  color: var(--md-default-fg-color);
+  width: 30%;
+  border: 1.5px solid var(--md-primary-fg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+}
+
+.feature a {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.feature a svg {
+  margin-left: 0.3em;
+}
+
+.feature img {
+  max-width: 100%;
+  width: 60%;
+  height: auto;
+}
+
+.feature h2 {
+  color: var(--md-default-fg-color);
+  margin-top: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  min-height: 5em;
+}
+
+/* Mobile styling */
+@media screen and (max-width: 800px) {
+  .hero-image {
+    display: none;
+  }
+
+  .hero-content {
+    position: relative; /* Adjust to keep it centered */
+    transform: none; /* Reset transform properties */
+    top: auto;
+    left: auto;
+    width: 90%; /* Ensure content fits well on mobile */
+    max-width: 90%; /* Ensure content fits well on mobile */
+    padding: 1rem; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center the content on mobile */
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  .md-content__inner {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  .feature {
+    width: 100%;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+  }
+
+  .button-wrapper .md-button {
+    margin: 0.5em auto;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+
+.feature p a {
+  display: inline;
+  white-space: nowrap;
+}

@@ -44,6 +44,9 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
+  - redirects:
+      redirect_maps:
+        getting-started.md: get-started/api.md
 validation:
   absolute_links: ignore
 extra:
@@ -61,10 +64,10 @@ extra:
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/profile.php?id=61558614587340
       name: Facebook
-  # TODO: set up analytics and feedback
-  # analytics:
-  #   provider: google
-  #   property: G-XXX
+  analytics:
+    provider: google
+    property: G-XXX
+  # TODO: set up feedback
   #   feedback:
   #     title: Was this page helpful?
   #     ratings:
