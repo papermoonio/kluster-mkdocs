@@ -1,0 +1,79 @@
+{% extends "main.html" %} {% block htmltitle %}
+<title>kluster.ai Documentation</title>
+{% endblock %} {% block styles %} {{ super() }}
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+{% endblock %} {% block content %}
+<div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Simplify deployments and management of AI workloads</h1>
+      <p>
+        Explore how to use <a href="https://kluster.ai">kluster.ai</a> to run
+        Large Language Models on a distributed AI platform from providers all
+        around the globe. <br /><br />
+      </p>
+      <div class="button-wrapper">
+        <a href="/getting-started/">
+          <button class="md-button secondary">Explore our API</button>
+        </a>
+        <!--         <a href="/getting-started/">
+          <button class="md-button secondary">Visit our Blog</button>
+        </a> -->
+      </div>
+    </div>
+    <div>
+      <img
+        src="./assets/images/hero.webp"
+        alt="kluster.ai Hero"
+        class="hero-image"
+      />
+    </div>
+  </div>
+  <div class="featured-content">
+    <div class="feature">
+      <h2>Early-Access Program</h2>
+      <img src="./assets/images/circle1.webp" alt="Early-Access Program" />
+      <p>Find out more about the benefits and features of the program.</p>
+      <a href="https://kluster.ai/early-access/" target="\_blank" class="btn"
+        >Learn More
+        <span class="md-icon"
+          >{% include ".icons/material/arrow-right.svg" %}</span
+        ></a
+      >
+    </div>
+    <div class="feature">
+      <h2>Get Coding</h2>
+      <img src="./assets/images/circle2.webp" alt="Colab Notebook" />
+      <p>
+        Test-drive
+        <a href="https://kluster.ai" target="\_blank">kluster.ai</a>
+        capabilities with a pre-built Colab notebook that lets you explore
+        without writing a single line of code.
+      </p>
+      <a
+        href="https://github.com/kluster-ai/klusterai-cookbook/blob/main/Quick_start_notebook.ipynb"
+        target="\_blank"
+        class="btn"
+        >Check Notebook
+        <span class="md-icon"
+          >{% include ".icons/material/arrow-right.svg" %}</span
+        ></a
+      >
+    </div>
+    <div class="feature">
+      <h2>Questions?</h2>
+      <img src="./assets/images/circle3.webp" alt="FAQs" />
+      <p>
+        Get answers to common questions about
+        <a href="https://kluster.ai">kluster.ai</a> capabilities and setup.
+      </p>
+      <a href="https://kluster.ai/faq/" target="\_blank" class="btn"
+        >FAQs
+        <span class="md-icon"
+          >{% include ".icons/material/arrow-right.svg" %}</span
+        ></a
+      >
+    </div>
+  </div>
+  {% endblock %}
+</div>
