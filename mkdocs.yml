@@ -47,6 +47,8 @@ plugins:
   - redirects:
       redirect_maps:
         getting-started.md: get-started/api.md
+  - mkdocs-jupyter:
+      ignore_h1_titles: True
 validation:
   absolute_links: ignore
 extra:
