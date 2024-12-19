@@ -62,6 +62,10 @@
   border-radius: var(--md-border-radius);
 }
 
+.md-grid {
+  max-width: 77rem;
+}
+
 /* Header styling */
 .md-header {
   background-color: var(--light);
