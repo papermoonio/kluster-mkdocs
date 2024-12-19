@@ -62,10 +62,41 @@
   border-radius: var(--md-border-radius);
 }
 
+/* Header styling */
 .md-header {
   background-color: var(--light);
   padding: 1em;
 }
+
+.md-header__buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2em;
+  z-index: 3;
+}
+
+.md-tabs {
+  width: unset;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: inherit;
+  overflow: visible;
+  color: var(--md-default-fg-color);
+}
+
+[dir='ltr'] .md-tabs__list {
+  margin-left: 0;
+  gap: 2em;
+}
+
+.md-tabs__link {
+  font-size: 0.725rem;
+  color: var(--md-header-tabs-fg-color);
+  opacity: 1;
+}
+
 
 /* Hides section permalink hash for H1 sections */
 .md-typeset h1 .headerlink {
