@@ -14,10 +14,11 @@ theme:
     text: DM Sans
     code: Source Code Pro
   features:
-    - navigation.footer
     - content.code.copy
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
     - toc.follow
-    - toc.integrate
 extra_css:
   - assets/stylesheets/terminal.css
 markdown_extensions:
