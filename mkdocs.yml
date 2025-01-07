@@ -70,8 +70,8 @@ extra:
       link: https://www.facebook.com/profile.php?id=61558614587340
       name: Facebook
   analytics:
-    # provider: google
-    # # property: G-XXX
+    provider: google
+    property: G-XXX
   # TODO: set up feedback
   #   feedback:
   #     title: Was this page helpful?
