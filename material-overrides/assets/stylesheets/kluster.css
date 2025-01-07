@@ -123,11 +123,6 @@ li > nav.md-nav[data-md-level='4'] {
   border-width: var(--md-border-width);
 }
 
-.md-typeset .admonition,
-.md-typeset details {
-  width: fit-content;
-}
-
 .md-typeset .admonition.note {
   border-color: var(--md-primary-fg-color);
 }
