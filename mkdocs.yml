@@ -49,6 +49,8 @@ plugins:
         getting-started.md: get-started/api.md
   - mkdocs-jupyter:
       ignore_h1_titles: True
+  - render_swagger:
+      css: assets/stylesheets/swagger-ui.css
 validation:
   absolute_links: ignore
 extra:
