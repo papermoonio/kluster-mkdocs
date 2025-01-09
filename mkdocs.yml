@@ -14,10 +14,11 @@ theme:
     text: DM Sans
     code: Source Code Pro
   features:
-    - navigation.footer
     - content.code.copy
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
     - toc.follow
-    - toc.integrate
 extra_css:
   - assets/stylesheets/terminal.css
 markdown_extensions:
@@ -46,7 +47,9 @@ plugins:
         - kluster-docs/variables.yml
   - redirects:
       redirect_maps:
-        getting-started.md: get-started/api.md
+        getting-started.md: get-started/quickstart.md
+        get-started/api.md: get-started/quickstart.md
+        tutorials/klusterai-api/getting-started.md: get-started/quickstart.md
   - mkdocs-jupyter:
       ignore_h1_titles: True
 validation:
