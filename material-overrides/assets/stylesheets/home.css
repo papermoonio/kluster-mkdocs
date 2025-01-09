@@ -1,3 +1,14 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.md-main__inner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Styles for the hero section */
 .hero {
   position: relative;
@@ -54,7 +65,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1rem;
   gap: 1rem;
 }
 
@@ -62,11 +72,10 @@
   text-align: center;
   padding: 0.5rem;
   color: var(--md-default-fg-color);
-  width: 35%;
+  width: 30%;
   max-width: 60vw;
   border: 1.5px solid var(--md-primary-fg-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
 }
 
 .feature a {
