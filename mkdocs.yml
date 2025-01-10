@@ -47,9 +47,9 @@ plugins:
         - kluster-docs/variables.yml
   - redirects:
       redirect_maps:
-        getting-started.md: get-started/quickstart.md
-        get-started/api.md: get-started/quickstart.md
-        tutorials/klusterai-api/getting-started.md: get-started/quickstart.md
+        getting-started.md: get-started/start-api.md
+        get-started/api.md: get-started/start-api.md
+        tutorials/klusterai-api/getting-started.md: get-started/start-api.md
   - mkdocs-jupyter:
       ignore_h1_titles: True
 validation:
