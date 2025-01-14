@@ -81,11 +81,6 @@
   z-index: 3;
 }
 
-/* this is the file used for the gif from Framer site*/
-/*.md-nav__button-overlay {
-  background-image: url(../images/rainbow.gif);
-}*/
-
 .md-header__buttons .md-nav__button-overlay {
   position: relative;
   overflow: hidden;
@@ -104,6 +99,7 @@
   z-index: 1;
 }
 
+/*gif is one used on the Framer site*/
 .md-header__buttons .md-nav__button-overlay::before {
   content: '';
   position: absolute;
@@ -156,10 +152,45 @@
   gap: 2em;
 }
 
+.md-tabs__list {
+  transition: transform 0.2s ease;
+}
+
+/* When any link is hovered, scale the entire list */
+.md-tabs__list:hover {
+  transform: scale(1.02); /* Adjust this value for more/less growth */
+}
+
 .md-tabs__link {
   font-size: 0.725rem;
   color: var(--md-header-tabs-fg-color);
   opacity: 1;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.md-tabs__link:hover,
+.md-tabs__item--active {
+    color: var(--vibrant-indigo);
+}
+
+.md-tabs__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--vibrant-indigo);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: left;
+}
+
+.md-tabs__link:hover::after,
+.md-tabs__item--active::after {
+    transform: scaleX(1);
 }
 
 
