@@ -9,6 +9,7 @@
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
   --alice-blue: #dbefff;
+  --electric-indigo: #5100ff;
   --vibrant-indigo: #5200ff;
   --blue-violet: #8630f3;
   --mint: #5feda9;
@@ -78,6 +79,67 @@
   position: absolute;
   right: 2em;
   z-index: 3;
+}
+
+/* this is the file used for the gif from Framer site*/
+/*.md-nav__button-overlay {
+  background-image: url(../images/rainbow.gif);
+}*/
+
+.md-header__buttons .md-nav__button-overlay {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 100px;
+  color: white !important;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Target the text directly */
+.md-header__buttons .md-nav__button-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.md-header__buttons .md-nav__button-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/rainbow.gif);
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -2;
+  border-radius: inherit;
+}
+
+.md-header__buttons .md-nav__button-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(114, 33, 255, 0.99) 47.5524%, rgba(10, 10, 10, 0.50) 100%);  /* Increased from 0.92 to 0.95 */
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.99;  
+}
+
+.md-header__buttons .md-nav__button-overlay:hover::before {
+  opacity: 1;
+}
+
+.md-nav__button {
+  background-color: var(--vibrant-indigo);
+  color: var(--light);
+  letter-spacing: -0.01em;
+  margin-right: 0.7em;
+  border-radius: 100px;
+  padding: 0.75em 1.8em;
+  font-weight: 400;
+  font-size: 16px;
+  height: 48px;
 }
 
 .md-tabs {
