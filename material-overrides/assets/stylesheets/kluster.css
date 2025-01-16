@@ -73,68 +73,8 @@
   padding: 1em;
 }
 
-.md-header__buttons {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 2em;
-  z-index: 3;
-}
-
-.md-header__buttons .md-nav__button-overlay {
+.md-header__inner {
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border-radius: 100px;
-  color: white !important;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Target the text directly */
-.md-header__buttons .md-nav__button-overlay {
-  position: relative;
-  z-index: 1;
-}
-
-/*gif is one used on the Framer site*/
-.md-header__buttons .md-nav__button-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url(../images/rainbow.gif);
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -2;
-  border-radius: inherit;
-}
-
-.md-header__buttons .md-nav__button-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(114, 33, 255, 0.70) 47.5524%, rgba(10, 10, 10, 0.50) 100%);  
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0.99;  
-}
-
-.md-header__buttons .md-nav__button-overlay:hover::before {
-  opacity: 1;
-}
-
-.md-nav__button {
-  background-color: var(--vibrant-indigo);
-  color: var(--light);
-  letter-spacing: -0.01em;
-  margin-right: 0.7em;
-  border-radius: 100px;
-  padding: 0.75em 1.8em;
-  font-weight: 400;
-  font-size: 16px;
 }
 
 .md-tabs {
@@ -193,6 +133,155 @@
     transform: scaleX(1);
 }
 
+.md-header__buttons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  margin: .2rem;
+  padding: .4rem;
+}
+
+/** Header button styling (copied from kluster.ai) **/
+.button-container {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  width: min-content;
+}
+
+.framer-1suqwmq-container {
+  opacity: 1;
+  will-change: transform;
+  transform: none;
+  flex: none;
+  height: 48px;
+  position: relative;
+  width: auto;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
+  background-color: rgb(81, 0, 255);
+  height: 100%;
+  border-radius: 35px;
+  opacity: 1;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover .framer-1a164ql {
+  background: linear-gradient(rgba(81, 0, 255, 0.61) 44.2251%, rgba(10, 10, 10, 0) 100%);
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover .framer-uvujyo {
+  background-color: rgba(0, 0, 0, .39);
+}
+
+.framer-Bja7l.framer-1v7ikbi {
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 48px;
+    justify-content: center;
+    overflow: visible;
+    padding: 0 20px;
+    position: relative;
+    text-decoration: none;
+    width: min-content;
+}
+
+.framer-follse {
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 0;
+  mix-blend-mode: lighten;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 2;
+  width: 100%; /* Ensures it doesn't overflow */
+  height: 100%;
+}
+
+.framer-follse > div {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0px;
+}
+
+.framer-follse img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.framer-1a164ql {
+  background: linear-gradient(rgba(114, 33, 255, 0.92) 47.5524%, rgba(10, 10, 10, 0) 100%);
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: -1px;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 3;
+}
+
+.framer-uvujyo {
+  background-color: rgb(81, 0, 255);
+  border-radius: 100px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  opacity: 1;
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+}
+
+.framer-p6mefi {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  transform: none;
+  opacity: 1;
+  -webkit-user-select: none;
+  flex: none;
+  height: auto;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  z-index: 4;
+  text-align: center; /* Ensures text is horizontally aligned */
+}
+
+.framer-text {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
 
 /* Hides section permalink hash for H1 sections */
 .md-typeset h1 .headerlink {
@@ -528,6 +617,11 @@ details.child {
 
   [dir='ltr'] .md-search__input::placeholder {
     color: var(--md-default-fg-color);
+  }
+
+  [data-md-toggle=search]:checked~.md-header .button-container {
+    display: none;
+    transition: display 0ms .25s;
   }
 }
 
