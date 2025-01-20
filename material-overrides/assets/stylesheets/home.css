@@ -1,7 +1,15 @@
+.md-content__inner {
+  margin-top: 0;
+}
+
+.md-content__inner:before {
+  height: 0;
+}
+
 .home {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2em;
 }
 
 .md-main__inner {
@@ -16,10 +24,11 @@
   text-align: center; /* Center everything for mobile */
 }
 
-.hero-image {
+.md-typeset img.hero-image {
   width: 100%;
   height: auto;
   display: block;
+  height: 70vh;
   max-height: 100vh;
 }
 
@@ -105,8 +114,14 @@
 }
 
 /* Mobile styling */
+@media screen and (max-width: 1219px) {
+  .featured-content {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1050px) {
-  .hero-image {
+  .md-typeset img.hero-image {
     display: none;
   }
 
