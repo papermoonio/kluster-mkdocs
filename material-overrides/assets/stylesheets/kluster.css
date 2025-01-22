@@ -9,6 +9,7 @@
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
   --alice-blue: #dbefff;
+  --electric-indigo: #5100ff;
   --vibrant-indigo: #5200ff;
   --blue-violet: #8630f3;
   --mint: #5feda9;
@@ -72,14 +73,11 @@
   padding: 1em;
 }
 
-.md-header__buttons {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 2em;
-  z-index: 3;
+.md-header__inner {
+  position: relative;
 }
 
+/** Tabs styling (some of this is copied from kluster.ai) **/
 .md-tabs {
   width: unset;
   position: absolute;
@@ -92,15 +90,246 @@
 
 [dir='ltr'] .md-tabs__list {
   margin-left: 0;
-  gap: 2em;
 }
 
+/* The styles for this particlar class are copied from kluster.ai */
+.md-tabs__list {
+  transition: transform 0.5s ease;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+  height: min-content;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: min-content;
+  will-change: var(--framer-will-change-override, transform);
+}
+
+.md-tabs__item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* When any link is hovered, scale the entire list */
+.md-tabs__link:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+  color: var(--vibrant-indigo);
+}
+
+/** Most of the styles for this particular class are copied from kluster.ai **/
 .md-tabs__link {
   font-size: 0.725rem;
-  color: var(--md-header-tabs-fg-color);
+  font-family: 'DM Sans', 'DM Sans Placeholder', sans-serif;
+  color: #0c0512;
+  font-weight: 500;
+  margin-top: 0;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+  opacity: 1;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.framer-1w65mo2 {
+  background: linear-gradient(
+    90deg,
+    rgb(81, 0, 255) 0%,
+    rgb(228, 150, 255) 51.26126126126127%,
+    rgb(81, 0, 255) 100%
+  );
+  bottom: 0;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.md-tabs__item--active {
+  color: var(--vibrant-indigo);
+}
+
+/* The styles for this particlar class are copied from kluster.ai */
+.md-tabs__item--active .framer-1w65mo2,
+.md-tabs__item .md-tabs__link:hover .framer-1w65mo2 {
   opacity: 1;
 }
 
+.md-header__buttons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  margin: 0.2rem;
+  padding: 0.4rem;
+}
+
+/** Header button styling (copied from kluster.ai) **/
+.button-container {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  width: min-content;
+}
+
+.framer-1suqwmq-container {
+  opacity: 1;
+  will-change: transform;
+  transform: none;
+  flex: none;
+  height: 48px;
+  position: relative;
+  width: auto;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
+  background-color: rgb(81, 0, 255);
+  height: 100%;
+  border-radius: 35px;
+  opacity: 1;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
+  .framer-1a164ql {
+  background: linear-gradient(
+    rgba(81, 0, 255, 0.61) 44.2251%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
+  .framer-uvujyo {
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.framer-Bja7l.framer-1v7ikbi {
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  overflow: visible;
+  padding: 0 20px;
+  position: relative;
+  text-decoration: none;
+  width: min-content;
+}
+
+.framer-follse {
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 0;
+  mix-blend-mode: lighten;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 2;
+  width: 100%; /* Ensures it doesn't overflow */
+  height: 100%;
+}
+
+.framer-follse > div {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0px;
+}
+
+.framer-follse img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.framer-1a164ql {
+  background: linear-gradient(
+    rgba(114, 33, 255, 0.92) 47.5524%,
+    rgba(10, 10, 10, 0) 100%
+  );
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: -1px;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 3;
+}
+
+.framer-uvujyo {
+  background-color: rgb(81, 0, 255);
+  border-radius: 100px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  opacity: 1;
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+}
+
+.framer-p6mefi {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  transform: none;
+  opacity: 1;
+  -webkit-user-select: none;
+  flex: none;
+  height: auto;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  z-index: 4;
+  text-align: center; /* Ensures text is horizontally aligned */
+}
+
+.framer-text {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
 
 /* Hides section permalink hash for H1 sections */
 .md-typeset h1 .headerlink {
@@ -437,6 +666,11 @@ details.child {
   [dir='ltr'] .md-search__input::placeholder {
     color: var(--md-default-fg-color);
   }
+
+  [data-md-toggle='search']:checked ~ .md-header .button-container {
+    display: none;
+    transition: display 0ms 0.25s;
+  }
 }
 
 .md-footer-meta {
@@ -487,5 +721,11 @@ details.child {
 @media screen and (max-width: 76.2344em) {
   .md-header__button.md-logo {
     display: block;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .md-header__button.md-logo {
+    display: none;
   }
 }
