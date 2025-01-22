@@ -748,3 +748,11 @@ details.child {
 .md-banner .md-typeset a:hover {
   color: #b7f7d8; /* Shade of mint */
 }
+
+.md-banner__inner {
+  margin: 0 auto;
+}
+
+.md-banner__inner p {
+  margin: .5em;
+}
