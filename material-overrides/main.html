@@ -25,6 +25,10 @@
   {%- endif -%} 
 {%- endblock -%} 
 
+{% block announce %}
+<p>Exciting news: kluster.ai now supports the DeepSeek-R1 model! Try it out using one of our <a href="/tutorials/klusterai-api/text-classification-api/">Colab notebooks</a>.</p>
+{% endblock %}
+
 {%- block container -%} 
   <div class="md-content" data-md-component="content">
     {% set class = "index-page" if not page.content and not page.is_homepage %}

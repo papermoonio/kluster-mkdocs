@@ -729,3 +729,30 @@ details.child {
     display: none;
   }
 }
+
+/** Announcement banner styling */
+.md-banner {
+  background-color: var(--md-accent-bg-color);
+  color: var(--light);
+  text-align: center;
+}
+
+.md-banner .md-icon svg {
+  fill: var(--light);
+}
+
+.md-banner .md-typeset a {
+  color: var(--mint);
+}
+
+.md-banner .md-typeset a:hover {
+  color: #b7f7d8; /* Shade of mint */
+}
+
+.md-banner__inner {
+  margin: 0 auto;
+}
+
+.md-banner__inner p {
+  margin: .5em;
+}
