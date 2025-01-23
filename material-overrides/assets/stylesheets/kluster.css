@@ -756,3 +756,11 @@ details.child {
 .md-banner__inner p {
   margin: .5em;
 }
+
+/** API Template Styling */
+/* Move TOC to the left */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary.left {
+    order: 0;
+  }
+}
