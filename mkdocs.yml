@@ -58,6 +58,9 @@ validation:
 extra:
   generator: !!bool false
   social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/klusterai
+      name: Discord
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/klusterai
       name: X
