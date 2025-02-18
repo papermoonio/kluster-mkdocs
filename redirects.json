@@ -1,0 +1,28 @@
+{
+    "data": [
+      {
+        "key": "/getting-started/",
+        "value": "/get-started/start-api/"
+      },
+      {
+        "key": "/get-started/api/",
+        "value": "/get-started/start-api/"
+      },
+      {
+        "key": "/tutorials/klusterai-api/getting-started/",
+        "value": "/get-started/start-api/"
+      },
+      {
+        "key": "/get-started/integrations/",
+        "value": "/get-started/integrations/crewai/"
+      },
+      {
+        "key": "/api-reference/",
+        "value": "/api-reference/reference/"
+      },
+      {
+        "key": "/klusterai-api/",
+        "value": "/klusterai-api/text-classification-api/"
+      }
+    ]
+  }
