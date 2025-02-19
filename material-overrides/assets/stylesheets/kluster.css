@@ -45,6 +45,11 @@
   --md-code-hl-keyword-color: var(--vibrant-coral);
   /* Comments */
   --md-code-hl-comment-color: var(--dark-transparent-70);
+
+  /*custom code admonition colors*/
+
+  --md-code-admo-border-color: #5ee20c;
+  --md-code-admo-title-bg: #64dd171a;
 }
 
 /* General styling */
@@ -370,25 +375,25 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 /* Styling for custom Admonition notes used for code */
-/* .md-typeset .admonition.code,
+.md-typeset .admonition.code,
 .md-typeset details.code {
-  border-color: XXX;
-} */
+  border-color: var(--md-code-admo-border-color);
+} 
 
 /* Admonition icon background color */
-/* Should be the same as the border color above */
-/* .md-typeset .code > .admonition-title,
+/* Should be var(--md-code-admo-title-bg)*/
+.md-typeset .code > .admonition-title,
 .md-typeset .code > summary {
-  background-color: XXX;
-} */
+  background-color: var(--md-code-admo-title-bg);
+} 
 
 /* Admonition top background color */
-/* .md-typeset .code > .admonition-title::before,
+.md-typeset .code > .admonition-title::before,
 .md-typeset .code > summary::before {
-  background-color: XXX;
-  -webkit-mask-image: XXX;
-  mask-image: XXX;
-} */
+  background-color: var(--md-code-admo-border-color);
+  -webkit-mask-image: var(--md-admonition-icon--code);
+  mask-image: var(--md-admonition-icon--code);
+} 
 
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
