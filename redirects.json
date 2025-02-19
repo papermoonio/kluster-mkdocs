@@ -9,6 +9,10 @@
         "value": "/get-started/start-api/"
       },
       {
+        "key": "/get-started/",
+        "value": "/get-started/start-api/"
+      },
+      {
         "key": "/tutorials/klusterai-api/getting-started/",
         "value": "/get-started/start-api/"
       },
@@ -19,6 +23,10 @@
       {
         "key": "/api-reference/",
         "value": "/api-reference/reference/"
+      },
+      {
+        "key": "/tutorials/",
+        "value": "/klusterai-api/text-classification-api/"
       },
       {
         "key": "/klusterai-api/",
