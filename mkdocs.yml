@@ -10,6 +10,10 @@ theme:
   custom_dir: material-overrides
   favicon: assets/images/favicon.png
   logo: assets/images/logo.png
+  icon:
+    edit: material/github
+    admonition: 
+      code: material/code-tags
   font:
     text: DM Sans
     code: Source Code Pro
