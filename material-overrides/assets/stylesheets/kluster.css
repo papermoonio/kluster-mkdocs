@@ -764,3 +764,31 @@ details.child {
     order: 0;
   }
 }
+
+/** Where to Go Next Badge styling */
+.md-typeset span.badge {
+  border-radius: var(--md-border-radius);
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+}
+
+.md-typeset span.badge.tutorial {
+  background-color: var(--blue-violet);
+  color: var(--light);
+}
+
+.md-typeset span.badge.guide {
+  background-color: var(--electric-indigo);
+  color: var(--light);
+}
+
+.md-typeset span.badge.learn {
+  background-color: var(--vibrant-coral);
+  color: var(--light);
+}
+
+.md-typeset span.badge.external {
+  background-color: var(--mint);
+  color: var(--dark);
+}
