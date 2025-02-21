@@ -31,6 +31,10 @@
       {
         "key": "tutorials/klusterai-api/",
         "value": "tutorials/klusterai-api/text-classification-api/"
+      },
+      {
+        "key": "/get-started/start-building/",
+        "value": "/get-started/start-building/real-time/"
       }
     ]
   }
