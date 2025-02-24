@@ -13,8 +13,8 @@
         "value": "/get-started/start-api/"
       },
       {
-        "key": "/tutorials/klusterai-api/getting-started/",
-        "value": "/get-started/start-api/"
+        "key": "/get-started/start-building/",
+        "value": "/get-started/start-building/real-time/"
       },
       {
         "key": "/get-started/integrations/",
@@ -25,16 +25,24 @@
         "value": "/api-reference/reference/"
       },
       {
+        "key": "/api-endpoints/",
+        "value": "/api-reference/reference/"
+      },
+      {
+        "key": "/tutorials/klusterai-api/getting-started/",
+        "value": "/get-started/start-api/"
+      },
+      {
         "key": "/tutorials/",
         "value": "/klusterai-api/text-classification-api/"
       },
       {
-        "key": "/tutorials/klusterai-api/",
-        "value": "/tutorials/klusterai-api/text-classification-api/"
+        "key": "tutorials/klusterai-api/",
+        "value": "tutorials/klusterai-api/text-classification-api/"
       },
       {
-        "key": "/get-started/start-building/",
-        "value": "/get-started/start-building/real-time/"
+        "key": "tutorials/use-cases/",
+        "value": "tutorials/klusterai-api/text-classification-api/"
       }
     ]
   }
