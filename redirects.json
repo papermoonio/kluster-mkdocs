@@ -29,8 +29,8 @@
         "value": "/klusterai-api/text-classification-api/"
       },
       {
-        "key": "tutorials/klusterai-api/",
-        "value": "tutorials/klusterai-api/text-classification-api/"
+        "key": "/tutorials/klusterai-api/",
+        "value": "/tutorials/klusterai-api/text-classification-api/"
       },
       {
         "key": "/get-started/start-building/",
