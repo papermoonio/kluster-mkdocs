@@ -82,6 +82,10 @@
   position: relative;
 }
 
+.md-header__button.md-logo img {
+  height: 1.6rem;
+}
+
 /** Tabs styling (some of this is copied from kluster.ai) **/
 .md-tabs {
   width: unset;
