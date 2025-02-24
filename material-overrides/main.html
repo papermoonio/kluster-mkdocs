@@ -39,3 +39,16 @@
     </article>
   </div>
 {%- endblock -%} 
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    const link = document.querySelector("link[rel~='icon']");
+    if (link) {
+      const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      isDarkMode ? 
+        link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}" :
+        link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}";
+    }
+  </script>
+{% endblock %}
