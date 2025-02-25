@@ -1,0 +1,172 @@
+{% extends "main.html" %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript">
+    var script = document.createElement("script");
+    script.src="https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
+    script.onload = function() {
+        APIMaticDevPortal.show(
+            {
+"container": "apimatic-widget",
+"portalStyle": "default",
+"codegenApiRoutes": {
+"docsgen": "/api/api-entities/Az4IxnTTHzK-zuuW5PWLztskEBhTgdwFi01gc-QiAsXGbQaeg-YI_RUZMrl0cUyR/portal-artifacts/docs/generated-file?template={template}",
+"codegen": "/api/api-entities/Az4IxnTTHzK-zuuW5PWLztskEBhTgdwFi01gc-QiAsXGbQaeg-YI_RUZMrl0cUyR/portal-artifacts/sdks/generated-file?template={template}",
+"transform": "/api/api-entities/Az4IxnTTHzK-zuuW5PWLztskEBhTgdwFi01gc-QiAsXGbQaeg-YI_RUZMrl0cUyR/portal-artifacts/specs/generated-file?format={format}",
+"apiProxy": "https://proxy.apimatic.io/api/proxy"
+},
+"apiKey": "PkUYNyvjYA7DfFBwoKTjTP7vpsrJFh2I-D5Ihs1wijzpEGgYIN1BygwzBCnMd0cTyqiLTP3djiQFIzuTEgfsOA**",
+"baseUrl": "https://www.apimatic.io",
+"enableExport": true,
+"renameHttpToRest": false,
+"enableConsoleCalls": true,
+"useProxyForConsoleCalls": true,
+"initialPlatform": "http_curl_v1",
+"languageSettings": {
+"http_curl_v1": {
+"disableSdkDownload": true
+}
+},
+"allowedExportFormats": [
+"postman10",
+"postman20",
+"openapi31json",
+"openapi31yaml",
+"openapi3json",
+"openapi3yaml",
+"swagger20",
+"swaggeryaml",
+"swagger10",
+"raml",
+"raml10",
+"apiblueprint",
+"wadl2009",
+"apimatic",
+"wsdl",
+"insomnia",
+"insomniayaml"
+],
+"theme": {
+"baseTheme": "standard",
+"colors": {
+"primaryColor": {
+"light": "#5200ff",
+"dark": "#8630f3"
+},
+"linkColor": {
+"light": "#5200ff",
+"dark": "#8630f3"
+}
+},
+"colorMode": {
+"defaultMode": "light",
+"disableSwitch": true
+},
+"cssStyles": {
+"headings": {
+"fontFamily": "Open Sans, sans-serif",
+"h1": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "27px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "0.9"
+},
+"h2": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "24px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "0.82"
+},
+"h3": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "21.36px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "1"
+},
+"h4": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "18px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "1.17"
+},
+"h5": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "16px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "1.26"
+},
+"h6": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "15px",
+"fontWeight": "600",
+"fontStyle": "normal",
+"lineHeight": "1.35"
+}
+},
+"body": {
+"fontFamily": "Open Sans, sans-serif",
+"text1": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "15px",
+"fontWeight": "400",
+"fontStyle": "normal",
+"lineHeight": "1.78"
+},
+"text2": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "13.33px",
+"fontWeight": "400",
+"fontStyle": "normal",
+"lineHeight": "1.5"
+},
+"text3": {
+"fontFamily": "Open Sans, sans-serif",
+"fontSize": "11.85px",
+"fontWeight": "400",
+"fontStyle": "normal",
+"lineHeight": "1.66"
+}
+},
+"code": {
+"fontFamily": "Courier Prime, monospace",
+"blockCode": {
+"fontFamily": "Courier Prime, monospace",
+"fontSize": "15px",
+"fontWeight": "400",
+"fontStyle": "normal",
+"lineHeight": "1.75"
+},
+"inlineCode": {
+"fontFamily": "Courier Prime, monospace",
+"fontSize": "15px",
+"fontWeight": "400",
+"fontStyle": "normal",
+"lineHeight": "1.75"
+}
+}
+},
+"fontSource": [
+"https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
+"https://fonts.googleapis.com/css?family=Courier+Prime:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+]
+}
+}
+        );
+    };
+    document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+{% endblock %}
+
+{% block container %}
+<div id="apimatic-widget" style="height: 100%; width: 100%;">
+</div>
+{% endblock %}
+
+{% block site_nav %}
+{% endblock %}
