@@ -50,12 +50,6 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
-  - redirects:
-      redirect_maps:
-        getting-started.md: get-started/start-building/setup.md
-        get-started/api.md: get-started/start-building/setup.md
-        get-started/start-api.md: get-started/start-building/setup.md
-        tutorials/klusterai-api/getting-started.md: get-started/start-building/setup.md
   - mkdocs-jupyter:
       ignore_h1_titles: true
       include_requirejs: true
