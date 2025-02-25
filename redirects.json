@@ -2,11 +2,11 @@
     "data": [
       {
         "key": "/getting-started/",
-        "value": "/get-started/get-api-key/"
+        "value": "/get-started/start-building/setup/"
       },
       {
         "key": "/get-started/api/",
-        "value": "/get-started/get-api-key/"
+        "value": "/get-started/start-building/setup/"
       },
       {
         "key": "/get-started/",
@@ -26,11 +26,11 @@
       },
       {
         "key": "/tutorials/klusterai-api/getting-started/",
-        "value": "/get-started/get-api-key/"
+        "value": "/get-started/start-building/setup/"
       },
       {
         "key": "/tutorials/",
-        "value": "/klusterai-api/text-classification-api/"
+        "value": "/tutorials/klusterai-api/text-classification-api/"
       },
       {
         "key": "/tutorials/klusterai-api/",
