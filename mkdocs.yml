@@ -15,7 +15,7 @@ theme:
     admonition: 
       code: material/code-tags
   font:
-    text: DM Sans
+    text: Space Grotesk
     code: Source Code Pro
   features:
     - announce.dismiss
