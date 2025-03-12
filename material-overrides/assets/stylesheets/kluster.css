@@ -801,3 +801,9 @@ details.child {
   background-color: var(--mint);
   color: var(--dark);
 }
+
+/* Image styling */
+.md-typeset img {
+  border: 1px solid var(--platinum);
+  border-radius: var(--md-border-radius);
+}
