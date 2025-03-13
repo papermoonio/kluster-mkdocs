@@ -26,12 +26,14 @@ theme:
     - toc.follow
 extra_css:
   - assets/stylesheets/terminal.css
+  - assets/stylesheets/timeline-neoteroi.css
 markdown_extensions:
   - admonition
   - attr_list
   - codehilite
   - md_in_html
   - meta
+  - neoteroi.timeline
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
