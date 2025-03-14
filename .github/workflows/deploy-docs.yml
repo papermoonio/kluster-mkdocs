@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: kluster-ai/docs
-          path: docs
+          path: kluster-docs
           ref: ${{ inputs.branch }}
       - uses: actions/setup-python@v5
         with:
@@ -47,7 +47,7 @@ jobs:
       - name: Update image paths in Markdown files
         run: |
           # Replace old image paths with new paths in Markdown files
-          find docs -type f -name "*.md" -exec sed -i -e 's|](/|](/kluster-mkdocs/|g' -e 's|href="/|href="/kluster-mkdocs/|g' {} \;
+          find kluster-docs -type f -name "*.md" -exec sed -i -e 's|](/|](/kluster-mkdocs/|g' -e 's|href="/|href="/kluster-mkdocs/|g' {} \;
           find material-overrides -type f -name "*.html" -exec sed -i -e 's|/|/kluster-mkdocs/|g' {} \;
       - name: Deploy Docs
         run: mkdocs gh-deploy --force --clean --site-dir ./site
