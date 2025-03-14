@@ -48,6 +48,5 @@ jobs:
         run: |
           # Replace old image paths with new paths in Markdown files
           find kluster-docs -type f -name "*.md" -exec sed -i -e 's|](/|](/kluster-mkdocs/|g' -e 's|href="/|href="/kluster-mkdocs/|g' {} \;
-          find material-overrides -type f -name "*.html" -exec sed -i -e 's|/|/kluster-mkdocs/|g' {} \;
       - name: Deploy Docs
         run: mkdocs gh-deploy --force --clean --site-dir ./site
