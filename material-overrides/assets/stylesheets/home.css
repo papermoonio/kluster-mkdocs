@@ -17,6 +17,12 @@
   margin-bottom: 1rem;
 }
 
+/* Image styling */
+.md-typeset img {
+  border-radius: unset;
+  box-shadow: unset;
+}
+
 /* Styles for the hero section */
 .hero {
   position: relative;
