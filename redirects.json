@@ -39,6 +39,14 @@
     {
       "key": "/get-started/start-api/",
       "value": "/get-started/get-api-key/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/text-classification-api/",
+      "value": "/tutorials/klusterai-api/text-classification/text-classification-openai-api/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/text-classification-curator/",
+      "value": "/tutorials/klusterai-api/text-classification/text-classification-curator/"
     }
   ]
 }
