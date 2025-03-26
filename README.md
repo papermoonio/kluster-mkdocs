@@ -60,3 +60,20 @@ mkdocs serve --watch-theme
 ```
 
 Otherwise, you'll need to stop the server (`control + C`) and restart it (`mkdocs serve`) to see the changes.
+
+## Issues Converting Notebooks
+
+If you run into the following issue when converting a notebook:
+
+```
+metadata["widgets"][WIDGET_STATE_MIMETYPE]["state"]
+KeyError: 'state'
+```
+
+This is due to some problems when rendering widgets. To circunvent the issue, you can run the following:
+
+```
+jq -M 'del(.metadata.widgets)' your-file.ipynb > your-file-fixed.ipynb
+```
+
+Check the `fixed` file, confirm the changes and then rename accordingly.
