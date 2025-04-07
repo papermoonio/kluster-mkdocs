@@ -17,15 +17,18 @@ page.meta.keywords %}
 <title>{{ config.site_name }}</title>
 {%- endif -%} {%- endblock -%} {% block announce %}
 <p>
-  More models your way! kluster.ai now supports the DeekSeepV3 0324 and Gemma 3
-  27B models! Try them out with
+  New model drop! kluster.ai now supports Llama 4 Maverick and Scout. Try them
+  with
   <a href="/get-started/start-building/real-time/#quickstart-snippets"
     >real-time</a
   >
   or
   <a href="/get-started/start-building/batch/#quickstart-snippets">batch</a>
-  inference.
+  inference, or explore the
+  <a href="/tutorials/klusterai-api/image-analysis/">image analysis notebook</a
+  >.
 </p>
+
 {% endblock %} {%- block container -%}
 <div class="md-content" data-md-component="content">
   {% set class = "index-page" if not page.content and not page.is_homepage %}
