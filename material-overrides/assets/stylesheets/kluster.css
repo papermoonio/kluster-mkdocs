@@ -776,6 +776,10 @@ details.child {
   font-family: 'Courier Prime', 'Courier New', monospace;
 }
 
+.app-layout-language-selector {
+  display: none;
+}
+
 @media screen and (min-width: 60em) {
   .md-sidebar--secondary.left {
     order: 0;
