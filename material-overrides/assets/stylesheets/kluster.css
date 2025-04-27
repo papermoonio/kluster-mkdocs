@@ -768,6 +768,14 @@ details.child {
 
 /** API Template Styling */
 /* Move TOC to the left */
+#apimatic-widget * {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#apimatic-widget pre {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
 @media screen and (min-width: 60em) {
   .md-sidebar--secondary.left {
     order: 0;
