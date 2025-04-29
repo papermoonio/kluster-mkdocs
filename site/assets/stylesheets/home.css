@@ -1,0 +1,179 @@
+.md-content__inner {
+  margin-top: 0;
+}
+
+.md-content__inner:before {
+  height: 0;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.md-main__inner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Image styling */
+.md-typeset img {
+  border-radius: unset;
+  box-shadow: unset;
+}
+
+/* Styles for the hero section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Center everything for mobile */
+}
+
+.md-typeset img.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 70vh;
+  max-height: 100vh;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 75%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.1em;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin: 1em 0 1em;
+}
+
+.button-wrapper {
+  display: flex;
+  width: max-content;
+  margin: auto;
+}
+
+.button-wrapper .md-button {
+  margin-right: 1em;
+}
+
+.button-wrapper .md-button:hover {
+  background-color: --md-code-fg-color; /* Change the background color to purple */
+  color: white; /* Ensure the text color is white for better contrast */
+}
+
+/* Styles for the featured content section */
+.featured-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--md-default-fg-color);
+  width: 30%;
+  max-width: 60vw;
+  border: 1.5px solid var(--md-primary-fg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature a {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.feature a svg {
+  margin-left: 0.3em;
+}
+
+.feature img {
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+}
+
+.feature h2 {
+  color: var(--md-default-fg-color);
+  margin-top: 5px;
+}
+
+.feature p {
+  font-size: 0.8rem;
+  min-height: 5em;
+}
+
+/* Mobile styling */
+@media screen and (max-width: 1219px) {
+  .featured-content {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .md-typeset img.hero-image {
+    display: none;
+  }
+
+  .feature img {
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+  }
+
+  .hero-content {
+    position: relative; /* Adjust to keep it centered */
+    transform: none; /* Reset transform properties */
+    top: auto;
+    left: auto;
+    width: 90%; /* Ensure content fits well on mobile */
+    max-width: 90%; /* Ensure content fits well on mobile */
+    padding: 1rem; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center the content on mobile */
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  .md-content__inner {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  .feature {
+    width: 100%;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+  }
+
+  .button-wrapper .md-button {
+    margin: 0.5em auto;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+
+.feature p a {
+  display: inline;
+  white-space: nowrap;
+}

@@ -60,10 +60,15 @@
   color: var(--md-accent-bg-color);
 }
 
+/*@media screen and (min-width: 76.25em) {
+  .md-header--lifted ~ .md-container .md-typeset :target {
+    --md-scroll-margin: 4rem;
+  }
+} */
 
 .md-typeset h2:target,
 .md-typeset h3:target {
-  scroll-margin-top: 4rem; 
+  scroll-margin-top: 4rem; /* adjust based on your header height */
 }
 
 

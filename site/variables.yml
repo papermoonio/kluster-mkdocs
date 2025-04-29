@@ -1,0 +1,11 @@
+# This file is used to define custom variables that can be reused
+# throughout your documentation. This allows you to manage certain
+# values in one place and reference them consistently across multiple
+# pages, ensuring maintainability and easy updates.
+
+libraries:
+  openai_api:
+    min_version: 1.0.0
+batch:
+  max_lines_free: 1000
+  max_size: '100 MB'
