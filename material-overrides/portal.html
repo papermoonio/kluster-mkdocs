@@ -165,6 +165,27 @@
     };
     document.getElementsByTagName("head")[0].appendChild(script);
     </script>
+
+  <script>
+    function adjustWidgetHeight() {
+      const mdMain = document.querySelector('.md-main');
+      const apimaticWidget = document.getElementById('apimatic-widget');
+      const mdFooterMetaInner = document.querySelector('.md-footer-meta__inner');
+  
+      if (!mdMain || !apimaticWidget) return;
+  
+      const mdMainHeight = mdMain.offsetHeight;
+      const mdFooterMetaInnerHeight = mdFooterMetaInner?.offsetHeight || 0;
+      const height = mdMainHeight - mdFooterMetaInnerHeight;
+  
+      // test using dev tools should it display the height in real time as it changes
+      apimaticWidget.style.height = `${height}px`;
+      console.log('[apimatic] Height adjusted to:', height);
+    }
+  
+    document.addEventListener('DOMContentLoaded', adjustWidgetHeight);
+    window.addEventListener('resize', adjustWidgetHeight);
+  </script>
 {% endblock %}
 
 {% block container %}
