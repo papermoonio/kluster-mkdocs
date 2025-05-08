@@ -2,7 +2,7 @@ site_name: kluster.ai Docs
 site_url: https://docs.kluster.ai/
 home_url: https://kluster.ai/
 home_name: kluster.ai
-site_dir: /var/www/kluster-docs-static
+site_dir: site #/var/www/kluster-docs-static
 docs_dir: kluster-docs
 copyright: © 2025 kluster.ai. All rights reserved.
 theme:
