@@ -60,12 +60,27 @@
   color: var(--md-accent-bg-color);
 }
 
-
-.md-typeset h2:target,
-.md-typeset h3:target {
-  scroll-margin-top: 4rem; 
+/* Header link styling */
+@media screen and (max-width: 1440px) {
+  .md-typeset h2:target,
+  .md-typeset h3:target {
+    scroll-margin-top: 4rem; /* Try a smaller value */
+  }
 }
 
+@media screen and (max-width: 1200px) {
+  .md-typeset h2:target,
+  .md-typeset h3:target {
+    scroll-margin-top: 2rem; /* Even smaller */
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .md-typeset h2:target,
+  .md-typeset h3:target {
+    scroll-margin-top: 1.5rem; /* Further adjustment */
+  }
+}
 
 .md-typeset h1 {
   color: var(--md-default-fg-color);
