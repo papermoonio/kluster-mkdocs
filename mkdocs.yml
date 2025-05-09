@@ -1,4 +1,4 @@
-site_name: Documentation for kluster.ai
+site_name: kluster.ai Docs
 site_url: https://docs.kluster.ai/
 home_url: https://kluster.ai/
 home_name: kluster.ai
@@ -8,10 +8,14 @@ copyright: © 2024 kluster.ai. All rights reserved.
 theme:
   name: material
   custom_dir: material-overrides
-  favicon: assets/images/favicon.png
+  favicon: assets/images/favicon-dark-mode.png
   logo: assets/images/logo.png
+  icon:
+    edit: material/github
+    admonition: 
+      code: material/code-tags
   font:
-    text: DM Sans
+    text: Space Grotesk
     code: Source Code Pro
   features:
     - announce.dismiss
@@ -22,12 +26,14 @@ theme:
     - toc.follow
 extra_css:
   - assets/stylesheets/terminal.css
+  - assets/stylesheets/timeline-neoteroi.css
 markdown_extensions:
   - admonition
   - attr_list
   - codehilite
   - md_in_html
   - meta
+  - neoteroi.timeline
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -46,14 +52,10 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
-  - redirects:
-      redirect_maps:
-        getting-started.md: get-started/start-api.md
-        get-started/api.md: get-started/start-api.md
-        tutorials/klusterai-api/getting-started.md: get-started/start-api.md
   - mkdocs-jupyter:
       ignore_h1_titles: true
       include_requirejs: true
+      ignore: ['*.py']
       custom_mathjax_url: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe'
 validation:
   absolute_links: ignore
