@@ -1,5 +1,6 @@
 {% extends "main.html" %}
 
+
 {% block scripts %}
 {{ super() }}
 <script type="text/javascript">
@@ -18,7 +19,7 @@
 },
 "apiKey": "PkUYNyvjYA7DfFBwoKTjTCtu_wG7ioIRoN9s5qMw6e1jnfjdXexOA0frW3mgIc6jXfjn0i8y-ccTGvpfd3vFzg**",
 "baseUrl": "https://www.apimatic.io",
-"enableExport": true,
+"enableExport": false,
 "renameHttpToRest": false,
 "enableConsoleCalls": true,
 "useProxyForConsoleCalls": true,
@@ -28,7 +29,7 @@
 "disableSdkDownload": true
 },
 "python_generic_lib": {
-"disableSdkDownload": false,
+"disableSdkDownload": true,
 "sdkDownloadLink": ""
 }
 },
@@ -161,16 +162,18 @@
 ]
 }
 }
-        );
-    };
-    document.getElementsByTagName("head")[0].appendChild(script);
-    </script>
+       );
+   };
+   document.getElementsByTagName("head")[0].appendChild(script);
+   </script>
 {% endblock %}
+
 
 {% block container %}
 <div id="apimatic-widget" style="height: 75vh; width: 100vw;">
 </div>
 {% endblock %}
+
 
 {% block site_nav %}
 {% endblock %}
