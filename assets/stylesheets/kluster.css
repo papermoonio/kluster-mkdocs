@@ -1,0 +1,809 @@
+:root {
+  --md-border-radius: 0.1rem;
+  --md-border-width: 0.1rem;
+}
+
+:root,
+[data-md-color-scheme='default'] {
+  --light: #ffffff;
+  --off-white: #f6f6f6;
+  --platinum: #d6d8d9;
+  --alice-blue: #dbefff;
+  --electric-indigo: #5100ff;
+  --vibrant-indigo: #5200ff;
+  --blue-violet: #8630f3;
+  --mint: #5feda9;
+  --vibrant-coral: #ed7062;
+  --dark: #000000;
+  --dark-transparent-70: #00000070;
+
+  /* Primary color: vibrant indigo */
+  --vibrant-indigo-30: #5200ff30;
+  --vibrant-indigo-70: #5200ff90;
+
+  --md-code-fg-color: var(--vibrant-indigo);
+  --md-code-bg-color: var(--off-white);
+
+  --md-primary-fg-color: var(--vibrant-indigo);
+  --md-primary-fg-color--light: var(--vibrant-indigo-70);
+
+  --md-accent-fg-color: var(--blue-violet);
+  --md-accent-fg-color-light: var(--dark-transparent-70);
+  --md-accent-bg-color: var(--blue-violet);
+
+  --md-footer-fg-color: var(--dark);
+  --md-footer-fg-color--light: var(--dark);
+  --md-footer-fg-color--lighter: var(--dark);
+  --md-footer-bg-color: var(--light);
+  --md-footer-bg-color--dark: var(--light);
+
+  /* Admonition SVGs (base64 encoded) - use Material icons */
+  --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
+
+  /* * Code highlighting color shades * */
+  /* Imports, const, let, var, async, await, function, etc. */
+  --md-code-hl-keyword-color: var(--vibrant-coral);
+  /* Comments */
+  --md-code-hl-comment-color: var(--dark-transparent-70);
+
+  /*custom code admonition colors*/
+
+  --md-code-admo-border-color: #5ee20c;
+  --md-code-admo-title-bg: #64dd171a;
+}
+
+/* General styling */
+.md-nav__link:focus,
+.md-nav__link:hover,
+.md-typeset a:focus,
+.md-typeset a:hover {
+  color: var(--md-accent-bg-color);
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset pre > code {
+  border-radius: var(--md-border-radius);
+}
+
+.md-grid {
+  max-width: 77rem;
+}
+
+/* Header styling */
+.md-header {
+  background-color: var(--light);
+  padding: 1em;
+}
+
+.md-header__inner {
+  position: relative;
+}
+
+.md-header__button.md-logo img {
+  height: 28px;
+}
+
+/** Tabs styling (some of this is copied from kluster.ai) **/
+.md-tabs {
+  width: unset;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: inherit;
+  overflow: visible;
+  color: var(--md-default-fg-color);
+}
+
+[dir='ltr'] .md-tabs__list {
+  margin-left: 0;
+}
+
+/* The styles for this particlar class are copied from kluster.ai */
+.md-tabs__list {
+  transition: transform 0.5s ease;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+  height: min-content;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: min-content;
+  will-change: var(--framer-will-change-override, transform);
+}
+
+.md-tabs__item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* When any link is hovered, scale the entire list */
+.md-tabs__link:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+  color: var(--vibrant-indigo);
+}
+
+/** Most of the styles for this particular class are copied from kluster.ai **/
+.md-tabs__link {
+  font-size: 0.725rem;
+  font-family: 'DM Sans', 'DM Sans Placeholder', sans-serif;
+  color: #0c0512;
+  font-weight: 500;
+  margin-top: 0;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+  opacity: 1;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.framer-1w65mo2 {
+  background: linear-gradient(
+    90deg,
+    rgb(81, 0, 255) 0%,
+    rgb(228, 150, 255) 51.26126126126127%,
+    rgb(81, 0, 255) 100%
+  );
+  bottom: 0;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.md-tabs__item--active {
+  color: var(--vibrant-indigo);
+}
+
+/* The styles for this particlar class are copied from kluster.ai */
+.md-tabs__item--active .framer-1w65mo2,
+.md-tabs__item .md-tabs__link:hover .framer-1w65mo2 {
+  opacity: 1;
+}
+
+.md-header__buttons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  margin: 0.2rem;
+  padding: 0.4rem;
+}
+
+/** Header button styling (copied from kluster.ai) **/
+.button-container {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  width: min-content;
+}
+
+.framer-1suqwmq-container {
+  opacity: 1;
+  will-change: transform;
+  transform: none;
+  flex: none;
+  height: 48px;
+  position: relative;
+  width: auto;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
+  background-color: rgb(81, 0, 255);
+  height: 100%;
+  border-radius: 35px;
+  opacity: 1;
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
+  .framer-1a164ql {
+  background: linear-gradient(
+    rgba(81, 0, 255, 0.61) 44.2251%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
+  .framer-uvujyo {
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.framer-Bja7l.framer-1v7ikbi {
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  overflow: visible;
+  padding: 0 20px;
+  position: relative;
+  text-decoration: none;
+  width: min-content;
+}
+
+.framer-follse {
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 0;
+  mix-blend-mode: lighten;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 2;
+  width: 100%; /* Ensures it doesn't overflow */
+  height: 100%;
+}
+
+.framer-follse > div {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0px;
+}
+
+.framer-follse img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.framer-1a164ql {
+  background: linear-gradient(
+    rgba(114, 33, 255, 0.92) 47.5524%,
+    rgba(10, 10, 10, 0) 100%
+  );
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: -1px;
+  overflow: hidden;
+  position: absolute;
+  will-change: none, transform;
+  z-index: 3;
+}
+
+.framer-uvujyo {
+  background-color: rgb(81, 0, 255);
+  border-radius: 100px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  opacity: 1;
+  border-radius: 100px;
+  opacity: 1;
+  flex: none;
+  inset: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+}
+
+.framer-p6mefi {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  transform: none;
+  opacity: 1;
+  -webkit-user-select: none;
+  flex: none;
+  height: auto;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  z-index: 4;
+  text-align: center; /* Ensures text is horizontally aligned */
+}
+
+.framer-text {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+/* Hides section permalink hash for H1 sections */
+.md-typeset h1 .headerlink {
+  display: none;
+}
+
+/* All other icons */
+.md-icon svg {
+  fill: var(--md-default-fg-color);
+}
+
+/* Section lines */
+li > nav.md-nav[data-md-level='3'],
+li > nav.md-nav[data-md-level='4'] {
+  border-left: var(--md-border-width) solid var(--md-accent-fg-color);
+}
+
+/* Custom admonition styling */
+.md-typeset .admonition {
+  border-width: var(--md-border-width);
+}
+
+.md-typeset .admonition.note {
+  border-color: var(--md-primary-fg-color);
+}
+
+/* Admonition icon background color */
+/* Should be the same as the border color above */
+.md-typeset .note > .admonition-title:before,
+.md-typeset .note > summary:before {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Admonition top background color */
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: var(--vibrant-indigo-30);
+}
+
+/* Styling for custom Admonition notes used for code */
+.md-typeset .admonition.code,
+.md-typeset details.code {
+  border-color: var(--md-code-admo-border-color);
+} 
+
+/* Admonition icon background color */
+/* Should be var(--md-code-admo-title-bg)*/
+.md-typeset .code > .admonition-title,
+.md-typeset .code > summary {
+  background-color: var(--md-code-admo-title-bg);
+} 
+
+/* Admonition top background color */
+.md-typeset .code > .admonition-title::before,
+.md-typeset .code > summary::before {
+  background-color: var(--md-code-admo-border-color);
+  -webkit-mask-image: var(--md-admonition-icon--code);
+  mask-image: var(--md-admonition-icon--code);
+} 
+
+/* Styling for the Copy to Clipboard */
+/* Clipboard icon */
+.md-clipboard {
+  color: var(--md-default-fg-color);
+}
+
+.md-clipboard:focus,
+.md-clipboard:hover {
+  color: var(--md-accent-bg-color);
+}
+
+.md-dialog {
+  text-align: center;
+}
+
+/* Styling for Tables */
+.md-typeset table:not([class]) {
+  border-radius: var(--md-border-radius);
+  display: inline-table;
+}
+
+.md-typeset .md-typeset__table table th {
+  background-color: var(--vibrant-indigo-30);
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  vertical-align: middle;
+}
+
+/* Tables centered */
+.md-typeset__scrollwrap {
+  text-align: center;
+}
+
+/* Tables in tabs */
+.tabbed-content .md-typeset__scrollwrap {
+  margin: 0;
+}
+
+.tabbed-content .md-typeset__table {
+  display: inline-table;
+  margin-bottom: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* Tabbed Styling */
+.md-typeset .tabbed-labels {
+  box-shadow: none;
+  padding: 0.2em;
+}
+
+.md-typeset .tabbed-set {
+  background: var(--off-white);
+  border-radius: var(--md-border-radius);
+}
+
+.md-typeset .tabbed-content {
+  background: var(--md-default-bg-color);
+  border: var(--md-border-width) solid var(--off-white);
+  border-bottom-left-radius: var(--md-border-radius);
+  border-bottom-right-radius: var(--md-border-radius);
+}
+
+.md-typeset
+  .tabbed-set
+  > input:first-child:checked
+  ~ .tabbed-labels
+  > :first-child,
+.md-typeset
+  .tabbed-set
+  > input:nth-child(10):checked
+  ~ .tabbed-labels
+  > :nth-child(10),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(11):checked
+  ~ .tabbed-labels
+  > :nth-child(11),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(12):checked
+  ~ .tabbed-labels
+  > :nth-child(12),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(13):checked
+  ~ .tabbed-labels
+  > :nth-child(13),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(14):checked
+  ~ .tabbed-labels
+  > :nth-child(14),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(15):checked
+  ~ .tabbed-labels
+  > :nth-child(15),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(16):checked
+  ~ .tabbed-labels
+  > :nth-child(16),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(17):checked
+  ~ .tabbed-labels
+  > :nth-child(17),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(18):checked
+  ~ .tabbed-labels
+  > :nth-child(18),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(19):checked
+  ~ .tabbed-labels
+  > :nth-child(19),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(2):checked
+  ~ .tabbed-labels
+  > :nth-child(2),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(20):checked
+  ~ .tabbed-labels
+  > :nth-child(20),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(3):checked
+  ~ .tabbed-labels
+  > :nth-child(3),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(4):checked
+  ~ .tabbed-labels
+  > :nth-child(4),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(5):checked
+  ~ .tabbed-labels
+  > :nth-child(5),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(6):checked
+  ~ .tabbed-labels
+  > :nth-child(6),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(7):checked
+  ~ .tabbed-labels
+  > :nth-child(7),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(8):checked
+  ~ .tabbed-labels
+  > :nth-child(8),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(9):checked
+  ~ .tabbed-labels
+  > :nth-child(9) {
+  opacity: 1;
+}
+
+.md-typeset .tabbed-labels > label {
+  opacity: 0.7;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  opacity: 1;
+}
+
+.js .md-typeset .tabbed-labels:before {
+  background: var(--vibrant-indigo);
+}
+
+/* Grid styling */
+.grid > div:last-child {
+  max-height: 1000px;
+  overflow: auto;
+}
+
+.md-typeset .grid {
+  grid-gap: 3rem;
+}
+
+.md-typeset .grid > div:first-child > p:first-child {
+  margin-top: 0;
+}
+
+.grid .highlight span.filename {
+  margin-top: 0;
+}
+
+/* Type styling */
+.md-typeset kbd {
+  background-color: unset;
+  font-size: 0.7em;
+  padding-left: 0;
+  border-radius: 1em;
+  vertical-align: baseline;
+  box-shadow: none;
+}
+
+/* Add background for required parameters */
+.md-typeset .required kbd {
+  background-color: rgb(255, 0, 0, 0.2);
+  text-transform: capitalize;
+  padding-left: 0.6666666667em;
+  border: 0.1px solid rgb(255, 0, 0);
+}
+
+/* Add background for unsupported parameters */
+.md-typeset .not-supported kbd {
+  background-color: rgba(255, 220, 0, 0.3);
+  text-transform: capitalize;
+  padding-left: 0.6666666667em;
+  border: 0.1px solid rgb(255, 210, 0);
+}
+
+/* Add background for future enhancement parameters */
+.md-typeset .future kbd {
+  background-color: rgb(0, 128, 0, 0.2);
+  text-transform: capitalize;
+  padding-left: 0.6666666667em;
+  border: 0.1px solid rgb(0, 128, 0);
+}
+
+/* Child adomonition styling */
+details.child summary::before {
+  display: none;
+}
+
+details.child {
+  width: fit-content;
+}
+
+[dir='ltr'] .md-typeset details.child summary {
+  width: fit-content;
+  padding-left: 1em;
+}
+
+[dir='ltr'] .md-typeset details.child[open] {
+  width: 100%;
+}
+
+.md-typeset details.child summary {
+  background-color: unset;
+}
+
+.md-typeset details.child {
+  width: fit-content;
+  border: 1px solid var(--platinum);
+  box-shadow: none;
+}
+
+@media screen and (min-width: 60em) {
+  .md-search__form {
+    background-color: var(--off-white);
+  }
+
+  .md-search__form:hover {
+    background-color: var(--md-default-fg-color--lightest);
+  }
+
+  .md-search__input {
+    color: var(--md-default-fg-color);
+  }
+
+  [dir='ltr'] .md-search__input::placeholder {
+    color: var(--md-default-fg-color);
+  }
+
+  [data-md-toggle='search']:checked ~ .md-header .button-container {
+    display: none;
+    transition: display 0ms 0.25s;
+  }
+}
+
+.md-footer-meta {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Active and hover styling for nav links */
+@media screen and (min-width: 76.25em) {
+  .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+    box-shadow: none;
+  }
+
+  .md-nav__list .md-ellipsis {
+    padding: 0.2em 0 0.2em 0.2em;
+    width: 100%;
+  }
+
+  .md-nav__list .md-nav__link--active .md-ellipsis {
+    background-color: var(--vibrant-indigo-30);
+    border-radius: var(--md-border-radius);
+  }
+
+  .md-nav__list .md-nav__link:hover .md-ellipsis,
+  .md-nav__list .md-nav__link--active:hover .md-ellipsis {
+    color: var(--md-typeset-a-color);
+    background-color: var(--vibrant-indigo-30);
+    border-radius: var(--md-border-radius);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 76.234375em) {
+  .md-nav__title .md-nav__button.md-logo img {
+    height: auto;
+  }
+
+  .md-nav--primary .md-nav__title[for='__drawer'] {
+    background-color: var(--md-default-bg-color);
+    height: 3.4rem;
+  }
+
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+  }
+}
+
+@media screen and (max-width: 76.2344em) {
+  .md-header__button.md-logo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .md-header__button.md-logo {
+    display: none;
+  }
+}
+
+/** Announcement banner styling */
+.md-banner {
+  background-color: var(--md-accent-bg-color);
+  color: var(--light);
+  text-align: center;
+}
+
+.md-banner .md-icon svg {
+  fill: var(--light);
+}
+
+.md-banner .md-typeset a {
+  color: var(--mint);
+}
+
+.md-banner .md-typeset a:hover {
+  color: #b7f7d8; /* Shade of mint */
+}
+
+.md-banner__inner {
+  margin: 0 auto;
+}
+
+.md-banner__inner p {
+  margin: .5em;
+}
+
+/** API Template Styling */
+/* Move TOC to the left */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary.left {
+    order: 0;
+  }
+}
+
+/** Where to Go Next Badge styling */
+.md-typeset span.badge {
+  border-radius: var(--md-border-radius);
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+}
+
+.md-typeset span.badge.tutorial {
+  background-color: var(--blue-violet);
+  color: var(--light);
+}
+
+.md-typeset span.badge.guide {
+  background-color: var(--electric-indigo);
+  color: var(--light);
+}
+
+.md-typeset span.badge.learn {
+  background-color: var(--vibrant-coral);
+  color: var(--light);
+}
+
+.md-typeset span.badge.external {
+  background-color: var(--mint);
+  color: var(--dark);
+}
+
+/* Image styling */
+.md-typeset img {
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
