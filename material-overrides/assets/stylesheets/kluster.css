@@ -45,6 +45,11 @@
   --md-code-hl-keyword-color: var(--vibrant-coral);
   /* Comments */
   --md-code-hl-comment-color: var(--dark-transparent-70);
+
+  /*custom code admonition colors*/
+
+  --md-code-admo-border-color: #5ee20c;
+  --md-code-admo-title-bg: #64dd171a;
 }
 
 /* General styling */
@@ -53,6 +58,11 @@
 .md-typeset a:focus,
 .md-typeset a:hover {
   color: var(--md-accent-bg-color);
+}
+
+.md-typeset h2:target,
+.md-typeset h3:target {
+  scroll-margin-top: 4rem; 
 }
 
 .md-typeset h1 {
@@ -75,6 +85,10 @@
 
 .md-header__inner {
   position: relative;
+}
+
+.md-header__button.md-logo img {
+  height: 28px;
 }
 
 /** Tabs styling (some of this is copied from kluster.ai) **/
@@ -370,25 +384,25 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 /* Styling for custom Admonition notes used for code */
-/* .md-typeset .admonition.code,
+.md-typeset .admonition.code,
 .md-typeset details.code {
-  border-color: XXX;
-} */
+  border-color: var(--md-code-admo-border-color);
+} 
 
 /* Admonition icon background color */
-/* Should be the same as the border color above */
-/* .md-typeset .code > .admonition-title,
+/* Should be var(--md-code-admo-title-bg)*/
+.md-typeset .code > .admonition-title,
 .md-typeset .code > summary {
-  background-color: XXX;
-} */
+  background-color: var(--md-code-admo-title-bg);
+} 
 
 /* Admonition top background color */
-/* .md-typeset .code > .admonition-title::before,
+.md-typeset .code > .admonition-title::before,
 .md-typeset .code > summary::before {
-  background-color: XXX;
-  -webkit-mask-image: XXX;
-  mask-image: XXX;
-} */
+  background-color: var(--md-code-admo-border-color);
+  -webkit-mask-image: var(--md-admonition-icon--code);
+  mask-image: var(--md-admonition-icon--code);
+} 
 
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
@@ -763,4 +777,38 @@ details.child {
   .md-sidebar--secondary.left {
     order: 0;
   }
+}
+
+/** Where to Go Next Badge styling */
+.md-typeset span.badge {
+  border-radius: var(--md-border-radius);
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+}
+
+.md-typeset span.badge.tutorial {
+  background-color: var(--blue-violet);
+  color: var(--light);
+}
+
+.md-typeset span.badge.guide {
+  background-color: var(--electric-indigo);
+  color: var(--light);
+}
+
+.md-typeset span.badge.learn {
+  background-color: var(--vibrant-coral);
+  color: var(--light);
+}
+
+.md-typeset span.badge.external {
+  background-color: var(--mint);
+  color: var(--dark);
+}
+
+/* Image styling */
+.md-typeset img {
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
