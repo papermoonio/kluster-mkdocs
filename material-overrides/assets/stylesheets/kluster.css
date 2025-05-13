@@ -301,7 +301,7 @@
 }
 
 .framer-uvujyo {
-  background-color: rgb(81, 0, 255);
+  background-color: #060809; /* remenber to add as a variable later */
   border-radius: 100px;
   transform: none;
   transform-origin: 50% 50% 0px;
