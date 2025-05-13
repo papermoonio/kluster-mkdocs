@@ -29,7 +29,7 @@
   overflow: hidden;
   text-align: center; /* Center everything for mobile */
 }
-
+/*  old one hero image 
 .md-typeset img.hero-image {
   width: 100%;
   height: auto;
@@ -37,6 +37,7 @@
   height: 70vh;
   max-height: 100vh;
 }
+  */
 
 .hero-content {
   position: absolute;
