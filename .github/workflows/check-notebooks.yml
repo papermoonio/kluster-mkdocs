@@ -9,6 +9,9 @@ jobs:
   check-hashes:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v3
+        
       - name: Checkout kluster-ai/docs
         uses: actions/checkout@v3
         with:
