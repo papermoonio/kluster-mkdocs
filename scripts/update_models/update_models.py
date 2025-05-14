@@ -28,8 +28,9 @@ from typing import Dict, List, Any
 # kluster-docs/get-started/models.md
 # kluster-docs/.snippets/text/get-started/rate-limit.md
 
-MODELS_MD_PATH = "../kluster-docs/get-started/models.md"
-RATE_LIMIT_MD_PATH = "../kluster-docs/.snippets/text/get-started/rate-limit.md"
+MODELS_MD_PATH = "../../kluster-docs/get-started/models.md"
+RATE_LIMIT_MD_PATH = "../../kluster-docs/.snippets/text/get-started/rate-limit.md"
+
 
 # Table headers for consistency
 MODEL_NAMES_HEADER = [
