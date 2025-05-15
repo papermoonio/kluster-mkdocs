@@ -25,12 +25,8 @@ import requests
 from typing import Dict, List, Any
 
 # Paths to the files, relative to the script location
-# kluster-docs/get-started/models.md
-# kluster-docs/.snippets/text/get-started/rate-limit.md
-
 MODELS_MD_PATH = "../../kluster-docs/get-started/models.md"
 RATE_LIMIT_MD_PATH = "../../kluster-docs/.snippets/text/get-started/rate-limit.md"
-
 
 # Table headers for consistency
 MODEL_NAMES_HEADER = [
@@ -320,6 +316,3 @@ def main():
     update_rate_limit_md(models_info, limits_path)
     
     print("✅ Done!")
-
-if __name__ == "__main__":
-    main()
