@@ -84,10 +84,10 @@ The project includes a unified tool for updating documentation components when A
 
 ```bash
 # Update all documentation components
-python scripts/kluster-docs
+python scripts/kluster_model_update/update_docs.py
 
-# Show available options
-python scripts/kluster-docs --help
+# Test commands 
+python scripts/kluster_model_update/update_docs.py --dry-run
 ```
 
-For more details, see [kluster-docs Documentation Update Tool](scripts/update_models/kluster-docs.md).
+For more details, see [kluster-docs Documentation Update Tool](/scripts/kluster_model_update/README.md.)
