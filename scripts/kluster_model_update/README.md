@@ -6,6 +6,18 @@ This directory contains the scripts for updating the kluster.ai documentation. T
 2. **Code snippets** - Generates code examples for all models in both real-time and batch modes
 3. **Documentation references** - Updates documentation to reference the generated snippets
 
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Directory Structure](#directory-structure)
+- [Troubleshooting Documentation Issues](#troubleshooting-documentation-issues)
+- [Generated Files](#generated-files)
+- [Development](#development)
+- [Output Directories](#output-directories)
+- [Modifying Snippets and Templates](#modifying-snippets-and-templates)
+- [Model Vision Capability Detection](#model-vision-capability-detection)
+- [Troubleshooting](#troubleshooting)
+
 ## Installation
 
 The documentation update scripts have minimal dependencies and can run on macOS, Linux, or Windows.
@@ -83,18 +95,6 @@ python3 update_docs.py --snippets --clean-force
   - `__init__.py`: Package initialization
   - `file_ops.py`: Common file operations
   - `check_duplicates.py`: Utilities for finding and fixing documentation inconsistencies
-
-## Recent Updates
-
-- Added support for handling both single models and lists of models in `update_documentation_files` function
-- Fixed file extension issues for Bash examples - now all use `.md` extensions instead of `.sh` to comply with MkDocs requirements
-- Added `--clean-force` option to completely reset documentation and rebuild from scratch
-- Added duplicate model detection and documentation inconsistency checking
-- Consolidated functionality by merging `rebuild_docs.py` into `documentation.py`
-- Reorganized file structure for better maintainability
-- Added detailed error reporting and traceback printing for easier debugging
-- Created separate utility modules for file operations and duplicate checking
-- Improved handling of model inconsistencies and duplicates in documentation
 
 ## Troubleshooting Documentation Issues
 
@@ -234,6 +234,7 @@ To add a new type of snippet (e.g., for a new API endpoint):
   - `batch-jsonl-{model_slug}.py`
   - `batch-jsonl-{model_slug}.md`
 - The script automatically updates documentation references, but check for proper inclusion in documentation files
+- For vision-capable models, special templates are used - see the [Model Vision Capability Detection](#model-vision-capability-detection) section for details
 
 ## Troubleshooting
 
@@ -308,3 +309,77 @@ If you encounter authentication issues when fetching from the API:
      # Or update your certificates
      /Applications/Python\ 3.x/Install\ Certificates.command
      ```
+
+## Model Vision Capability Detection
+
+The script automatically detects and generates specialized code examples for models with vision capabilities. This ensures that all generated documentation reflects each model's actual capabilities.
+
+### How Vision Models are Detected
+
+Vision-capable models are identified in the `models.py` file through API metadata:
+
+```python
+# Check for vision capabilities
+supports_vision = (model.get("model_purpose") == "multimodal" or 
+                  "vision" in model.get("tags", []))
+```
+
+A model is considered vision-capable if either:
+- Its `model_purpose` is set to "multimodal", OR
+- It has "vision" in its tags list
+
+This information is stored in each model's data object and passed to the template generation functions.
+
+### Different Templates for Vision Models
+
+When a model supports vision capabilities, different code templates are generated:
+
+#### Real-time Vision Templates
+
+For vision-capable models, additional examples are included to demonstrate image input:
+
+```python
+# Example with image input
+image_url = "https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
+
+vision_messages = [
+    {
+        "role": "user", 
+        "content": [
+            {"type": "text", "text": "Describe what you see in this image."},
+            {"type": "image_url", "image_url": {"url": image_url}}
+        ]
+    }
+]
+
+vision_response = client.real_time.completions.create(
+    model="model_id_here",
+    messages=vision_messages,
+    max_tokens=300,
+)
+```
+
+#### Batch Vision Templates
+
+For batch processing with vision models, specialized JSONL input formats are demonstrated:
+
+```python
+# Create input file with multiple image requests (JSONL format)
+input_jsonl_path = "batch_input.jsonl"
+with open(input_jsonl_path, "w") as f:
+    # Example 1
+    f.write(json.dumps({
+        "messages": [
+            {
+                "role": "user", 
+                "content": [
+                    {"type": "text", "text": "Who can park in the area?"},
+                    {"type": "image_url", "image_url": {"url": image_url}}
+                ]
+            }
+        ],
+        "max_tokens": 300
+    }) + "\n")
+```
+
+This automated differentiation ensures that users have appropriate working examples for each model type without requiring manual customization.
