@@ -77,3 +77,17 @@ jq -M 'del(.metadata.widgets)' your-file.ipynb > your-file-fixed.ipynb
 ```
 
 Check the `fixed` file, confirm the changes and then rename accordingly.
+
+## Updating Documentation
+
+The project includes a unified tool for updating documentation components when API changes or new models are released:
+
+```bash
+# Update all documentation components
+python scripts/kluster_model_update/update_docs.py
+
+# Test commands 
+python scripts/kluster_model_update/update_docs.py --dry-run
+```
+
+For more details, see [kluster-docs Documentation Update Tool](/scripts/kluster_model_update/README.md.)
