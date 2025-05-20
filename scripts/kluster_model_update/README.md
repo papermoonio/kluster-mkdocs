@@ -57,6 +57,9 @@ python3 update_docs.py --snippets --fix-formatting
 # Debug documentation issues and detect inconsistencies
 python3 update_docs.py --snippets --debug
 
+# Replace all existing snippets without asking for confirmation
+python3 update_docs.py --snippets --replace-all
+
 # DANGEROUS: Clean and regenerate all snippets from scratch
 python3 update_docs.py --snippets --clean-force
 ```
@@ -69,6 +72,7 @@ python3 update_docs.py --snippets --clean-force
 - `--model-id MODEL_ID`: Generate snippets for a specific model only
 - `--fix-formatting`: Fix formatting issues in documentation
 - `--api-only`: Only fetch models from API (don't generate snippets)
+- `--replace-all`: Replace all existing snippets without asking for confirmation
 - `--debug`: Print additional debug information and run documentation consistency checks
 - `--clean-force`: DANGEROUS! Deletes all existing snippets and resets documentation references. After confirmation, completely rebuilds only using current API models
 
@@ -272,7 +276,7 @@ To add a new type of snippet (e.g., for a new API endpoint):
 If you encounter authentication issues when fetching from the API:
 1. Check that your API key is set correctly in the environment
 2. Ensure you have the necessary permissions for the API endpoints
-3. Try setting the API key explicitly: `export KLUSTER_API_KEY="your-api-key"`
+3. Try setting the API key explicitly: `export API_KEY="your-api-key"`
 
 ### macOS Specific Issues
 
@@ -285,7 +289,7 @@ If you encounter authentication issues when fetching from the API:
    - To set API keys permanently on macOS, add to your shell profile:
      ```zsh
      # Add to ~/.zshrc (for zsh) or ~/.bash_profile (for bash)
-     export KLUSTER_API_KEY="your-api-key"
+     export API_KEY="your-api-key"
      ```
    - Then reload your shell settings: `source ~/.zshrc` or `source ~/.bash_profile`
 
