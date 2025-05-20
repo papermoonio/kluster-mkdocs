@@ -14,16 +14,18 @@ def get_real_time_template(model: Dict[str, Any]) -> str:
     # Base template for all models
     template = f'''# {template_description}
 import os
+import getpass
 import kluster
 from typing import Dict, Any
 
 # 1. Initialize the Kluster SDK client
-#    Your API key can also be specified via KLUSTER_API_KEY environment variable
-client = kluster.Client(api_key="YOUR_API_KEY")
+# Get API key securely using getpass (will not be displayed or saved)
+api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
+client = kluster.Client(api_key=api_key)
 
 # 2. Example inputs
 messages = [
-    {{"role": "user", "content": "What is the capital of France?"}}
+    {{"role": "user", "content": "Write a poem about artificial intelligence."}}
 ]
 
 # 3. Generate completion
@@ -80,12 +82,14 @@ def get_batch_template(model: Dict[str, Any]) -> str:
         template = f'''# {template_description}
 import os
 import json
+import getpass
 import kluster
 from typing import Dict, Any
 
 # 1. Initialize the Kluster SDK client
-#    Your API key can also be specified via KLUSTER_API_KEY environment variable
-client = kluster.Client(api_key="YOUR_API_KEY")
+# Get API key securely using getpass (will not be displayed or saved)
+api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
+client = kluster.Client(api_key=api_key)
 
 # 2. Set up image URL
 image_url = "https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
@@ -151,12 +155,14 @@ with open(output_jsonl_path, "r") as f:
         template = f'''# {template_description}
 import os
 import json
+import getpass
 import kluster
 from typing import Dict, Any
 
 # 1. Initialize the Kluster SDK client
-#    Your API key can also be specified via KLUSTER_API_KEY environment variable
-client = kluster.Client(api_key="YOUR_API_KEY")
+# Get API key securely using getpass (will not be displayed or saved)
+api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
+client = kluster.Client(api_key=api_key)
 
 # 2. Create input file with multiple requests (JSONL format)
 input_jsonl_path = "batch_input.jsonl"
@@ -164,7 +170,7 @@ with open(input_jsonl_path, "w") as f:
     # Example 1
     f.write(json.dumps({{
         "messages": [
-            {{"role": "user", "content": "What is the capital of France?"}}
+            {{"role": "user", "content": "What is the capital of Argentina?"}}
         ],
         "max_tokens": 100
     }}) + "\\n")
@@ -172,7 +178,7 @@ with open(input_jsonl_path, "w") as f:
     # Example 2
     f.write(json.dumps({{
         "messages": [
-            {{"role": "user", "content": "What is machine learning?"}}
+            {{"role": "user", "content": "Write a short poem about neural networks."}}
         ],
         "max_tokens": 150
     }}) + "\\n")
@@ -180,9 +186,9 @@ with open(input_jsonl_path, "w") as f:
     # Example 3
     f.write(json.dumps({{
         "messages": [
-            {{"role": "user", "content": "Write a haiku about clouds."}}
+            {{"role": "user", "content": "Create a short sci-fi story about AI in 50 words."}}
         ],
-        "max_tokens": 50
+        "max_tokens": 100
     }}) + "\\n")
 
 # 3. Define output file path
@@ -223,15 +229,15 @@ def get_real_time_bash_template(model: Dict[str, Any]) -> str:
     if supports_vision:
         template = f'''# Real-time API completions with {model_display_name} model (vision-capable)
 
-# Replace YOUR_API_KEY with your actual API key
-KLUSTER_API_KEY="YOUR_API_KEY"
+# Ensure your API key is set in your environment
+# export API_KEY="your_api_key_here"
 
 # Define image URL 
 IMAGE_URL="https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
 
 curl -X POST \\
   https://api.kluster.ai/v1/real-time/completions \\
-  -H "Authorization: Bearer $KLUSTER_API_KEY" \\
+  -H "Authorization: Bearer $API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{{
     "model": "{model_id}",
@@ -250,12 +256,12 @@ curl -X POST \\
     else:
         template = f'''# Real-time API completions with {model_display_name} model
 
-# Replace YOUR_API_KEY with your actual API key
-KLUSTER_API_KEY="YOUR_API_KEY"
+# Ensure your API key is set in your environment
+# export API_KEY="your_api_key_here"
 
 curl -X POST \\
   https://api.kluster.ai/v1/real-time/completions \\
-  -H "Authorization: Bearer $KLUSTER_API_KEY" \\
+  -H "Authorization: Bearer $API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{{
     "model": "{model_id}",
@@ -280,8 +286,8 @@ def get_batch_bash_template(model: Dict[str, Any]) -> str:
     if supports_vision:
         template = f'''# Batch API completions with {model_display_name} model (vision-capable)
 
-# Replace YOUR_API_KEY with your actual API key
-KLUSTER_API_KEY="YOUR_API_KEY"
+# Ensure your API key is set in your environment
+# export API_KEY="your_api_key_here"
 
 # Define image URL
 IMAGE_URL="https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
@@ -295,7 +301,7 @@ EOF
 # 2. Submit batch job
 curl -X POST \\
   https://api.kluster.ai/v1/batch/completions \\
-  -H "Authorization: Bearer $KLUSTER_API_KEY" \\
+  -H "Authorization: Bearer $API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{{
     "model": "{model_id}",
@@ -306,8 +312,8 @@ curl -X POST \\
     else:
         template = f'''# Batch API completions with {model_display_name} model
 
-# Replace YOUR_API_KEY with your actual API key
-KLUSTER_API_KEY="YOUR_API_KEY"
+# Ensure your API key is set in your environment
+# export API_KEY="your_api_key_here"
 
 # 1. Create input file (batch_input.jsonl)
 cat > batch_input.jsonl << 'EOF'
@@ -319,7 +325,7 @@ EOF
 # 2. Submit batch job
 curl -X POST \\
   https://api.kluster.ai/v1/batch/completions \\
-  -H "Authorization: Bearer $KLUSTER_API_KEY" \\
+  -H "Authorization: Bearer $API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{{
     "model": "{model_id}",

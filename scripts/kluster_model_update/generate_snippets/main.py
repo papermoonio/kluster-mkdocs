@@ -22,13 +22,15 @@ from .documentation import update_documentation_files, fix_documentation_formatt
 
 def create_snippet_files(model: Dict[str, Any], 
                          existing_real_time: List[str], 
-                         existing_batch: List[str]) -> Tuple[bool, bool]:
+                         existing_batch: List[str],
+                         replace_all: bool = False) -> Tuple[bool, bool]:
     """Create snippet files for a model.
     
     Args:
         model: Model information dictionary
         existing_real_time: List of existing real-time model slugs
         existing_batch: List of existing batch model slugs
+        replace_all: Whether to replace all existing snippets without asking
     
     Returns:
         Tuple of (real_time_created, batch_created) booleans
@@ -41,9 +43,20 @@ def create_snippet_files(model: Dict[str, Any],
     batch_created = False
     
     # Check if real-time snippet exists
+    replace_real_time = True
     if file_slug in existing_real_time:
-        print(f"ℹ Real-time example for {display_name} already exists, skipping")
-    else:
+        if replace_all:
+            # Auto-replace without asking
+            replace_real_time = True
+        else:
+            # Ask user if they want to replace existing files
+            print(f"ℹ Real-time example for {display_name} already exists")
+            replace_confirm = input(f"  Do you want to replace the existing real-time snippets for {display_name}? (y/N): ")
+            replace_real_time = replace_confirm.lower() == 'y'
+            if not replace_real_time:
+                print(f"  Skipping real-time example for {display_name}")
+    
+    if replace_real_time:
         # Create real-time Python snippet
         real_time_py_path = os.path.join(REALTIME_DIR, f"real-time-{file_slug}.py")
         real_time_py_content = get_real_time_template(model)
@@ -51,7 +64,8 @@ def create_snippet_files(model: Dict[str, Any],
         try:
             with open(real_time_py_path, "w", encoding="utf-8") as f:
                 f.write(real_time_py_content)
-            print(f"✓ Created real-time Python example for {display_name}: {real_time_py_path}")
+            action = "Replaced" if file_slug in existing_real_time else "Created"
+            print(f"✓ {action} real-time Python example for {display_name}: {real_time_py_path}")
             real_time_created = True
         except Exception as e:
             print(f"✗ Error creating real-time Python example for {display_name}: {e}")
@@ -63,14 +77,26 @@ def create_snippet_files(model: Dict[str, Any],
         try:
             with open(real_time_bash_path, "w", encoding="utf-8") as f:
                 f.write(real_time_bash_content)
-            print(f"✓ Created real-time Bash example for {display_name}: {real_time_bash_path}")
+            action = "Replaced" if file_slug in existing_real_time else "Created"
+            print(f"✓ {action} real-time Bash example for {display_name}: {real_time_bash_path}")
         except Exception as e:
             print(f"✗ Error creating real-time Bash example for {display_name}: {e}")
     
     # Check if batch snippet exists
+    replace_batch = True
     if file_slug in existing_batch:
-        print(f"ℹ Batch example for {display_name} already exists, skipping")
-    else:
+        if replace_all:
+            # Auto-replace without asking
+            replace_batch = True
+        else:
+            # Ask user if they want to replace existing files
+            print(f"ℹ Batch example for {display_name} already exists")
+            replace_confirm = input(f"  Do you want to replace the existing batch snippets for {display_name}? (y/N): ")
+            replace_batch = replace_confirm.lower() == 'y'
+            if not replace_batch:
+                print(f"  Skipping batch example for {display_name}")
+    
+    if replace_batch:
         # Create batch Python snippet
         batch_py_path = os.path.join(BATCH_DIR, f"batch-jsonl-{file_slug}.py")
         batch_py_content = get_batch_template(model)
@@ -78,7 +104,8 @@ def create_snippet_files(model: Dict[str, Any],
         try:
             with open(batch_py_path, "w", encoding="utf-8") as f:
                 f.write(batch_py_content)
-            print(f"✓ Created batch Python example for {display_name}: {batch_py_path}")
+            action = "Replaced" if file_slug in existing_batch else "Created"
+            print(f"✓ {action} batch Python example for {display_name}: {batch_py_path}")
             batch_created = True
         except Exception as e:
             print(f"✗ Error creating batch Python example for {display_name}: {e}")
@@ -90,7 +117,8 @@ def create_snippet_files(model: Dict[str, Any],
         try:
             with open(batch_bash_path, "w", encoding="utf-8") as f:
                 f.write(batch_bash_content)
-            print(f"✓ Created batch Bash example for {display_name}: {batch_bash_path}")
+            action = "Replaced" if file_slug in existing_batch else "Created"
+            print(f"✓ {action} batch Bash example for {display_name}: {batch_bash_path}")
         except Exception as e:
             print(f"✗ Error creating batch Bash example for {display_name}: {e}")
     

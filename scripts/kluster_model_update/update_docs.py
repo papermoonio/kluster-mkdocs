@@ -83,7 +83,8 @@ def generate_code_snippets(
     fix_formatting: bool = False,
     api_only: bool = False,
     debug: bool = False,
-    clean_force: bool = False
+    clean_force: bool = False,
+    replace_all: bool = False
 ) -> bool:
     """Generate code snippets using generate_snippets functionality."""
     try:
@@ -244,7 +245,7 @@ def generate_code_snippets(
         new_models = []
         for model in models_info:
             real_time, batch = create_snippet_files(
-                model, real_time_models, batch_models
+                model, real_time_models, batch_models, replace_all=replace_all
             )
             if real_time or batch:
                 new_models.append(model)
@@ -291,6 +292,9 @@ Examples:
   # Generate snippets for a specific model
   python update_docs.py --snippets --model-id kluster/llama3-8b
   
+  # Replace all existing snippets without confirmation
+  python update_docs.py --snippets --replace-all
+  
   # Fix formatting issues in documentation
   python update_docs.py --snippets --fix-formatting
 """
@@ -310,6 +314,8 @@ Examples:
     snippet_group.add_argument('--model-id', type=str, help="Generate snippets for a specific model ID only")
     snippet_group.add_argument('--fix-formatting', action='store_true', help="Fix formatting issues in documentation")
     snippet_group.add_argument('--api-only', action='store_true', help="Only fetch models from API (don't generate snippets)")
+    snippet_group.add_argument('--replace-all', action='store_true', 
+                              help="Replace all existing snippets without asking for confirmation")
     snippet_group.add_argument('--clean-force', action='store_true', 
                               help="WARNING: Dangerous option! Deletes all existing snippets and resets documentation references. After confirmation, completely rebuilds only using current API models.")
     
@@ -334,7 +340,8 @@ Examples:
             fix_formatting=args.fix_formatting,
             api_only=args.api_only,
             debug=args.debug,
-            clean_force=args.clean_force
+            clean_force=args.clean_force,
+            replace_all=args.replace_all
         )
         success = success and snippets_success
     
