@@ -22,11 +22,24 @@ PREDEFINED VALUES:
 import os
 import re
 import requests
+from pathlib import Path
 from typing import Dict, List, Any
 
 # Paths to the files, relative to the script location
-MODELS_MD_PATH = "../../kluster-docs/get-started/models.md"
-RATE_LIMIT_MD_PATH = "../../kluster-docs/.snippets/text/get-started/rate-limit.md"
+print("Current working directory:", os.getcwd())
+
+base_path_1 = Path("./kluster-docs")
+base_path_2 = Path("./docs")
+
+if base_path_1.exists():
+    base = base_path_1
+elif base_path_2.exists():
+    base = base_path_2
+else:
+    raise FileNotFoundError("No docs directory found.")
+
+MODELS_MD_PATH = base / "get-started" / "models.md"
+RATE_LIMIT_MD_PATH = base / ".snippets" / "text" / "get-started" / "rate-limit.md"
 
 # Table headers for consistency
 MODEL_NAMES_HEADER = [
