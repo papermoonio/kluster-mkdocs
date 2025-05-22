@@ -50,24 +50,30 @@
   <!-- first 3 cards layers TOP ONES, Need to add routes -->
   <div class="feature-cards">
     <div class="feature-card">
-      <img src="{{ 'assets/images/zap.png' | url }}" alt="Real-time Inference" />
-      <h2>Real-time Inference</h2>
+      <div class="feature-header">
+        <img src="{{ 'assets/images/zap.png' | url }}" alt="Real-time Inference" />
+        <h2>Real-time Inference</h2>
+      </div>  
       <p>Instant predictions backed by autoscaling infrastructure. Built for latency-sensitive LLM applications.</p>
-      <a href="#" class="card-button">Loren ipssum</a>
+      <a href="#" class="card-button">Learn More</a>
     </div>
 
     <div class="feature-card">
-      <img src="{{ 'assets/images/list.png' | url }}" alt="Batch Inference" />
-      <h2>Batch Inference</h2>
-      <p>Process large datasets with parallel inference at scale. Ideal for precomputing outputs or automating bulk tasks.</p>
-      <a href="#" class="card-button">Loren ipssum</a>
+      <div class="feature-header"> 
+        <img src="{{ 'assets/images/list.png' | url }}" alt="Batch Inference" />
+        <h2>Batch Inference</h2>
+      </div> 
+        <p>Process large datasets with parallel inference at scale. Ideal for precomputing outputs or automating bulk tasks.</p>
+      <a href="#" class="card-button">Run Batch Job</a>
     </div>
 
     <div class="feature-card">
-      <img src="{{ 'assets/images/tools.png' | url }}" alt="Fine-tuning" />
-      <h2>Fine-tuning</h2>
+      <div class="feature-header"> 
+        <img src="{{ 'assets/images/tools.png' | url }}" alt="Fine-tuning" />
+        <h2>Fine-tuning</h2>
+      </div>
       <p>Refine models with your data to reduce costs and boost efficiency, without sacrificing accuracy.</p>
-      <a href="#" class="card-button">Loren ipssum</a>
+      <a href="#" class="card-button">Fine-Tune a Model</a>
     </div>
   </div>
 
