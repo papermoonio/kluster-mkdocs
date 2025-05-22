@@ -27,17 +27,23 @@
 .hero {
   position: relative;
   overflow: hidden;
-  text-align: center; /* Center everything for mobile */
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 4rem;
 }
-/*  old one hero image 
-.md-typeset img.hero-image {
+
+img.hero-bg {
+  position: absolute;
+    /* top: 0; */
+    /* left: 0; */
   width: 100%;
-  height: auto;
-  display: block;
-  height: 70vh;
-  max-height: 100vh;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 2rem;
 }
-  */
 
 .hero-content {
   position: absolute;
@@ -46,14 +52,29 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 75%;
-  max-width: 1000px;
   text-align: center;
   padding: 1.5rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Ajuste visual del logo inline */
+.hero-logo-inline img {
+  height: 1.2em;
+  vertical-align: middle;
+  margin: 0 0.25em;
+}
+
+/* Enlace a kluster.ai */
+.hero-link {
+  text-decoration: none;
+  color: var(--md-accent-fg-color);
+  font-weight: bold;
 }
 
 .hero h1 {
   font-size: 2rem;
-  margin-bottom: 0.1em;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 
 .hero p {
@@ -76,49 +97,121 @@
   color: white; /* Ensure the text color is white for better contrast */
 }
 
-/* Styles for the featured content section */
-.featured-content {
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 3rem auto 4rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: var(--light);
+  width: 100%;
+  max-width: 500px;
+  min-height: 341px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.feature-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+  flex-grow: 1;
+}
+
+.card-button {
+  margin-top: 1rem;
+  background-color: var(--md-accent-fg-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+  background-color: var(--md-accent-fg-color--dark);
+}
+
+/* buttons final page styling CHECK
+.section-buttons {
+  margin: 4rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+*/
+h2.cta-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+.button-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
 }
 
-.feature {
-  text-align: center;
-  padding: 0.5rem;
-  color: var(--md-default-fg-color);
-  width: 30%;
-  max-width: 60vw;
-  border: 1.5px solid var(--md-primary-fg-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature a {
+.button-card {
   display: flex;
-  justify-content: center;
-  margin-top: auto;
-}
-
-.feature a svg {
-  margin-left: 0.3em;
-}
-
-.feature img {
-  width: 50%;
-  max-width: 50%;
-  height: auto;
-}
-
-.feature h2 {
+  align-items: flex-start;
+  background-color: var(--md-footer-bg-color);
   color: var(--md-default-fg-color);
-  margin-top: 5px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex: 1 1 calc(33.333% - 1rem);
+  gap: 1rem;
+  border: 1px solid;
 }
 
-.feature p {
-  font-size: 0.8rem;
-  min-height: 5em;
+.button-card:hover {
+  background-color: var(--md-default-bg-color--lightest);
 }
+
+.button-card .icon {
+  color: var(--md-accent-fg-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.button-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--md-default-fg-color);
+}
+
+.button-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
+
+
+
+
 
 /* Mobile styling */
 @media screen and (max-width: 1219px) {
