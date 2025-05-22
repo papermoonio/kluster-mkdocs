@@ -152,7 +152,7 @@
 .md-tabs__link {
   font-size: 0.725rem;
   font-family: 'DM Sans', 'DM Sans Placeholder', sans-serif;
-  color: #0c0512;
+  color: var(--light-green);
   font-weight: 500;
   margin-top: 0;
   align-items: center;
@@ -350,6 +350,7 @@
 }
 
 .framer-text {
+  color: var(--light);
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -698,7 +699,11 @@ details.child {
 }
 
 .md-footer-meta {
-  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 1px solid var(--light-green);
+}
+
+.md-footer-meta {
+    background-color: var(--dark-green);
 }
 
 /* Active and hover styling for nav links */
