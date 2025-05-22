@@ -2,7 +2,7 @@
 
 {% block htmltitle %}
   <title>kluster.ai Documentation</title>
-{% endblock %} 
+{% endblock %}
 
 {% block styles %}
   {{ super() }}
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-  <!-- hero  -->
+  <!-- hero -->
   <div class="hero">
     <!-- hero bg just for test need to change it -->
     <img src="{{ 'assets/images/testbg.png' | url }}" alt="" class="hero-bg" />
@@ -47,65 +47,59 @@
     </div>
   </div>
 
-  <!-- first 3 cards layerds TOP ONES, Need to add real text and routes -->
+  <!-- first 3 cards layers TOP ONES, Need to add routes -->
   <div class="feature-cards">
     <div class="feature-card">
       <img src="{{ 'assets/images/zap.png' | url }}" alt="Real-time Inference" />
       <h2>Real-time Inference</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+      <p>Instant predictions backed by autoscaling infrastructure. Built for latency-sensitive LLM applications.</p>
       <a href="#" class="card-button">Loren ipssum</a>
     </div>
 
     <div class="feature-card">
       <img src="{{ 'assets/images/list.png' | url }}" alt="Batch Inference" />
       <h2>Batch Inference</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+      <p>Process large datasets with parallel inference at scale. Ideal for precomputing outputs or automating bulk tasks.</p>
       <a href="#" class="card-button">Loren ipssum</a>
     </div>
 
     <div class="feature-card">
       <img src="{{ 'assets/images/tools.png' | url }}" alt="Fine-tuning" />
       <h2>Fine-tuning</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+      <p>Refine models with your data to reduce costs and boost efficiency, without sacrificing accuracy.</p>
       <a href="#" class="card-button">Loren ipssum</a>
     </div>
   </div>
-  <!-- second layers buttons + text , Need to add real text and routes -->
-  <!-- tittle -->
+
+  <!-- second layer buttons + text, Need to add real text and routes -->
   <div class="cta-section">
-  <h2 class="cta-title">Built for developers by developers</h2>
-  <!-- buttons + callout-->  
-  <div class="cta-group">
-    <div class="cta-block">
-      <p class="cta-description">
-        Grab your API key to build and manage on kluster.ai
-      </p>
-      <a href="#" class="featured-button">
+    <h2 class="cta-title">Built for developers by developers</h2>
+
+    <!-- buttons + callout -->
+    <div class="button-grid">
+      <a href="#" class="button-card">
         <span class="icon">{% include ".icons/octicons/code-16.svg" %}</span>
-        API Reference
+        <div class="button-info">
+          <h3>API Reference</h3>
+          <p>Grab your API key to build and manage on kluster.ai</p>
+        </div>
       </a>
-    </div>
 
-    <div class="cta-block">
-      <p class="cta-description">
-        Follow step-by-step tutorials to build and deploy with kluster.ai
-      </p>
-      <a href="#" class="featured-button">
+      <a href="#" class="button-card">
         <span class="icon">{% include ".icons/octicons/book-16.svg" %}</span>
-        Tutorials
+        <div class="button-info">
+          <h3>Tutorials</h3>
+          <p>Follow step-by-step tutorials to build and deploy with kluster.ai</p>
+        </div>
       </a>
-    </div>
 
-    <div class="cta-block">
-      <p class="cta-description">
-        We’re here to help! Get answers to common questions
-      </p>
-      <a href="#" class="featured-button">
+      <a href="#" class="button-card">
         <span class="icon">{% include ".icons/octicons/comment-discussion-16.svg" %}</span>
-        Support
+        <div class="button-info">
+          <h3>Supported Models</h3>
+          <p>Check out the latest supported LLMs and deployment-ready models</p>
+        </div>
       </a>
     </div>
   </div>
-  </div>
-   
 {% endblock %}
