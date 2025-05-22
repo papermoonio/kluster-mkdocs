@@ -1,10 +1,23 @@
 :root {
+  /* new styles */
+  --hero-border-radius: 2rem;
+  --hero-border-width: 1px;
+
   --md-border-radius: 0.1rem;
   --md-border-width: 0.1rem;
+  
 }
 
 :root,
 [data-md-color-scheme='default'] {
+  
+  /*new color palet*/
+  --dark-green: #1A2428;
+  --light-green: #83A2AF;
+  --dark: #060809;
+  --violet: #6525F8;
+  --violet-electric: #5E2BFF;
+  /*old color palet*/
   --light: #ffffff;
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
@@ -14,12 +27,14 @@
   --blue-violet: #8630f3;
   --mint: #5feda9;
   --vibrant-coral: #ed7062;
-  --dark: #000000;
+  /*--dark: #000000;*/
   --dark-transparent-70: #00000070;
 
   /* Primary color: vibrant indigo */
   --vibrant-indigo-30: #5200ff30;
   --vibrant-indigo-70: #5200ff90;
+  /* new bg color */
+  --md-default-bg-color: var(--dark-green);
 
   --md-code-fg-color: var(--vibrant-indigo);
   --md-code-bg-color: var(--off-white);
