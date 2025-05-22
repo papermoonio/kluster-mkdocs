@@ -3,3 +3,9 @@ venv
 .DS_Store
 kluster-docs*/
 docs*/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

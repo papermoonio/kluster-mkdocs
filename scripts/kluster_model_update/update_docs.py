@@ -18,17 +18,19 @@ import traceback
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Union
 
-# Determine script directory to find modules
-SCRIPT_DIR = Path(__file__).parent.absolute()
+# Determine directory to find modules
+parts = str(Path(__file__).resolve()).split(os.sep)
+assert "kluster-mkdocs" in parts, "'kluster-mkdocs' not found in path"
+BASE_DIR = Path(os.sep.join(parts[:parts.index("kluster-mkdocs")+1]))
 
 # Add the parent directory to the path to ensure imports work
-sys.path.insert(0, str(SCRIPT_DIR.parent))
+sys.path.insert(0, str(BASE_DIR.parent))
 
 def update_model_tables(dry_run: bool = False) -> bool:
     """Update model tables using update_models.py functionality."""
     try:
         # Import the module loader
-        sys.path.insert(0, str(SCRIPT_DIR))
+        sys.path.insert(0, str(BASE_DIR))
         from core.update_models import (
             fetch_models_from_api, 
             extract_model_info, 
@@ -53,8 +55,8 @@ def update_model_tables(dry_run: bool = False) -> bool:
         
         if dry_run:
             print("\nDRY RUN - Model table updates would affect these files:")
-            models_path = os.path.join(SCRIPT_DIR, MODELS_MD_PATH)
-            limits_path = os.path.join(SCRIPT_DIR, RATE_LIMIT_MD_PATH)
+            models_path = os.path.join(BASE_DIR, MODELS_MD_PATH)
+            limits_path = os.path.join(BASE_DIR, RATE_LIMIT_MD_PATH)
             print(f"  - {models_path}")
             print(f"  - {limits_path}")
             print(f"  - Would update information for {len(models_info)} models\n")
@@ -62,8 +64,8 @@ def update_model_tables(dry_run: bool = False) -> bool:
         
         # Update documentation files
         print("🔄 Updating documentation files...")
-        models_path = os.path.join(SCRIPT_DIR, MODELS_MD_PATH)
-        limits_path = os.path.join(SCRIPT_DIR, RATE_LIMIT_MD_PATH)
+        models_path = os.path.join(BASE_DIR, MODELS_MD_PATH)
+        limits_path = os.path.join(BASE_DIR, RATE_LIMIT_MD_PATH)
         
         update_models_md(models_info, models_path)
         update_rate_limit_md(models_info, limits_path)
@@ -89,7 +91,7 @@ def generate_code_snippets(
     """Generate code snippets using generate_snippets functionality."""
     try:
         # Add the current directory to path to ensure imports work
-        sys.path.insert(0, str(SCRIPT_DIR))
+        sys.path.insert(0, str(BASE_DIR))
         
         # Import directly from the generate_snippets package
         from generate_snippets.cli import parse_cli_args, run_cli
