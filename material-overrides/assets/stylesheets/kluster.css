@@ -671,9 +671,17 @@ details.child {
   box-shadow: none;
 }
 
+form.md-search__form {
+  border-radius: 1em;
+}
+
+.md-search__input {
+  text-align: center;
+}
+
 @media screen and (min-width: 60em) {
   .md-search__form {
-    background-color: var(--off-white);
+    background-color: var(--light-green);
   }
 
   .md-search__form:hover {
@@ -682,6 +690,7 @@ details.child {
 
   .md-search__input {
     color: var(--md-default-fg-color);
+    
   }
 
   [dir='ltr'] .md-search__input::placeholder {
