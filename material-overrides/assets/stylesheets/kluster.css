@@ -772,7 +772,6 @@ details.child {
 }
 
 /** API Template Styling */
-/* Move TOC to the left */
 #apimatic-widget * {
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -781,6 +780,12 @@ details.child {
   font-family: 'Courier Prime', 'Courier New', monospace;
 }
 
+/* Hide Title "API Code Playground" */
+.sc-jlZhew.fAxLIz {
+  display: none !important;
+}
+
+/* Move TOC to the left */
 .app-layout-language-selector {
   display: none;
 }
