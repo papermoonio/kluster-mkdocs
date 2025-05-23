@@ -47,7 +47,7 @@
   --md-accent-bg-color: var(--blue-violet);
 
   --md-footer-fg-color: var(--dark);
-  --md-footer-fg-color--light: var(--dark);
+  --md-footer-fg-color--light: var(--light-green);
   --md-footer-fg-color--lighter: var(--dark);
   --md-footer-bg-color: var(--light);
   --md-footer-bg-color--dark: var(--light);
@@ -700,10 +700,15 @@ details.child {
 
 .md-footer-meta {
   border-top: 1px solid var(--light-green);
+  background-color: var(--dark-green);
 }
 
-.md-footer-meta {
-    background-color: var(--dark-green);
+.md-footer-meta__inner{
+  align-items: center;  
+}
+
+.papermoon {
+    color: var(--light-green);
 }
 
 /* Active and hover styling for nav links */

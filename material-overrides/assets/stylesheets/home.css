@@ -107,8 +107,9 @@ a.hero-link {
 
 .feature-card {
   padding: 3rem;
-  border-radius: 1rem;
+  border-radius: 1em;
   background-color: var(--dark);
+  border: 1px solid var(--light-green);
   width: 100%;
   max-width: 500px;
   min-height: 341px;
@@ -173,44 +174,47 @@ h2.cta-title {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 4rem;
 }
 
 .button-card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  background-color: var(--md-footer-bg-color);
+  background-color: var(--dark);
   color: var(--md-default-fg-color);
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 1em;
   flex: 1 1 calc(33.333% - 1rem);
-  gap: 1rem;
-  border: 1px solid;
-}
-
-.button-card:hover {
-  background-color: var(--md-default-bg-color--lightest);
+  gap: 0.5em;
+  border: 1px solid var(--light-green);
 }
 
 .button-card .icon {
-  color: var(--md-accent-fg-color);
-  font-size: 1.5rem;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+}
+
+.button-card .icon svg {
+  fill: var(--electric-indigo);
+  width: 36px;
+  height: 36px;
 }
 
 .button-info h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  color: var(--md-default-fg-color);
+  font-size: 1.2rem;
+  color: var(--light-green);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
 }
 
 .button-info p {
+  font-family: 'Space Grotesk';
+  font-weight: 300;
   margin: 0;
   font-size: 0.9rem;
-  color: var(--md-default-fg-color--light);
+  color: var(--light-green);
 }
 
 
