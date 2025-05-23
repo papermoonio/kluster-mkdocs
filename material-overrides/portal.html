@@ -4,14 +4,7 @@
 {% block scripts %}
 {{ super() }}
   <script type="text/javascript">
-    // Hide Tittle "API Code Playground"
-    (function() {
-        var style = document.createElement('style');
-        style.innerHTML = '.sc-jlZhew.fAxLIz { display: none !important; }';
-        document.head.appendChild(style);
-    })();
-
-    //APIMatic
+    // APIMatic
     var script = document.createElement("script");
     script.src = "https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
     script.onload = function() {
