@@ -99,18 +99,16 @@ a.hero-link {
 
 .feature-cards {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  margin: 2rem auto 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem 0;
 }
 
 .feature-card {
-  padding: 3rem;
+  padding: 1em;
   border-radius: 1em;
   background-color: var(--dark);
   border: 1px solid var(--light-green);
-  max-width: 500px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,10 +116,11 @@ a.hero-link {
 }
 
 .feature-header {
+  padding: 1em 0 0;
+  text-align: left;
   margin: 1em 0;
   display: flex;
-  align-items: center;
-  gap: 1em;
+  gap: 1.2em;
 }    
 
 .feature-card svg {
@@ -138,19 +137,18 @@ a.hero-link {
 }
 
 .feature-card p {
-  padding: 1em;
-  margin-top: 1em;
+  padding: 0.5em 1em 1em;
   font-family: 'Space Grotesk';
-  font-size: 0.9rem;
+  font-size: 1.05em;
   color: var(--light-green);
   flex-grow: 1;
 }
 
 .card-button {
-  margin-top: 1rem;
+  margin: 1em;
   background-color: var(--light-green);
   padding: 0.5rem 1rem;
-  border-radius: 12px;
+  border-radius: 0.63em;
 }
 
 a.card-button {
