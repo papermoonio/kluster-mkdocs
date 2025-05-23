@@ -178,11 +178,13 @@
   
       const mainWindowHeight = mainWindow.offsetHeight;
       const footerHeight = footer?.offsetHeight || 0;
-      // This stems from the padding applied to the middle column (w/ all the content)
+      // This comes from the padding applied to the middle column of the portal
       const paddingOffset = 40;
+      // This comes from the margin offset at the top of .md-main
+      const marginOffset = '1.5rem';
 
       const height = mainWindowHeight - footerHeight + paddingOffset;
-      apimaticWidget.style.height = `${height}px`;
+      apimaticWidget.style.height = `calc(${height}px + ${marginOffset})`;
     }
   
     document.addEventListener('DOMContentLoaded', adjustWidgetHeight);
