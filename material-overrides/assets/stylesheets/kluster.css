@@ -237,7 +237,7 @@
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
   background-color: rgb(81, 0, 255);
   height: 100%;
-  border-radius: 35px;
+  border-radius: 1em;
   opacity: 1;
 }
 
@@ -272,7 +272,7 @@
 }
 
 .framer-follse {
-  border-radius: 100px;
+  border-radius: 1em;
   opacity: 1;
   flex: none;
   inset: 0;
@@ -301,11 +301,7 @@
 }
 
 .framer-1a164ql {
-  background: linear-gradient(
-    rgba(114, 33, 255, 0.92) 47.5524%,
-    rgba(10, 10, 10, 0) 100%
-  );
-  border-radius: 100px;
+  border-radius: 1em;
   opacity: 1;
   flex: none;
   inset: -1px;
@@ -321,7 +317,7 @@
   transform: none;
   transform-origin: 50% 50% 0px;
   opacity: 1;
-  border-radius: 100px;
+  border-radius: 1em;
   opacity: 1;
   flex: none;
   inset: 1px;
@@ -350,7 +346,7 @@
 }
 
 .framer-text {
-  color: var(--light);
+  color: var(--light-green);
   margin: 0px;
   padding: 0px;
   font-size: 16px;
