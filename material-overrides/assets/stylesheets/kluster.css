@@ -772,10 +772,43 @@ details.child {
 }
 
 /** API Template Styling */
-/* Move TOC to the left */
+.md-main__inner:has(#apimatic-widget) {
+  margin-top: 0;
+}
+
+#apimatic-widget :first-child {
+  border-top: none;
+}
+
+#apimatic-widget * {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#apimatic-widget pre {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+.Sub-NavBar-Wrapper {
+  display: none !important;
+}
+
+.NavBar-Wrapper > button {
+  max-width: unset !important;
+}
+
+/* Hide Title "API Code Playground" */
+.sc-jlZhew.fAxLIz {
+  display: none !important;
+}
+
+.app-layout-language-selector {
+  display: none;
+}
+
 @media screen and (min-width: 60em) {
-  .md-sidebar--secondary.left {
-    order: 0;
+  .api-wrapper .md-sidebar--primary,
+  .api-wrapper .md-sidebar--secondary:not([hidden]) {
+    display: none;
   }
 }
 
