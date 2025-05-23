@@ -3,7 +3,7 @@
 
 {% block scripts %}
 {{ super() }}
-<script type="text/javascript">
+  <script type="text/javascript">
     // Hide Tittle "API Code Playground"
     (function() {
         var style = document.createElement('style');
@@ -15,181 +15,181 @@
     var script = document.createElement("script");
     script.src = "https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
     script.onload = function() {
-        APIMaticDevPortal.show(
-            {
-                "container": "apimatic-widget",
-                "portalStyle": "default",
-                "codegenApiRoutes": {
-                    "docsgen": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/docs/generated-file?template={template}",
-                    "codegen": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/sdks/generated-file?template={template}",
-                    "transform": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/specs/generated-file?format={format}",
-                    "apiProxy": "https://proxy.apimatic.io/api/proxy"
-                },
-                "apiKey": "PkUYNyvjYA7DfFBwoKTjTCtu_wG7ioIRoN9s5qMw6e1jnfjdXexOA0frW3mgIc6jXfjn0i8y-ccTGvpfd3vFzg**",
-                "baseUrl": "https://www.apimatic.io",
-                "enableExport": false,
-                "renameHttpToRest": false,
-                "enableConsoleCalls": true,
-                "useProxyForConsoleCalls": true,
-                "initialPlatform": "http_curl_v1",
-                "languageSettings": {
-                    "http_curl_v1": {
-                        "disableSdkDownload": true
-                    },
-                    "python_generic_lib": {
-                        "disableSdkDownload": true,
-                        "sdkDownloadLink": ""
-                    }
-                },
-                "allowedExportFormats": [
-                    "postman10",
-                    "postman20",
-                    "openapi31json",
-                    "openapi31yaml",
-                    "openapi3json",
-                    "openapi3yaml",
-                    "swagger20",
-                    "swaggeryaml",
-                    "swagger10",
-                    "raml",
-                    "raml10",
-                    "apiblueprint",
-                    "wadl2009",
-                    "apimatic",
-                    "wsdl",
-                    "insomnia",
-                    "insomniayaml"
-                ],
-                "theme": {
-                    "baseTheme": "standard",
-                    "colors": {
-                        "primaryColor": {
-                            "light": "#5200ff",
-                            "dark": "#5200ff"
-                        },
-                        "linkColor": {
-                            "light": "#5200ff",
-                            "dark": "#5300ff"
-                        }
-                    },
-                    "colorMode": {
-                        "defaultMode": "light",
-                        "disableSwitch": true
-                    },
-                    "cssStyles": {
-                        "headings": {
-                            "fontFamily": "'Rubik', sans-serif",
-                            "h1": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "27px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            },
-                            "h2": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "24px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            },
-                            "h3": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "21.36px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            },
-                            "h4": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "18px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            },
-                            "h5": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "16px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            },
-                            "h6": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "15px",
-                                "fontWeight": "500",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.3"
-                            }
-                        },
-                        "body": {
-                            "fontFamily": "'Rubik', sans-serif",
-                            "text1": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "15px",
-                                "fontWeight": "400",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.75"
-                            },
-                            "text2": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "13.33px",
-                                "fontWeight": "400",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.75"
-                            },
-                            "text3": {
-                                "fontFamily": "'Rubik', sans-serif",
-                                "fontSize": "11.85px",
-                                "fontWeight": "400",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.75"
-                            }
-                        },
-                        "code": {
-                            "fontFamily": "Courier Prime, monospace",
-                            "blockCode": {
-                                "fontFamily": "Courier Prime, monospace",
-                                "fontSize": "15px",
-                                "fontWeight": "400",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.75"
-                            },
-                            "inlineCode": {
-                                "fontFamily": "Courier Prime, monospace",
-                                "fontSize": "15px",
-                                "fontWeight": "400",
-                                "fontStyle": "normal",
-                                "lineHeight": "1.75"
-                            }
-                        }
-                    },
-                    "fontSource": [
-                        "https://fonts.googleapis.com/css?family='Rubik':100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
-                        "https://fonts.googleapis.com/css?family=Courier+Prime:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-                    ]
-                }
+      APIMaticDevPortal.show(
+        {
+          "container": "apimatic-widget",
+          "portalStyle": "default",
+          "codegenApiRoutes": {
+            "docsgen": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/docs/generated-file?template={template}",
+            "codegen": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/sdks/generated-file?template={template}",
+            "transform": "/api/api-entities/V75_vOFDNtTsMNqmdTQfQ1h_glfJFVwF3GhRcZa8wEi4v9aplewuqEAoGQB23FoD/portal-artifacts/specs/generated-file?format={format}",
+            "apiProxy": "https://proxy.apimatic.io/api/proxy"
+          },
+          "apiKey": "PkUYNyvjYA7DfFBwoKTjTCtu_wG7ioIRoN9s5qMw6e1jnfjdXexOA0frW3mgIc6jXfjn0i8y-ccTGvpfd3vFzg**",
+          "baseUrl": "https://www.apimatic.io",
+          "enableExport": false,
+          "renameHttpToRest": false,
+          "enableConsoleCalls": true,
+          "useProxyForConsoleCalls": true,
+          "initialPlatform": "http_curl_v1",
+          "languageSettings": {
+            "http_curl_v1": {
+              "disableSdkDownload": true
+            },
+            "python_generic_lib": {
+              "disableSdkDownload": true,
+              "sdkDownloadLink": ""
             }
-        );
+          },
+          "allowedExportFormats": [
+            "postman10",
+            "postman20",
+            "openapi31json",
+            "openapi31yaml",
+            "openapi3json",
+            "openapi3yaml",
+            "swagger20",
+            "swaggeryaml",
+            "swagger10",
+            "raml",
+            "raml10",
+            "apiblueprint",
+            "wadl2009",
+            "apimatic",
+            "wsdl",
+            "insomnia",
+            "insomniayaml"
+          ],
+          "theme": {
+            "baseTheme": "standard",
+            "colors": {
+              "primaryColor": {
+                "light": "#5200ff",
+                "dark": "#5200ff"
+              },
+              "linkColor": {
+                "light": "#5200ff",
+                "dark": "#5300ff"
+              }
+            },
+            "colorMode": {
+              "defaultMode": "light",
+              "disableSwitch": true
+            },
+            "cssStyles": {
+              "headings": {
+                "fontFamily": "'Rubik', sans-serif",
+                "h1": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "27px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                },
+                "h2": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "24px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                },
+                "h3": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "21.36px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                },
+                "h4": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "18px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                },
+                "h5": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "16px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                },
+                "h6": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "500",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.3"
+                }
+              },
+              "body": {
+                "fontFamily": "'Rubik', sans-serif",
+                "text1": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.75"
+                },
+                "text2": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "13.33px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.75"
+                },
+                "text3": {
+                  "fontFamily": "'Rubik', sans-serif",
+                  "fontSize": "11.85px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.75"
+                }
+              },
+              "code": {
+                "fontFamily": "Courier Prime, monospace",
+                "blockCode": {
+                  "fontFamily": "Courier Prime, monospace",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.75"
+                },
+                "inlineCode": {
+                  "fontFamily": "Courier Prime, monospace",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "lineHeight": "1.75"
+                }
+              }
+            },
+            "fontSource": [
+              "https://fonts.googleapis.com/css?family='Rubik':100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
+              "https://fonts.googleapis.com/css?family=Courier+Prime:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+            ]
+          }
+        }
+      );
     };
     document.getElementsByTagName("head")[0].appendChild(script);
-    </script>
+  </script>
 
   <script>
     function adjustWidgetHeight() {
-      const mdMain = document.querySelector('.md-main');
+      const mainWindow = document.querySelector('.md-main');
       const apimaticWidget = document.getElementById('apimatic-widget');
-      const mdFooterMetaInner = document.querySelector('.md-footer-meta__inner');
+      const footer = document.querySelector('.md-footer');
   
-      if (!mdMain || !apimaticWidget) return;
+      if (!mainWindow || !apimaticWidget) return;
   
-      const mdMainHeight = mdMain.offsetHeight;
-      const mdFooterMetaInnerHeight = mdFooterMetaInner?.offsetHeight || 0;
-      const height = mdMainHeight - mdFooterMetaInnerHeight;
-  
-      // test using dev tools should it display the height in real time as it changes
+      const mainWindowHeight = mainWindow.offsetHeight;
+      const footerHeight = footer?.offsetHeight || 0;
+      // This stems from the padding applied to the middle column (w/ all the content)
+      const paddingOffset = 40;
+
+      const height = mainWindowHeight - footerHeight + paddingOffset;
       apimaticWidget.style.height = `${height}px`;
-      console.log('[apimatic] Height adjusted to:', height);
     }
   
     document.addEventListener('DOMContentLoaded', adjustWidgetHeight);
@@ -199,8 +199,7 @@
 
 
 {% block container %}
-<div id="apimatic-widget" style="height: 75vh; width: 100vw;">
-</div>
+  <div id="apimatic-widget" style="height: 75vh; width: 100vw;"></div>
 {% endblock %}
 
 
