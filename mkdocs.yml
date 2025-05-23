@@ -24,6 +24,8 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.follow
+extra_javascript:
+  - js/remove-badges.js    
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
