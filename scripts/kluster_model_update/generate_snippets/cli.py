@@ -41,11 +41,11 @@ def create_cli_parser() -> argparse.ArgumentParser:
         action='store_true',
         help='Print additional debug information'
     )
-    parser.add_argument(
-        '--clean-force',
-        action='store_true',
-        help='WARNING: Dangerous option! Deletes all existing snippets and regenerates only for current API models'
-    )
+    # parser.add_argument(
+    #     '--clean-force',
+    #     action='store_true',
+    #     help='WARNING: Dangerous option! Deletes all existing snippets and regenerates only for current API models'
+    # )
     
     return parser
 

@@ -60,9 +60,10 @@ python3 update_docs.py --snippets --debug
 # Replace all existing snippets without asking for confirmation
 python3 update_docs.py --snippets --replace-all
 
-# DANGEROUS: Clean and regenerate all snippets from scratch
-python3 update_docs.py --snippets --clean-force
-```
+# DISABLED FROM cli.py
+# # DANGEROUS: Clean and regenerate all snippets from scratch
+# python3 update_docs.py --snippets --clean-force
+# ```
 
 ### Command Line Options
 
