@@ -4,7 +4,7 @@
 }
 
 :root,
-[data-md-color-scheme='default'] {
+[data-md-color-scheme="default"] {
   --light: #ffffff;
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
@@ -38,7 +38,7 @@
   --md-footer-bg-color--dark: var(--light);
 
   /* Admonition SVGs (base64 encoded) - use Material icons */
-  --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
+  --md-admonition-icon--note: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=");
 
   /* * Code highlighting color shades * */
   /* Imports, const, let, var, async, await, function, etc. */
@@ -65,7 +65,7 @@
 .md-typeset h3:target {
   scroll-margin-top: 4rem; 
 }*/
- 
+
 .md-typeset h1 {
   color: var(--md-default-fg-color);
 }
@@ -103,7 +103,7 @@
   color: var(--md-default-fg-color);
 }
 
-[dir='ltr'] .md-tabs__list {
+[dir="ltr"] .md-tabs__list {
   margin-left: 0;
 }
 
@@ -142,7 +142,7 @@
 /** Most of the styles for this particular class are copied from kluster.ai **/
 .md-tabs__link {
   font-size: 0.725rem;
-  font-family: 'DM Sans', 'DM Sans Placeholder', sans-serif;
+  font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
   color: #0c0512;
   font-weight: 500;
   margin-top: 0;
@@ -158,7 +158,9 @@
   position: relative;
   text-decoration: none;
   transform: scale(1);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .framer-1w65mo2 {
@@ -357,8 +359,8 @@
 }
 
 /* Section lines */
-li > nav.md-nav[data-md-level='3'],
-li > nav.md-nav[data-md-level='4'] {
+li > nav.md-nav[data-md-level="3"],
+li > nav.md-nav[data-md-level="4"] {
   border-left: var(--md-border-width) solid var(--md-accent-fg-color);
 }
 
@@ -388,14 +390,14 @@ li > nav.md-nav[data-md-level='4'] {
 .md-typeset .admonition.code,
 .md-typeset details.code {
   border-color: var(--md-code-admo-border-color);
-} 
+}
 
 /* Admonition icon background color */
 /* Should be var(--md-code-admo-title-bg)*/
 .md-typeset .code > .admonition-title,
 .md-typeset .code > summary {
   background-color: var(--md-code-admo-title-bg);
-} 
+}
 
 /* Admonition top background color */
 .md-typeset .code > .admonition-title::before,
@@ -403,7 +405,7 @@ li > nav.md-nav[data-md-level='4'] {
   background-color: var(--md-code-admo-border-color);
   -webkit-mask-image: var(--md-admonition-icon--code);
   mask-image: var(--md-admonition-icon--code);
-} 
+}
 
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
@@ -646,12 +648,12 @@ details.child {
   width: fit-content;
 }
 
-[dir='ltr'] .md-typeset details.child summary {
+[dir="ltr"] .md-typeset details.child summary {
   width: fit-content;
   padding-left: 1em;
 }
 
-[dir='ltr'] .md-typeset details.child[open] {
+[dir="ltr"] .md-typeset details.child[open] {
   width: 100%;
 }
 
@@ -678,11 +680,11 @@ details.child {
     color: var(--md-default-fg-color);
   }
 
-  [dir='ltr'] .md-search__input::placeholder {
+  [dir="ltr"] .md-search__input::placeholder {
     color: var(--md-default-fg-color);
   }
 
-  [data-md-toggle='search']:checked ~ .md-header .button-container {
+  [data-md-toggle="search"]:checked ~ .md-header .button-container {
     display: none;
     transition: display 0ms 0.25s;
   }
@@ -722,7 +724,7 @@ details.child {
     height: auto;
   }
 
-  .md-nav--primary .md-nav__title[for='__drawer'] {
+  .md-nav--primary .md-nav__title[for="__drawer"] {
     background-color: var(--md-default-bg-color);
     height: 3.4rem;
   }
@@ -769,7 +771,7 @@ details.child {
 }
 
 .md-banner__inner p {
-  margin: .5em;
+  margin: 0.5em;
 }
 
 /** API Template Styling */
@@ -810,6 +812,6 @@ details.child {
 
 /* Image styling */
 .md-typeset img {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
