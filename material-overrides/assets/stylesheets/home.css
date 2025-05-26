@@ -207,8 +207,7 @@ h2.cta-title {
   color: var(--light-green);
 }
 
-/*Mobile responsiveness */
-
+/*Responsive Styling */
 @media screen and (max-width: 767px) {
   .hero {
     min-height: 15em;
@@ -224,13 +223,10 @@ h2.cta-title {
   .feature-cards,
   .button-grid {
     flex-direction: column;
-    gap: 1em;
   }
 
   .feature-card,
   .button-card {
-    max-width: 100%;
-    width: 100%;
     padding: 1em;
   }
 
@@ -240,12 +236,50 @@ h2.cta-title {
 
   a.card-button {
     width: 80%;
-    text-align: center;
   }
 
-  .cta-title {
+  h2.cta-title {
     font-size: 1.4rem;
-    text-align: center;
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .feature-card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+  .feature-header {
+    margin: 0.3em 0;
+  }
+
+  .feature-card h2 {
+    font-size: 1rem;
+  }
+
+  .feature-card svg{
+    width: 50px;
+  }
+
+  .feature-card p {
+    font-size: 0.80rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  .card-button {
+    padding: 0.4rem 1rem;
+    margin-top: auto;
+  }  
+  
+  h2.cta-title {
+    font-size: 1.5rem;
+  }
+
+  .button-info h3 {
+    font-size: 1rem;
+  }
+
+  .button-info p {
+    font-size: 0.8rem;
+  }
+}
