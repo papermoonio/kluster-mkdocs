@@ -60,11 +60,11 @@
   color: var(--md-accent-bg-color);
 }
 
-/* Header link styling 
+/* Header link styling */
 .md-typeset h2:target,
 .md-typeset h3:target {
   scroll-margin-top: 4rem; 
-}*/
+}
  
 .md-typeset h1 {
   color: var(--md-default-fg-color);
