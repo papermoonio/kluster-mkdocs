@@ -17,7 +17,7 @@ import os
 import getpass
 from openai import OpenAI
 
-# 1. Initialize OpenAI client pointing to kluster.ai api
+# 1. Initialize OpenAI client pointing to kluster.ai API
 # Get API key securely using getpass (will not be displayed or saved)
 api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
 client = OpenAI(
@@ -87,7 +87,7 @@ import json
 import getpass
 from openai import OpenAI
 
-# 1. Initialize OpenAI client pointing to kluster.ai api
+# 1. Initialize OpenAI client pointing to kluster.ai API
 # Get API key securely using getpass (will not be displayed or saved)
 api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
 client = OpenAI(
@@ -187,7 +187,7 @@ import json
 import getpass
 from openai import OpenAI
 
-# 1. Initialize OpenAI client pointing to kluster.ai api
+# 1. Initialize OpenAI client pointing to kluster.ai API
 # Get API key securely using getpass (will not be displayed or saved)
 api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your Kluster API key: ")
 client = OpenAI(
