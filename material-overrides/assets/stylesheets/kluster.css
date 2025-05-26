@@ -715,7 +715,16 @@ form.md-search__form {
 .papermoon {
     color: var(--light-green);
 }
+/* Mobile Footer styling */
+@media screen and (max-width: 767px) {
+  .md-footer-meta__inner {
+    flex-direction: column;
+  }
 
+  .md-copyright__highlight {
+    text-align: center;
+  }
+}
 /* Active and hover styling for nav links */
 @media screen and (min-width: 76.25em) {
   .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
