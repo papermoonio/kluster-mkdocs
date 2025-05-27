@@ -1,4 +1,4 @@
-# Kluster Documentation Update Tools
+# kluster Documentation Update Tools
 
 This directory contains the scripts for updating the kluster.ai documentation. The unified interface handles:
 
@@ -39,9 +39,6 @@ The main entry point is `update_docs.py`, which provides a unified interface for
 # Update everything (model tables and code snippets)
 python3 update_docs.py
 
-# Dry run to preview changes without making them
-python3 update_docs.py --dry-run
-
 # Only update model tables
 python3 update_docs.py --tables
 
@@ -63,7 +60,9 @@ python3 update_docs.py --snippets --replace-all
 # DISABLED FROM cli.py
 # # DANGEROUS: Clean and regenerate all snippets from scratch
 # python3 update_docs.py --snippets --clean-force
-# ```
+# 
+# Dry run to preview changes without making them
+#python3 update_docs.py --dry-run
 
 ### Command Line Options
 
