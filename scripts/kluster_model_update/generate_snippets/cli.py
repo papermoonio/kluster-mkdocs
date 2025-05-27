@@ -37,12 +37,11 @@ def create_cli_parser() -> argparse.ArgumentParser:
         help='Print additional debug information'
     )
 
-    #parser.add_argument(
-    #    '--dry-run', 
-    #    action='store_true',
-    #    help='Print what would be done without actually doing it'
-    #)
-
+    parser.add_argument(
+        '--dry-run', 
+        action='store_true',
+        help='Print what would be done without actually doing it'
+    )
     #parser.add_argument( #Disabled for security reasons.
     #    '--clean-force',
     #    action='store_true',
