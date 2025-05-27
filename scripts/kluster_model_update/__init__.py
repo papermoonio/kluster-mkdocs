@@ -1,5 +1,5 @@
 """
-Kluster Documentation Update Tools
+kluster.ai Documentation Update Tools
 
 This package contains scripts for updating the kluster.ai documentation,
 including model tables and code snippets.

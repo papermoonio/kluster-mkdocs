@@ -14,7 +14,7 @@ from .documentation import update_documentation_files, fix_documentation_formatt
 def create_cli_parser() -> argparse.ArgumentParser:
     """Create the command-line argument parser."""
     parser = argparse.ArgumentParser(
-        description="Generate code snippets for Kluster.ai documentation."
+        description="Generate code snippets for kluster.ai documentation."
     )
     parser.add_argument(
         '--model-id', 
@@ -32,20 +32,22 @@ def create_cli_parser() -> argparse.ArgumentParser:
         help='Only fetch models from API without generating snippets'
     )
     parser.add_argument(
-        '--dry-run', 
-        action='store_true',
-        help='Print what would be done without actually doing it'
-    )
-    parser.add_argument(
         '--debug', 
         action='store_true',
         help='Print additional debug information'
     )
-    # parser.add_argument(
-    #     '--clean-force',
-    #     action='store_true',
-    #     help='WARNING: Dangerous option! Deletes all existing snippets and regenerates only for current API models'
-    # )
+
+    #parser.add_argument(
+    #    '--dry-run', 
+    #    action='store_true',
+    #    help='Print what would be done without actually doing it'
+    #)
+
+    #parser.add_argument( #Disabled for security reasons.
+    #    '--clean-force',
+    #    action='store_true',
+    #    help='WARNING: Dangerous option! Deletes all existing snippets and regenerates only for current API models'
+    #)
     
     return parser
 
@@ -69,7 +71,7 @@ def run_cli(args: Optional[List[str]] = None) -> int:
             return 0
     
     # Fetch models from API
-    print("Fetching models from Kluster API...")
+    print("Fetching models from kluster API...")
     try:
         models_data = fetch_models_from_api()
         print(f"✓ Found {len(models_data)} models in the API")

@@ -144,7 +144,7 @@ def generate_code_snippets(
             report_documentation_issues(REALTIME_MD, BATCH_MD)
         
         # Fetch models from API
-        print("Fetching models from Kluster API...")
+        print("Fetching models from kluster API...")
         try:
             models_data = fetch_models_from_api()
             print(f"✓ Found {len(models_data)} models in the API")
