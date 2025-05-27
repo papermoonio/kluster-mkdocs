@@ -25,7 +25,7 @@
   box-shadow: unset;
 }
 
-/* Styles for the hero section */
+/* Hero Section Styling */
 .hero {
   position: relative;
   overflow: hidden;
@@ -79,16 +79,7 @@ a.hero-link {
   width: max-content;
   margin: 1em auto
 }
-
-.button-wrapper .md-button {
-  margin-right: 1em;
-}
-
-.button-wrapper .md-button:hover {
-  background-color: --md-code-fg-color; /* Change the background color to purple */
-  color: white; /* Ensure the text color is white for better contrast */
-}
-
+/* Featured Card Styling */
 .feature-cards {
   display: flex;
   justify-content: space-between;
@@ -118,7 +109,7 @@ a.hero-link {
 
 .feature-card svg {
   fill: var(--electric-indigo);
-  width: 65px; /* change it to  responsive later */
+  width: 65px;
 }
 
 .feature-card h2 {
@@ -152,6 +143,7 @@ a.card-button {
     font-size: 0.8em;
 }
 
+/* CTA and Buttons Styling */
 h2.cta-title {
   color: var(--light-green);
   font-family: 'Space Grotesk';
