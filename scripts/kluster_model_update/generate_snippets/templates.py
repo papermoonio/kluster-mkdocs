@@ -20,7 +20,7 @@ from openai import OpenAI
 from getpass import getpass
 
 # Get API key from user input
-api_key = environ.get("API_KEY") or getpass.getpass("Enter your kluster.ai API key: ")
+api_key = environ.get("API_KEY") or getpass("Enter your kluster.ai API key: ")
 
 print(f"📤 Sending a chat completion request to kluster.ai...\\n")
 
@@ -60,7 +60,7 @@ from getpass import getpass
 image_url = "https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
 
 # Get API key from user input
-api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your kluster.ai API key: ")
+api_key = environ.get("API_KEY") or getpass("Enter your kluster.ai API key: ")
 
 # Initialize OpenAI client pointing to kluster.ai API
 client = OpenAI(api_key=api_key, base_url="https://api.kluster.ai/v1")
@@ -121,7 +121,7 @@ image2_url="https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/te
 image3_url="https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/parking-image.jpeg?raw=true"
 
 # Get API key from user input
-api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your kluster.ai API key: ")
+api_key = environ.get("API_KEY") or getpass("Enter your kluster.ai API key: ")
 
 # Initialize OpenAI client pointing to kluster.ai API
 client = OpenAI(
@@ -260,7 +260,7 @@ import json
 import time
 
 # Get API key from user input
-api_key = os.environ.get("API_KEY") or getpass.getpass("Enter your kluster.ai API key: ")
+api_key = environ.get("API_KEY") or getpass("Enter your kluster.ai API key: ")
 
 # Initialize OpenAI client pointing to kluster.ai API
 client = OpenAI(
@@ -437,11 +437,12 @@ def get_batch_bash_template(model: Dict[str, Any]) -> str:
     
     if supports_vision:
         # Using a raw string rather than f-string to avoid nested expression issues
-        template = '''#!/bin/bash
+        template = f'''#!/bin/bash
 
 # Check if API_KEY is set and not empty
 if [[ -z "$API_KEY" ]]; then
     echo "Error: API_KEY environment variable is not set." >&2
+    exit 1
 fi
 
 echo -e "📤 Sending batch request to kluster.ai...\\n"
@@ -473,11 +474,11 @@ echo "File uploaded, file ID: $FILE_ID"
 BATCH_ID=$(curl -s https://api.kluster.ai/v1/batches \\
     -H "Authorization: Bearer $API_KEY" \\
     -H "Content-Type: application/json" \\
-    -d '{
+    -d '{{
         "input_file_id": "'$FILE_ID'",
         "endpoint": "/v1/chat/completions",
         "completion_window": "24h"
-    }' | jq -r '.id')
+    }}' | jq -r '.id')
 echo "Batch job submitted, job ID: $BATCH_ID"
 
 # Poll the batch status until it's completed
@@ -513,6 +514,7 @@ echo "$OUTPUT_CONTENT"
 # Check if API_KEY is set and not empty
 if [[ -z "$API_KEY" ]]; then
     echo "Error: API_KEY environment variable is not set." >&2
+    exit 1
 fi
 
 echo -e "📤 Sending batch request to kluster.ai...\n"
