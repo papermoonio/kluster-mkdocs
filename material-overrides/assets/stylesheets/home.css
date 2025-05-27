@@ -37,12 +37,12 @@
 }
 
 img.hero-bg {
-  border: 2px solid var(--light-green);
+  border: var(--hero-border-width) solid var(--light-green);
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 2rem;
+  border-radius: var(--hero-border-radius);
 }
 
 .hero-content {
@@ -89,9 +89,9 @@ a.hero-link {
 
 .feature-card {
   padding: 1em;
-  border-radius: 1em;
+  border-radius: var(--md-border-radius);
   background-color: var(--dark);
-  border: 1px solid var(--light-green);
+  border: var(--md-border-width) solid var(--light-green);
   max-width: 550px;
   display: flex;
   flex-direction: column;
@@ -167,10 +167,10 @@ h2.cta-title {
   background-color: var(--dark);
   color: var(--md-default-fg-color);
   padding: 1.5rem;
-  border-radius: 1em;
+  border-radius: var(--md-border-radius);
   flex: 1 1 calc(33.333% - 1rem);
   gap: 0.5em;
-  border: 1px solid var(--light-green);
+  border: var(--md-border-width) solid var(--light-green);
 }
 
 .button-card .icon {
