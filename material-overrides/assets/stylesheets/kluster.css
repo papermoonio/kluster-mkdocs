@@ -1,10 +1,11 @@
 :root {
   /* new styles */
   --hero-border-radius: 2rem;
-  --hero-border-width: 1px;
+  --hero-border-width: 2px;
 
-  --md-border-radius: 0.1rem;
-  --md-border-width: 0.1rem;
+  --md-border-radius: 1em;
+  --md-border-width: 1px;
+  
   
 }
 
@@ -14,9 +15,11 @@
   /*new color palet*/
   --dark-green: #1A2428;
   --light-green: #83A2AF;
+  --light-gren-30: #83A2AF4D;
   --dark: #060809;
   --violet: #6525F8;
   --violet-electric: #5E2BFF;
+  --violet-code-30:#161820;
   /*old color palet*/
   --light: #ffffff;
   --off-white: #f6f6f6;
@@ -33,16 +36,31 @@
   /* Primary color: vibrant indigo */
   --vibrant-indigo-30: #5200ff30;
   --vibrant-indigo-70: #5200ff90;
-  /* new bg color */
-  --md-default-bg-color: var(--dark-green);
 
-  --md-code-fg-color: var(--vibrant-indigo);
-  --md-code-bg-color: var(--off-white);
+  --md-default-bg-color: var(--dark-green);
+  --md-default-fg-color: var(--light);
+/*code variables*/
+--md-code-bg-color: #1e1e1e;
+  --md-code-fg-color: #ffffff;
+
+  --md-code-hl-keyword-color: #62aef7;    /* from, import */
+  --md-code-hl-string-color: #b4f34a;     /* "text", URLs */
+  --md-code-hl-number-color: #ffffff;     /* no colores extra para números */
+  --md-code-hl-function-color: #ffffff;   /* funciones como create */
+  --md-code-hl-name-color: #ffffff;       /* client, OpenAI */
+  --md-code-hl-constant-color: #ffffff;
+  --md-code-hl-comment-color: #7a7a7a;    /* opcional */
+  --md-code-hl-punctuation-color: #ffffff;
+  --md-code-hl-operator-color: #ffffff;
+
+  --md-code-hl-color: #2a2a2a;  /* Fondo de línea resaltada */
+
+  --md-typeset-a-color: var(--light-green); /* Links in typeset content */
 
   --md-primary-fg-color: var(--vibrant-indigo);
   --md-primary-fg-color--light: var(--vibrant-indigo-70);
 
-  --md-accent-fg-color: var(--blue-violet);
+  --md-accent-fg-color: var(--light-green);
   --md-accent-fg-color-light: var(--dark-transparent-70);
   --md-accent-bg-color: var(--blue-violet);
 
@@ -55,14 +73,7 @@
   /* Admonition SVGs (base64 encoded) - use Material icons */
   --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
 
-  /* * Code highlighting color shades * */
-  /* Imports, const, let, var, async, await, function, etc. */
-  --md-code-hl-keyword-color: var(--vibrant-coral);
-  /* Comments */
-  --md-code-hl-comment-color: var(--dark-transparent-70);
-
   /*custom code admonition colors*/
-
   --md-code-admo-border-color: #5ee20c;
   --md-code-admo-title-bg: #64dd171a;
 }
@@ -414,7 +425,7 @@ li > nav.md-nav[data-md-level='4'] {
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
 .md-clipboard {
-  color: var(--md-default-fg-color);
+  color: var(--light-green);
 }
 
 .md-clipboard:focus,
@@ -465,7 +476,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset .tabbed-set {
-  background: var(--off-white);
+  background: var(--dark);
   border-radius: var(--md-border-radius);
 }
 
@@ -737,16 +748,18 @@ form.md-search__form {
   }
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
-    background-color: var(--vibrant-indigo-30);
+    background-color: var(--light-gren-30);
     border-radius: var(--md-border-radius);
+    padding-left: 1em;
   }
 
   .md-nav__list .md-nav__link:hover .md-ellipsis,
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
     color: var(--md-typeset-a-color);
-    background-color: var(--vibrant-indigo-30);
+    background-color: var(--light-gren-30);
     border-radius: var(--md-border-radius);
     opacity: 1;
+    padding-left: 0.7em;
   }
 }
 
