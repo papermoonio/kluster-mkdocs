@@ -376,7 +376,7 @@
 
 /* All other icons */
 .md-icon svg {
-  fill: var(--md-default-fg-color);
+  fill: var(--dark-green);
 }
 
 /* Section lines */
@@ -701,6 +701,10 @@ form.md-search__form {
 
 .md-search__input {
   text-align: center;
+}
+
+input.md-search__input[placeholder="Search"]::placeholder{
+  color: #1A2428; /* variables dont apply here */
 }
 
 @media screen and (min-width: 60em) {
