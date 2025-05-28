@@ -21,6 +21,7 @@
   --violet: #6525F8;
   --violet-electric: #5E2BFF;
   --violet-code-30:#161820;
+  --blue: #6e8dff; /* New blue color for hover */
   /*old color palet*/
   --light: #ffffff;
   --off-white: #f6f6f6;
@@ -161,7 +162,7 @@
 .md-tabs__link:hover {
   transform: scale(1.01);
   transition: transform 0.3s ease;
-  color: var(--vibrant-indigo);
+  color: var(--blue);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
@@ -189,9 +190,9 @@
 .framer-1w65mo2 {
   background: linear-gradient(
     90deg,
-    rgb(81, 0, 255) 0%,
-    rgb(228, 150, 255) 51.26126126126127%,
-    rgb(81, 0, 255) 100%
+   #6e8dff 0%,
+   #4165ff 50%,
+   #6e8dff 100%
   );
   bottom: 0;
   height: 1px;
@@ -204,7 +205,7 @@
 }
 
 .md-tabs__item--active {
-  color: var(--vibrant-indigo);
+  color: var(--blue);
 }
 
 /* The styles for this particlar class are copied from kluster.ai */
