@@ -42,7 +42,7 @@
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--light-green--lighter);
 /*code variables*/
---md-code-bg-color: #1e1e1e;
+  --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: #ffffff;
 
   --md-code-hl-keyword-color: #62aef7;    /* from, import */
@@ -67,11 +67,9 @@
   --md-accent-fg-color-light: var(--dark-transparent-70);
   --md-accent-bg-color: var(--blue-violet);
 
-  --md-footer-fg-color: var(--dark);
-  --md-footer-fg-color--light: var(--light-green);
-  --md-footer-fg-color--lighter: var(--dark);
-  --md-footer-bg-color: var(--light);
-  --md-footer-bg-color--dark: var(--light);
+  --md-footer-fg-color: var(--light-green);
+  --md-footer-fg-color--light: var(--light-green--lighter);
+  --md-footer-bg-color: var(--dark-green);
 
   /* Admonition SVGs (base64 encoded) - use Material icons */
   --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
@@ -95,6 +93,10 @@
 
 .md-typeset pre > code {
   border-radius: var(--md-border-radius);
+}
+
+.md-typeset code {
+  color: var(--md-code-hl-string-color);
 }
 
 .md-grid {
@@ -725,8 +727,8 @@ form.md-search__form {
 }
 
 .md-footer-meta {
-  border-top: 1px solid var(--light-green);
-  background-color: var(--dark-green);
+  border-top: 1px solid var(--md-footer-fg-color);
+  background-color: var(--md-footer-bg-color);
 }
 
 .md-footer-meta__inner{
