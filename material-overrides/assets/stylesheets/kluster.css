@@ -897,3 +897,60 @@ input.md-search__input[placeholder="Search"]::placeholder{
 .md-typeset .grid.cards > ul > li > p > a:hover {
     color: var(--blue);
 }
+
+/* Base styling for Jupyter notebook code blocks */
+.highlight-ipynb {
+  background-color: var(--md-code-bg-color) !important;
+  color: var(--md-code-fg-color) !important;
+  padding: 0.5em;
+
+}
+
+/* Comment tokens */
+.highlight-ipynb .c1 {
+  color: var(--md-code-hl-comment-color) !important;
+}
+
+/* String tokens */
+.highlight-ipynb .s,
+.highlight-ipynb .s1,
+.highlight-ipynb .s2 {
+  color: var(--md-code-hl-string-color) !important;
+}
+
+/* Keywords like `def`, `import`, `return`, etc. */
+.highlight-ipynb .k {
+  color: var(--md-code-hl-keyword-color) !important;
+}
+
+/* Numeric values */
+.highlight-ipynb .mi,
+.highlight-ipynb .mf {
+  color: var(--md-code-hl-number-color) !important;
+}
+
+/* Names: functions, variables, classes */
+.highlight-ipynb .n,
+.highlight-ipynb .nf,
+.highlight-ipynb .nc {
+  color: var(--md-code-hl-name-color) !important;
+}
+
+/* Constants like True, False, None */
+.highlight-ipynb .kc {
+  color: var(--md-code-hl-constant-color) !important;
+}
+
+/* Punctuation: parentheses, brackets, commas */
+.highlight-ipynb .p {
+  color: var(--md-code-hl-punctuation-color) !important;
+}
+
+/* Operators: +, =, *, etc. */
+.highlight-ipynb .o {
+  color: var(--md-code-hl-operator-color) !important;
+}
+
+.jp-OutputArea .jp-OutputArea-output pre {
+  color: var(--light-green)!important;
+}
