@@ -16,7 +16,7 @@
   --dark-green: #1A2428;
   --light-green: #83A2AF;
   --light-green--lighter: #BBCAD3;
-  --light-gren-30: #83A2AF4D;
+  --light-green-30: #83A2AF4D;
   --dark: #060809;
   --violet: #6525F8;
   --violet-electric: #5E2BFF;
@@ -767,7 +767,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
   }
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
-    background-color: var(--light-gren-30);
+    background-color: var(--light-green-30);
     border-radius: var(--md-border-radius);
     padding-left: 1em;
   }
@@ -775,7 +775,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
   .md-nav__list .md-nav__link:hover .md-ellipsis,
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
     color: var(--md-typeset-a-color);
-    background-color: var(--light-gren-30);
+    background-color: var(--light-green-30);
     border-radius: var(--md-border-radius);
     opacity: 1;
     padding-left: 0.7em;
@@ -953,4 +953,13 @@ input.md-search__input[placeholder="Search"]::placeholder{
 
 .jp-OutputArea .jp-OutputArea-output pre {
   color: var(--light-green)!important;
+}
+
+.jp-CodeMirrorEditor.jp-Editor.jp-InputArea-editor {
+    border: none;
+}
+
+.jp-InputPrompt {
+  background-color: var(--md-code-bg-color) !important;
+  color: var(--md-code-fg-color) !important;
 }
