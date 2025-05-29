@@ -1,5 +1,5 @@
 :root {
-  /* new styles */
+  /* General styles */
   --hero-border-radius: 2rem;
   --hero-border-width: 2px;
 
@@ -12,7 +12,7 @@
 :root,
 [data-md-color-scheme='default'] {
   
-  /*new color palet*/
+  /*New Color Palet*/
   --dark-green: #1A2428;
   --light-green: #83A2AF;
   --light-green--lighter: #BBCAD3;
@@ -46,17 +46,17 @@
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: #ffffff;
 
-  --md-code-hl-keyword-color: #62aef7;    /* from, import */
-  --md-code-hl-string-color: #b4f34a;     /* "text", URLs */
-  --md-code-hl-number-color: #ffffff;     /* no colores extra para números */
-  --md-code-hl-function-color: #ffffff;   /* funciones como create */
-  --md-code-hl-name-color: #ffffff;       /* client, OpenAI */
+  --md-code-hl-keyword-color: #62aef7;
+  --md-code-hl-string-color: #b4f34a;
+  --md-code-hl-number-color: #ffffff;
+  --md-code-hl-function-color: #ffffff;   
+  --md-code-hl-name-color: #ffffff;   
   --md-code-hl-constant-color: #ffffff;
-  --md-code-hl-comment-color: #7a7a7a;    /* opcional */
+  --md-code-hl-comment-color: #7a7a7a;   
   --md-code-hl-punctuation-color: #ffffff;
   --md-code-hl-operator-color: #ffffff;
 
-  --md-code-hl-color: #2a2a2a;  /* Fondo de línea resaltada */
+  --md-code-hl-color: #2a2a2a;
 
   --md-typeset-a-color: var(--light-green); /* Links in typeset content */
   --md-typeset-table-color: var(--light-green); /* Table line color */
