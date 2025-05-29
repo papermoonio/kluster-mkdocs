@@ -951,15 +951,27 @@ input.md-search__input[placeholder="Search"]::placeholder{
   color: var(--md-code-hl-operator-color) !important;
 }
 
-.jp-OutputArea .jp-OutputArea-output pre {
+.jupyter-wrapper .jp-OutputArea-output pre {
   color: var(--light-green)!important;
 }
 
 .jp-CodeMirrorEditor.jp-Editor.jp-InputArea-editor {
-    border: none;
+  border: none;
 }
 
 .jp-InputPrompt {
   background-color: var(--md-code-bg-color) !important;
   color: var(--md-code-fg-color) !important;
+}
+.jp-RenderedText.jp-OutputArea-output {
+  border: 0.5px solid var(--light-green--lighter)
+}
+
+.jupyter-wrapper .jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"] pre {
+  color: #ff4c4c !important; /* Vibrant red text */
+  padding: 0.5em;
+}
+
+.jupyter-wrapper .jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"] {
+  padding: 0;
 }
