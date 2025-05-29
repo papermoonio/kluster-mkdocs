@@ -914,7 +914,10 @@ input.md-search__input[placeholder="Search"]::placeholder{
 /* String tokens */
 .highlight-ipynb .s,
 .highlight-ipynb .s1,
-.highlight-ipynb .s2 {
+.highlight-ipynb .s2,
+.highlight-ipynb .sd,
+.highlight-ipynb .si, 
+.highlight-ipynb .sa {
   color: var(--md-code-hl-string-color) !important;
 }
 
