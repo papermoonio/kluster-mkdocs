@@ -63,6 +63,8 @@
 
   --md-primary-fg-color: var(--vibrant-indigo);
   --md-primary-fg-color--light: var(--vibrant-indigo-70);
+  
+  --md-default-fg-color--lightest: var(--light-green--lighter);
 
   --md-accent-fg-color: var(--light-green);
   --md-accent-fg-color-light: var(--dark-transparent-70);
@@ -875,4 +877,23 @@ input.md-search__input[placeholder="Search"]::placeholder{
 .md-typeset img {
   border-radius: .5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Where to go next cards styling */
+.md-typeset .grid.cards > ul > li {
+  background: var(--dark);
+  border-radius: var(--md-border-radius);
+  border: var(--md-border-width) solid var(--light-green);
+}
+
+.md-typeset .grid.cards>ul>li:hover {
+  border-color: var(--light-green--lighter);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  border-bottom: .05rem solid var(--light-green);
+}
+
+.md-typeset .grid.cards > ul > li > p > a:hover {
+    color: var(--blue);
 }
