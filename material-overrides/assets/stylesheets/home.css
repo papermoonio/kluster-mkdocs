@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
 .md-content__inner {
   margin-top: 0;
 }
@@ -23,157 +25,253 @@
   box-shadow: unset;
 }
 
-/* Styles for the hero section */
+/* Hero Section Styling */
 .hero {
   position: relative;
   overflow: hidden;
-  text-align: center; /* Center everything for mobile */
+  min-height: 18em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
 }
 
-.md-typeset img.hero-image {
+img.hero-bg {
+  border: var(--hero-border-width) solid var(--light-green);
+  position: absolute;
   width: 100%;
-  height: auto;
-  display: block;
-  height: 70vh;
-  max-height: 100vh;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--hero-border-radius);
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 75%;
-  max-width: 1000px;
+  position: relative;
   text-align: center;
-  padding: 1.5rem;
+}
+
+.hero-logo-inline img {
+  height: 1.2em;
+  vertical-align: middle;
+  margin: 0 0.25em;
+}
+
+a.hero-link {
+  color: var(--light);
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 0.1em;
+  color: var(--light-green);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .hero p {
-  font-size: 1.125rem;
+  
   margin: 1em 0 1em;
 }
 
 .button-wrapper {
   display: flex;
   width: max-content;
-  margin: auto;
+  margin: 1em auto
+}
+/* Featured Card Styling */
+.feature-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 1em;
 }
 
-.button-wrapper .md-button {
-  margin-right: 1em;
+.feature-card {
+  padding: 1em;
+  border-radius: var(--md-border-radius);
+  background-color: var(--dark);
+  border: var(--md-border-width) solid var(--light-green);
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.button-wrapper .md-button:hover {
-  background-color: --md-code-fg-color; /* Change the background color to purple */
-  color: white; /* Ensure the text color is white for better contrast */
+.feature-header {
+  padding: 0.5em 0 0;
+  text-align: left;
+  margin: 1em 0;
+  display: flex;
+  gap: 1.2em;
+}    
+
+.feature-card svg {
+  fill: var(--electric-indigo);
+  width: 65px;
 }
 
-/* Styles for the featured content section */
-.featured-content {
+.feature-card h2 {
+  color: var(--light-green);
+  font-weight: 800;
+  font-family: 'Space Grotesk';
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  padding: 0.5em 1em 0;
+  margin: 0.5em 0;
+  font-family: 'Space Grotesk';
+  font-size: 1.05em;
+  color: var(--light-green);
+  flex-grow: 1;
+}
+
+.card-button {
+  margin: 1em;
+  background-color: var(--light-green);
+  padding: 0.5rem 1rem;
+  border-radius: 0.63em;
+}
+
+a.card-button {
+    color: var(--dark);
+    font-family: 'Space Grotesk';
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+/* CTA and Buttons Styling */
+h2.cta-title {
+  color: var(--light-green);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
+}
+
+.button-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1em;
 }
 
-.feature {
-  text-align: center;
-  padding: 0.5rem;
-  color: var(--md-default-fg-color);
-  width: 30%;
-  max-width: 60vw;
-  border: 1.5px solid var(--md-primary-fg-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature a {
+.button-card {
   display: flex;
-  justify-content: center;
-  margin-top: auto;
-}
-
-.feature a svg {
-  margin-left: 0.3em;
-}
-
-.feature img {
-  width: 50%;
-  max-width: 50%;
-  height: auto;
-}
-
-.feature h2 {
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--dark);
   color: var(--md-default-fg-color);
-  margin-top: 5px;
+  padding: 1.5rem;
+  border-radius: var(--md-border-radius);
+  flex: 1 1 calc(33.333% - 1rem);
+  gap: 0.5em;
+  border: var(--md-border-width) solid var(--light-green);
 }
 
-.feature p {
-  font-size: 0.8rem;
-  min-height: 5em;
+.button-card .icon {
+  flex-shrink: 0;
 }
 
-/* Mobile styling */
-@media screen and (max-width: 1219px) {
-  .featured-content {
-    justify-content: center;
-  }
+.button-card .icon svg {
+  fill: var(--electric-indigo);
+  width: 36px;
+  height: 36px;
 }
 
-@media screen and (max-width: 1050px) {
-  .md-typeset img.hero-image {
-    display: none;
-  }
-
-  .feature img {
-    width: 40%;
-    max-width: 40%;
-    height: auto;
-  }
-
-  .hero-content {
-    position: relative; /* Adjust to keep it centered */
-    transform: none; /* Reset transform properties */
-    top: auto;
-    left: auto;
-    width: 90%; /* Ensure content fits well on mobile */
-    max-width: 90%; /* Ensure content fits well on mobile */
-    padding: 1rem; /* Adjust padding for mobile */
-    margin: 0 auto; /* Center the content on mobile */
-  }
+.button-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--light-green);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
 }
 
-@media screen and (max-width: 76.234375em) {
-  .md-content__inner {
+.button-info p {
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--light-green);
+}
+
+/*Responsive Styling */
+@media screen and (max-width: 767px) {
+  .hero {
+    min-height: 15em;
     padding: 1em;
-  }
-}
-
-@media screen and (max-width: 76.234375em) {
-  .feature {
-    width: 100%;
-  }
-
-  .button-wrapper {
-    flex-direction: column;
-  }
-
-  .button-wrapper .md-button {
-    margin: 0.5em auto;
   }
 
   .hero h1 {
-    font-size: 2em;
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .feature-cards,
+  .button-grid {
+    flex-direction: column;
+  }
+
+  .feature-card,
+  .button-card {
+    padding: 1em;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  a.card-button {
+    width: 80%;
+  }
+
+  h2.cta-title {
+    font-size: 1.4rem;
   }
 }
 
-.feature p a {
-  display: inline;
-  white-space: nowrap;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .feature-card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+  .feature-header {
+    margin: 0.3em 0;
+  }
+
+  .feature-card h2 {
+    font-size: 1rem;
+  }
+
+  .feature-card svg{
+    width: 50px;
+  }
+
+  .feature-card p {
+    font-size: 0.80rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  .card-button {
+    padding: 0.4rem 1rem;
+    margin-top: auto;
+  }  
+  
+  h2.cta-title {
+    font-size: 1.5rem;
+  }
+
+  .button-info h3 {
+    font-size: 1rem;
+  }
+
+  .button-info p {
+    font-size: 0.8rem;
+  }
 }
