@@ -20,6 +20,7 @@
   --dark: #060809;
   --violet: #6525F8;
   --violet-electric: #5E2BFF;
+  --electric-indigo: #5100ff;
   --violet-code-30:#161820;
   --mint: #5feda9; /* only for banner color for links */
   --blue: #6e8dff; /* New blue color for hover */
@@ -28,7 +29,6 @@
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
   --alice-blue: #dbefff;
-  --electric-indigo: #5100ff;
   --vibrant-indigo: #5200ff;
   --blue-violet: #8630f3;
   --vibrant-coral: #ed7062;
@@ -68,7 +68,7 @@
 
   --md-accent-fg-color: var(--light-green);
   --md-accent-fg-color-light: var(--dark-transparent-70);
-  --md-accent-bg-color: var(--blue-violet);
+  --md-accent-bg-color: var(--electric-indigo);
 
   --md-footer-fg-color: var(--light-green);
   --md-footer-fg-color--light: var(--light-green--lighter);
