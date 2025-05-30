@@ -21,6 +21,7 @@
   --violet: #6525F8;
   --violet-electric: #5E2BFF;
   --violet-code-30:#161820;
+  --mint: #5feda9; /* only for banner color for links */
   --blue: #6e8dff; /* New blue color for hover */
   /*old color palet*/
   --light: #ffffff;
@@ -30,7 +31,6 @@
   --electric-indigo: #5100ff;
   --vibrant-indigo: #5200ff;
   --blue-violet: #8630f3;
-  --mint: #5feda9;
   --vibrant-coral: #ed7062;
   /*--dark: #000000;*/
   --dark-transparent-70: #00000070;
@@ -821,7 +821,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
 
 /** Announcement banner styling */
 .md-banner {
-  background-color: var(--md-accent-bg-color);
+  background-color: var(--dark);
   color: var(--light);
   text-align: center;
 }
