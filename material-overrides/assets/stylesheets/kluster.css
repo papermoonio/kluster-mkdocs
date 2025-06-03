@@ -192,12 +192,7 @@
 }
 
 .framer-1w65mo2 {
-  background: linear-gradient(
-    90deg,
-   #6e8dff 0%,
-   #4165ff 50%,
-   #6e8dff 100%
-  );
+  background: var(--blue);
   bottom: 0;
   height: 1px;
   position: absolute;
