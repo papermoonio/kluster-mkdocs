@@ -621,7 +621,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset .grid {
-  grid-gap: 3rem;
+  grid-gap: 1em;
 }
 
 .md-typeset .grid > div:first-child > p:first-child {
