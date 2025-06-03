@@ -138,8 +138,7 @@ a.hero-link {
 
 a.card-button {
     color: var(--dark);
-    font-family: 'Space Grotesk';
-    font-weight: 800;
+    font-family: 'Space Grotesk';    
     font-size: 0.8em;
 }
 
