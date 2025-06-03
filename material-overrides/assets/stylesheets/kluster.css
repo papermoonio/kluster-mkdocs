@@ -744,8 +744,13 @@ input.md-search__input[placeholder="Search"]::placeholder{
 }
 
 .papermoon {
-    color: var(--light-green);
+    font-size: 0.64rem;
 }
+
+.md-footer-meta .md-footer-meta__inner .papermoon a {
+  color: var(--md-footer-fg-color);
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-footer-meta__inner {
