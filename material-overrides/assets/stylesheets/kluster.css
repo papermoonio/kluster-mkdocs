@@ -84,7 +84,7 @@
 .md-nav__link:hover,
 .md-typeset a:focus,
 .md-typeset a:hover {
-  color: var(--md-accent-bg-color);
+  color: var(--blue);
 }
 
 .md-typeset h1 {
