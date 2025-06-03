@@ -57,11 +57,11 @@ img.hero-bg {
 }
 
 a.hero-link {
-  color: var(--light);
+  color: var(--light-green);
 }
 
 .hero h1 {
-  color: var(--light-green);
+  color: var(--light);
   font-family: 'Space Grotesk';
   font-weight: 800;
   font-size: 1.5rem;
@@ -113,7 +113,7 @@ a.hero-link {
 }
 
 .feature-card h2 {
-  color: var(--light-green);
+  color: var(--light);
   font-weight: 800;
   font-family: 'Space Grotesk';
   margin: 0;
@@ -185,7 +185,7 @@ h2.cta-title {
 .button-info h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
-  color: var(--light-green);
+  color: var(--light);
   font-family: 'Space Grotesk';
   font-weight: 800;
 }
