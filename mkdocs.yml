@@ -9,7 +9,7 @@ theme:
   name: material
   custom_dir: material-overrides
   favicon: assets/images/logo.png #test
-  logo: assets/images/logo.png
+  logo: assets/images/logofull.png
   icon:
     edit: material/github
     admonition: 
