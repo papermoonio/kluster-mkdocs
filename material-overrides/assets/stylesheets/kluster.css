@@ -435,7 +435,7 @@ li > nav.md-nav[data-md-level='4'] {
 
 .md-clipboard:focus,
 .md-clipboard:hover {
-  color: var(--md-accent-bg-color);
+  color: var(--blue);
 }
 
 .md-dialog {
@@ -455,6 +455,10 @@ li > nav.md-nav[data-md-level='4'] {
 .md-typeset table:not([class]) td,
 .md-typeset table:not([class]) th {
   vertical-align: middle;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: .05rem solid var(--dark);
 }
 
 .md-typeset__table table thead th:first-child {
@@ -479,6 +483,9 @@ li > nav.md-nav[data-md-level='4'] {
   margin-bottom: 0;
   padding: 0.5em;
   width: 100%;
+  border-bottom-right-radius: 12px;/* test */
+  border-bottom-left-radius: 12px;/* test */
+  background: black;/* test */
 }
 
 /* Tabbed Styling */
@@ -768,13 +775,13 @@ input.md-search__input[placeholder="Search"]::placeholder{
   }
 
   .md-nav__list .md-ellipsis {
-    padding: 0.2em 0 0.2em 0.2em;
+    padding: 0.2em 0 0.2em 1em;
     width: 100%;
   }
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
     background-color: var(--light-green-30);
-    border-radius: var(--md-border-radius);
+    border-radius: 6px; /*test same as kluster web make variable later */
     padding-left: 1em;
   }
 
@@ -782,9 +789,9 @@ input.md-search__input[placeholder="Search"]::placeholder{
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
     color: var(--md-typeset-a-color);
     background-color: var(--light-green-30);
-    border-radius: var(--md-border-radius);
+    border-radius: 6px;/*test same as kluster web make variable later */
     opacity: 1;
-    padding-left: 0.7em;
+    padding-left: 1em;
   }
 }
 
