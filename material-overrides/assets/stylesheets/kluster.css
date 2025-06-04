@@ -109,7 +109,7 @@
 
 /* Header styling */
 .md-header {
-  background-color: var(--light);
+  background-color: var(--dark-green);
   padding: 1em;
 }
 
@@ -230,6 +230,7 @@
 
 /** Header button styling (copied from kluster.ai) **/
 .button-container {
+  margin: 1em;
   align-items: center;
   display: flex;
   flex: none;
