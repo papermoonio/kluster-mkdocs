@@ -111,6 +111,7 @@
 .md-header {
   background-color: var(--dark-green);
   padding: 1em;
+  z-index: 5;
 }
 
 .md-header__inner {
@@ -747,9 +748,17 @@ input.md-search__input[placeholder="Search"]::placeholder{
     background-color: var(--md-default-fg-color--lightest);
   }
 
+  .md-search-result__meta {
+    background-color: var(--light-green-30);
+    color: var(--light);
+  }
+
+  .md-search-result__item {
+    box-shadow: 0 -.05rem var(--light-green-30);
+  }
+
   .md-search__input {
-    color: var(--md-default-fg-color);
-    
+    color: var(--md-default-fg-color);  
   }
 
   [dir='ltr'] .md-search__input::placeholder {
