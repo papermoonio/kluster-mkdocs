@@ -18,9 +18,10 @@
   --light-green--lighter: #BBCAD3;
   --light-green-30: #83A2AF4D;
   --dark: #060809;
-  --electric-indigo: #5100ff;
+  --electric-indigo: #6525f8;
   --mint: #5feda9; /* only for banner color for links */
   --blue: #6e8dff; /* New blue color for hover */
+  --blue-framer: #0099ff; /* Framer blue color */
   --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --light: #ffffff;
   /*old color palet*/
@@ -78,6 +79,8 @@
   /*custom code admonition colors*/
   --md-code-admo-border-color: #5ee20c;
   --md-code-admo-title-bg: #64dd171a;
+  --md-example-admo-border-color: #9b7de5;     /* violet more soft to check*/
+  --md-example-admo-title-bg: #9b7de51a;       /* violet at 10%  */
 }
 
 /* General styling */
@@ -260,15 +263,12 @@
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
   .framer-1a164ql {
-  background: linear-gradient(
-    rgba(81, 0, 255, 0.61) 44.2251%,
-    rgba(10, 10, 10, 0) 100%
-  );
+  background: var(--electric-indigo);
 }
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
   .framer-uvujyo {
-  background-color: rgba(0, 0, 0, 0.39);
+  background-color: var(--blue-framer);
 }
 
 .framer-Bja7l.framer-1v7ikbi {
@@ -363,7 +363,7 @@
 }
 
 .framer-text {
-  color: var(--light-green);
+  color: var(--light);
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -427,6 +427,24 @@ li > nav.md-nav[data-md-level='4'] {
   -webkit-mask-image: var(--md-admonition-icon--code);
   mask-image: var(--md-admonition-icon--code);
 } 
+
+/* Admonition styling for 'example' */
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: var(--md-example-admo-border-color);
+}
+
+/* Title background */
+.md-typeset .example > .admonition-title,
+.md-typeset .example > summary {
+  background-color: var(--md-example-admo-title-bg);
+}
+
+/* Icon background */
+.md-typeset .example > .admonition-title::before,
+.md-typeset .example > summary::before {
+  background-color: var(--md-example-admo-border-color);
+}
 
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
@@ -781,6 +799,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
   }
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
+    color: var(--light);
     background-color: var(--light-green-30);
     border-radius: 6px; /*test same as kluster web make variable later */
     padding-left: 1em;
@@ -788,7 +807,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
 
   .md-nav__list .md-nav__link:hover .md-ellipsis,
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
-    color: var(--md-typeset-a-color);
+    color: var(--light);
     background-color: var(--light-green-30);
     border-radius: 6px;/*test same as kluster web make variable later */
     opacity: 1;
