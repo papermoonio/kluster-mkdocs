@@ -208,6 +208,7 @@ h2.cta-title {
   .hero {
     min-height: 15em;
     padding: 1em;
+    margin: 0 1em 2.5em;
   }
 
   .hero h1 {
@@ -219,11 +220,7 @@ h2.cta-title {
   .feature-cards,
   .button-grid {
     flex-direction: column;
-  }
-
-  .feature-card,
-  .button-card {
-    padding: 1em;
+    margin: 0 1em;
   }
 
   .feature-card p {
