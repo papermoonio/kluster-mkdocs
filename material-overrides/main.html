@@ -33,7 +33,6 @@ page.meta.keywords %}
   </article>
 </div>
 {%- endblock -%} {% block scripts %} {{ super() }}
-<!--
 <script>
   const link = document.querySelector("link[rel~='icon']");
   if (link) {
@@ -45,5 +44,4 @@ page.meta.keywords %}
       : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
   }
 </script>
--->
 {% endblock %}
