@@ -137,9 +137,15 @@ a.hero-link {
 }
 
 a.card-button {
-    color: var(--dark);
-    font-family: 'Space Grotesk';    
-    font-size: 0.8em;
+  color: var(--dark);
+  font-family: 'Space Grotesk';    
+  font-size: 0.8em;
+}
+
+a.card-button:hover {
+  color: var(--dark);
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
 }
 
 /* CTA and Buttons Styling */
