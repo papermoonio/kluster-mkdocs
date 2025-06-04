@@ -21,8 +21,9 @@
   --electric-indigo: #5100ff;
   --mint: #5feda9; /* only for banner color for links */
   --blue: #6e8dff; /* New blue color for hover */
-  /*old color palet*/
+  --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --light: #ffffff;
+  /*old color palet*/
   --off-white: #f6f6f6;
   --platinum: #d6d8d9;
   --alice-blue: #dbefff;
@@ -808,6 +809,10 @@ input.md-search__input[placeholder="Search"]::placeholder{
   .md-nav--primary .md-nav__title {
     background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
+  }
+
+  .md-nav--primary .md-nav__item {
+    border-top: .05rem solid var(--ligth-transparent-10);
   }
 }
 
