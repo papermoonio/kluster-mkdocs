@@ -1004,9 +1004,11 @@ input.md-search__input[placeholder="Search"]::placeholder{
   border: none;
 }
 
-.jp-InputPrompt {
-  background-color: var(--md-code-bg-color) !important;
+.jupyter-wrapper .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-InputPrompt {
+  background-color: var(--md-code-bg-color);
   color: var(--md-code-fg-color) !important;
+  opacity: 1 !important;
+  border-right: 0.05rem solid var(--light-green-30);
 }
 .jp-RenderedText.jp-OutputArea-output {
   border: 0.5px solid var(--light-green--lighter)
