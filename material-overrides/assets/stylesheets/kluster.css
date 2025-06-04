@@ -463,6 +463,7 @@ li > nav.md-nav[data-md-level='4'] {
 
 /* Styling for Tables */
 .md-typeset table:not([class]) {
+  border: 0.05rem solid var(--light-green-30);
   border-radius: var(--md-border-radius);
   display: inline-table;
 }
@@ -813,6 +814,10 @@ input.md-search__input[placeholder="Search"]::placeholder{
     opacity: 1;
     padding-left: 1em;
   }
+
+  .md-nav__link[for]:focus, .md-nav__link[for]:hover, .md-nav__link[href]:focus, .md-nav__link[href]:hover {
+    color:var(--light);
+  }
 }
 
 @media screen and (max-width: 76.234375em) {
@@ -920,7 +925,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
 .md-typeset .grid.cards > ul > li {
   background: var(--dark);
   border-radius: var(--md-border-radius);
-  border: var(--md-border-width) solid var(--light-green);
+  border: var(--md-border-width) solid var(--light-green-30);
 }
 
 .md-typeset .grid.cards>ul>li:hover {
