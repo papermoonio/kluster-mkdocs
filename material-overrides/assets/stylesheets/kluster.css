@@ -1,7 +1,7 @@
 :root {
   /* General styles */
   --hero-border-radius: 2rem;
-  --hero-border-width: 2px;
+  --hero-border-width: 1px;
 
   --md-border-radius: 1.3em;
   --md-border-width: 1px;
