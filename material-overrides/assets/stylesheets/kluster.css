@@ -21,7 +21,7 @@
   --electric-indigo: #6525f8;
   --mint: #5feda9; /* only for banner color for links */
   --blue: #6e8dff; /* New blue color for hover */
-  --blue-framer: #0099ff; /* Framer blue color */
+  --blue-framer: rgb(12, 64, 255); /* Framer blue color */
   --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --light: #ffffff;
   /*old color palet*/
