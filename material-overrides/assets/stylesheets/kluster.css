@@ -950,6 +950,23 @@ input.md-search__input[placeholder="Search"]::placeholder{
     color: var(--blue);
 }
 
+/* Content Page Buttons Styling */
+
+.md-typeset .md-button {
+  border: none;
+  border-radius: 8px;
+  background-color: var(--light-green);
+  color: var(--dark);
+  font-weight: 400;
+  padding: .625em 1em;
+}
+
+.md-typeset .md-button:hover {
+  color: var(--dark);
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
 /* Base styling for Jupyter notebook code blocks */
 .highlight-ipynb {
   background-color: var(--md-code-bg-color) !important;
