@@ -57,11 +57,11 @@ img.hero-bg {
 }
 
 a.hero-link {
-  color: var(--light);
+  color: var(--light-green);
 }
 
 .hero h1 {
-  color: var(--light-green);
+  color: var(--light);
   font-family: 'Space Grotesk';
   font-weight: 800;
   font-size: 1.5rem;
@@ -92,7 +92,7 @@ a.hero-link {
   border-radius: var(--md-border-radius);
   background-color: var(--dark);
   border: var(--md-border-width) solid var(--light-green);
-  max-width: 550px;
+  flex: 1 1 calc(33.333% - 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +113,7 @@ a.hero-link {
 }
 
 .feature-card h2 {
-  color: var(--light-green);
+  color: var(--light);
   font-weight: 800;
   font-family: 'Space Grotesk';
   margin: 0;
@@ -137,10 +137,15 @@ a.hero-link {
 }
 
 a.card-button {
-    color: var(--dark);
-    font-family: 'Space Grotesk';
-    font-weight: 800;
-    font-size: 0.8em;
+  color: var(--dark);
+  font-family: 'Space Grotesk';    
+  font-size: 0.8em;
+}
+
+a.card-button:hover {
+  color: var(--dark);
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
 }
 
 /* CTA and Buttons Styling */
@@ -149,7 +154,7 @@ h2.cta-title {
   font-family: 'Space Grotesk';
   font-weight: 800;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.25rem;
   margin: 1.5rem 0;
 }
 
@@ -165,7 +170,6 @@ h2.cta-title {
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--dark);
-  color: var(--md-default-fg-color);
   padding: 1.5rem;
   border-radius: var(--md-border-radius);
   flex: 1 1 calc(33.333% - 1rem);
@@ -186,7 +190,7 @@ h2.cta-title {
 .button-info h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
-  color: var(--light-green);
+  color: var(--light);
   font-family: 'Space Grotesk';
   font-weight: 800;
 }
@@ -195,7 +199,7 @@ h2.cta-title {
   font-family: 'Space Grotesk';
   font-weight: 300;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.05em;
   color: var(--light-green);
 }
 
@@ -204,6 +208,7 @@ h2.cta-title {
   .hero {
     min-height: 15em;
     padding: 1em;
+    margin: 0 1em 2.5em;
   }
 
   .hero h1 {
@@ -215,11 +220,7 @@ h2.cta-title {
   .feature-cards,
   .button-grid {
     flex-direction: column;
-  }
-
-  .feature-card,
-  .button-card {
-    padding: 1em;
+    margin: 0 1em;
   }
 
   .feature-card p {
