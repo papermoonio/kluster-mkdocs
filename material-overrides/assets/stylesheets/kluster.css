@@ -939,7 +939,8 @@ input.md-search__input[placeholder="Search"]::placeholder{
 }
 
 .md-typeset .grid.cards>ul>li:hover {
-  border-color: var(--light-green--lighter);
+  border-color: var(--light-green-30);
+  box-shadow: none;
 }
 
 .md-typeset .grid.cards > ul > li > hr {
