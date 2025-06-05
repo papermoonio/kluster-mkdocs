@@ -870,15 +870,15 @@ input.md-search__input[placeholder="Search"]::placeholder{
 }
 
 .md-banner .md-icon svg {
-  fill: var(--light);
+  fill: var(--light-green);
 }
 
 .md-banner .md-typeset a {
-  color: var(--mint);
+  color: var(--light-green);
 }
 
 .md-banner .md-typeset a:hover {
-  color: #b7f7d8; /* Shade of mint */
+  color: var(--blue);
 }
 
 .md-banner__inner {
