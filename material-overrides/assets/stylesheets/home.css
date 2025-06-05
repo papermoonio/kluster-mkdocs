@@ -120,6 +120,10 @@ a.hero-link {
   font-size: 1.2rem;
 }
 
+.feature-cards .feature-card:nth-child(4) .feature-header h2 {
+  padding-top: 0.4em;
+}
+
 .feature-card p {
   padding: 0.5em 1em 0;
   margin: 0.5em 0;
