@@ -1,216 +1,181 @@
 #!/usr/bin/env python3
 """
-Kluster API Specification Cleaner
+Kluster API Specification Fixer for APIMATIC
 
-This script prepares OpenAPI specifications from Kluster.ai for APIMATIC import by:
-1. Updating the server URL from platform.kluster.ai to api.kluster.ai
-2. Adding HTTP Bearer Authentication (matching APIMATIC's implementation)
-3. Adding examples to the completions endpoint
-4. Basic structural fixes for OpenAPI compatibility
+Fixes critical compatibility issues:
+1. Server URL: platform.kluster.ai → api.kluster.ai
+2. Authentication: Adds HTTP Bearer auth
+3. Enum expansion: Converts anyOf enums to simple arrays
+4. Empty models: Fixes models with no fields
 
 Usage:
-  python main.py [input_file] [output_file]
+  python fix_api.py [input_file] [output_file]
 """
 
 import sys
 import json
 import os
-import copy
 
-def fix_openapi_spec(input_path, output_path):
-    """
-    Fix an OpenAPI specification for APIMATIC import.<
+def fix_anyof_enums(spec):
+    """Convert anyOf enum structures to simple enum arrays."""
+    enums_fixed = 0
     
-    Args:
-        input_path: Path to the input OpenAPI spec file (JSON)
-        output_path: Path where the fixed OpenAPI spec will be saved
+    def process_schema(schema):
+        nonlocal enums_fixed
         
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        # Load the OpenAPI spec
-        with open(input_path, 'r') as f:
-            spec = json.load(f)
+        if not isinstance(schema, dict):
+            return
         
-        # Keep a copy of the original spec for comparison
-        original_spec = copy.deepcopy(spec)
-        
-        # 1. Fix server URLs - change platform.kluster.ai to api.kluster.ai
-        if 'servers' in spec:
-            for server in spec['servers']:
-                if 'url' in server and 'platform.kluster.ai' in server['url']:
-                    server['url'] = server['url'].replace('platform.kluster.ai', 'api.kluster.ai')
-                    print(f"✓ Changed server URL to {server['url']}")
-        
-        # 2. Add Bearer Auth security scheme (matching APIMATIC version)
-        if 'components' in spec and 'securitySchemes' in spec['components']:
-            # Replace with HTTP Bearer Authentication
-            spec['components']['securitySchemes'] = {
-                'bearerAuth': {
-                    'type': 'http',
-                    'scheme': 'bearer'
-                }
-            }
-            print("✓ Added HTTP Bearer Authentication scheme")
+        # Fix anyOf enums
+        if 'anyOf' in schema and isinstance(schema['anyOf'], list):
+            all_enums = True
+            enum_values = []
+            enum_type = None
             
-            # Add security requirement at the root level
-            spec['security'] = [
-                {'bearerAuth': []}
-            ]
-            print("✓ Added global security requirements")
-        
-        # 3. Add examples for completions endpoint
-        completions_enhanced = False
-        
-        for path, methods in spec.get('paths', {}).items():
-            # Check if this is the completions endpoint
-            is_completions_endpoint = '/v1/chat/completions' in path
+            for item in schema['anyOf']:
+                if isinstance(item, dict) and 'enum' in item and 'type' in item:
+                    if isinstance(item['enum'], list) and len(item['enum']) == 1:
+                        enum_values.append(item['enum'][0])
+                        if enum_type is None:
+                            enum_type = item['type']
+                    else:
+                        all_enums = False
+                        break
+                else:
+                    all_enums = False
+                    break
             
-            for method, operation in methods.items():
-                if not is_completions_endpoint or method != 'post':
-                    continue
-                
-                # Add specific examples for the completions endpoint
-                if 'requestBody' in operation and 'content' in operation['requestBody']:
-                    operation['requestBody']['content']['application/json']['example'] = {
-                        "stream": False,
-                        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-                        "messages": [
-                            {
-                                "role": "user",
-                                "content": "Create the ultimate breakfast sandwich."
-                            }
-                        ],
-                        "session_id": "Hew3PY-DtxzQEj1HA-Cu",
-                        "chat_id": "886713bb-b319-40ad-9f42-be79f4a4f699",
-                        "id": "e42a494c-0f39-48f5-89d7-cee39972c219"
-                    }
-                    
-                    # Add operationId for better code generation
-                    operation['operationId'] = "V1ChatCompletions_POST"
-                    completions_enhanced = True
-                    print("✓ Added examples to completions endpoint")
-                    
-                    # Add example response
-                    for status_code, response in operation.get('responses', {}).items():
-                        if status_code == '200' and 'content' in response:
-                            response['content']['application/json']['example'] = {
-                                "id": "chatcmpl-123456789",
-                                "object": "chat.completion",
-                                "created": 1677858242,
-                                "model": "gpt-3.5-turbo",
-                                "choices": [
-                                    {
-                                        "message": {
-                                            "role": "assistant",
-                                            "content": "Hello! Yes, I'd be happy to help you today. What do you need assistance with?"
-                                        },
-                                        "index": 0,
-                                        "finish_reason": "stop"
-                                    }
-                                ],
-                                "usage": {
-                                    "prompt_tokens": 23,
-                                    "completion_tokens": 17,
-                                    "total_tokens": 40
-                                }
-                            }
+            if all_enums and enum_values and enum_type:
+                del schema['anyOf']
+                schema['type'] = enum_type
+                schema['enum'] = enum_values
+                enums_fixed += 1
         
-        # 4. Basic structural fixes (minimal and non-destructive)
-        
-        # Fix schemas that have properties but no type
-        schemas_fixed = 0
-        
-        if 'components' in spec and 'schemas' in spec.get('components', {}):
-            for schema_name, schema in spec['components']['schemas'].items():
-                if 'properties' in schema and 'type' not in schema:
-                    schema['type'] = 'object'
-                    schemas_fixed += 1
-        
-        if schemas_fixed > 0:
-            print(f"✓ Fixed {schemas_fixed} schema(s) missing type")
-        
-        # Simple fix for array examples that are provided as strings
-        array_examples_fixed = 0
-        
-        # Helper function to fix array examples (simplified)
-        def fix_array_examples(obj, parent_key=None):
-            nonlocal array_examples_fixed
-            
-            if isinstance(obj, dict):
-                for key, value in list(obj.items()):
-                    # Check if this is a property that should be an array but has string example
-                    if key == 'example' and parent_key in ['errors', 'labels', 'tags'] and isinstance(value, str):
-                        # Convert string example to array example
-                        obj[key] = [value]
-                        array_examples_fixed += 1
-                    elif isinstance(value, (dict, list)):
-                        # Recursively process nested structures
-                        fix_array_examples(value, key)
-            elif isinstance(obj, list):
-                for item in obj:
-                    if isinstance(item, (dict, list)):
-                        fix_array_examples(item)
-        
-        # Process the entire spec to fix array examples
-        fix_array_examples(spec)
-        
-        if array_examples_fixed > 0:
-            print(f"✓ Fixed {array_examples_fixed} array examples with missing brackets")
-        
-        # 5. Save the fixed spec
-        with open(output_path, 'w') as f:
-            json.dump(spec, f, indent=2)
-        
-        print(f"\nFixed OpenAPI specification saved to: {output_path}")
-        
-        # Report changes made
-        if spec == original_spec:
-            print("No changes were made to the specification.")
-        else:
-            print("Changes successfully applied to the specification.")
-        
-        return True
+        # Recursively process nested schemas
+        for key in list(schema.keys()):
+            if key in ['properties', 'items', 'allOf', 'oneOf', 'anyOf']:
+                if key == 'properties' and isinstance(schema[key], dict):
+                    for prop in schema[key].values():
+                        process_schema(prop)
+                elif key == 'items':
+                    process_schema(schema[key])
+                elif isinstance(schema[key], list):
+                    for item in schema[key]:
+                        process_schema(item)
     
-    except Exception as e:
-        print(f"Error fixing OpenAPI specification: {e}")
-        return False
+    # Process all schemas
+    if 'components' in spec and 'schemas' in spec['components']:
+        for schema in spec['components']['schemas'].values():
+            process_schema(schema)
+    
+    # Process all paths
+    for path_item in spec.get('paths', {}).values():
+        for operation in path_item.values():
+            if not isinstance(operation, dict):
+                continue
+            
+            # Process parameters
+            for param in operation.get('parameters', []):
+                if 'schema' in param:
+                    process_schema(param['schema'])
+            
+            # Process request/response bodies
+            for content in ['requestBody', 'responses']:
+                if content in operation:
+                    if content == 'requestBody' and 'content' in operation[content]:
+                        for media_type in operation[content]['content'].values():
+                            if 'schema' in media_type:
+                                process_schema(media_type['schema'])
+                    elif content == 'responses':
+                        for response in operation[content].values():
+                            if 'content' in response:
+                                for media_type in response['content'].values():
+                                    if 'schema' in media_type:
+                                        process_schema(media_type['schema'])
+    
+    return enums_fixed
+
+def fix_empty_models(spec):
+    """Fix models that have no fields."""
+    models_fixed = 0
+    
+    if 'components' in spec and 'schemas' in spec.get('components', {}):
+        for schema_name, schema in spec['components']['schemas'].items():
+            if isinstance(schema, dict):
+                # Check if it's an empty object
+                if schema.get('type') == 'object' and not schema.get('properties'):
+                    if schema_name == 'LogitBias':
+                        # LogitBias is a map of token IDs to bias values
+                        spec['components']['schemas'][schema_name] = {
+                            "type": "object",
+                            "description": "Modify the likelihood of tokens appearing in the completion",
+                            "additionalProperties": {
+                                "type": "number",
+                                "minimum": -100,
+                                "maximum": 100
+                            }
+                        }
+                        models_fixed += 1
+    
+    return models_fixed
 
 def main():
-    """Main entry point for the script."""
-    # Get input and output file paths
+    # Parse arguments
     if len(sys.argv) > 2:
         input_path = sys.argv[1]
         output_path = sys.argv[2]
     elif len(sys.argv) > 1:
         input_path = sys.argv[1]
-        output_path = "fixed_" + os.path.basename(input_path)
+        output_path = "kluster_openapi_fixed.json"
     else:
         input_path = "kluster_openapi.json"
         output_path = "kluster_openapi_fixed.json"
     
-    # Check if input file exists
+    # Check input file
     if not os.path.exists(input_path):
         print(f"Error: File '{input_path}' not found")
-        print(f"Hint: Run 'python get_api_specs.py' first to download the latest API specification")
         sys.exit(1)
     
-    print(f"Processing OpenAPI specification: {input_path} → {output_path}\n")
+    print(f"Processing: {input_path} → {output_path}\n")
     
-    # Fix the OpenAPI spec
-    success = fix_openapi_spec(input_path, output_path)
+    # Load spec
+    with open(input_path, 'r') as f:
+        spec = json.load(f)
     
-    if success:
-        # Provide guidance for APIMATIC import
-        print("\nNext steps for APIMATIC import:")
-        print("1. Log in to your APIMATIC account")
-        print("2. Create a new API or update an existing API")
-        print("3. Import the fixed OpenAPI specification")
-        print("4. If import fails, check the error message for any remaining issues")
+    # 1. Fix server URL
+    if 'servers' in spec:
+        for server in spec['servers']:
+            if 'url' in server and 'platform.kluster.ai' in server['url']:
+                server['url'] = server['url'].replace('platform.kluster.ai', 'api.kluster.ai')
+                print(f"✓ Updated server URL to {server['url']}")
     
-    # Exit with appropriate status code
-    sys.exit(0 if success else 1)
+    # 2. Fix authentication
+    if 'components' in spec and 'securitySchemes' in spec['components']:
+        spec['components']['securitySchemes'] = {
+            'bearerAuth': {
+                'type': 'http',
+                'scheme': 'bearer'
+            }
+        }
+        spec['security'] = [{'bearerAuth': []}]
+        print("✓ Added Bearer authentication")
+    
+    # 3. Fix anyOf enums
+    enums_fixed = fix_anyof_enums(spec)
+    if enums_fixed > 0:
+        print(f"✓ Fixed {enums_fixed} anyOf enum structures")
+    
+    # 4. Fix empty models
+    models_fixed = fix_empty_models(spec)
+    if models_fixed > 0:
+        print(f"✓ Fixed {models_fixed} empty models")
+    
+    # Save output
+    with open(output_path, 'w') as f:
+        json.dump(spec, f, indent=2)
+    
+    print(f"\n✅ Saved to {output_path}")
+    print("\nNote: APIMATIC may show multiple message tabs for anyOf schemas - this is their default UI behavior.")
 
 if __name__ == "__main__":
     main()
