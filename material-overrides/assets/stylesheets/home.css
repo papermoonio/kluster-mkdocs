@@ -104,7 +104,7 @@ a.hero-link {
   text-align: left;
   margin: 1em 0;
   display: flex;
-  gap: 1.2em;
+  gap: 1em;
 }    
 
 .feature-card svg {
@@ -122,6 +122,10 @@ a.hero-link {
 
 .feature-cards .feature-card:nth-child(4) .feature-header h2 {
   padding-top: 0.4em;
+}
+
+.feature-cards .feature-card:nth-child(4) p {
+    margin-top: 1.2em;
 }
 
 .feature-card p {
