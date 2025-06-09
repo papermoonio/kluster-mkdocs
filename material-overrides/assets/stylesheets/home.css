@@ -28,7 +28,7 @@
 /* New hero Styling */
 .hero {
   position: relative;
-  padding: 2em 1em;
+  padding: 0.5em 1em 1em;
   color: var(--light);
   margin: 0 auto 1em;
   text-align: center;
@@ -260,15 +260,23 @@ h2.cta-title {
   }
 
   .hero h1 {
-    font-size: 1.2rem;
+    letter-spacing: -2px;
+    font-size: 2rem;
     margin-top: 0.5em;
-    margin-bottom: 1em;
+  }
+
+  .hero-sub {
+    font-size: 0.75rem;
+    max-width: 24rem;
+    padding: 0 1em;
   }
 
   .feature-cards,
   .button-grid {
     flex-direction: column;
     margin: 0 1em;
+    margin: 0 auto;
+    width: 80%;
   }
 
   .feature-card p {
