@@ -11,17 +11,14 @@
 
 {% block content %}
   <div class="hero">
-    <img src="{{ 'assets/images/testbg.png' | url }}" alt="" class="hero-bg" />
-
     <div class="hero-content">
       <h1>
-        Run and fine-tune your LLMs on 
-        <span class="hero-logo-inline">
-          <img src="{{ 'assets/images/logo.png' | url }}" alt="{k}" />
-        </span>
-        <a href="https://www.kluster.ai" target="_blank" class="hero-link">kluster.ai</a>, a<br>
-        globally distributed AI platform
+        Simplify deployments and<br />
+        management of AI workloads
       </h1>
+      <p class="hero-sub">
+        Explore how to use <a href="https://www.kluster.ai" class="hero-link" target="_blank">kluster.ai</a> to run Large Language Models on a distributed AI platform from providers all around the globe.
+      </p>
 
       <div class="button-wrapper">
         <a class="framer-Bja7l framer-1v7ikbi framer-v-1v7ikbi framer-aotcnd" 
@@ -46,50 +43,39 @@
 
   <div class="feature-cards">
     <div class="feature-card">
-      <div class="feature-header">
-        {% include ".icons/octicons/zap-16.svg" %}
-        <h2>Real-time <br /> Inference</h2>
-      </div>  
+      <h2>Real-time Inference</h2>
+      <div class="feature-divider"></div>
       <p>Instant predictions backed by autoscaling infrastructure. Built for latency-sensitive LLM applications.</p>
       <a href="get-started/start-building/real-time/" class="card-button">Learn More</a>
     </div>
 
     <div class="feature-card">
-      <div class="feature-header"> 
-        {% include ".icons/octicons/list-unordered-16.svg" %}
-        <h2>Batch<br /> Inference</h2>
-      </div> 
-        <p>Process large datasets with parallel inference at scale. Ideal for precomputing outputs or automating bulk tasks.</p>
+      <h2>Batch Inference</h2>
+      <div class="feature-divider"></div>
+      <p>Process large datasets with parallel inference at scale. Ideal for precomputing outputs or automating bulk tasks.</p>
       <a href="/get-started/start-building/batch/" class="card-button">Run Batch Job</a>
     </div>
 
     <div class="feature-card">
-      <div class="feature-header"> 
-        {% include ".icons/octicons/tools-16.svg" %}
-        <h2>Fine-Tune<br /> Models</h2>
-      </div>
+      <h2>Fine-Tune Models</h2>
+      <div class="feature-divider"></div>
       <p>Refine models with your data to reduce costs and boost efficiency without sacrificing accuracy.</p>
       <a href="/tutorials/klusterai-api/finetuning-sent-analysis/" class="card-button">Fine-Tune a Model</a>
     </div>
-        
+      
     <div class="feature-card">
-      <div class="feature-header"> 
-        {% include ".icons/octicons/codescan-checkmark-16.svg" %}
-        <h2>Verify</h2>
-      </div> 
+      <h2>Verify</h2>
+      <div class="feature-divider"></div>
       <p>Assess the quality and reliability of LLMs before taking action or showing results to users.</p>
       <a href="/get-started/verify/overview/" class="card-button">Explore Verify</a>
     </div>
   </div>
-
-  
 
   <div class="cta-section">
     <h2 class="cta-title">Built for developers by developers</h2>
 
     <div class="button-grid">
       <a href="/api-reference/reference/" class="button-card">
-        <span class="icon">{% include ".icons/octicons/code-16.svg" %}</span>
         <div class="button-info">
           <h3>API Reference</h3>
           <p>Grab your API key to build and manage on kluster.ai.</p>
@@ -97,7 +83,6 @@
       </a>
 
       <a href="/tutorials/klusterai-api/text-classification/text-classification-openai-api/" class="button-card">
-        <span class="icon">{% include ".icons/octicons/book-16.svg" %}</span>
         <div class="button-info">
           <h3>Tutorials</h3>
           <p>Follow step-by-step tutorials to build and deploy with kluster.ai.</p>
@@ -105,7 +90,6 @@
       </a>
 
       <a href="/get-started/models/" class="button-card">
-        <span class="icon">{% include ".icons/octicons/comment-discussion-16.svg" %}</span>
         <div class="button-info">
           <h3>Supported Models</h3>
           <p>Check out the latest supported LLMs and deployment-ready models.</p>
