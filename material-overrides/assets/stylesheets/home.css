@@ -50,7 +50,7 @@
 
 .hero-sub {
   font-size: 0.80rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: 'Space Grotesk';
   color: var(--light-green);
   max-width: 35rem;
@@ -121,11 +121,6 @@ a.hero-link {
   margin: 1em 0 1em;
 }
  */
-.button-wrapper {
-  display: flex;
-  width: max-content;
-  margin: 1em auto
-}
 /* Featured Card Styling */
 .feature-cards {
   display: flex;
@@ -146,29 +141,12 @@ a.hero-link {
   text-align: center;
 }
 
-.feature-header {
-  padding: 0.5em 0 0;
-  text-align: left;
-  margin: 1em 0;
-  display: flex;
-  gap: 1em;
-}    
-
-.feature-card svg {
-  fill: var(--electric-indigo);
-  width: 65px;
-}
-
 .feature-card h2 {
   color: var(--light);
   font-weight: 800;
   font-family: 'Space Grotesk';
   margin: 0;
   font-size: 1.2rem;
-}
-
-.feature-cards .feature-card:nth-child(4) .feature-header h2 {
-  padding-top: 0.4em;
 }
 
 .feature-card p {
@@ -294,16 +272,9 @@ h2.cta-title {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .feature-header {
-    margin: 0.3em 0;
-  }
 
   .feature-card h2 {
     font-size: 1rem;
-  }
-
-  .feature-card svg{
-    width: 50px;
   }
 
   .feature-card p {
