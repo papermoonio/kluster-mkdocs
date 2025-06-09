@@ -25,7 +25,54 @@
   box-shadow: unset;
 }
 
-/* Hero Section Styling */
+/* New hero Styling */
+.hero {
+  position: relative;
+  padding: 2em 1em;
+  color: var(--light);
+  margin: 0 auto 1em;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--light);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -4px;
+}
+
+.hero-sub {
+  font-size: 0.80rem;
+  margin-bottom: 2rem;
+  font-family: 'Space Grotesk';
+  color: var(--light-green);
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero a.hero-link {
+  color: var(--light-green);
+  font-weight: 700;
+}
+
+.hero a.hero-link:hover {
+    color: var(--blue);
+}
+
+.hero .button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Hero Section Styling 
 .hero {
   position: relative;
   overflow: hidden;
@@ -73,7 +120,7 @@ a.hero-link {
   
   margin: 1em 0 1em;
 }
-
+ */
 .button-wrapper {
   display: flex;
   width: max-content;
