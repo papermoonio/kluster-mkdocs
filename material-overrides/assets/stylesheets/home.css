@@ -124,34 +124,36 @@ a.hero-link {
   padding-top: 0.4em;
 }
 
-.feature-cards .feature-card:nth-child(4) p {
-    margin-top: 1.2em;
-}
-
 .feature-card p {
   padding: 0.5em 1em 0;
   margin: 0.5em 0;
   font-family: 'Space Grotesk';
-  font-size: 1.05em;
-  color: var(--light-green);
+  font-size: 1em;
+  color: var(--light);
   flex-grow: 1;
 }
 
 .card-button {
-  margin: 1em;
-  background-color: var(--light-green);
-  padding: 0.5rem 1rem;
-  border-radius: 0.63em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em;
+  background-color: var(--dark);
+  border: var(--feat-button-width) solid var(--light);
+  padding: var(--feat-button-padding);
+  border-radius: var(--feat-button-radius);
+  width: 80%;
+  height: var(--feat-button-height);
 }
 
 a.card-button {
-  color: var(--dark);
+  color: var(--light);
   font-family: 'Space Grotesk';    
   font-size: 0.8em;
 }
 
 a.card-button:hover {
-  color: var(--dark);
+  color: var(--light);
   opacity: 0.75;
   transition: opacity 0.3s ease;
 }
@@ -208,7 +210,7 @@ h2.cta-title {
   font-weight: 300;
   margin: 0;
   font-size: 1.05em;
-  color: var(--light-green);
+  color: var(--light);
 }
 
 /*Responsive Styling */
