@@ -263,7 +263,7 @@
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
   background-color: rgb(81, 0, 255);
-  border-radius: 0.5em;
+  border-radius: 8px;
   opacity: 1;
 }
 
@@ -295,7 +295,7 @@
 }
 
 .framer-follse {
-  border-radius: 0.5em;
+  border-radius: 8px;
   opacity: 1;
   flex: none;
   inset: 0;
@@ -324,7 +324,7 @@
 }
 
 .framer-1a164ql {
-  border-radius: 0.5em;
+  border-radius: 8px;
   opacity: 1;
   flex: none;
   inset: -1px;
@@ -336,11 +336,10 @@
 
 .framer-uvujyo {
   background-color: #060809; /* remenber to add as a variable later */
-  border-radius: 100px;
   transform: none;
   transform-origin: 50% 50% 0px;
   opacity: 1;
-  border-radius: 0.5em;
+  border-radius: 8px;
   opacity: 1;
   flex: none;
   inset: 1px;

@@ -72,6 +72,10 @@
   justify-content: center;
 }
 
+.hero .framer-Bja7l.framer-1v7ikbi {
+    width: 170px; /* Adjust width of framer button */
+}
+
 /* Hero Section Styling 
 .hero {
   position: relative;
@@ -125,7 +129,7 @@ a.hero-link {
 .feature-cards {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
   gap: 1em;
 }
 
@@ -142,17 +146,26 @@ a.hero-link {
 }
 
 .feature-card h2 {
+  padding: 1em 0 0.5em;
   color: var(--light);
   font-weight: 800;
   font-family: 'Space Grotesk';
-  margin: 0;
+  margin: auto;
   font-size: 1.2rem;
+}
+
+.feature-divider {
+  width: 80%;
+  height: 1px;
+  background-color: var(--light);
+  margin: 0.5em 0;
 }
 
 .feature-card p {
   padding: 0.5em 1em 0;
-  margin: 0.5em 0;
+  margin: 0.5em 1em 0;
   font-family: 'Space Grotesk';
+  text-align: left;
   font-size: 1em;
   color: var(--light);
   flex-grow: 1;
