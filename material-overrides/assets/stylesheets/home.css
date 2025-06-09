@@ -292,7 +292,65 @@ h2.cta-title {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 999px) and (min-width: 768px) {
+    .hero {
+    padding: 1.5em 2em;
+    margin: 0 auto 2em;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.8rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    flex: 1 1 calc(50% - 1rem); 
+    max-width: 340px;
+  }
+
+  .feature-cards-wrapper {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .hero {
+    padding: 1.5em 2em;
+    margin: 0 auto 2em;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.8rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-cards,
+  .button-grid {
+    margin: 0 auto 1rem;
+  }
 
   .feature-card h2 {
     font-size: 1rem;
@@ -303,10 +361,6 @@ h2.cta-title {
     line-height: 1.4;
     margin-bottom: 1em;
     padding: 0.5em;
-  }
-
-  .feature-cards .feature-card:nth-child(4) p {
-    margin-top: 1em;
   }
 
   a.card-button {
