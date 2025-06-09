@@ -24,9 +24,9 @@
   --light-green-30: #83A2AF4D;
   --dark: #060809;
   --electric-indigo: #6525f8;
-  --mint: #5feda9; /* only for banner color for links */
-  --blue: #6e8dff; /* New blue color for hover */
-  --blue-framer: rgb(12, 64, 255); /* Framer blue color */
+  --mint: #5feda9; /* only for badge external */
+  --blue: #0A40FF; /* New blue color for hover */
+  --blue-framer: #0c40ff; /* Framer blue color */
   --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --light: #ffffff;
   /*old color palet*/
@@ -382,7 +382,7 @@
 
 /* All other icons */
 .md-icon svg {
-  fill: var(--dark-green);
+  fill: var(--light-green);
 }
 
 /* Section lines */
@@ -736,20 +736,16 @@ form.md-search__form {
 }
 
 input.md-search__input[placeholder="Search"]::placeholder{
-  color: #1A2428; /* variables dont apply here */
-}
-
-.md-header__buttons > .md-header__button.md-icon[for="__search"] > svg {
-  fill: var(--light-green);
+  color: #83A2AF; /* variables dont apply here */
 }
 
 @media screen and (min-width: 60em) {
   .md-search__form {
-    background-color: var(--light-green);
+    background-color: var(--dark);
   }
 
   .md-search__form:hover {
-    background-color: var(--md-default-fg-color--lightest);
+    background-color: #0A40FF;
   }
 
   .md-search-result__meta {
@@ -767,6 +763,10 @@ input.md-search__input[placeholder="Search"]::placeholder{
 
   [dir='ltr'] .md-search__input::placeholder {
     color: var(--md-default-fg-color);
+  }
+
+  .md-search-result__list{
+    background-color: var(--dark);
   }
 
   [data-md-toggle='search']:checked ~ .md-header .button-container {
