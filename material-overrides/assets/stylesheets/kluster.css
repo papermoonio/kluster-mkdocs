@@ -176,7 +176,7 @@
 .md-tabs__link:hover {
   transform: scale(1.01);
   transition: transform 0.3s ease;
-  color: var(--blue);
+  color: var(--light-green);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
@@ -199,6 +199,10 @@
   text-decoration: none;
   transform: scale(1);
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.md-tabs__item--active > .md-tabs__link {
+  color: var(--light-green);
 }
 
 .framer-1w65mo2 {
@@ -744,7 +748,7 @@ input.md-search__input[placeholder="Search"]::placeholder{
   }
 
   .md-search__form:hover {
-    background-color: #0A40FF;
+    background-color: var(--light-green-30);
   }
 
   .md-search-result__meta {
