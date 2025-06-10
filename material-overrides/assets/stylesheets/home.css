@@ -200,7 +200,7 @@ a.button-card:hover {
 }
 
 .button-card:hover > .button-info > h3{
-  color: var(--blue-site);
+  color: var(--blue);
   opacity: 1;
 }
 
