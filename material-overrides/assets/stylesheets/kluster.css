@@ -25,7 +25,8 @@
   --dark: #060809;
   --electric-indigo: #6525f8;
   --mint: #5feda9; /* only for badge external */
-  --blue: #0A40FF; /* New blue color for hover */
+  --blue-site: #6e8dff; /* blue from the kluster.ia site */
+  --blue: #0A40FF; /* New blue color from the figma file */
   --blue-framer: #0c40ff; /* Framer blue color */
   --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --light: #ffffff;
@@ -177,7 +178,7 @@
 .md-tabs__link:hover {
   transform: scale(1.01);
   transition: transform 0.3s ease;
-  color: var(--light-green);
+  color: var(--blue-site);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
@@ -203,11 +204,11 @@
 }
 
 .md-tabs__item--active > .md-tabs__link {
-  color: var(--light-green);
+  color: var(--blue-site);
 }
 
 .framer-1w65mo2 {
-  background: var(--light-green);
+  background: var(--blue-site);
   bottom: 0;
   height: 1px;
   position: absolute;
