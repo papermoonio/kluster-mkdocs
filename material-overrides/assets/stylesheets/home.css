@@ -64,7 +64,7 @@
 }
 
 .hero a.hero-link:hover {
-    color: var(--blue);
+    color: var(--blue-site);
 }
 
 .hero .button-wrapper {
@@ -141,9 +141,9 @@ a.card-button {
 }
 
 a.card-button:hover {
+  background-color: var(--blue-site);
   color: var(--light);
-  opacity: 0.75;
-  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
 /* CTA and Buttons Styling */
@@ -175,6 +175,10 @@ h2.cta-title {
   border: var(--md-border-width) solid var(--light-green);
 }
 
+a.button-card:hover {
+  opacity: 1;
+}
+
 .button-card .icon {
   flex-shrink: 0;
 }
@@ -191,6 +195,12 @@ h2.cta-title {
   color: var(--light);
   font-family: 'Space Grotesk';
   font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+.button-card:hover > .button-info > h3{
+  color: var(--blue-site);
+  opacity: 1;
 }
 
 .button-info p {
