@@ -141,7 +141,8 @@ a.card-button {
 }
 
 a.card-button:hover {
-  background-color: var(--blue-site);
+  background-color: var(--blue);
+  border-color: var(--blue);
   color: var(--light);
   opacity: 1;
 }

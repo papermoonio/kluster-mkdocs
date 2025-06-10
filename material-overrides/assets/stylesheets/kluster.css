@@ -983,13 +983,12 @@ input.md-search__input[placeholder="Search"]::placeholder{
   color: var(--light);
   font-weight: 400;
   padding: .625em 1em;
-  height: 45px;
   border: solid 1px var(--light);
 }
 .md-typeset .md-button:hover {
-  border-color: var(--light);
+  border-color: var(--blue);
   color: var(--light);
-  background-color: var(--blue-site);
+  background-color: var(--blue);
   opacity: 1;
 }
 
