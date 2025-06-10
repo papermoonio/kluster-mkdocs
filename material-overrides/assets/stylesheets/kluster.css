@@ -89,11 +89,10 @@
 }
 
 /* General styling */
-.md-nav__link:focus,
-.md-nav__link:hover,
 .md-typeset a:focus,
 .md-typeset a:hover {
-  color: var(--blue);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
 }
 
 .md-typeset h1 {
@@ -206,7 +205,7 @@
 }
 
 .framer-1w65mo2 {
-  background: var(--blue);
+  background: var(--light-green);
   bottom: 0;
   height: 1px;
   position: absolute;
