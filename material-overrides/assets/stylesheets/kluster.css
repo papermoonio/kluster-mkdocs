@@ -23,7 +23,8 @@
   --dark: #060809;
   --electric-indigo: #6525f8;
   --mint: #5feda9; /* only for badge external */
-  --blue: #0a40ff; /* New blue color for hover */
+  --blue-site: #6e8dff; /* blue from the kluster.ia site */
+  --blue: #0a40ff; /* New blue color from the figma file */
   --blue-framer: #0c40ff; /* Framer blue color */
   --ligth-transparent-10: rgba(
     255,
@@ -183,7 +184,7 @@
 .md-tabs__link:hover {
   transform: scale(1.01);
   transition: transform 0.3s ease;
-  color: var(--light-green);
+  color: var(--blue-site);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
@@ -209,11 +210,11 @@
 }
 
 .md-tabs__item--active > .md-tabs__link {
-  color: var(--light-green);
+  color: var(--blue-site);
 }
 
 .framer-1w65mo2 {
-  background: var(--light-green);
+  background: var(--blue-site);
   bottom: 0;
   height: 1px;
   position: absolute;
@@ -1072,15 +1073,14 @@ input.md-search__input[placeholder="Search"]::placeholder {
   color: var(--light);
   font-weight: 400;
   padding: 0.625em 1em;
-  height: 45px;
   border: solid 1px var(--light);
 }
+
 .md-typeset .md-button:hover {
-  border-color: var(--light);
+  border-color: var(--blue);
   color: var(--light);
-  background-color: var(--dark);
-  opacity: 0.75;
-  transition: opacity 0.3s ease;
+  background-color: var(--blue);
+  opacity: 1;
 }
 
 /* Base styling for Jupyter notebook code blocks */
