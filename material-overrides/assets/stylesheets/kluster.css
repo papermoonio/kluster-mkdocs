@@ -926,6 +926,14 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /** API Template Styling */
+/** TODO: remove the following when new API docs are added */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary.left {
+    order: 0;
+  }
+}
+/** End TODO */
+
 .md-main__inner:has(#apimatic-widget) {
   margin-top: 0;
 }
