@@ -1019,6 +1019,11 @@ input.md-search__input[placeholder="Search"]::placeholder {
   border-radius: 8px !important;
 }
 
+/* Hide the models docs */
+li.rc-menu-item-group:has(> div[title="Models"]) {
+  display: none;
+}
+
 /** Where to Go Next Badge styling */
 .md-typeset span.badge {
   border-radius: var(--md-border-radius);
