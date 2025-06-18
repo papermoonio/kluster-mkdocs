@@ -956,7 +956,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /* Hide Title "API Code Playground" */
-.sc-jlZhew.fAxLIz {
+.sc-jlZhew.ioczOV {
   display: none !important;
 }
 
@@ -974,7 +974,13 @@ input.md-search__input[placeholder="Search"]::placeholder {
 .gCcuwK, /* Left nav */
 .kEPWjP, /* Left nav */
 .bhkPhL, /* Main window */
+.kdNlRo .rjsf-even-bg, /* Playground parameters */
 .dewhKL  /* Selected submenus */
+  .rc-menu
+  .rc-menu-item-group
+  .rc-menu-item-group-list
+  > .rc-menu-submenu.rc-menu-submenu-selected.admonition,
+.dewhKL
   .rc-menu
   .rc-menu-item-group
   .rc-menu-item-group-list
@@ -1009,6 +1015,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
   > a {
   background-color: rgb(44, 60, 67) !important;
   border-radius: 8px !important;
+}
+
+.kdNlRo .rjsf-odd-bg::before {
+  border-color: var(--md-default-bg-color) transparent transparent !important;
 }
 
 /* Hide the models docs */
