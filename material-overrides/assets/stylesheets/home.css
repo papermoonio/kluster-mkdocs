@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
 .md-content__inner {
   margin-top: 0;
 }
@@ -23,157 +25,319 @@
   box-shadow: unset;
 }
 
-/* Styles for the hero section */
+/* New hero Styling */
 .hero {
   position: relative;
-  overflow: hidden;
-  text-align: center; /* Center everything for mobile */
-}
-
-.md-typeset img.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  height: 70vh;
-  max-height: 100vh;
+  padding: 0.5em 1em 3em;
+  color: var(--light);
+  margin: 0 auto 1em;
+  text-align: center;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 75%;
-  max-width: 1000px;
-  text-align: center;
-  padding: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 0.1em;
+  color: var(--light);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  font-size: 3.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: -4px;
 }
 
-.hero p {
-  font-size: 1.125rem;
-  margin: 1em 0 1em;
+.hero-sub {
+  font-size: 0.80rem;
+  margin-bottom: 1rem;
+  font-family: 'Space Grotesk';
+  color: var(--light-green);
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.button-wrapper {
+.hero a.hero-link {
+  color: var(--light-green);
+  font-weight: 700;
+}
+
+.hero a.hero-link:hover {
+    color: var(--blue-site);
+}
+
+.hero .button-wrapper {
   display: flex;
-  width: max-content;
+  justify-content: center;
+}
+
+.hero .framer-Bja7l.framer-1v7ikbi {
+    width: 170px; /* Adjust width of framer button */
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  gap: 1em;
+}
+
+.feature-card {
+  padding: 1em;
+  border-radius: var(--md-border-radius);
+  background-color: var(--dark);
+  border: var(--md-border-width) solid var(--light-green);
+  flex: 1 1 calc(25% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-card h2 {
+  padding: 1em 0 0.5em;
+  color: var(--light);
+  font-weight: 800;
+  font-family: 'Space Grotesk';
   margin: auto;
+  font-size: 1.2rem;
 }
 
-.button-wrapper .md-button {
-  margin-right: 1em;
+.feature-divider {
+  width: 80%;
+  height: 1px;
+  background-color: var(--light);
+  margin: 0.5em 0;
 }
 
-.button-wrapper .md-button:hover {
-  background-color: --md-code-fg-color; /* Change the background color to purple */
-  color: white; /* Ensure the text color is white for better contrast */
+.feature-card p {
+  padding: 0.5em 1em 0;
+  margin: 0.5em 1em 0;
+  font-family: 'Space Grotesk';
+  text-align: left;
+  font-size: 1em;
+  color: var(--light);
+  flex-grow: 1;
 }
 
-/* Styles for the featured content section */
-.featured-content {
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em;
+  background-color: var(--dark);
+  border: var(--feat-button-width) solid var(--light);
+  padding: var(--feat-button-padding);
+  border-radius: var(--feat-button-radius);
+  width: 80%;
+  height: var(--feat-button-height);
+}
+
+a.card-button {
+  color: var(--light);
+  font-family: 'Space Grotesk';    
+  font-size: 0.8em;
+}
+
+a.card-button:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--light);
+  opacity: 1;
+}
+
+/* CTA and Buttons Styling */
+h2.cta-title {
+  color: var(--light-green);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.50rem;
+  margin: 2rem 0;
+}
+
+.button-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1em;
 }
 
-.feature {
-  text-align: center;
-  padding: 0.5rem;
-  color: var(--md-default-fg-color);
-  width: 30%;
-  max-width: 60vw;
-  border: 1.5px solid var(--md-primary-fg-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature a {
+.button-card {
   display: flex;
-  justify-content: center;
-  margin-top: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--dark);
+  padding: 1.5rem;
+  border-radius: var(--md-border-radius);
+  flex: 1 1 calc(33.333% - 1rem);
+  gap: 0.5em;
+  border: var(--md-border-width) solid var(--light-green);
 }
 
-.feature a svg {
-  margin-left: 0.3em;
+a.button-card:hover {
+  opacity: 1;
 }
 
-.feature img {
-  width: 50%;
-  max-width: 50%;
-  height: auto;
+.button-card .icon {
+  flex-shrink: 0;
 }
 
-.feature h2 {
-  color: var(--md-default-fg-color);
-  margin-top: 5px;
+.button-card .icon svg {
+  fill: var(--electric-indigo);
+  width: 36px;
+  height: 36px;
 }
 
-.feature p {
-  font-size: 0.8rem;
-  min-height: 5em;
+.button-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--light);
+  font-family: 'Space Grotesk';
+  font-weight: 800;
+  transition: color 0.3s ease;
 }
 
-/* Mobile styling */
-@media screen and (max-width: 1219px) {
-  .featured-content {
+.button-card:hover > .button-info > h3{
+  color: var(--blue);
+  opacity: 1;
+}
+
+.button-info p {
+  font-family: 'Space Grotesk';
+  font-weight: 300;
+  margin: 0;
+  font-size: 1.05em;
+  color: var(--light);
+}
+
+/*Responsive Styling */
+@media screen and (max-width: 767px) {
+  .hero {
+    min-height: 15em;
+    padding: 1em;
+    margin: 0 1em 2.5em;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+    font-size: 2rem;
+    margin-top: 0.5em;
+  }
+
+  .hero-sub {
+    font-size: 0.75rem;
+    max-width: 24rem;
+    padding: 0 1em;
+  }
+
+  .feature-cards,
+  .button-grid {
+    flex-direction: column;
+    margin: 0 1em;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  a.card-button {
+    width: 80%;
+  }
+
+  h2.cta-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
+    .hero {
+    padding: 1.5em 2em;
+    margin: 0 auto 2em;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.8rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    flex: 1 1 calc(50% - 1rem); 
+    max-width: 340px;
+  }
+
+  .feature-cards-wrapper {
     justify-content: center;
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .md-typeset img.hero-image {
-    display: none;
-  }
-
-  .feature img {
-    width: 40%;
-    max-width: 40%;
-    height: auto;
-  }
-
-  .hero-content {
-    position: relative; /* Adjust to keep it centered */
-    transform: none; /* Reset transform properties */
-    top: auto;
-    left: auto;
-    width: 90%; /* Ensure content fits well on mobile */
-    max-width: 90%; /* Ensure content fits well on mobile */
-    padding: 1rem; /* Adjust padding for mobile */
-    margin: 0 auto; /* Center the content on mobile */
-  }
-}
-
-@media screen and (max-width: 76.234375em) {
-  .md-content__inner {
-    padding: 1em;
-  }
-}
-
-@media screen and (max-width: 76.234375em) {
-  .feature {
-    width: 100%;
-  }
-
-  .button-wrapper {
-    flex-direction: column;
-  }
-
-  .button-wrapper .md-button {
-    margin: 0.5em auto;
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .hero {
+    padding: 1.5em 2em;
+    margin: 0 auto 2em;
   }
 
   .hero h1 {
-    font-size: 2em;
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+    margin-bottom: 1rem;
   }
-}
 
-.feature p a {
-  display: inline;
-  white-space: nowrap;
+  .hero-sub {
+    font-size: 0.8rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-cards,
+  .button-grid {
+    margin: 0 auto 1rem;
+  }
+
+  .feature-card h2 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.80rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  a.card-button {
+    padding: 0.4rem 1rem;
+    margin-top: auto;
+  }  
+  
+  h2.cta-title {
+    font-size: 1.5rem;
+  }
+
+  .button-info h3 {
+    font-size: 1rem;
+  }
+
+  .button-info p {
+    font-size: 0.8rem;
+  }
 }

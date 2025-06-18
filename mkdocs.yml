@@ -8,8 +8,8 @@ copyright: © 2025 kluster.ai. All rights reserved.
 theme:
   name: material
   custom_dir: material-overrides
-  favicon: assets/images/favicon-dark-mode.png
-  logo: assets/images/logo.png
+  favicon: assets/images/logo.png #test
+  logo: assets/images/logofull.png
   icon:
     edit: material/github
     admonition: 
@@ -24,6 +24,8 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.follow
+extra_javascript:
+  - js/remove-badges.js    
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
