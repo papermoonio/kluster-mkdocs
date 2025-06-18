@@ -1,6 +1,6 @@
 site_name: kluster.ai Docs
 site_url: https://docs.kluster.ai/
-home_url: https://kluster.ai/
+home_url: https://www.kluster.ai/
 home_name: kluster.ai
 site_dir: /var/www/kluster-docs-static
 docs_dir: kluster-docs
@@ -23,9 +23,7 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow
-extra_javascript:
-  - js/remove-badges.js    
+    - toc.follow    
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
@@ -65,7 +63,7 @@ extra:
   generator: !!bool false
   social:
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/klusterai
+      link: https://discord.com/invite/klusterai
       name: Discord
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/klusterai
