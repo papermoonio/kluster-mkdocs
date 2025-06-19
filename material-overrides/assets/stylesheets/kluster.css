@@ -926,42 +926,29 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /** API Template Styling */
-.md-main__inner:has(#apimatic-widget) {
+.md-main__inner:has(#scalar-api) {
   margin-top: 0;
 }
 
-#apimatic-widget > :first-child {
-  border-top: 1px solid rgb(60, 64, 67);
-}
-
-#apimatic-widget * {
+#scalar-api * {
   font-family: "Space Grotesk", sans-serif;
 }
 
-#apimatic-widget pre {
+#scalar-api pre {
   font-family: "Courier Prime", "Courier New", monospace;
 }
 
-.Sub-NavBar-Wrapper {
-  display: none !important;
-}
-
-.NavBar-Wrapper > button {
-  max-width: unset !important;
-}
-
-.bhkPhL {
-  border-left: none !important;
-  border-right: none !important;
-}
-
-/* Hide Title "API Code Playground" */
-.sc-jlZhew.fAxLIz {
-  display: none !important;
-}
-
-.app-layout-language-selector {
+#scalar-api .section-container.tag-section-container > section.section,
+#scalar-api .section-container.tag-section-container > section.section ~ button.show-more {
   display: none;
+}
+
+#scalar-api .introduction-section .section-header-label {
+  font-size: 1.5rem;
+}
+
+#scalar-api .introduction-section .introduction-description p {
+  font-size: 0.8rem !important;
 }
 
 @media screen and (min-width: 60em) {
@@ -969,46 +956,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .api-wrapper .md-sidebar--secondary:not([hidden]) {
     display: none;
   }
-}
-
-.gCcuwK, /* Left nav */
-.kEPWjP, /* Left nav */
-.bhkPhL, /* Main window */
-.dewhKL  /* Selected submenus */
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-submenu.rc-menu-submenu-selected {
-  background-color: var(--md-default-bg-color) !important;
-}
-
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item[role="menuitem"]
-  > a:hover,
-.dewhKL .rc-menu .rc-menu-item-group .rc-menu-item-selected,
-.dewhKL .rc-menu .rc-menu-item-group .rc-menu-item-active,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-submenu-active
-  > .rc-menu-submenu-title,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item.rc-menu-item-selected
-  > a:hover,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item.rc-menu-item-selected
-  > a {
-  background-color: rgb(44, 60, 67) !important;
-  border-radius: 8px !important;
 }
 
 /** Where to Go Next Badge styling */
