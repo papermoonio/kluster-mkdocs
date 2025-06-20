@@ -540,7 +540,7 @@ li > nav.md-nav[data-md-level="4"] {
 .md-typeset .tabbed-content:has(p),
 .md-typeset .tabbed-content:has(ul),
 .md-typeset .tabbed-content:has(ol) {
-  padding: 0.5em 1em;
+  padding: 0 1em;
   background: var(--green-table);
 }
 
