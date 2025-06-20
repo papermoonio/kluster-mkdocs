@@ -100,11 +100,6 @@
   transition: opacity 0.2s ease;
 }
 
-.md-typeset h2:target,
-.md-typeset h3:target {
-  scroll-margin-top: 4rem;
-}
-
 .md-typeset h1 {
   color: var(--md-default-fg-color);
 }
@@ -926,14 +921,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /** API Template Styling */
-/** TODO: remove the following when new API docs are added */
-@media screen and (min-width: 60em) {
-  .md-sidebar--secondary.left {
-    order: 0;
-  }
-}
-/** End TODO */
-
 .md-main__inner:has(#apimatic-widget) {
   margin-top: 0;
 }
@@ -964,7 +951,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /* Hide Title "API Code Playground" */
-.sc-jlZhew.fAxLIz {
+.sc-jlZhew.ioczOV {
   display: none !important;
 }
 
@@ -979,44 +966,9 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 }
 
-.gCcuwK, /* Left nav */
-.kEPWjP, /* Left nav */
-.bhkPhL, /* Main window */
-.dewhKL  /* Selected submenus */
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-submenu.rc-menu-submenu-selected {
-  background-color: var(--md-default-bg-color) !important;
-}
-
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item[role="menuitem"]
-  > a:hover,
-.dewhKL .rc-menu .rc-menu-item-group .rc-menu-item-selected,
-.dewhKL .rc-menu .rc-menu-item-group .rc-menu-item-active,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-submenu-active
-  > .rc-menu-submenu-title,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item.rc-menu-item-selected
-  > a:hover,
-.dewhKL
-  .rc-menu
-  .rc-menu-item-group
-  .rc-menu-item-group-list
-  > .rc-menu-item.rc-menu-item-selected
-  > a {
-  background-color: rgb(44, 60, 67) !important;
-  border-radius: 8px !important;
+/* Hide the models docs */
+li.rc-menu-item-group:has(> div[title="Models"]) {
+  display: none;
 }
 
 /** Where to Go Next Badge styling */
