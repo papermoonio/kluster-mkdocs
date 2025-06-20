@@ -1,12 +1,11 @@
 :root {
   /* General styles */
-  --hero-border-radius: 2rem;
-  --hero-border-width: 1px;
+  --border-radius: 0.61rem;
 
   --md-border-radius: 1.3em;
   --md-border-width: 1px;
 
-  /* Buttons styles NEED TO APPLY */
+  /* Buttons styles */
   --feat-button-radius: 0.63em;
   --feat-button-height: 45px;
   --feat-button-padding: 0.4rem 1.2rem;
@@ -26,12 +25,8 @@
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
   --blue: #0a40ff; /* New blue color from the figma file */
   --blue-framer: #0c40ff; /* Framer blue color */
-  --ligth-transparent-10: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* use for border-top on nav-links */
+  --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
+  --green-table: #38484e; /* green for table bg */
   --light: #ffffff;
   /*old color palet*/
   --off-white: #f6f6f6;
@@ -105,7 +100,7 @@
 }
 
 .md-typeset pre > code {
-  border-radius: var(--md-border-radius);
+  border-radius: var(--border-radius);
 }
 
 .md-typeset code {
@@ -532,10 +527,16 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 .md-typeset .tabbed-content {
-  background: var(--md-default-bg-color);
   border: var(--md-border-width) solid var(--dark);
   border-bottom-left-radius: var(--md-border-radius);
   border-bottom-right-radius: var(--md-border-radius);
+}
+
+.md-typeset .tabbed-content:has(p),
+.md-typeset .tabbed-content:has(ul),
+.md-typeset .tabbed-content:has(ol) {
+  padding: 0 1em;
+  background: var(--green-table);
 }
 
 .md-typeset
