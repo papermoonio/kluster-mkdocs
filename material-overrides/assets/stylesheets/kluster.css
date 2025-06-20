@@ -532,11 +532,16 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 .md-typeset .tabbed-content {
-  padding: 0.8em 1em;
-  background: var(--green-table);
   border: var(--md-border-width) solid var(--dark);
   border-bottom-left-radius: var(--md-border-radius);
   border-bottom-right-radius: var(--md-border-radius);
+}
+
+.md-typeset .tabbed-content:has(p),
+.md-typeset .tabbed-content:has(ul),
+.md-typeset .tabbed-content:has(ol) {
+  padding: 0.5em 1em;
+  background: var(--green-table);
 }
 
 .md-typeset
