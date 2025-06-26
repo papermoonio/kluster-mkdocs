@@ -1,0 +1,11 @@
+# Ignore localhost
+localhost
+
+# Ignore Google Fonts service
+https://fonts.gstatic.com/
+
+# Ignore specific API endpoint
+https://api.kluster.ai/v1*
+
+# Ignore a reference to IMAGE_NAME
+https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/IMAGE_NAME*
