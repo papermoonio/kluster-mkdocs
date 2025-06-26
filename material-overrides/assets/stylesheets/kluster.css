@@ -922,42 +922,30 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /** API Template Styling */
-.md-main__inner:has(#apimatic-widget) {
+/** API Template Styling */
+.md-main__inner:has(#scalar-api) {
   margin-top: 0;
 }
 
-#apimatic-widget > :first-child {
-  border-top: 1px solid rgb(60, 64, 67);
-}
-
-#apimatic-widget * {
+#scalar-api * {
   font-family: "Space Grotesk", sans-serif;
 }
 
-#apimatic-widget pre {
+#scalar-api pre {
   font-family: "Courier Prime", "Courier New", monospace;
 }
 
-.Sub-NavBar-Wrapper {
-  display: none !important;
-}
-
-.NavBar-Wrapper > button {
-  max-width: unset !important;
-}
-
-.bhkPhL {
-  border-left: none !important;
-  border-right: none !important;
-}
-
-/* Hide Title "API Code Playground" */
-.sc-jlZhew.ioczOV {
-  display: none !important;
-}
-
-.app-layout-language-selector {
+#scalar-api .section-container.tag-section-container > section.section,
+#scalar-api .section-container.tag-section-container > section.section ~ button.show-more {
   display: none;
+}
+
+#scalar-api .introduction-section .section-header-label {
+  font-size: 1.5rem;
+}
+
+#scalar-api .introduction-section .introduction-description p {
+  font-size: 0.8rem !important;
 }
 
 @media screen and (min-width: 60em) {
@@ -965,11 +953,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .api-wrapper .md-sidebar--secondary:not([hidden]) {
     display: none;
   }
-}
-
-/* Hide the models docs */
-li.rc-menu-item-group:has(> div[title="Models"]) {
-  display: none;
 }
 
 /** Where to Go Next Badge styling */
