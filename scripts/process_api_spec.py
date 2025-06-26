@@ -292,6 +292,45 @@ def main():
     if endpoint_tag_fixes > 0:
         print(f"✓ Updated {endpoint_tag_fixes} endpoint tags")
 
+    # 9. Remove undocumented endpoints (those without tags)
+    removed_endpoints = []
+    if "paths" in spec:
+        paths_to_remove = []
+        for path, path_obj in spec["paths"].items():
+            for method, method_obj in path_obj.items():
+                if isinstance(method_obj, dict):
+                    # Check if endpoint has no tags or empty tags
+                    if "tags" not in method_obj or not method_obj["tags"] or len(method_obj["tags"]) == 0:
+                        endpoint_info = f"{method.upper()} {path}"
+                        removed_endpoints.append(endpoint_info)
+                        # Mark the entire path for removal if all methods are undocumented
+                        if path not in paths_to_remove:
+                            # Check if any other method in this path has tags
+                            has_documented_method = False
+                            for other_method, other_method_obj in path_obj.items():
+                                if (isinstance(other_method_obj, dict) and 
+                                    "tags" in other_method_obj and 
+                                    other_method_obj["tags"] and 
+                                    len(other_method_obj["tags"]) > 0 and
+                                    other_method != method):
+                                    has_documented_method = True
+                                    break
+                            
+                            if not has_documented_method:
+                                paths_to_remove.append(path)
+                            else:
+                                # Remove just this method from the path
+                                del path_obj[method]
+        
+        # Remove paths that have no documented methods
+        for path in paths_to_remove:
+            del spec["paths"][path]
+    
+    if removed_endpoints:
+        print(f"✓ Removed {len(removed_endpoints)} undocumented endpoints")
+        for endpoint in removed_endpoints:
+            print(f"  ⚠️  Needs to be properly documented: {endpoint}")
+
     # Save output
     with open(output_path, "w") as f:
         json.dump(spec, f, indent=2)
