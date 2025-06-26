@@ -1,0 +1,64 @@
+name: Update API Specification
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run twice daily at 6:00 UTC and 18:00 UTC to check for API spec updates
+    - cron: '0 6 * * *'
+    - cron: '0 18 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-api-spec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests
+
+      - name: Fetch and process API specification
+        run: |
+          python scripts/process_api_spec.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet spec-files/kluster_openapi_fixed.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in API specification"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in API specification"
+          fi
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "🤖 Update API specification"
+          title: "Update API specification from kluster.ai API"
+          body: |
+            This PR updates the API specification with the latest changes from https://api.kluster.ai/v1/admin/openapi.json
+            
+            Changes processed by `scripts/process_api_spec.py`:
+            - Server URL updates
+            - Authentication fixes  
+            - Schema compatibility improvements
+            - Tag name formatting
+            - Naming standardization
+            
+            **This PR was automatically generated.** Please review the changes before merging.
+          branch: update-api-spec-${{ github.run_number }}
+          delete-branch: true
