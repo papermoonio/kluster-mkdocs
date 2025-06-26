@@ -922,7 +922,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /** API Template Styling */
-/** API Template Styling */
 .md-main__inner:has(#scalar-api) {
   margin-top: 0;
 }
@@ -931,21 +930,32 @@ input.md-search__input[placeholder="Search"]::placeholder {
   font-family: "Space Grotesk", sans-serif;
 }
 
-#scalar-api pre {
-  font-family: "Courier Prime", "Courier New", monospace;
-}
-
-#scalar-api .section-container.tag-section-container > section.section,
-#scalar-api .section-container.tag-section-container > section.section ~ button.show-more {
-  display: none;
+#scalar-api pre * {
+  font-family: var(--scalar-font-code);
 }
 
 #scalar-api .introduction-section .section-header-label {
   font-size: 1.5rem;
 }
 
-#scalar-api .introduction-section .introduction-description p {
+#scalar-api .operation-details > .text-ellipsis > p {
+  font-size: var(--scalar-small);
+}
+
+#scalar-api .introduction-section .introduction-description p{
   font-size: 0.8rem !important;
+}
+
+/* Remove index-like content from Introduction page */
+#scalar-api .section-container:not(:has(.introduction-section)) > section.section,
+#scalar-api .section-container.tag-section-container > section.section,
+#scalar-api .section-container.tag-section-container > section.section ~ button.show-more {
+  display: none;
+}
+
+/* Remove download spec file button */
+#scalar-api .download-container {
+  display: none;
 }
 
 @media screen and (min-width: 60em) {
