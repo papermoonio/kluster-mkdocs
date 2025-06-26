@@ -265,8 +265,6 @@ def main():
                     new_name = format_tag_name(original_name)
                     tag["name"] = new_name
 
-                    print(f"✓ Updated tag '{original_name}' to '{tag['name']}'")
-
     # 8. Update endpoint tags throughout the spec
     endpoint_tag_fixes = 0
     if "paths" in spec:
@@ -274,7 +272,6 @@ def main():
             for method, method_obj in path_obj.items():
                 if isinstance(method_obj, dict) and "tags" in method_obj:
                     if isinstance(method_obj["tags"], list):
-                        original_tags = method_obj["tags"].copy()
                         updated_tags = []
                         for tag in method_obj["tags"]:
                             if tag == "portal":
