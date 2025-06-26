@@ -3,6 +3,7 @@ localhost
 
 # Ignore Google Fonts service
 https://fonts.gstatic.com/
+https://fonts.googleapis.com/
 
 # Ignore specific API endpoint
 https://api.kluster.ai/v1*
