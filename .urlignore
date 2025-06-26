@@ -1,5 +1,6 @@
 # Ignore localhost
 localhost
+127.0.0.1
 
 # Ignore Google Fonts service
 https://fonts.gstatic.com/
