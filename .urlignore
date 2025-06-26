@@ -2,18 +2,18 @@
 localhost
 127.0.0.1
 
-# Ignore Google Fonts service
-https://fonts.gstatic.com/
-https://fonts.googleapis.com/
+# Ignore Google Fonts service and all its assets
+https://fonts.gstatic.com/**
+https://fonts.googleapis.com/**
 
-# Ignore specific API endpoint
-https://api.kluster.ai/v1*
+# Ignore specific API endpoint and all paths under it
+https://api.kluster.ai/v1**
 
-# Ignore a reference to IMAGE_NAME
-https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/IMAGE_NAME*
+# Ignore all images in the cookbook directory
+https://github.com/kluster-ai/klusterai-cookbook/blob/main/images/**
 
 # Ignore OpenAI docs, which block crawlers
-https://platform.openai.com/docs/api-reference*
+https://platform.openai.com/docs/api-reference/**
 
-# Ignore Claude download link, which blocks crawlers
-https://claude.ai/download*
+# Ignore Claude download link and any potential sub-paths
+https://claude.ai/download**
