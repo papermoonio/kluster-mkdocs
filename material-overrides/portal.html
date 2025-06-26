@@ -1,204 +1,190 @@
-{% extends "main.html" %}
-
-
-{% block scripts %}
-{{ super() }}
-  <script type="text/javascript">
-    var script = document.createElement("script");
-    script.src="https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
-    script.onload = function() {
-      APIMaticDevPortal.show(
-        {
-          "container": "apimatic-widget",
-          "portalStyle": "default",
-          "codegenApiRoutes": {
-            "docsgen": "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/docs/generated-file?template={template}",
-            "codegen": "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/sdks/generated-file?template={template}",
-            "transform": "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/specs/generated-file?format={format}",
-            "apiProxy": "https://proxy.apimatic.io/api/proxy"
+{% extends "main.html" %} {% block scripts %} {{ super() }}
+<script type="text/javascript">
+  var script = document.createElement("script");
+  script.src = "https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
+  script.onload = function () {
+    APIMaticDevPortal.show({
+      container: "apimatic-widget",
+      portalStyle: "default",
+      codegenApiRoutes: {
+        docsgen:
+          "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/docs/generated-file?template={template}",
+        codegen:
+          "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/sdks/generated-file?template={template}",
+        transform:
+          "/api/api-entities/VHDKLP6h2111aV7fMOJ5zau1HAE4f2TAVM4I2t_48X6P_sMil86mVLREYyPVkwZk/portal-artifacts/specs/generated-file?format={format}",
+        apiProxy: "https://proxy.apimatic.io/api/proxy",
+      },
+      apiKey:
+        "PkUYNyvjYA7DfFBwoKTjTIcwkDAUZrvf1BTDKAl60gn3mNM7nmrOX30P2fJ1uX-NoWLVuX0_r_XvKCqEKetuCQ**",
+      baseUrl: "https://www.apimatic.io",
+      enableExport: true,
+      renameHttpToRest: false,
+      enableConsoleCalls: true,
+      useProxyForConsoleCalls: true,
+      initialPlatform: "http_curl_v1",
+      languageSettings: {
+        http_curl_v1: {
+          disableSdkDownload: true,
+        },
+      },
+      allowedExportFormats: [
+        "openapi31json",
+        "openapi31yaml",
+        "openapi3json",
+        "openapi3yaml",
+        "swagger20",
+        "swaggeryaml",
+        "swagger10",
+        "raml",
+        "raml10",
+        "apiblueprint",
+        "insomnia",
+        "insomniayaml",
+        "wadl2009",
+        "wsdl",
+        "apimatic",
+        "postman10",
+        "postman20",
+      ],
+      theme: {
+        baseTheme: "standard",
+        colors: {
+          primaryColor: {
+            light: "#83a2af",
+            dark: "#83a2af",
           },
-          "apiKey": "PkUYNyvjYA7DfFBwoKTjTIcwkDAUZrvf1BTDKAl60gn3mNM7nmrOX30P2fJ1uX-NoWLVuX0_r_XvKCqEKetuCQ**",
-          "baseUrl": "https://www.apimatic.io",
-          "enableExport": true,
-          "renameHttpToRest": false,
-          "enableConsoleCalls": true,
-          "useProxyForConsoleCalls": true,
-          "initialPlatform": "http_curl_v1",
-          "languageSettings": {
-            "http_curl_v1": {
-              "disableSdkDownload": true
-            },
-            "python_generic_lib": {
-              "disableSdkDownload": false,
-              "sdkDownloadLink": ""
-            }
+          linkColor: {
+            light: "#83a2af",
+            dark: "#83a2af",
           },
-          "allowedExportFormats": [
-            "openapi31json",
-            "openapi31yaml",
-            "openapi3json",
-            "openapi3yaml",
-            "swagger20",
-            "swaggeryaml",
-            "swagger10",
-            "raml",
-            "raml10",
-            "apiblueprint",
-            "insomnia",
-            "insomniayaml",
-            "wadl2009",
-            "wsdl",
-            "apimatic",
-            "postman10",
-            "postman20"
-          ],
-          "theme": {
-            "baseTheme": "standard",
-            "colors": {
-              "primaryColor": {
-                "light": "#83a2af",
-                "dark": "#83a2af"
-              },
-              "linkColor": {
-                "light": "#83a2af",
-                "dark": "#83a2af"
-              }
+        },
+        colorMode: {
+          defaultMode: "dark",
+          disableSwitch: true,
+        },
+        cssStyles: {
+          headings: {
+            fontFamily: "'Rubik', sans-serif",
+            h1: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "27px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
             },
-            "colorMode": {
-              "defaultMode": "dark",
-              "disableSwitch": true
+            h2: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "24px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
             },
-            "cssStyles": {
-              "headings": {
-                "fontFamily": "'Rubik', sans-serif",
-                "h1": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "27px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                },
-                "h2": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "24px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                },
-                "h3": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "21.36px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                },
-                "h4": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "18px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                },
-                "h5": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "16px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                },
-                "h6": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "15px",
-                  "fontWeight": "500",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.3"
-                }
-              },
-              "body": {
-                "fontFamily": "'Rubik', sans-serif",
-                "text1": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "15px",
-                  "fontWeight": "400",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.78"
-                },
-                "text2": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "13.33px",
-                  "fontWeight": "400",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.5"
-                },
-                "text3": {
-                  "fontFamily": "'Rubik', sans-serif",
-                  "fontSize": "11.85px",
-                  "fontWeight": "400",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.66"
-                }
-              },
-              "code": {
-                "fontFamily": "Courier Prime, monospace",
-                "blockCode": {
-                  "fontFamily": "Courier Prime, monospace",
-                  "fontSize": "15px",
-                  "fontWeight": "400",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.75"
-                },
-                "inlineCode": {
-                  "fontFamily": "Courier Prime, monospace",
-                  "fontSize": "15px",
-                  "fontWeight": "400",
-                  "fontStyle": "normal",
-                  "lineHeight": "1.75"
-                }
-              }
+            h3: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "21.36px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
             },
-            "fontSource": [
-              "https://fonts.googleapis.com/css?family='Rubik':100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
-              "https://fonts.googleapis.com/css?family=Courier+Prime:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-            ]
-          }
-        }
-      );
-    };
-    document.getElementsByTagName("head")[0].appendChild(script);
-  </script>
+            h4: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "18px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
+            },
+            h5: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "16px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
+            },
+            h6: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "15px",
+              fontWeight: "500",
+              fontStyle: "normal",
+              lineHeight: "1.3",
+            },
+          },
+          body: {
+            fontFamily: "'Rubik', sans-serif",
+            text1: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "15px",
+              fontWeight: "400",
+              fontStyle: "normal",
+              lineHeight: "1.78",
+            },
+            text2: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "13.33px",
+              fontWeight: "400",
+              fontStyle: "normal",
+              lineHeight: "1.5",
+            },
+            text3: {
+              fontFamily: "'Rubik', sans-serif",
+              fontSize: "11.85px",
+              fontWeight: "400",
+              fontStyle: "normal",
+              lineHeight: "1.66",
+            },
+          },
+          code: {
+            fontFamily: "Courier Prime, monospace",
+            blockCode: {
+              fontFamily: "Courier Prime, monospace",
+              fontSize: "15px",
+              fontWeight: "400",
+              fontStyle: "normal",
+              lineHeight: "1.75",
+            },
+            inlineCode: {
+              fontFamily: "Courier Prime, monospace",
+              fontSize: "15px",
+              fontWeight: "400",
+              fontStyle: "normal",
+              lineHeight: "1.75",
+            },
+          },
+        },
+        fontSource: [
+          "https://fonts.googleapis.com/css?family='Rubik':100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
+          "https://fonts.googleapis.com/css?family=Courier+Prime:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i",
+        ],
+      },
+    });
+  };
+  document.getElementsByTagName("head")[0].appendChild(script);
+</script>
 
-  <script>
-    function adjustWidgetHeight() {
-      const mainWindow = document.querySelector('.md-main');
-      const apimaticWidget = document.getElementById('apimatic-widget');
-      const footer = document.querySelector('.md-footer');
-  
-      if (!mainWindow || !apimaticWidget) return;
-  
-      const mainWindowHeight = mainWindow.offsetHeight;
-      const footerHeight = footer?.offsetHeight || 0;
-      // This comes from the padding applied to the middle column of the portal
-      const paddingOffset = 40;
-      // This comes from the margin offset at the top of .md-main
-      const marginOffset = '1.5rem';
+<script>
+  function adjustWidgetHeight() {
+    const mainWindow = document.querySelector(".md-main");
+    const apimaticWidget = document.getElementById("apimatic-widget");
+    const footer = document.querySelector(".md-footer");
 
-      const height = mainWindowHeight - footerHeight + paddingOffset;
-      apimaticWidget.style.height = `calc(${height}px + ${marginOffset})`;
-    }
-  
-    document.addEventListener('DOMContentLoaded', adjustWidgetHeight);
-    window.addEventListener('resize', adjustWidgetHeight);
-  </script>
-{% endblock %}
+    if (!mainWindow || !apimaticWidget) return;
 
+    const mainWindowHeight = mainWindow.offsetHeight;
+    const footerHeight = footer?.offsetHeight || 0;
+    // This comes from the padding applied to the middle column of the portal
+    const paddingOffset = 40;
+    // This comes from the margin offset at the top of .md-main
+    const marginOffset = "1.5rem";
 
-{% block container %}
-  <div id="apimatic-widget" style="height: 75vh; width: 100vw;"></div>
-{% endblock %}
+    const height = mainWindowHeight - footerHeight + paddingOffset;
+    apimaticWidget.style.height = `calc(${height}px + ${marginOffset})`;
+  }
 
-
-{% block site_nav %}
-  <div class="api-wrapper">
-      {{ super() }}
-  </div>
+  document.addEventListener("DOMContentLoaded", adjustWidgetHeight);
+  window.addEventListener("resize", adjustWidgetHeight);
+</script>
+{% endblock %} {% block container %}
+<div id="apimatic-widget" style="height: 75vh; width: 100vw"></div>
+{% endblock %} {% block site_nav %}
+<div class="api-wrapper">{{ super() }}</div>
 {% endblock %}
