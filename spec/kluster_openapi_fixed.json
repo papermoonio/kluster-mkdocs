@@ -18,8 +18,7 @@
     "/v1/batches": {
       "post": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Schedule a new batch operation for the user.",
         "requestBody": {
@@ -313,8 +312,7 @@
       },
       "get": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Retrieves all batch operations.",
         "parameters": [
@@ -655,8 +653,7 @@
     "/v1/batches/{batchId}": {
       "get": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Retrieves a single batch operation.",
         "parameters": [
@@ -911,8 +908,7 @@
     "/v1/async-batches": {
       "get": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Redirects to the standard batches endpoint",
         "parameters": [
@@ -1253,8 +1249,7 @@
     "/v1/batches/{batchId}/cancel": {
       "post": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Cancel a batch operation",
         "parameters": [
@@ -1509,8 +1504,7 @@
     "/v1/batches/{batchId}/delete": {
       "delete": {
         "tags": [
-          "batch",
-          "portal"
+          "Batch"
         ],
         "description": "Delete a batch operation and optionally its files",
         "parameters": [
@@ -1570,8 +1564,7 @@
     "/v1/embeddings": {
       "post": {
         "tags": [
-          "embeddings",
-          "portal"
+          "Embeddings"
         ],
         "description": "Creates an embedding vector representing the input text.",
         "requestBody": {
@@ -1757,8 +1750,7 @@
     "/v1/files": {
       "post": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Uploads a file.",
         "responses": {
@@ -1817,8 +1809,7 @@
       },
       "get": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Retrieves all files.",
         "parameters": [
@@ -1988,8 +1979,7 @@
     "/v1/files/{fileId}": {
       "get": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Get file information.",
         "parameters": [
@@ -2022,8 +2012,7 @@
       },
       "delete": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Removes file.",
         "parameters": [
@@ -2090,8 +2079,7 @@
     "/v1/fine_tuning/jobs": {
       "post": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Start fine tuning.",
         "requestBody": {
@@ -2727,8 +2715,7 @@
       },
       "get": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "List fine tuning jobs.",
         "parameters": [
@@ -3369,8 +3356,7 @@
     "/v1/fine_tuning/jobs/{id}": {
       "get": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Get fine tuning job.",
         "parameters": [
@@ -3773,8 +3759,7 @@
       },
       "delete": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Delete fine tuning job.",
         "parameters": [
@@ -4179,8 +4164,7 @@
     "/v1/fine_tuning/jobs/{id}/labels": {
       "post": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Add a label to fine tuning job.",
         "requestBody": {
@@ -4603,8 +4587,7 @@
       },
       "delete": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Remove a label from fine tuning job.",
         "requestBody": {
@@ -5029,8 +5012,7 @@
     "/v1/fine_tuning/jobs/{id}/cancel": {
       "post": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Cancel fine tuning job.",
         "parameters": [
@@ -5435,8 +5417,7 @@
     "/v1/fine_tuning/jobs/{id}/events": {
       "get": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Get fine tuning job events.",
         "parameters": [
@@ -5572,8 +5553,7 @@
     "/v1/fine_tuning/jobs/{id}/checkpoints": {
       "get": {
         "tags": [
-          "fineTuning",
-          "portal"
+          "Fine tuning"
         ],
         "description": "Get fine tuning job checkpoints.",
         "parameters": [
@@ -5784,8 +5764,7 @@
     "/v1/models": {
       "get": {
         "tags": [
-          "models",
-          "portal"
+          "Models"
         ],
         "description": "Get all available supported models.",
         "parameters": [
@@ -6432,8 +6411,7 @@
     "/v1/models/{id}": {
       "get": {
         "tags": [
-          "models",
-          "portal"
+          "Models"
         ],
         "description": "Get model.",
         "parameters": [
@@ -6500,8 +6478,7 @@
       },
       "delete": {
         "tags": [
-          "models",
-          "portal"
+          "Models"
         ],
         "description": "Delete model.",
         "parameters": [
@@ -6570,8 +6547,7 @@
     "/v1/chat/completions": {
       "post": {
         "tags": [
-          "realtime",
-          "portal"
+          "Realtime"
         ],
         "description": "Submit chat completions request.",
         "requestBody": {
@@ -7508,8 +7484,7 @@
     "/v1/uploads": {
       "post": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Creates an upload.",
         "requestBody": {
@@ -7678,8 +7653,7 @@
     "/v1/uploads/{uploadId}/parts": {
       "post": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Adds part to an upload.",
         "parameters": [
@@ -7759,8 +7733,7 @@
     "/v1/uploads/{uploadId}/complete": {
       "post": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Completes an upload.",
         "requestBody": {
@@ -7953,8 +7926,7 @@
     "/v1/uploads/{uploadId}/cancel": {
       "post": {
         "tags": [
-          "files",
-          "portal"
+          "Files"
         ],
         "description": "Cancels an upload",
         "parameters": [
@@ -8107,8 +8079,7 @@
     "/v1/verify/reliability": {
       "post": {
         "tags": [
-          "realtime",
-          "portal"
+          "Realtime"
         ],
         "description": "kluster verify judge for LLM reliability. Submits hallucination detection request.",
         "requestBody": {

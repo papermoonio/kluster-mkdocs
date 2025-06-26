@@ -267,6 +267,31 @@ def main():
 
                     print(f"✓ Updated tag '{original_name}' to '{tag['name']}'")
 
+    # 8. Update endpoint tags throughout the spec
+    endpoint_tag_fixes = 0
+    if "paths" in spec:
+        for path, path_obj in spec["paths"].items():
+            for method, method_obj in path_obj.items():
+                if isinstance(method_obj, dict) and "tags" in method_obj:
+                    if isinstance(method_obj["tags"], list):
+                        original_tags = method_obj["tags"].copy()
+                        updated_tags = []
+                        for tag in method_obj["tags"]:
+                            if tag == "portal":
+                                # Remove portal tags from endpoints
+                                endpoint_tag_fixes += 1
+                                continue
+                            else:
+                                # Format other tags
+                                new_tag = format_tag_name(tag)
+                                updated_tags.append(new_tag)
+                                if new_tag != tag:
+                                    endpoint_tag_fixes += 1
+                        method_obj["tags"] = updated_tags
+    
+    if endpoint_tag_fixes > 0:
+        print(f"✓ Updated {endpoint_tag_fixes} endpoint tags")
+
     # Save output
     with open(output_path, "w") as f:
         json.dump(spec, f, indent=2)
