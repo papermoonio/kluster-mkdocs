@@ -35,7 +35,7 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet spec-files/kluster_openapi_fixed.json; then
+          if git diff --quiet spec/kluster_openapi_fixed.json; then
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "No changes detected in API specification"
           else
