@@ -252,18 +252,10 @@ def main():
     if total_fixes > 0:
         print(f"✓ Applied {total_fixes} recursive fixes (array examples, anyOf enums, naming)")
 
-    # 7. Remove "portal" tags and update tag names
+    # 7. Remove root-level tags section
     if "tags" in spec:
-        for tag in spec["tags"]:
-            if "name" in tag:
-                if tag["name"] == "portal":
-                    spec["tags"].remove(tag)
-                    print("✓ Removed 'portal' tag")
-                else:
-                    # Update tag name with proper abbreviation handling
-                    original_name = tag["name"]
-                    new_name = format_tag_name(original_name)
-                    tag["name"] = new_name
+        del spec["tags"]
+        print("✓ Removed root-level tags section")
 
     # 8. Update endpoint tags throughout the spec
     endpoint_tag_fixes = 0

@@ -8859,12 +8859,6 @@
       "description": "PRODUCTION server"
     }
   ],
-  "tags": [
-    {
-      "name": "MCP",
-      "description": "Model Context Protocol end-points"
-    }
-  ],
   "externalDocs": {
     "url": "https://docs.kluster.ai/",
     "description": "kluster.ai documentation"
