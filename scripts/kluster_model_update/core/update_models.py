@@ -48,8 +48,8 @@ MODEL_NAMES_HEADER = [
 ]
 
 COMPARISON_TABLE_HEADER = [
-    "| Model | Description | Real-time<br>inference support | Batch<br>inference support | Fine-tuning<br>support | Image<br>analysis  |",
-    "|:-----------------------------:|:-------------------------------------------------------------------:|:------------------------------:|:--------------------------:|:----------------------:|:------------------:|"
+    "| Model | Description | Real-time<br>inference | Batch<br>inference | Tools | Fine-tuning | Image<br>analysis  |",
+    "|:-----------------------------:|:-------------------------------------------------------------------:|:------------------------------:|:--------------------------:|:----------------------:|:----------------------:|:------------------:|"
 ]
 
 RATE_LIMIT_HEADER = [
@@ -129,7 +129,9 @@ def extract_model_info(models: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         
         # Determine model capabilities from API data
         capabilities = {
-            # From API: check tags for fine-tunable
+            # From API: check tools_supported boolean
+            "tools_supported": model.get("tools_supported", False)
+,            # From API: check tags for fine-tunable
             "fine_tuning": "fine-tunable" in model.get("tags", []),
             # From API: check model_purpose or vision tag
             "image_analysis": (model.get("model_purpose") == "multimodal" or 
@@ -227,8 +229,9 @@ def generate_comparison_table(models: List[Dict[str, Any]]) -> str:
         
         # Format with exact spacing to match original table
         row = (f"| **{display_name}** | {use_cases} | {check} | {check} | "
-              f"{check if capabilities['fine_tuning'] else x_mark} | "
-              f"{check if capabilities['image_analysis'] else x_mark} |")
+               f"{check if capabilities['tools_supported'] else x_mark} | "
+               f"{check if capabilities['fine_tuning'] else x_mark} | "
+               f"{check if capabilities['image_analysis'] else x_mark} |")
         table_lines.append(row)
     
     return "\n".join(table_lines)
