@@ -229,9 +229,9 @@ def generate_comparison_table(models: List[Dict[str, Any]]) -> str:
         
         # Format with exact spacing to match original table
         row = (f"| **{display_name}** | {use_cases} | {check} | {check} | "
-              f"{check if capabilities['tools_supported'] else x_mark} |"
-              f"{check if capabilities['fine_tuning'] else x_mark} | "
-              f"{check if capabilities['image_analysis'] else x_mark} |")
+               f"{check if capabilities['tools_supported'] else x_mark} | "
+               f"{check if capabilities['fine_tuning'] else x_mark} | "
+               f"{check if capabilities['image_analysis'] else x_mark} |")
         table_lines.append(row)
     
     return "\n".join(table_lines)
