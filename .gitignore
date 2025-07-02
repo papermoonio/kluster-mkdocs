@@ -3,6 +3,7 @@ venv
 .DS_Store
 kluster-docs*/
 docs*/
+site
 
 # Ignore Python bytecode
 __pycache__/
