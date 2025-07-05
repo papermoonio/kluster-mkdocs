@@ -1,12 +1,12 @@
 :root {
   /* General styles */
-  --border-radius: 0.61rem;
+  --border-radius: 10px;
 
-  --md-border-radius: 1.3em;
+  --md-border-radius: 12px;
   --md-border-width: 1px;
 
   /* Buttons styles */
-  --feat-button-radius: 0.63em;
+  --feat-button-radius: 8px;
   --feat-button-height: 45px;
   --feat-button-padding: 0.4rem 1.2rem;
   --feat-button-width: 1px;
