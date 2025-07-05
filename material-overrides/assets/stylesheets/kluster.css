@@ -687,7 +687,7 @@ li > nav.md-nav[data-md-level="4"] {
   background-color: rgb(255, 0, 0, 0.2);
   text-transform: capitalize;
   padding-left: 0.6666666667em;
-  border: 0.1px solid rgb(255, 0, 0);
+  border: 0.1px solid rgb(255 105 105);;
 }
 
 /* Add background for unsupported parameters */
@@ -704,6 +704,36 @@ li > nav.md-nav[data-md-level="4"] {
   text-transform: capitalize;
   padding-left: 0.6666666667em;
   border: 0.1px solid rgb(0, 128, 0);
+}
+
+/* Interface admonition styling */
+details.interface > summary::before {
+  display: none;
+}
+
+.md-typeset details.interface {
+  border: 1px solid var(--light-green-30);
+  box-shadow: none;
+  width: auto;
+}
+
+[dir="ltr"] .md-typeset details.interface > summary {
+  padding: 1em 0 1em 1em;
+  background-color: var(--dark);
+}
+
+.md-typeset details.interface > summary:after {
+  top: auto;
+}
+
+.md-typeset details.interface:has(~ details.interface),
+.md-typeset details.interface ~ details.interface {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.md-typeset details.interface hr {
+  border-bottom: 1px solid var(--light-green-30);
 }
 
 /* Child adomonition styling */
