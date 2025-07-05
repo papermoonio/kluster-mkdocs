@@ -744,7 +744,7 @@ form.md-search__form {
 }
 
 input.md-search__input[placeholder="Search"]::placeholder {
-  color: #83a2af; /* variables dont apply here */
+  color: var(--light-green);
 }
 
 @media screen and (min-width: 60em) {
