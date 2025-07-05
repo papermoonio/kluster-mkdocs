@@ -14,7 +14,7 @@
 
 :root,
 [data-md-color-scheme="default"] {
-  /*New Color Palet*/
+
   --dark-green: #1a2428;
   --light-green: #83a2af;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
@@ -25,40 +25,34 @@
   --mint: #5feda9; /* only for badge external */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
   --blue: #0a40ff; /* New blue color from the figma file */
-  --blue-framer: #0c40ff; /* Framer blue color */
   --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
   --green-table: #38484e; /* green for table bg */
-  --light: #ffffff;
-  /*old color palet*/
-  --off-white: #f6f6f6;
-  --platinum: #d6d8d9;
-  --alice-blue: #dbefff;
+  --light: #ffffff; 
   --vibrant-indigo: #5200ff;
   --blue-violet: #8630f3;
   --vibrant-coral: #ed7062;
-  /*--dark: #000000;*/
   --dark-transparent-70: #00000070;
 
   /* Primary color: vibrant indigo */
   --vibrant-indigo-30: #5200ff30;
-  --vibrant-indigo-70: #5200ff90;
+  --vibrant-indigo-90: #5200ff90;
 
   --md-default-bg-color: var(--dark-green);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--light-green--lighter);
   /*code variables*/
   --md-code-bg-color: #1e1e1e;
-  --md-code-fg-color: #ffffff;
+  --md-code-fg-color: var(--light);
 
   --md-code-hl-keyword-color: #62aef7;
   --md-code-hl-string-color: #b4f34a;
-  --md-code-hl-number-color: #ffffff;
-  --md-code-hl-function-color: #ffffff;
-  --md-code-hl-name-color: #ffffff;
-  --md-code-hl-constant-color: #ffffff;
+  --md-code-hl-number-color: var(--light);
+  --md-code-hl-function-color: var(--light);
+  --md-code-hl-name-color: var(--light);
+  --md-code-hl-constant-color: var(--light);
   --md-code-hl-comment-color: #7a7a7a;
-  --md-code-hl-punctuation-color: #ffffff;
-  --md-code-hl-operator-color: #ffffff;
+  --md-code-hl-punctuation-color: var(--light);
+  --md-code-hl-operator-color: #var(--light);
 
   --md-code-hl-color: #2a2a2a;
 
@@ -66,7 +60,7 @@
   --md-typeset-table-color: var(--light-green); /* Table line color */
 
   --md-primary-fg-color: var(--vibrant-indigo);
-  --md-primary-fg-color--light: var(--vibrant-indigo-70);
+  --md-primary-fg-color--light: var(--vibrant-indigo-90);
 
   --md-default-fg-color--lightest: var(--light-green--lighter);
 
