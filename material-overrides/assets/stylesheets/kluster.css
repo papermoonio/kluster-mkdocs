@@ -511,9 +511,9 @@ li > nav.md-nav[data-md-level="4"] {
   margin-bottom: 0;
   padding: 0.5em;
   width: 100%;
-  border-bottom-right-radius: 12px; /* test */
-  border-bottom-left-radius: 12px; /* test */
-  background: black; /* test */
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: var(--dark);
 }
 
 /* Tabbed Styling */
@@ -907,7 +907,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 .md-banner .md-typeset a:hover {
-  color: var(--blue);
+  color: var(--blue-site);
 }
 
 .md-banner__inner {
