@@ -1,15 +1,15 @@
 :root {
   /* General styles */
-  --border-radius: 10px;
-
   --md-border-radius: 12px;
-  --md-border-width: 1px;
+  --border-width: 1px;
 
   /* Buttons styles */
   --feat-button-radius: 8px;
   --feat-button-height: 45px;
   --feat-button-padding: 0.4rem 1.2rem;
   --feat-button-width: 1px;
+
+  /* Cards styles */
 }
 
 :root,
@@ -79,10 +79,10 @@
   --md-admonition-icon--note: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=");
 
   /*custom code admonition colors*/
-  --md-code-admo-border-color: #5ee20c;
-  --md-code-admo-title-bg: #64dd171a;
-  --md-example-admo-border-color: #9b7de5;
-  --md-example-admo-title-bg: #9b7de51a;
+  --code-admo-border-color: #5ee20c;
+  --code-admo-title-bg: #64dd171a;
+  --example-admo-border-color: #9b7de5;
+  --example-admo-title-bg: #9b7de51a;
 }
 
 /* General styling */
@@ -97,7 +97,7 @@
 }
 
 .md-typeset pre > code {
-  border-radius: var(--border-radius);
+  border-radius: 10px;
 }
 
 .md-typeset code {
@@ -390,12 +390,12 @@
 /* Section lines */
 li > nav.md-nav[data-md-level="3"],
 li > nav.md-nav[data-md-level="4"] {
-  border-left: var(--md-border-width) solid var(--md-accent-fg-color);
+  border-left: var(--border-width) solid var(--md-accent-fg-color);
 }
 
 /* Custom admonition styling */
 .md-typeset .admonition {
-  border-width: var(--md-border-width);
+  border-width: var(--border-width);
 }
 
 .md-typeset .admonition.note {
@@ -418,20 +418,19 @@ li > nav.md-nav[data-md-level="4"] {
 /* Styling for custom Admonition notes used for code */
 .md-typeset .admonition.code,
 .md-typeset details.code {
-  border-color: var(--md-code-admo-border-color);
+  border-color: var(--code-admo-border-color);
 }
 
 /* Admonition icon background color */
-/* Should be var(--md-code-admo-title-bg)*/
 .md-typeset .code > .admonition-title,
 .md-typeset .code > summary {
-  background-color: var(--md-code-admo-title-bg);
+  background-color: var(--code-admo-title-bg);
 }
 
 /* Admonition top background color */
 .md-typeset .code > .admonition-title::before,
 .md-typeset .code > summary::before {
-  background-color: var(--md-code-admo-border-color);
+  background-color: var(--code-admo-border-color);
   -webkit-mask-image: var(--md-admonition-icon--code);
   mask-image: var(--md-admonition-icon--code);
 }
@@ -439,19 +438,19 @@ li > nav.md-nav[data-md-level="4"] {
 /* Admonition styling for 'example' */
 .md-typeset .admonition.example,
 .md-typeset details.example {
-  border-color: var(--md-example-admo-border-color);
+  border-color: var(--example-admo-border-color);
 }
 
 /* Title background */
 .md-typeset .example > .admonition-title,
 .md-typeset .example > summary {
-  background-color: var(--md-example-admo-title-bg);
+  background-color: var(--example-admo-title-bg);
 }
 
 /* Icon background */
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
-  background-color: var(--md-example-admo-border-color);
+  background-color: var(--example-admo-border-color);
 }
 
 /* Styling for the Copy to Clipboard */
@@ -528,7 +527,7 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 .md-typeset .tabbed-content {
-  border: var(--md-border-width) solid var(--dark);
+  border: var(--border-width) solid var(--dark);
   border-bottom-left-radius: var(--md-border-radius);
   border-bottom-right-radius: var(--md-border-radius);
 }
@@ -1011,7 +1010,7 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 .md-typeset .grid.cards > ul > li {
   background: var(--dark);
   border-radius: var(--md-border-radius);
-  border: var(--md-border-width) solid var(--light-green-30);
+  border: var(--border-width) solid var(--light-green-30);
 }
 
 .md-typeset .grid.cards > ul > li:hover {
