@@ -15,27 +15,29 @@
 :root,
 [data-md-color-scheme="default"] {
 
+  --dark: #060809;
+  --light: #ffffff; 
+
+  /*brand colors*/
   --dark-green: #1a2428;
   --light-green: #83a2af;
+  --blue: #0a40ff; /* New blue color from the figma file */
+  --blue-site: #6e8dff; /* blue from the kluster.ia site */
+
+  --green-table: #38484e; /* green for table bg */
+  --vibrant-coral: #ed7062;
+  --blue-violet: #8630f3;
+  --electric-indigo: #6525f8;
+  --vibrant-indigo: #5200ff;
+  --mint: #5feda9; /* only for badge external */
+  --light-green--lighter: #BBCAD3;
+
+  --dark-transparent-70: #00000070;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
   --light-green-30: #83a2af4d;
-  --light-green--lighter: #BBCAD3;
-  --dark: #060809;
-  --electric-indigo: #6525f8;
-  --mint: #5feda9; /* only for badge external */
-  --blue-site: #6e8dff; /* blue from the kluster.ia site */
-  --blue: #0a40ff; /* New blue color from the figma file */
-  --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
-  --green-table: #38484e; /* green for table bg */
-  --light: #ffffff; 
-  --vibrant-indigo: #5200ff;
-  --blue-violet: #8630f3;
-  --vibrant-coral: #ed7062;
-  --dark-transparent-70: #00000070;
-
-  /* Primary color: vibrant indigo */
   --vibrant-indigo-30: #5200ff30;
   --vibrant-indigo-90: #5200ff90;
+  --ligth-transparent-10: rgba(255, 255, 255, 0.1); /* use for border-top on nav-links */
 
   --md-default-bg-color: var(--dark-green);
   --md-default-fg-color: var(--light);
@@ -79,8 +81,8 @@
   /*custom code admonition colors*/
   --md-code-admo-border-color: #5ee20c;
   --md-code-admo-title-bg: #64dd171a;
-  --md-example-admo-border-color: #9b7de5; /* violet more soft to check*/
-  --md-example-admo-title-bg: #9b7de51a; /* violet at 10%  */
+  --md-example-admo-border-color: #9b7de5;
+  --md-example-admo-title-bg: #9b7de51a;
 }
 
 /* General styling */
