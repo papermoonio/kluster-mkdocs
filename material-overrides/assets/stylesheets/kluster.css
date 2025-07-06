@@ -17,6 +17,14 @@
   /* Cards styles Where To Go Next*/
   --card-wtgn-border-color: var(--light-green-30);
   --card-wtgn-border: var(--border-width) solid var(--card-wtgn-border-color);
+
+  /* Tabs styles */
+  --tabs-border-color: var(--dark);
+  --tabs-border: var(--border-width) solid var(--tabs-border-color);
+
+  /* Table Styles */
+  --table-border-color: var(--light-green-30);
+  --table-border: var(--border-width) solid var(--table-border-color);
 }
 
 :root,
@@ -477,7 +485,7 @@ li > nav.md-nav[data-md-level="4"] {
 
 /* Styling for Tables */
 .md-typeset table:not([class]) {
-  border: 0.05rem solid var(--light-green-30);
+  border: var(--table-border);
   border-radius: var(--border-radius);
   display: inline-table;
 }
@@ -534,7 +542,7 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 .md-typeset .tabbed-content {
-  border: var(--border-width) solid var(--dark);
+  border: var(--tabs-border);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
