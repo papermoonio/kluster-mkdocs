@@ -108,6 +108,10 @@
   max-width: 66rem;
 }
 
+.md-typeset .headerlink {
+    color: var(--light-green--lighter);
+}
+
 /* Header styling */
 .md-header {
   background-color: var(--dark-green);
