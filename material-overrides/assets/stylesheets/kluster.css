@@ -1,15 +1,22 @@
 :root {
   /* General styles */
-  --md-border-radius: 12px;
+  --border-radius: 12px;
   --border-width: 1px;
 
   /* Buttons styles */
-  --feat-button-radius: 8px;
-  --feat-button-height: 45px;
-  --feat-button-padding: 0.4rem 1.2rem;
-  --feat-button-width: 1px;
+  --button-radius: 8px;
+  --button-height: 45px;
+  --button-padding: 0.4rem 1.2rem;
+  --button-border-color: var(--light);
+  --button-border: var(--border-width) solid var(--button-border-color);
 
-  /* Cards styles */
+  /* Cards styles general*/
+  --card-border-color: var(--light-green);
+  --card-border: var(--border-width) solid var(--card-border-color);
+
+  /* Cards styles Where To Go Next*/
+  --card-wtgn-border-color: var(--light-green-30);
+  --card-wtgn-border: var(--border-width) solid var(--card-wtgn-border-color);
 }
 
 :root,
@@ -54,7 +61,7 @@
   --md-code-hl-constant-color: var(--light);
   --md-code-hl-comment-color: #7a7a7a;
   --md-code-hl-punctuation-color: var(--light);
-  --md-code-hl-operator-color: #var(--light);
+  --md-code-hl-operator-color: var(--light);
 
   --md-code-hl-color: #2a2a2a;
 
@@ -259,7 +266,7 @@
   will-change: transform;
   transform: none;
   flex: none;
-  height: 45px;
+  height: var(--button-height);
   position: relative;
   width: auto;
 }
@@ -288,7 +295,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 10px;
-  height: 45px;
+  height: var(--button-height);
   justify-content: center;
   overflow: visible;
   padding: 0 20px;
@@ -471,7 +478,7 @@ li > nav.md-nav[data-md-level="4"] {
 /* Styling for Tables */
 .md-typeset table:not([class]) {
   border: 0.05rem solid var(--light-green-30);
-  border-radius: var(--md-border-radius);
+  border-radius: var(--border-radius);
   display: inline-table;
 }
 
@@ -489,10 +496,10 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 .md-typeset__table table thead th:first-child {
-  border-top-left-radius: var(--md-border-radius);
+  border-top-left-radius: var(--border-radius);
 }
 .md-typeset__table table thead th:last-child {
-  border-top-right-radius: var(--md-border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 /* Tables centered */
@@ -523,13 +530,13 @@ li > nav.md-nav[data-md-level="4"] {
 
 .md-typeset .tabbed-set {
   background: var(--dark);
-  border-radius: var(--md-border-radius);
+  border-radius: var(--border-radius);
 }
 
 .md-typeset .tabbed-content {
   border: var(--border-width) solid var(--dark);
-  border-bottom-left-radius: var(--md-border-radius);
-  border-bottom-right-radius: var(--md-border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .md-typeset .tabbed-content:has(p),
@@ -974,7 +981,7 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 
 /** Where to Go Next Badge styling */
 .md-typeset span.badge {
-  border-radius: var(--md-border-radius);
+  border-radius: var(--border-radius);
   font-size: 0.8em;
   padding: 0.2em 0.5em;
   margin-right: 0.5em;
@@ -1009,8 +1016,8 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 /* Where to go next cards styling */
 .md-typeset .grid.cards > ul > li {
   background: var(--dark);
-  border-radius: var(--md-border-radius);
-  border: var(--border-width) solid var(--light-green-30);
+  border-radius: var(--border-radius);
+  border: var(--card-wtgn-border);
 }
 
 .md-typeset .grid.cards > ul > li:hover {
@@ -1029,12 +1036,12 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 /* Content Page Buttons Styling */
 
 .md-typeset .md-button {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   background-color: var(--dark);
   color: var(--light);
   font-weight: 400;
   padding: 0.625em 1em;
-  border: solid 1px var(--light);
+  border: var(--button-border);
 }
 
 .md-typeset .md-button:hover {
