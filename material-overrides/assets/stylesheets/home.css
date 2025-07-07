@@ -154,29 +154,15 @@ h2.cta-title {
 }
 
 .button-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   background-color: var(--dark);
   padding: 1.5rem;
   border-radius: var(--border-radius);
   flex: 1 1 calc(33.333% - 1rem);
-  gap: 0.5em;
   border: var(--card-border);
 }
 
 a.button-card:hover {
   opacity: 1;
-}
-
-.button-card .icon {
-  flex-shrink: 0;
-}
-
-.button-card .icon svg {
-  fill: var(--electric-indigo);
-  width: 36px;
-  height: 36px;
 }
 
 .button-info h3 {
