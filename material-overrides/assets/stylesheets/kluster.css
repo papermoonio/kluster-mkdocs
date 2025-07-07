@@ -198,18 +198,9 @@
   font-size: 0.725rem;
   font-family: "Space Grotesk", sans-serif;
   color: var(--light-green);
-  font-weight: 400;
   margin-top: 0;
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 4px;
   opacity: 1;
-  justify-content: center;
   padding: 10px 0;
-  position: relative;
   text-decoration: none;
   transform: scale(1);
   transition: transform 0.3s ease, color 0.3s ease;
@@ -287,12 +278,12 @@
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
   .framer-1a164ql {
-  background: var(--blue-framer);
+  background: var(--blue);
 }
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
   .framer-uvujyo {
-  background-color: var(--blue-framer);
+  background-color: var(--blue);
 }
 
 .framer-Bja7l.framer-1v7ikbi {
@@ -418,7 +409,6 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 /* Admonition icon background color */
-/* Should be the same as the border color above */
 .md-typeset .note > .admonition-title:before,
 .md-typeset .note > summary:before {
   background-color: var(--md-primary-fg-color);
