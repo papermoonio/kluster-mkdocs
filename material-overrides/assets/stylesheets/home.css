@@ -43,7 +43,7 @@
 }
 
 .hero-sub {
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   font-family: 'Space Grotesk';
   color: var(--light-green);
@@ -57,7 +57,7 @@
 }
 
 .hero a.hero-link:hover {
-    color: var(--blue-site);
+  color: var(--blue-site);
 }
 
 .hero .button-wrapper {
@@ -66,7 +66,7 @@
 }
 
 .hero .framer-Bja7l.framer-1v7ikbi {
-    width: 170px; /* Adjust width of framer button */
+  width: 170px; /* Adjust width of framer button */
 }
 
 .feature-cards {
@@ -125,7 +125,7 @@
 
 a.card-button {
   color: var(--light);
-  font-family: 'Space Grotesk';    
+  font-family: 'Space Grotesk';
   font-size: 0.8em;
 }
 
@@ -142,7 +142,7 @@ h2.cta-title {
   font-family: 'Space Grotesk';
   font-weight: 800;
   text-align: center;
-  font-size: 1.50rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
 }
 
@@ -174,7 +174,7 @@ a.button-card:hover {
   transition: color 0.3s ease;
 }
 
-.button-card:hover > .button-info > h3{
+.button-card:hover > .button-info > h3 {
   color: var(--blue);
   opacity: 1;
 }
@@ -229,7 +229,7 @@ a.button-card:hover {
 }
 
 @media screen and (max-width: 999px) and (min-width: 768px) {
-    .hero {
+  .hero {
     padding: 1.5em 2em;
     margin: 0 auto 2em;
   }
@@ -255,7 +255,7 @@ a.button-card:hover {
   }
 
   .feature-card {
-    flex: 1 1 calc(50% - 1rem); 
+    flex: 1 1 calc(50% - 1rem);
     max-width: 340px;
   }
 
@@ -265,7 +265,7 @@ a.button-card:hover {
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1024px) {
-    .hero {
+  .hero {
     padding: 1.5em 2em;
     margin: 0 auto 2em;
   }
@@ -293,7 +293,7 @@ a.button-card:hover {
   }
 
   .feature-card p {
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 1em;
     padding: 0.5em;
@@ -302,8 +302,8 @@ a.button-card:hover {
   a.card-button {
     padding: 0.4rem 1rem;
     margin-top: auto;
-  }  
-  
+  }
+
   h2.cta-title {
     font-size: 1.5rem;
   }
