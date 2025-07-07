@@ -287,26 +287,17 @@
 }
 
 .framer-Bja7l.framer-1v7ikbi {
-  align-content: center;
-  align-items: center;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 10px;
   height: var(--button-height);
   justify-content: center;
   overflow: visible;
   padding: 0 20px;
   position: relative;
-  text-decoration: none;
-  width: min-content;
 }
 
 .framer-follse {
-  border-radius: 8px;
-  opacity: 1;
-  flex: none;
+  border-radius: var(--button-radius);
   inset: 0;
   mix-blend-mode: lighten;
   overflow: hidden;
@@ -333,24 +324,18 @@
 }
 
 .framer-1a164ql {
-  border-radius: 8px;
+  border-radius: var(--button-radius);
   opacity: 1;
-  flex: none;
   inset: -1px;
   overflow: hidden;
   position: absolute;
-  will-change: none, transform;
   z-index: 3;
 }
 
 .framer-uvujyo {
-  background-color: #060809; /* remenber to add as a variable later */
-  transform: none;
-  transform-origin: 50% 50% 0px;
+  background-color: var(--dark);
+  border-radius: var(--button-radius);
   opacity: 1;
-  border-radius: 8px;
-  opacity: 1;
-  flex: none;
   inset: 1px;
   overflow: hidden;
   position: absolute;
@@ -361,19 +346,12 @@
   outline: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  transform: none;
   opacity: 1;
-  -webkit-user-select: none;
-  flex: none;
-  height: auto;
   position: relative;
-  user-select: none;
   white-space: nowrap;
   width: auto;
   z-index: 4;
-  text-align: center; /* Ensures text is horizontally aligned */
+  text-align: center;
 }
 
 .framer-text {
