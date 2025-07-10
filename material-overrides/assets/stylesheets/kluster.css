@@ -47,10 +47,9 @@
  
   --info-blue-600: #0a40ff;
 
-
+  /* Other colors */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
-
-  --dark-transparent-70: #00000070;
+  --dark-transparent-70: #06080970;
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
