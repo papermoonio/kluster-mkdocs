@@ -32,6 +32,7 @@
   --primary-green-800: #1a2428;
   --primary-green-700: #28383E;
   --primary-green-600: #364B54;
+  --primary-green-500: #425C67;
   --primary-green-300: #83a2af;
   --info-blue-600: #0a40ff;
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
@@ -44,14 +45,13 @@
   --tertiary-indigo-200: #996FFB;
   --positive-mint-400: #2FF985;
 
-  --light-green--lighter: #bbcad3;
+  --primary-green-200: #ABC0C9;
   --dark-transparent-70: #00000070;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
-  --primary-green-500: #425C67;
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
-  --md-default-fg-color--light: var(--light-green--lighter);
+  --md-default-fg-color--light: var(--primary-green-200);
   /*code variables*/
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: var(--light);
@@ -74,7 +74,7 @@
   --md-primary-fg-color: var(--tertiary-indigo-400);
   --md-primary-fg-color--light: var(--tertiary-indigo-200);
 
-  --md-default-fg-color--lightest: var(--light-green--lighter);
+  --md-default-fg-color--lightest: var(--primary-green-200);
 
   --md-accent-fg-color: var(--primary-green-300);
   --md-accent-fg-color-light: var(--dark-transparent-70);
@@ -82,7 +82,7 @@
   --md-accent-bg-color: var(--tertiary-indigo-300);
 
   --md-footer-fg-color: var(--primary-green-300);
-  --md-footer-fg-color--light: var(--light-green--lighter);
+  --md-footer-fg-color--light: var(--primary-green-200);
   --md-footer-bg-color: var(--primary-green-800);
 
   /* Admonition SVGs (base64 encoded) - use Material icons */
@@ -119,7 +119,7 @@
 }
 
 .md-typeset .headerlink {
-  color: var(--light-green--lighter);
+  color: var(--primary-green-200);
 }
 
 /* Header styling */
@@ -629,7 +629,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .js .md-typeset .tabbed-labels:before {
-  background: var(--light-green--lighter);
+  background: var(--primary-green-200);
 }
 
 /* Grid styling */
@@ -1092,7 +1092,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
   border-right: 0.05rem solid var(--primary-green-500);
 }
 .jp-RenderedText.jp-OutputArea-output {
-  border: 0.5px solid var(--light-green--lighter);
+  border: 0.5px solid var(--primary-green-200);
 }
 
 .jupyter-wrapper
