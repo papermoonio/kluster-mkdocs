@@ -26,6 +26,7 @@
 :root,
 [data-md-color-scheme='default'] {
   --dark: #060809;
+  --dark-transparent-70: #06080970;
   --light: #ffffff;
 
   /* Brand colors */
@@ -49,7 +50,6 @@
 
   /* Other colors */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
-  --dark-transparent-70: #06080970;
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
