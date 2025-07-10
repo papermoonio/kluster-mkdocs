@@ -37,7 +37,7 @@
   --primary-green-600: #364B54;
   --vibrant-coral: #ed7062;
   --blue-violet: #8630f3;
-  --electric-indigo: #6525f8;
+  --tertiary-indigo-300: #6525f8;
   --vibrant-indigo: #5200ff;
   --mint: #5feda9; /* only for badge external */
   --light-green--lighter: #bbcad3;
@@ -84,7 +84,7 @@
   --md-accent-fg-color: var(--primary-green-300);
   --md-accent-fg-color-light: var(--dark-transparent-70);
   --md-accent-fg-color--transparent: var(--light-green-transparent-33);
-  --md-accent-bg-color: var(--electric-indigo);
+  --md-accent-bg-color: var(--tertiary-indigo-300);
 
   --md-footer-fg-color: var(--primary-green-300);
   --md-footer-fg-color--light: var(--light-green--lighter);
@@ -969,7 +969,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset span.badge.guide {
-  background-color: var(--electric-indigo);
+  background-color: var(--tertiary-indigo-300);
   color: var(--light);
 }
 
