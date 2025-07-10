@@ -30,29 +30,24 @@
 
   /* Brand colors */
   --primary-green-800: #1a2428;
+  --primary-green-700: #28383E;
+  --primary-green-600: #364B54;
   --primary-green-300: #83a2af;
   --info-blue-600: #0a40ff;
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
 
-  --primary-green-600: #364B54;
-  --vibrant-coral: #ed7062;
+
+  --negative-pink-700: #BA0C4B;
   --tertiary-indigo-700: #19024F;
   --tertiary-indigo-300: #6525f8;
   --tertiary-indigo-400: #4306D0;
   --tertiary-indigo-200: #996FFB;
   --positive-mint-400: #2FF985;
+
   --light-green--lighter: #bbcad3;
   --dark-transparent-70: #00000070;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
   --light-green-30: #83a2af4d;
-
-
-  --ligth-transparent-10: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* use for border-top on nav-links */
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
@@ -857,7 +852,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-nav--primary .md-nav__item {
-    border-top: 0.05rem solid var(--ligth-transparent-10);
+    border-top: 0.05rem solid var(--primary-green-700);
   }
 }
 
@@ -974,7 +969,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset span.badge.learn {
-  background-color: var(--vibrant-coral);
+  background-color: var(--negative-pink-700);
   color: var(--light);
 }
 
