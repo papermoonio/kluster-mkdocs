@@ -34,7 +34,7 @@
   --blue: #0a40ff; /* New blue color from the figma file */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
 
-  --green-table: #38484e; /* green for table bg */
+  --primary-green-600: #364B54;
   --vibrant-coral: #ed7062;
   --blue-violet: #8630f3;
   --electric-indigo: #6525f8;
@@ -519,7 +519,7 @@ li > nav.md-nav[data-md-level='4'] {
 .md-typeset .tabbed-content:has(ul),
 .md-typeset .tabbed-content:has(ol) {
   padding: 0 1em;
-  background: var(--green-table);
+  background: var(--primary-green-600);
 }
 
 .md-typeset
