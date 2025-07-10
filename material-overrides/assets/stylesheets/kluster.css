@@ -11,7 +11,7 @@
   --button-border: var(--border-width) solid var(--light);
 
   /* Cards styles general*/
-  --card-border: var(--border-width) solid var(--light-green);
+  --card-border: var(--border-width) solid var(--primary-green-300);
 
   /* Cards styles Where To Go Next*/
   --card-wtgn-border: var(--border-width) solid var(--border-color);
@@ -30,7 +30,7 @@
 
   /* Brand colors */
   --dark-green: #1a2428;
-  --light-green: #83a2af;
+  --primary-green-300: #83a2af;
   --blue: #0a40ff; /* New blue color from the figma file */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
 
@@ -73,20 +73,20 @@
 
   --md-code-hl-color: #2a2a2a;
 
-  --md-typeset-a-color: var(--light-green); /* Links in typeset content */
-  --md-typeset-table-color: var(--light-green); /* Table line color */
+  --md-typeset-a-color: var(--primary-green-300); /* Links in typeset content */
+  --md-typeset-table-color: var(--primary-green-300); /* Table line color */
 
   --md-primary-fg-color: var(--vibrant-indigo);
   --md-primary-fg-color--light: var(--vibrant-indigo-90);
 
   --md-default-fg-color--lightest: var(--light-green--lighter);
 
-  --md-accent-fg-color: var(--light-green);
+  --md-accent-fg-color: var(--primary-green-300);
   --md-accent-fg-color-light: var(--dark-transparent-70);
   --md-accent-fg-color--transparent: var(--light-green-transparent-33);
   --md-accent-bg-color: var(--electric-indigo);
 
-  --md-footer-fg-color: var(--light-green);
+  --md-footer-fg-color: var(--primary-green-300);
   --md-footer-fg-color--light: var(--light-green--lighter);
   --md-footer-bg-color: var(--dark-green);
 
@@ -143,7 +143,7 @@
 }
 
 .md-header__button[for='__drawer'] svg {
-  fill: var(--light-green);
+  fill: var(--primary-green-300);
 }
 
 /** Tabs styling (some of this is copied from kluster.ai) **/
@@ -197,7 +197,7 @@
 .md-tabs__link {
   font-size: 0.725rem;
   font-family: 'Space Grotesk', sans-serif;
-  color: var(--light-green);
+  color: var(--primary-green-300);
   margin-top: 0;
   opacity: 1;
   padding: 10px 0;
@@ -368,7 +368,7 @@
 
 /* All other icons */
 .md-icon svg {
-  fill: var(--light-green);
+  fill: var(--primary-green-300);
 }
 
 /* Section lines */
@@ -439,7 +439,7 @@ li > nav.md-nav[data-md-level='4'] {
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
 .md-clipboard {
-  color: var(--light-green);
+  color: var(--primary-green-300);
 }
 
 .md-clipboard:focus,
@@ -726,7 +726,7 @@ form.md-search__form {
 }
 
 input.md-search__input[placeholder='Search']::placeholder {
-  color: var(--light-green);
+  color: var(--primary-green-300);
 }
 
 @media screen and (min-width: 60em) {
@@ -881,11 +881,11 @@ input.md-search__input[placeholder='Search']::placeholder {
 }
 
 .md-banner .md-icon svg {
-  fill: var(--light-green);
+  fill: var(--primary-green-300);
 }
 
 .md-banner .md-typeset a {
-  color: var(--light-green);
+  color: var(--primary-green-300);
 }
 
 .md-banner .md-typeset a:hover {
@@ -1002,7 +1002,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset .grid.cards > ul > li > hr {
-  border-bottom: 0.05rem solid var(--light-green);
+  border-bottom: 0.05rem solid var(--primary-green-300);
 }
 
 .md-typeset .grid.cards > ul > li > p > a:hover {
@@ -1083,7 +1083,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .jupyter-wrapper .jp-OutputArea-output pre {
-  color: var(--light-green) !important;
+  color: var(--primary-green-300) !important;
 }
 
 .jp-CodeMirrorEditor.jp-Editor.jp-InputArea-editor {
