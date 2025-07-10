@@ -2,24 +2,25 @@
   /* General styles */
   --border-radius: 12px;
   --border-width: 1px;
+  --border-color: var(--light-green-30);
 
   /* Buttons styles */
   --button-radius: 8px;
   --button-height: 45px;
   --button-padding: 0.4rem 1.2rem;
-  --button-border: var(--border-width) solid var(--light);;
+  --button-border: var(--border-width) solid var(--light);
 
   /* Cards styles general*/
   --card-border: var(--border-width) solid var(--light-green);
 
   /* Cards styles Where To Go Next*/
-  --card-wtgn-border: var(--border-width) solid var(--light-green-30);
+  --card-wtgn-border: var(--border-width) solid var(--border-color);
 
   /* Tabs styles */
   --tabs-border: var(--border-width) solid var(--dark);
 
   /* Table Styles */
-  --table-border: var(--border-width) solid var(--light-green-30);
+  --table-border: var(--border-width) solid var(--border-color);
 }
 
 :root,
