@@ -7,24 +7,19 @@
   --button-radius: 8px;
   --button-height: 45px;
   --button-padding: 0.4rem 1.2rem;
-  --button-border-color: var(--light);
-  --button-border: var(--border-width) solid var(--button-border-color);
+  --button-border: var(--border-width) solid var(--light);;
 
   /* Cards styles general*/
-  --card-border-color: var(--light-green);
-  --card-border: var(--border-width) solid var(--card-border-color);
+  --card-border: var(--border-width) solid var(--light-green);
 
   /* Cards styles Where To Go Next*/
-  --card-wtgn-border-color: var(--light-green-30);
-  --card-wtgn-border: var(--border-width) solid var(--card-wtgn-border-color);
+  --card-wtgn-border: var(--border-width) solid var(--light-green-30);
 
   /* Tabs styles */
-  --tabs-border-color: var(--dark);
-  --tabs-border: var(--border-width) solid var(--tabs-border-color);
+  --tabs-border: var(--border-width) solid var(--dark);
 
   /* Table Styles */
-  --table-border-color: var(--light-green-30);
-  --table-border: var(--border-width) solid var(--table-border-color);
+  --table-border: var(--border-width) solid var(--light-green-30);
 }
 
 :root,
@@ -32,7 +27,7 @@
   --dark: #060809;
   --light: #ffffff;
 
-  /*brand colors*/
+  /* Brand colors */
   --dark-green: #1a2428;
   --light-green: #83a2af;
   --blue: #0a40ff; /* New blue color from the figma file */
