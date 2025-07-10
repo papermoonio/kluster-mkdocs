@@ -130,8 +130,8 @@ a.card-button {
 }
 
 a.card-button:hover {
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--info-blue-600);
+  border-color: var(--info-blue-600);
   color: var(--light);
   opacity: 1;
 }
@@ -175,7 +175,7 @@ a.button-card:hover {
 }
 
 .button-card:hover > .button-info > h3 {
-  color: var(--blue);
+  color: var(--info-blue-600);
   opacity: 1;
 }
 
