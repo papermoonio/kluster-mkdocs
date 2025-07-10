@@ -39,7 +39,7 @@
   --blue-violet: #8630f3;
   --tertiary-indigo-300: #6525f8;
   --vibrant-indigo: #5200ff;
-  --mint: #5feda9; /* only for badge external */
+  --positive-mint-400: #2FF985; /* only for badge external */
   --light-green--lighter: #bbcad3;
 
   --dark-transparent-70: #00000070;
@@ -979,7 +979,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset span.badge.external {
-  background-color: var(--mint);
+  background-color: var(--positive-mint-400);
   color: var(--dark);
 }
 
