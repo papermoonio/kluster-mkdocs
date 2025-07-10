@@ -36,17 +36,17 @@
 
   --primary-green-600: #364B54;
   --vibrant-coral: #ed7062;
-  --blue-violet: #8630f3;
+  --tertiary-indigo-700: #19024F;
   --tertiary-indigo-300: #6525f8;
-  --vibrant-indigo: #5200ff;
+  --tertiary-indigo-400: #4306D0;
+  --tertiary-indigo-200: #996FFB;
   --positive-mint-400: #2FF985; /* only for badge external */
   --light-green--lighter: #bbcad3;
-
   --dark-transparent-70: #00000070;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
   --light-green-30: #83a2af4d;
-  --vibrant-indigo-30: #5200ff30;
-  --vibrant-indigo-90: #5200ff90;
+
+
   --ligth-transparent-10: rgba(
     255,
     255,
@@ -76,8 +76,8 @@
   --md-typeset-a-color: var(--primary-green-300); /* Links in typeset content */
   --md-typeset-table-color: var(--primary-green-300); /* Table line color */
 
-  --md-primary-fg-color: var(--vibrant-indigo);
-  --md-primary-fg-color--light: var(--vibrant-indigo-90);
+  --md-primary-fg-color: var(--tertiary-indigo-400);
+  --md-primary-fg-color--light: var(--tertiary-indigo-200);
 
   --md-default-fg-color--lightest: var(--light-green--lighter);
 
@@ -395,7 +395,7 @@ li > nav.md-nav[data-md-level='4'] {
 /* Admonition top background color */
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
-  background-color: var(--vibrant-indigo-30);
+  background-color: var(--tertiary-indigo-700);
 }
 
 /* Styling for custom Admonition notes used for code */
@@ -964,7 +964,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset span.badge.tutorial {
-  background-color: var(--blue-violet);
+  background-color: var(--tertiary-indigo-200);
   color: var(--light);
 }
 
