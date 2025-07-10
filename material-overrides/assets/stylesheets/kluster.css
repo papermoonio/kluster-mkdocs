@@ -34,20 +34,23 @@
   --primary-green-600: #364B54;
   --primary-green-500: #425C67;
   --primary-green-300: #83a2af;
-  --info-blue-600: #0a40ff;
-  --blue-site: #6e8dff; /* blue from the kluster.ia site */
-
-
-  --negative-pink-700: #BA0C4B;
+  --primary-green-200: #ABC0C9;
+ 
   --tertiary-indigo-700: #19024F;
   --tertiary-indigo-300: #6525f8;
   --tertiary-indigo-400: #4306D0;
   --tertiary-indigo-200: #996FFB;
+
   --positive-mint-400: #2FF985;
 
-  --primary-green-200: #ABC0C9;
+  --negative-pink-700: #BA0C4B;
+ 
+  --info-blue-600: #0a40ff;
+
+
+  --blue-site: #6e8dff; /* blue from the kluster.ia site */
+
   --dark-transparent-70: #00000070;
-  --light-green-transparent-33: rgb(58 74 81 / 33%);
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
