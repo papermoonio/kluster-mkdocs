@@ -2,7 +2,7 @@
   /* General styles */
   --border-radius: 12px;
   --border-width: 1px;
-  --border-color: var(--light-green-30);
+  --border-color: var(--primary-green-500);
 
   /* Buttons styles */
   --button-radius: 8px;
@@ -47,7 +47,7 @@
   --light-green--lighter: #bbcad3;
   --dark-transparent-70: #00000070;
   --light-green-transparent-33: rgb(58 74 81 / 33%);
-  --light-green-30: #83a2af4d;
+  --primary-green-500: #425C67;
 
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
@@ -730,16 +730,16 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-search__form:hover {
-    background-color: var(--light-green-30);
+    background-color: var(--primary-green-500);
   }
 
   .md-search-result__meta {
-    background-color: var(--light-green-30);
+    background-color: var(--primary-green-500);
     color: var(--light);
   }
 
   .md-search-result__item {
-    box-shadow: 0 -0.05rem var(--light-green-30);
+    box-shadow: 0 -0.05rem var(--primary-green-500);
   }
 
   .md-search__input {
@@ -814,7 +814,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
     color: var(--light);
-    background-color: var(--light-green-30);
+    background-color: var(--primary-green-500);
     border-radius: 6px; /*test same as kluster web make variable later */
     padding-left: 1em;
   }
@@ -822,7 +822,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   .md-nav__list .md-nav__link:hover .md-ellipsis,
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
     color: var(--light);
-    background-color: var(--light-green-30);
+    background-color: var(--primary-green-500);
     border-radius: 6px; /*test same as kluster web make variable later */
     opacity: 1;
     padding-left: 1em;
@@ -992,7 +992,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 }
 
 .md-typeset .grid.cards > ul > li:hover {
-  border-color: var(--light-green-30);
+  border-color: var(--primary-green-500);
   box-shadow: none;
 }
 
@@ -1089,7 +1089,7 @@ li.rc-menu-item-group:has(> div[title='Models']) {
   background-color: var(--md-code-bg-color);
   color: var(--md-code-fg-color) !important;
   opacity: 1 !important;
-  border-right: 0.05rem solid var(--light-green-30);
+  border-right: 0.05rem solid var(--primary-green-500);
 }
 .jp-RenderedText.jp-OutputArea-output {
   border: 0.5px solid var(--light-green--lighter);
