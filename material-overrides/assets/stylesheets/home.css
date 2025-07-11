@@ -302,6 +302,7 @@ a.button-card:hover {
   a.card-button {
     padding: 0.4rem 1rem;
     margin-top: auto;
+    text-wrap: nowrap;
   }
 
   h2.cta-title {
