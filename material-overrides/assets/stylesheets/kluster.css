@@ -2,28 +2,11 @@
   /* General styles */
   --border-radius: 12px;
   --border-width: 1px;
-  --border-color: var(--primary-green-500);
 
   /* Buttons styles */
   --button-radius: 8px;
   --button-height: 45px;
   --button-padding: 0.4rem 1.2rem;
-  --button-border: var(--border-width) solid var(--light);
-
-  /* Cards styles general */
-  --card-border: var(--border-width) solid var(--primary-green-300);
-
-  /* Cards styles Where To Go Next */
-  --card-wtgn-border: var(--border-width) solid var(--border-color);
-
-  /* Tabs styles */
-  --tabs-border: var(--border-width) solid var(--dark);
-
-  /* Table Styles */
-  --table-border: var(--border-width) solid var(--border-color);
-
-  /* Screenshots Styles */
-  --img-border: var(--border-width) solid var(--border-color);
 }
 
 :root,
@@ -81,7 +64,6 @@
 
   --md-default-fg-color--lightest: var(--primary-green-200);
 
-  --md-accent-fg-color: var(--primary-green-300);
   --md-accent-fg-color-light: var(--dark-transparent-70);
   --md-accent-fg-color--transparent: var(--light-green-transparent-33);
   --md-accent-bg-color: var(--tertiary-indigo-300);
@@ -98,6 +80,27 @@
   --code-admo-title-bg: #64dd171a;
   --example-admo-border-color: #9b7de5;
   --example-admo-title-bg: #9b7de51a;
+
+  /* General styles */
+  --border-color: var(--primary-green-500);
+  
+  /* Buttons styles */
+  --button-border: var(--border-width) solid var(--light);
+
+  /* Cards styles general */
+  --card-border: var(--border-width) solid var(--primary-green-300);
+
+  /* Cards styles Where To Go Next */
+  --card-wtgn-border: var(--border-width) solid var(--border-color);
+
+  /* Tabs styles */
+  --tabs-border: var(--border-width) solid var(--dark);
+
+  /* Table Styles */
+  --table-border: var(--border-width) solid var(--border-color);
+
+  /* Screenshots Styles */
+  --img-border: var(--border-width) solid var(--border-color);
 }
 
 /* General styling */
