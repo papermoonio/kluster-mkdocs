@@ -10,10 +10,10 @@
   --button-padding: 0.4rem 1.2rem;
   --button-border: var(--border-width) solid var(--light);
 
-  /* Cards styles general*/
+  /* Cards styles general */
   --card-border: var(--border-width) solid var(--primary-green-300);
 
-  /* Cards styles Where To Go Next*/
+  /* Cards styles Where To Go Next */
   --card-wtgn-border: var(--border-width) solid var(--border-color);
 
   /* Tabs styles */
