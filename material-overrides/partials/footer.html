@@ -45,9 +45,14 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       {% include "partials/copyright.html" %}
-        <div class="papermoon">
-            <span>Made with 🩵 by <a href="https://papermoon.io/" target="_blank">PaperMoon</a></span>
-        </div>
+      <div class="button-wrapper">
+        <button class="md-clipboard--inline md-icon llms-full md-button" title="{{ lang.t('clipboard.copy') }}">
+          {% include ".icons/material/content-copy.svg" %} llms-full.txt
+        </button>
+      </div>
+      <div class="papermoon">
+          <span>Made with 🩵 by <a href="https://papermoon.io/" target="_blank">PaperMoon</a></span>
+      </div>
       {% if config.extra.social %}
         {% include "partials/social.html" %}
       {% endif %}
