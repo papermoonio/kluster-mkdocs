@@ -813,6 +813,43 @@ input.md-search__input[placeholder="Search"]::placeholder {
   color: var(--md-footer-fg-color);
 }
 
+/* llms-full button styling */
+
+.md-footer__buttons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  z-index: 3;
+  padding: 0.4rem;
+}
+
+.llms-copy-button {
+  min-width: max-content;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.llms-copy-button svg,
+.llms-copy-button:focus svg {
+  width: 1.25em;   
+  height: 1.25em;
+  fill: var(--md-footer-fg-color);
+  display: inline-block;
+  vertical-align: middle;
+  transition: fill 0.3s ease;
+}
+
+.llms-copy-button:hover svg {
+  fill: var(--md-footer-bg-color);
+}
+
+.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd.llms-copy-button {
+  display: flex;
+  align-items: center;
+}
+  
 
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
