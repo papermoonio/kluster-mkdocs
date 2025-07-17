@@ -813,13 +813,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
   color: var(--md-footer-fg-color);
 }
 
-.button.md-clipboard--inline.md-icon.llms-full.md-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  min-width: max-content;
-  gap: 0.5em;
-}
 
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {

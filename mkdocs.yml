@@ -23,7 +23,9 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
+    - toc.follow
+extra_javascript:
+  - js/clipboardCopy.js
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
