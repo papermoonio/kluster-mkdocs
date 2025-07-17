@@ -1,16 +1,4 @@
 :root {
-  /* General styles */
-  --border-radius: 12px;
-  --border-width: 1px;
-
-  /* Buttons styles */
-  --button-radius: 8px;
-  --button-height: 45px;
-  --button-padding: 0.4rem 1.2rem;
-}
-
-:root,
-[data-md-color-scheme='default'] {
   --dark: #060809;
   --dark-transparent-70: #06080970;
   --light: #ffffff;
@@ -37,6 +25,18 @@
   /* Other colors */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
 
+  /* General styles */
+  --border-radius: 12px;
+  --border-width: 1px;
+
+  /* Buttons styles */
+  --button-radius: 8px;
+  --button-height: 45px;
+  --button-padding: 0.4rem 1.2rem;
+}
+
+:root,
+[data-md-color-scheme='default'] {
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
