@@ -4,6 +4,8 @@
   --light: #ffffff;
 
   /* Brand colors */
+  --base-grey-50:#E9EFF1;
+
   --primary-green-800: #1a2428;
   --primary-green-700: #28383E;
   --primary-green-600: #364B54;
@@ -37,6 +39,29 @@
 
 :root,
 [data-md-color-scheme='default'] {
+  /* Fondo y texto principal */
+  --md-default-bg-color: var(--base-grey-50);
+  --md-default-fg-color: var(--dark);
+    /* Footer */
+  --md-footer-bg-color: var(--base-grey-50);
+  --md-footer-fg-color: var(--dark);
+  --md-footer-fg-color--light: var(--primary-green-500);
+
+
+  /* Links */
+  --md-typeset-a-color: #2a5bd7;
+
+  /* Código */
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #000000;
+
+  /* Color principal (botones, highlights) */
+  --md-primary-fg-color: #4306D0;
+
+
+
+}
+[data-md-color-scheme='slate'] {
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
