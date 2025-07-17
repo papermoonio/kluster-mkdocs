@@ -23,7 +23,16 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
+    - toc.follow
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
