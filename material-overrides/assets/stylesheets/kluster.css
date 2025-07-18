@@ -54,6 +54,7 @@
     /* cards */
   --card-background: var(--light);
   --card-border-color: var(--primary-green-500);
+  --divider-color: var(--dark);
   /* General */
   --font-color: var(--primary-green-500);
 
@@ -112,6 +113,7 @@
   /* Cards styles general */
   --card-background: var(--dark);
   --card-border-color: var(--primary-green-300);
+  --divider-color: var(--light);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-border: var(--border-width) solid var(--border-color);
