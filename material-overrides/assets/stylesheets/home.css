@@ -47,7 +47,7 @@
   margin-bottom: 1rem;
   font-family: 'Space Grotesk';
   color: var(--primary-green-300);
-  max-width: 35rem;
+  max-width: 24rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -144,47 +144,6 @@ h2.cta-title {
   text-align: center;
   font-size: 1.5rem;
   margin: 2rem 0;
-}
-
-.button-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1em;
-}
-
-.button-card {
-  background-color: var(--dark);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  flex: 1 1 calc(33.333% - 1rem);
-  border: var(--card-border);
-}
-
-a.button-card:hover {
-  opacity: 1;
-}
-
-.button-info h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  color: var(--light);
-  font-family: 'Space Grotesk';
-  font-weight: 800;
-  transition: color 0.3s ease;
-}
-
-.button-card:hover > .button-info > h3 {
-  color: var(--info-blue-600);
-  opacity: 1;
-}
-
-.button-info p {
-  font-family: 'Space Grotesk';
-  font-weight: 300;
-  margin: 0;
-  font-size: 1.05em;
-  color: var(--light);
 }
 
 /*Responsive Styling */
