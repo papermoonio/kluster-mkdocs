@@ -48,7 +48,8 @@ markdown_extensions:
       permalink: ＃
 plugins:
   - search
-  - awesome-pages
+  - awesome-nav
+  - glightbox
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
