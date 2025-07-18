@@ -25,8 +25,8 @@
 
 /* Hero Styling */
 .hero {
-  padding: 0.5em 1em 3em;
-  margin: 0 auto 1em;
+  padding: 0.5em 1em 2.6em;
+  margin: 1em auto 1em;
   text-align: center;
 }
 
@@ -61,6 +61,7 @@
 }
 
 .hero .button-wrapper {
+  margin: 2rem 0 0;
   display: flex;
   justify-content: center;
 }
@@ -166,12 +167,18 @@ h2.cta-title {
     padding: 0 1em;
   }
 
-  .feature-cards,
-  .button-grid {
+  .feature-cards {
     flex-direction: column;
     margin: 0 1em;
     margin: 0 auto;
     width: 90%;
+  }
+
+   .feature-card h2 {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0.75em 0 0.5em;
+    text-align: center;
   }
 
   .feature-card p {
@@ -242,8 +249,7 @@ h2.cta-title {
     margin-right: auto;
   }
 
-  .feature-cards,
-  .button-grid {
+  .feature-cards {
     margin: 0 auto 1rem;
   }
 
