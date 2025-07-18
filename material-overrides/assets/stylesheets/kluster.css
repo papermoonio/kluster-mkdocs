@@ -45,6 +45,8 @@
   /* Fondo y texto principal */
   --md-default-bg-color: var(--base-grey-50);
   --md-default-fg-color: var(--dark);
+  /* links */
+  --md-typeset-a-color: var(--primary-green-500);
     /* Footer */
   --md-footer-bg-color: var(--base-grey-50);
   --md-footer-fg-color: var(--dark);
@@ -52,9 +54,8 @@
     /* cards */
   --card-background: var(--light);
   --card-border-color: var(--primary-green-500);
-  /* CTA */
-  --cta-color: var(--primary-green-500);
-
+  /* General */
+  --font-color: var(--primary-green-500);
 
 }
 [data-md-color-scheme='slate'] {
@@ -104,7 +105,7 @@
 
   /* General styles */
   --border-color: var(--primary-green-500);
-  
+  --font-color: var(--primary-green-300);
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
 
@@ -124,8 +125,6 @@
   /* Screenshots Styles */
   --img-border: var(--border-width) solid var(--border-color);
 
-    /* CTA */
-  --cta-color: var(--primary-green-300);
 }
 
 /* General styling */
