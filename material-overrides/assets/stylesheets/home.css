@@ -79,7 +79,7 @@
 .feature-card {
   padding: 1em;
   border-radius: var(--border-radius);
-  background-color: var(--dark);
+  background-color: var(--card-background);
   border: var(--card-border);
   flex: 1 1 calc(25% - 1rem);
   display: flex;
@@ -138,7 +138,7 @@ a.card-button:hover {
 
 /* CTA and Buttons Styling */
 h2.cta-title {
-  color: var(--primary-green-300);
+  color: var(--cta-color);
   font-family: 'Space Grotesk';
   font-weight: 800;
   text-align: center;
