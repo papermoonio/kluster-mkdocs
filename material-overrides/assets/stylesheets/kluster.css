@@ -57,7 +57,11 @@
   --divider-color: var(--dark);
   /* General */
   --font-color: var(--primary-green-500);
-
+  --banner-color: var(--light);
+  --banner-background-color: var(--primary-green-500);
+  --banner-link-color: var(--primary-green-200);
+  --banner-icon-color: var(--light);
+  
 }
 [data-md-color-scheme='slate'] {
   --md-default-bg-color: var(--primary-green-800);
@@ -107,6 +111,11 @@
   /* General styles */
   --border-color: var(--primary-green-500);
   --font-color: var(--primary-green-300);
+  --banner-color: var(--light);
+  --banner-background-color: var(--dark);
+  --banner-link-color: var(--primary-green-300);
+  --banner-icon-color: var(--primary-green-300);
+  
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
 
@@ -904,17 +913,17 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 /** Announcement banner styling */
 .md-banner {
-  background-color: var(--dark);
-  color: var(--light);
+  background-color: var(--banner-background-color);
+  color: var(--banner-color);
   text-align: center;
 }
 
 .md-banner .md-icon svg {
-  fill: var(--primary-green-300);
+  fill: var(--banner-icon-color);
 }
 
 .md-banner .md-typeset a {
-  color: var(--primary-green-300);
+  color: var(--banner-link-color);
 }
 
 .md-banner .md-typeset a:hover {
