@@ -256,12 +256,4 @@ a.card-button:hover {
     margin-top: auto;
     text-wrap: nowrap;
   }
-
-  .button-info h3 {
-    font-size: 1rem;
-  }
-
-  .button-info p {
-    font-size: 0.8rem;
-  }
 }
