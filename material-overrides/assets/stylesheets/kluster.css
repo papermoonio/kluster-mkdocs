@@ -58,9 +58,15 @@
   /* General */
   --font-color: var(--primary-green-500);
   --banner-color: var(--light);
+  /* Banner */
   --banner-background-color: var(--primary-green-500);
   --banner-link-color: var(--primary-green-200);
   --banner-icon-color: var(--light);
+  /* Search */
+  --search-background-color: var(--light);
+  --search-border-color: var(--primary-green-500);
+  --search-color: var(--primary-green-500);
+  --search-result-color: var(--dark);
   
 }
 [data-md-color-scheme='slate'] {
@@ -111,10 +117,19 @@
   /* General styles */
   --border-color: var(--primary-green-500);
   --font-color: var(--primary-green-300);
+  
+  /* Banner styles */
   --banner-color: var(--light);
   --banner-background-color: var(--dark);
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
+
+  /* Search */
+  --search-background-color: var(--dark);
+  --search-border-color: var(--dark);
+  --search-color: var(--primary-green-300);
+  --search-result-color: var(--dark);
+  --search-result-bg-color: var(--dark);
   
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
@@ -764,12 +779,16 @@ form.md-search__form {
 }
 
 input.md-search__input[placeholder='Search']::placeholder {
-  color: var(--primary-green-300);
+  color: var(--search-color);
+}
+
+.md-search__icon.md-icon svg{
+  fill: var(--search-color);
 }
 
 @media screen and (min-width: 60em) {
   .md-search__form {
-    background-color: var(--dark);
+    background-color: var(--search-background-color);
   }
 
   .md-search__form:hover {
