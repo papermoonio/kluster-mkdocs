@@ -226,7 +226,7 @@
 .md-tabs__link {
   font-size: 0.725rem;
   font-family: 'Space Grotesk', sans-serif;
-  color: var(--primary-green-300);
+  color: var(--font-color);
   margin-top: 0;
   opacity: 1;
   padding: 10px 0;
