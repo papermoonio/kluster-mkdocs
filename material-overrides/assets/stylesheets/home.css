@@ -137,16 +137,6 @@ a.card-button:hover {
   opacity: 1;
 }
 
-/* CTA and Buttons Styling */
-h2.cta-title {
-  color: var(--primary-green-300);
-  font-family: 'Space Grotesk';
-  font-weight: 800;
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 2rem 0;
-}
-
 /*Responsive Styling */
 @media screen and (max-width: 767px) {
   .hero {
@@ -189,9 +179,6 @@ h2.cta-title {
     width: 80%;
   }
 
-  h2.cta-title {
-    font-size: 1.4rem;
-  }
 }
 
 @media screen and (max-width: 999px) and (min-width: 768px) {
@@ -268,10 +255,6 @@ h2.cta-title {
     padding: 0.4rem 1rem;
     margin-top: auto;
     text-wrap: nowrap;
-  }
-
-  h2.cta-title {
-    font-size: 1.5rem;
   }
 
   .button-info h3 {
