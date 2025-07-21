@@ -67,6 +67,7 @@
   --search-border-color: var(--primary-green-500);
   --search-color: var(--primary-green-500);
   --search-result-color: var(--dark);
+  --search-result-bg-color: var(--light);
   
 }
 [data-md-color-scheme='slate'] {
@@ -130,6 +131,7 @@
   --search-color: var(--primary-green-300);
   --search-result-color: var(--dark);
   --search-result-bg-color: var(--dark);
+  
   
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
@@ -813,7 +815,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-search-result__list {
-    background-color: var(--dark);
+    background-color: var(--search-result-bg-color);
   }
 
   .md-header .md-search__form {
