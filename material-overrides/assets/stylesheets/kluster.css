@@ -816,6 +816,10 @@ input.md-search__input[placeholder='Search']::placeholder {
     background-color: var(--dark);
   }
 
+  .md-header .md-search__form {
+    border: var(--border-width) solid var(--search-border-color);
+  }
+
   [data-md-toggle='search']:checked ~ .md-header .button-container {
     display: none;
     transition: display 0ms 0.25s;
@@ -829,6 +833,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   [data-md-toggle='search']:checked ~ .md-header .md-search__form {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+    border: none;
   }
 
   [data-md-toggle='search']:checked ~ .md-header .md-search__form {
