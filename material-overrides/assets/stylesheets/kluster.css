@@ -47,13 +47,13 @@
   --md-default-fg-color: var(--dark);
   /* links */
   --md-typeset-a-color: var(--primary-green-500);
-    /* Footer */
+  /* Footer */
   --md-footer-bg-color: var(--base-grey-50);
   --md-footer-fg-color: var(--dark);
   --md-footer-fg-color--light: var(--primary-green-500);
 
   --md-default-fg-color--light: var(--primary-green-500);
-    /* cards */
+  /* cards */
   --card-background: var(--light);
   --card-border-color: var(--primary-green-500);
   --divider-color: var(--dark);
