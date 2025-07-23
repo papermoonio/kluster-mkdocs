@@ -1,52 +1,236 @@
 {
   "data": [
     {
-      "key": "/getting-started/",
-      "value": "/get-started/start-building/setup/"
-    },
-    {
-      "key": "/get-started/api/",
-      "value": "/get-started/start-building/setup/"
-    },
-    {
-      "key": "/get-started/",
-      "value": "/get-started/get-api-key/"
-    },
-    {
-      "key": "/get-started/start-building/",
-      "value": "/get-started/start-building/setup/"
-    },
-    {
-      "key": "/get-started/integrations/",
-      "value": "/get-started/integrations/crewai/"
-    },
-    {
       "key": "/api-reference/",
       "value": "/api-reference/reference/"
     },
     {
-      "key": "/tutorials/klusterai-api/getting-started/",
-      "value": "/get-started/start-building/setup/"
+      "key": "/get-started/",
+      "value": "/verify/get-api-key/"
     },
     {
-      "key": "/tutorials/",
-      "value": "/tutorials/klusterai-api/text-classification-api/"
+      "key": "/get-started/api/",
+      "value": "/verify/quickstart/reliability/"
     },
     {
-      "key": "/tutorials/klusterai-api/",
-      "value": "/tutorials/klusterai-api/text-classification-api/"
+      "key": "/get-started/dedicated-deployments/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/fine-tuning/api/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/fine-tuning/overview/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/fine-tuning/platform/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/get-api-key/",
+      "value": "/verify/get-api-key/"
+    },
+    {
+      "key": "/get-started/integrations/",
+      "value": "/verify/reliability-check/workflow-integrations/"
+    },
+    {
+      "key": "/get-started/integrations/crewai/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/eliza/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/immersive-translate/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/langchain/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/litellm/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/llama-ocr/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/msty/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/pydantic/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/sillytavern/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/integrations/typingmind/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/mcp/cloud/api/",
+      "value": "/verify/mcp/cloud/api/"
+    },
+    {
+      "key": "/get-started/mcp/cloud/platform/",
+      "value": "/verify/mcp/cloud/platform/"
+    },
+    {
+      "key": "/get-started/mcp/get-started/",
+      "value": "/verify/mcp/get-started/"
+    },
+    {
+      "key": "/get-started/mcp/integrations/",
+      "value": "/verify/mcp/client-integrations/"
+    },
+    {
+      "key": "/get-started/mcp/overview/",
+      "value": "/verify/mcp/overview/"
+    },
+    {
+      "key": "/get-started/mcp/self-hosted/",
+      "value": "/verify/mcp/self-hosted/"
+    },
+    {
+      "key": "/get-started/mcp/tools/",
+      "value": "/verify/mcp/tools/"
+    },
+    {
+      "key": "/get-started/models/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/openai-compatibility/",
+      "value": "/"
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/get-started/get-api-key/"
+      "value": "/verify/get-api-key/"
+    },
+    {
+      "key": "/get-started/start-building/",
+      "value": "/verify/quickstart/reliability/"
+    },
+    {
+      "key": "/get-started/start-building/batch/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/start-building/real-time/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/start-building/setup/",
+      "value": "/"
+    },
+    {
+      "key": "/get-started/verify/overview/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/get-started/verify/reliability/chat-completion/",
+      "value": "/verify/reliability/chat-completion/"
+    },
+    {
+      "key": "/get-started/verify/reliability/overview/",
+      "value": "/verify/reliability/overview/"
+    },
+    {
+      "key": "/get-started/verify/reliability/verify-api/",
+      "value": "/verify/reliability/verify-api/"
+    },
+    {
+      "key": "/get-started/verify/reliability/workflow-integrations/",
+      "value": "/verify/reliability/workflow-integrations/"
+    },
+    {
+      "key": "/getting-started/",
+      "value": "/verify/quickstart/reliability/"
+    },
+    {
+      "key": "/tutorials/",
+      "value": "/tutorials/klusterai-api/reliability/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/",
+      "value": "/tutorials/klusterai-api/reliability/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/effective-prompt-engineering/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/finetuning-sent-analysis/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/getting-started/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/image-analysis/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/integrating-tools/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/keyword-extraction-api/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/llm-as-a-judge/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/model-comparison/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/multiple-tasks-batch-api/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/rag/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/reliability-check/",
+      "value": "/tutorials/klusterai-api/reliability/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/sentiment-analysis-api/",
+      "value": "/"
     },
     {
       "key": "/tutorials/klusterai-api/text-classification-api/",
-      "value": "/tutorials/klusterai-api/text-classification/text-classification-openai-api/"
+      "value": "/"
     },
     {
       "key": "/tutorials/klusterai-api/text-classification-curator/",
-      "value": "/tutorials/klusterai-api/text-classification/text-classification-curator/"
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/text-classification/text-classification-curator/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/text-classification/text-classification-openai-api/",
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/uploads-api/",
+      "value": "/"
     }
   ]
 }
