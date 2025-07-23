@@ -1,19 +1,15 @@
 {
   "data": [
     {
-      "key": "/getting-started/",
-      "value": "/verify/quickstart/reliability-check/"
-    },
-    {
-      "key": "/get-started/api/",
-      "value": "/verify/quickstart/reliability-check/"
+      "key": "/api-reference/",
+      "value": "/api-reference/reference/"
     },
     {
       "key": "/get-started/",
       "value": "/verify/get-api-key/"
     },
     {
-      "key": "/get-started/start-building/",
+      "key": "/get-started/api/",
       "value": "/verify/quickstart/reliability-check/"
     },
     {
@@ -21,11 +17,15 @@
       "value": "/verify/reliability-check/workflow-integrations/"
     },
     {
-      "key": "/api-reference/",
-      "value": "/api-reference/reference/"
+      "key": "/get-started/start-api/",
+      "value": "/verify/get-api-key/"
     },
     {
-      "key": "/tutorials/klusterai-api/getting-started/",
+      "key": "/get-started/start-building/",
+      "value": "/verify/quickstart/reliability-check/"
+    },
+    {
+      "key": "/getting-started/",
       "value": "/verify/quickstart/reliability-check/"
     },
     {
@@ -37,8 +37,8 @@
       "value": "/tutorials/klusterai-api/text-classification-api/"
     },
     {
-      "key": "/get-started/start-api/",
-      "value": "/verify/get-api-key/"
+      "key": "/tutorials/klusterai-api/getting-started/",
+      "value": "/verify/quickstart/reliability-check/"
     },
     {
       "key": "/tutorials/klusterai-api/text-classification-api/",
