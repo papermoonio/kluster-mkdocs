@@ -30,7 +30,7 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/verify/get-api-key/"
+      "value": "/get-api-key/"
     },
     {
       "key": "/get-started/integrations/",
@@ -114,7 +114,7 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/verify/get-api-key/"
+      "value": "/get-api-key/"
     },
     {
       "key": "/get-started/start-building/",
