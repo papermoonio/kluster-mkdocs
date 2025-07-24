@@ -416,6 +416,8 @@
 }
 
 .framer-text {
+  display: flex;
+  justify-content: center;
   color: var(--light);
   margin: 0px;
   padding: 0px;
