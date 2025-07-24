@@ -72,6 +72,22 @@
   --search-result-bg-color: var(--light);
   --search-input-bg-color: var(--light);
   --search-hover-color: var(--primary-green-200);
+
+    /*code variables*/
+  --md-code-bg-color: #1e1e1e;
+  --md-code-fg-color: var(--light);
+
+  --md-code-hl-keyword-color: #62aef7;
+  --md-code-hl-string-color: #b4f34a;
+  --md-code-hl-number-color: var(--light);
+  --md-code-hl-function-color: var(--light);
+  --md-code-hl-name-color: var(--light);
+  --md-code-hl-constant-color: var(--light);
+  --md-code-hl-comment-color: #7a7a7a;
+  --md-code-hl-punctuation-color: var(--light);
+  --md-code-hl-operator-color: var(--light);
+
+  --md-code-hl-color: #2a2a2a;
   
 }
 [data-md-color-scheme='slate'] {
