@@ -1,45 +1,61 @@
-{% extends "base.html" %} {% block styles %} {{ super() }}
-<link rel="stylesheet" href="{{ 'assets/stylesheets/kluster.css' | url }}" />
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-  rel="stylesheet"
-/>
-{% endblock %} {% block site_meta %} {{ super() }} {% if page and page.meta and
-page.meta.keywords %}
-<meta name="keywords" content="{{ page.meta.keywords }}" />
-{% endif %} {% endblock %} {%- block htmltitle -%} {%- if page.is_homepage -%}
-<title>Documentation for kluster.ai</title>
-{%- elif page and page.meta and page.meta.title -%}
-<title>{{ page.meta.title }} | {{ config.site_name }}</title>
-{%- elif page and page.title and not page.is_homepage -%}
-<title>{{ page.title }} | {{ config.site_name }}</title>
-{%- else -%}
-<title>{{ config.site_name }}</title>
-{%- endif -%} {%- endblock -%} {% block announce %}
-<p>
-  Verify service is live! Try out  
-  <a href="/get-started/verify/reliability/overview/"
-    >reliability check feature</a
-  >
-  on your prompts today!
-</p>
-{% endblock %} {%- block container -%}
-<div class="md-content" data-md-component="content">
-  {% set class = "index-page" if not page.content and not page.is_homepage %}
-  <article class="md-content__inner md-typeset {{ class }}">
-    {% block content %} {% include "partials/content.html" %} {% endblock %}
-  </article>
-</div>
-{%- endblock -%} {% block scripts %} {{ super() }}
-<script>
-  const link = document.querySelector("link[rel~='icon']");
-  if (link) {
-    const isDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    isDarkMode
-      ? (link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}")
-      : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
-  }
-</script>
+{% extends "base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/kluster.css' | url }}" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
+    rel="stylesheet"
+  />
+{% endblock %}
+
+{% block site_meta %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.keywords %}
+    <meta name="keywords" content="{{ page.meta.keywords }}" />
+  {% endif %}
+{% endblock %}
+
+{%- block htmltitle -%}
+  {%- if page.is_homepage -%}
+    <title>Documentation for kluster.ai</title>
+  {%- elif page and page.meta and page.meta.title -%}
+    <title>{{ page.meta.title }} | {{ config.site_name }}</title>
+  {%- elif page and page.title and not page.is_homepage -%}
+    <title>{{ page.title }} | {{ config.site_name }}</title>
+  {%- else -%}
+    <title>{{ config.site_name }}</title>
+  {%- endif -%}
+{%- endblock -%}
+
+{% block announce %}
+  <p>
+    Inference, Fine-Tuning & Dedicated Deployments were sunset on July 24 at 11PM ET. <a href="https://kluster.ai/blog/end-of-life-for-inference-fine-tuning-and-dedicated-deployments" target="_blank" rel="noopener">Learn more</a>.
+  </p>
+{% endblock %}
+
+{%- block container -%}
+  <div class="md-content" data-md-component="content">
+    {% set class = "index-page" if not page.content and not page.is_homepage %}
+    <article class="md-content__inner md-typeset {{ class }}">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{%- endblock -%}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    const link = document.querySelector("link[rel~='icon']");
+    if (link) {
+      const isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      isDarkMode
+        ? (link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}")
+        : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
+    }
+  </script>
 {% endblock %}

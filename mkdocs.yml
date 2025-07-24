@@ -80,7 +80,7 @@ extra:
       name: Facebook
   analytics:
     provider: google
-    property: G-XXX
+    property: AW-11500721833
   # TODO: set up feedback
   #   feedback:
   #     title: Was this page helpful?
