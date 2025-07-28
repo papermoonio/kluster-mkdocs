@@ -76,7 +76,7 @@
   --search-input-bg-color: var(--light);
   --search-hover-color: var(--primary-green-200);
 
-    /*code variables*/
+  /*code variables*/
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: var(--light);
 
@@ -102,7 +102,10 @@
   --card-wtgn-border: var(--border-width) solid var(--border-color);
   --card-wtgn-hover-color: var(--primary-green-200);
 
-  
+  /* Table Styles */
+  --table-border: var(--border-width) solid var(--border-color);
+  --table-header-bg-color: var(--light);
+  --table-divider-color: var(--primary-green-200);
 }
 [data-md-color-scheme='slate'] {
   --md-default-bg-color: var(--primary-green-800);
@@ -187,6 +190,9 @@
 
   /* Table Styles */
   --table-border: var(--border-width) solid var(--border-color);
+  --table-header-bg-color: var(--dark);
+  --table-divider-color: var(--dark);
+
 
   /* Screenshots Styles */
   --img-border: var(--border-width) solid var(--border-color);
@@ -559,7 +565,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset .md-typeset__table table th {
-  background-color: var(--dark);
+  background-color: var(--table-header-bg-color);
 }
 
 .md-typeset table:not([class]) td,
@@ -568,7 +574,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset table:not([class]) td {
-  border-top: 0.05rem solid var(--dark);
+  border-top: 0.05rem solid var(--table-divider-color);
 }
 
 .md-typeset__table table thead th:first-child {
