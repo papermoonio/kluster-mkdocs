@@ -22,6 +22,8 @@
 
   --negative-pink-700: #BA0C4B;
  
+  --warning-yellow-500:#FCC434;
+
   --info-blue-600: #0a40ff;
 
   /* Other colors */
@@ -1085,6 +1087,11 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 
 .md-typeset span.badge.external {
   background-color: var(--positive-mint-400);
+  color: var(--dark);
+}
+
+span.badge.integration {
+  background-color: var(--warning-yellow-500);
   color: var(--dark);
 }
 
