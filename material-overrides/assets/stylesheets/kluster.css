@@ -88,6 +88,12 @@
   --md-code-hl-operator-color: var(--light);
 
   --md-code-hl-color: #2a2a2a;
+
+  /* Nav List styles */
+  --nav-link-hover-color: var(--dark);
+  --nav-font-color: var(--dark);
+  --nav-bg-color: var(--primary-green-200);
+
   
 }
 [data-md-color-scheme='slate'] {
@@ -174,6 +180,11 @@
 
   /* Screenshots Styles */
   --img-border: var(--border-width) solid var(--border-color);
+
+  /* Nav List styles */
+  --nav-link-hover-color: var(--light);
+  --nav-font-color: var(--light);
+  --nav-bg-color: var(--primary-green-500);
 
 }
 
@@ -912,16 +923,16 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-nav__list .md-nav__link--active .md-ellipsis {
-    color: var(--light);
-    background-color: var(--primary-green-500);
+    color: var(--nav-font-color);
+    background-color: var(--nav-bg-color);
     border-radius: 6px; /*test same as kluster web make variable later */
     padding-left: 1em;
   }
 
   .md-nav__list .md-nav__link:hover .md-ellipsis,
   .md-nav__list .md-nav__link--active:hover .md-ellipsis {
-    color: var(--light);
-    background-color: var(--primary-green-500);
+    color: var(--nav-font-color);
+    background-color: var(--nav-bg-color);
     border-radius: 6px; /*test same as kluster web make variable later */
     opacity: 1;
     padding-left: 1em;
@@ -931,7 +942,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   .md-nav__link[for]:hover,
   .md-nav__link[href]:focus,
   .md-nav__link[href]:hover {
-    color: var(--light);
+    color: var(--nav-link-hover-color);
   }
 }
 
