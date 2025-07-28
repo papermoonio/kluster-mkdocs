@@ -109,6 +109,11 @@
   --table-border: var(--border-width) solid var(--border-color);
   --table-header-bg-color: var(--light);
   --table-divider-color: var(--primary-green-200);
+
+ /* Jupyter styles */
+  --jupyter-border-color: var(--primary-green-200);
+  --jupyter-result-color: var(--primary-green-600);
+  --jupyter-result-border-color: var(--primary-green-500);
 }
 [data-md-color-scheme='slate'] {
   --md-default-bg-color: var(--primary-green-800);
@@ -201,6 +206,13 @@
   --nav-link-hover-color: var(--light);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
+
+  /* Jupyter styles */
+  --jupyter-border-color: var(--primary-green-600);
+  --jupyter-result-color: var(--primary-green-300);
+  --jupyter-result-border-color: var(--primary-green-200);
+  
+  
 
 }
 
@@ -1211,7 +1223,7 @@ span.badge.integration {
 }
 
 .jupyter-wrapper .jp-OutputArea-output pre {
-  color: var(--primary-green-300) !important;
+  color: var(--jupyter-result-color) !important;
 }
 
 .jp-CodeMirrorEditor.jp-Editor.jp-InputArea-editor {
@@ -1222,10 +1234,10 @@ span.badge.integration {
   background-color: var(--md-code-bg-color);
   color: var(--md-code-fg-color) !important;
   opacity: 1 !important;
-  border-right: 0.05rem solid var(--primary-green-500);
+  border-right: 0.05rem solid var(--jupyter-border-color);
 }
 .jp-RenderedText.jp-OutputArea-output {
-  border: 0.5px solid var(--primary-green-200);
+  border: 0.5px solid var(--jupyter-result-border-color);
 }
 
 .jupyter-wrapper
