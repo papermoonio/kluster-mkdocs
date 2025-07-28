@@ -57,7 +57,8 @@ markdown_extensions:
       permalink: ＃
 plugins:
   - search
-  - awesome-pages
+  - awesome-nav
+  - glightbox
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
@@ -88,7 +89,7 @@ extra:
       name: Facebook
   analytics:
     provider: google
-    property: G-XXX
+    property: AW-11500721833
   # TODO: set up feedback
   #   feedback:
   #     title: Was this page helpful?
