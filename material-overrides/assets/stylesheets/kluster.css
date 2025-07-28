@@ -40,6 +40,9 @@
 
   /* Cards styles general */
   --card-border: var(--border-width) solid var(--card-border-color);
+
+  /* Admonition SVGs (base64 encoded) - use Material icons */
+  --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
 }
 
 :root,
@@ -142,9 +145,6 @@
   --md-footer-fg-color: var(--primary-green-300);
   --md-footer-fg-color--light: var(--primary-green-200);
   --md-footer-bg-color: var(--primary-green-800);
-
-  /* Admonition SVGs (base64 encoded) - use Material icons */
-  --md-admonition-icon--note: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=');
 
   /*custom code admonition colors*/
   --code-admo-border-color: #5ee20c;
@@ -502,6 +502,7 @@ li > nav.md-nav[data-md-level='4'] {
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
   background-color: var(--tertiary-indigo-700);
+  color: var(--light);
 }
 
 /* Styling for custom Admonition notes used for code */
