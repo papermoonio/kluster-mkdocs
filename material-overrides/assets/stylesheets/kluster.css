@@ -62,6 +62,7 @@
   /* General */
   --font-color: var(--primary-green-500);
   --banner-color: var(--light);
+  --border-color: var(--primary-green-200);
   /* Banner */
   --banner-background-color: var(--primary-green-500);
   --banner-link-color: var(--primary-green-200);
@@ -95,6 +96,11 @@
   --nav-link-hover-color: var(--dark);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
+
+  /* Cards styles Where To Go Next */
+  --card-wtgn-bg-color: var(--light);
+  --card-wtgn-border: var(--border-width) solid var(--border-color);
+  --card-wtgn-hover-color: var(--primary-green-200);
 
   
 }
@@ -172,7 +178,9 @@
   --divider-color: var(--light);
 
   /* Cards styles Where To Go Next */
+  --card-wtgn-bg-color: var(--dark);
   --card-wtgn-border: var(--border-width) solid var(--border-color);
+  --card-wtgn-hover-color: var(--primary-green-500);
 
   /* Tabs styles */
   --tabs-border: var(--border-width) solid var(--dark);
@@ -1104,13 +1112,13 @@ span.badge.integration {
 
 /* Where to go next cards styling */
 .md-typeset .grid.cards > ul > li {
-  background: var(--dark);
+  background: var(--card-wtgn-bg-color);
   border-radius: var(--border-radius);
   border: var(--card-wtgn-border);
 }
 
 .md-typeset .grid.cards > ul > li:hover {
-  border-color: var(--primary-green-500);
+  border-color: var(--card-wtgn-hover-color);
   box-shadow: none;
 }
 
