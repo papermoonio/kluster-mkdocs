@@ -1222,6 +1222,28 @@ span.badge.integration {
   color: var(--md-code-hl-operator-color) !important;
 }
 
+/* Scrollbar style */
+.highlight-ipynb.hl-python::-webkit-scrollbar {
+  height: 10px;
+}
+.highlight-ipynb.hl-python::-webkit-scrollbar-track {
+  background: var(--md-default-bg-color);
+}
+.highlight-ipynb.hl-python::-webkit-scrollbar-thumb {
+  background-color: var(--primary-green-500);
+  border-radius: 6px;
+}
+
+/* Firefox fix */
+.highlight-ipynb.hl-python {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green-500) var(--md-default-bg-color);
+}
+
+.jupyter-wrapper .highlight-ipynb pre {
+  margin: 1em 0 0 !important;
+}
+
 .jupyter-wrapper .jp-OutputArea-output pre {
   color: var(--jupyter-result-color) !important;
 }
