@@ -58,11 +58,12 @@
   /* bg and main text */
   --md-default-bg-color: var(--base-grey-50);
   --md-default-fg-color: var(--dark);
+  --md-default-fg-color--lightest: var(--primary-green-500);
   /* links */
   --md-typeset-a-color: var(--primary-green-500);
   /* Footer */
   --md-footer-bg-color: var(--base-grey-50);
-  --md-footer-fg-color: var(--dark);
+  --md-footer-fg-color: var(--primary-green-500);
   --md-footer-fg-color--light: var(--primary-green-500);
 
   --md-default-fg-color--light: var(--primary-green-500);
