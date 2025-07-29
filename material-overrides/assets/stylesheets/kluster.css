@@ -47,7 +47,7 @@
 
 :root,
 [data-md-color-scheme='default'] {
-  /* Fondo y texto principal */
+  /* bg and main text */
   --md-default-bg-color: var(--base-grey-50);
   --md-default-fg-color: var(--dark);
   /* links */
@@ -94,6 +94,12 @@
   --md-code-hl-operator-color: var(--light);
 
   --md-code-hl-color: #2a2a2a;
+
+  /*custom code admonition colors*/
+  --code-admo-border-color: #035E2A;   /* positive 800 */
+  --code-admo-title-bg: #06BC53;       /* positive 600 */
+  --example-admo-border-color: #2B0486; /* Purple 500:  */
+  --example-admo-title-bg: #996FFB;     /* Purple 200: */
 
   /* Nav List styles */
   --nav-link-hover-color: var(--dark);
@@ -152,10 +158,10 @@
   --md-footer-bg-color: var(--primary-green-800);
 
   /*custom code admonition colors*/
-  --code-admo-border-color: #5ee20c;
-  --code-admo-title-bg: #64dd171a;
-  --example-admo-border-color: #9b7de5;
-  --example-admo-title-bg: #9b7de51a;
+  --code-admo-border-color: #2FF985;   /* positive 400 */
+  --code-admo-title-bg: #035E2A;       /* positive 800 */
+  --example-admo-border-color: #CAB5FD; /* Purple 100 */
+  --example-admo-title-bg: #19024F;     /* Purple 700 */
 
   /* General styles */
   --border-color: var(--primary-green-500);
