@@ -55,40 +55,12 @@
 
 :root,
 [data-md-color-scheme='default'] {
-  /* bg and main text */
   --md-default-bg-color: var(--base-grey-50);
   --md-default-fg-color: var(--dark);
-  --md-default-fg-color--lightest: var(--primary-green-500);
-  /* links */
-  --md-typeset-a-color: var(--primary-green-500);
-  /* Footer */
-  --md-footer-bg-color: var(--base-grey-50);
-  --md-footer-fg-color: var(--primary-green-500);
-  --md-footer-fg-color--light: var(--primary-green-500);
-
   --md-default-fg-color--light: var(--primary-green-500);
-  /* cards */
-  --card-background: var(--light);
-  --card-border-color: var(--primary-green-500);
-  --divider-color: var(--dark);
-  /* General */
-  --font-color: var(--primary-green-500);
-  --banner-color: var(--light);
-  --border-color: var(--primary-green-200);
-  /* Banner */
-  --banner-background-color: var(--primary-green-500);
-  --banner-link-color: var(--primary-green-200);
-  --banner-icon-color: var(--light);
-  /* Search */
-  --search-background-color: var(--light);
-  --search-border-color: var(--primary-green-500);
-  --search-color: var(--primary-green-500);
-  --search-result-color: var(--dark);
-  --search-result-bg-color: var(--light);
-  --search-input-bg-color: var(--light);
-  --search-hover-color: var(--primary-green-200);
+  --md-default-fg-color--lightest: var(--primary-green-500);
 
-  /*code variables*/
+  /* code variables */
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: var(--light);
 
@@ -104,7 +76,15 @@
 
   --md-code-hl-color: #2a2a2a;
 
-  /*custom code admonition colors*/
+  /* Links */
+  --md-typeset-a-color: var(--primary-green-500);
+
+  /* Footer */
+  --md-footer-fg-color: var(--primary-green-500);
+  --md-footer-fg-color--light: var(--primary-green-500);
+  --md-footer-bg-color: var(--base-grey-50);
+
+  /* custom code admonition colors */
   --code-admo-border-color: var(--positive-mint-800);
   --code-admo-title-bg: var(--positive-mint-600);
   --example-admo-border-color: var(--tertiary-indigo-500);
@@ -112,10 +92,29 @@
   --note-admo-border-color: var(--secondary-aqua-900);
   --note-admo-title-bg: var(--secondary-aqua-700);
 
-  /* Nav List styles */
-  --nav-link-hover-color: var(--dark);
-  --nav-font-color: var(--dark);
-  --nav-bg-color: var(--primary-green-200);
+  /* General styles */
+  --border-color: var(--primary-green-200);
+  --font-color: var(--primary-green-500);
+
+  /* Banner styles */
+  --banner-color: var(--light);
+  --banner-background-color: var(--primary-green-500);
+  --banner-link-color: var(--primary-green-200);
+  --banner-icon-color: var(--light);
+
+  /* Search */
+  --search-background-color: var(--light);
+  --search-border-color: var(--primary-green-500);
+  --search-color: var(--primary-green-500);
+  --search-result-color: var(--dark);
+  --search-result-bg-color: var(--light);
+  --search-input-bg-color: var(--light);
+  --search-hover-color: var(--primary-green-200);
+
+  /* Cards styles general */
+  --card-background: var(--light);
+  --card-border-color: var(--primary-green-500);
+  --divider-color: var(--dark);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--light);
@@ -127,7 +126,12 @@
   --table-header-bg-color: var(--light);
   --table-divider-color: var(--primary-green-200);
 
- /* Jupyter styles */
+  /* Nav List styles */
+  --nav-link-hover-color: var(--dark);
+  --nav-font-color: var(--dark);
+  --nav-bg-color: var(--primary-green-200);
+
+  /* Jupyter styles */
   --jupyter-border-color: var(--primary-green-200);
   --jupyter-result-color: var(--primary-green-600);
   --jupyter-result-border-color: var(--primary-green-500);
@@ -136,6 +140,7 @@
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
+
   /*code variables*/
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: var(--light);
@@ -152,8 +157,10 @@
 
   --md-code-hl-color: #2a2a2a;
 
-  --md-typeset-a-color: var(--primary-green-300); /* Links in typeset content */
-  --md-typeset-table-color: var(--primary-green-300); /* Table line color */
+  /* Links */
+  --md-typeset-a-color: var(--primary-green-300); 
+
+  --md-typeset-table-color: var(--primary-green-300);
 
   --md-primary-fg-color: var(--tertiary-indigo-400);
   --md-primary-fg-color--light: var(--tertiary-indigo-200);
@@ -164,6 +171,7 @@
   --md-accent-fg-color--transparent: var(--light-green-transparent-33);
   --md-accent-bg-color: var(--tertiary-indigo-300);
 
+  /* Footer */
   --md-footer-fg-color: var(--primary-green-300);
   --md-footer-fg-color--light: var(--primary-green-200);
   --md-footer-bg-color: var(--primary-green-800);
@@ -216,7 +224,6 @@
   --table-border: var(--border-width) solid var(--border-color);
   --table-header-bg-color: var(--dark);
   --table-divider-color: var(--dark);
-
 
   /* Screenshots Styles */
   --img-border: var(--border-width) solid var(--border-color);
