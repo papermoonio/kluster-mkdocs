@@ -4,33 +4,33 @@
   --light: #ffffff;
 
   /* Brand colors */
-  --base-grey-50:#E9EFF1;
+  --base-grey-50: #e9eff1;
 
   --primary-green-800: #1a2428;
-  --primary-green-700: #28383E;
-  --primary-green-600: #364B54;
-  --primary-green-500: #425C67;
+  --primary-green-700: #28383e;
+  --primary-green-600: #364b54;
+  --primary-green-500: #425c67;
   --primary-green-300: #83a2af;
-  --primary-green-200: #ABC0C9;
+  --primary-green-200: #abc0c9;
 
-  --secondary-aqua-900: #00473C;
-  --secondary-aqua-700: #00D1AF;
-  --secondary-aqua-400: #80FFEA;
+  --secondary-aqua-900: #00473c;
+  --secondary-aqua-700: #00d1af;
+  --secondary-aqua-400: #80ffea;
 
-  --tertiary-indigo-700: #19024F;
-  --tertiary-indigo-500: #2B0486;
-  --tertiary-indigo-400: #4306D0;
+  --tertiary-indigo-700: #19024f;
+  --tertiary-indigo-500: #2b0486;
+  --tertiary-indigo-400: #4306d0;
   --tertiary-indigo-300: #6525f8;
-  --tertiary-indigo-200: #996FFB;
-  --tertiary-indigo-100: #CAB5FD;
+  --tertiary-indigo-200: #996ffb;
+  --tertiary-indigo-100: #cab5fd;
 
-  --positive-mint-800:#035E2A;
-  --positive-mint-600: #06BC53;
-  --positive-mint-400: #2FF985;
-  
-  --negative-pink-700: #BA0C4B;
- 
-  --warning-yellow-500:#FCC434;
+  --positive-mint-800: #035e2a;
+  --positive-mint-600: #06bc53;
+  --positive-mint-400: #2ff985;
+
+  --negative-pink-700: #ba0c4b;
+
+  --warning-yellow-500: #fcc434;
 
   --info-blue-600: #0a40ff;
 
@@ -158,7 +158,7 @@
   --md-code-hl-color: #2a2a2a;
 
   /* Links */
-  --md-typeset-a-color: var(--primary-green-300); 
+  --md-typeset-a-color: var(--primary-green-300);
 
   --md-typeset-table-color: var(--primary-green-300);
 
@@ -187,7 +187,7 @@
   /* General styles */
   --border-color: var(--primary-green-500);
   --font-color: var(--primary-green-300);
-  
+
   /* Banner styles */
   --banner-color: var(--light);
   --banner-background-color: var(--dark);
@@ -202,8 +202,7 @@
   --search-result-bg-color: var(--dark);
   --search-input-bg-color: var(--primary-green-700);
   --search-hover-color: var(--primary-green-500);
-  
-  
+
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
 
@@ -766,7 +765,106 @@ li > nav.md-nav[data-md-level='4'] {
   opacity: 1;
 }
 
-.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child, .md-typeset .tabbed-set>input:nth-child(10):checked~.tabbed-labels>:nth-child(10), .md-typeset .tabbed-set>input:nth-child(11):checked~.tabbed-labels>:nth-child(11), .md-typeset .tabbed-set>input:nth-child(12):checked~.tabbed-labels>:nth-child(12), .md-typeset .tabbed-set>input:nth-child(13):checked~.tabbed-labels>:nth-child(13), .md-typeset .tabbed-set>input:nth-child(14):checked~.tabbed-labels>:nth-child(14), .md-typeset .tabbed-set>input:nth-child(15):checked~.tabbed-labels>:nth-child(15), .md-typeset .tabbed-set>input:nth-child(16):checked~.tabbed-labels>:nth-child(16), .md-typeset .tabbed-set>input:nth-child(17):checked~.tabbed-labels>:nth-child(17), .md-typeset .tabbed-set>input:nth-child(18):checked~.tabbed-labels>:nth-child(18), .md-typeset .tabbed-set>input:nth-child(19):checked~.tabbed-labels>:nth-child(19), .md-typeset .tabbed-set>input:nth-child(2):checked~.tabbed-labels>:nth-child(2), .md-typeset .tabbed-set>input:nth-child(20):checked~.tabbed-labels>:nth-child(20), .md-typeset .tabbed-set>input:nth-child(3):checked~.tabbed-labels>:nth-child(3), .md-typeset .tabbed-set>input:nth-child(4):checked~.tabbed-labels>:nth-child(4), .md-typeset .tabbed-set>input:nth-child(5):checked~.tabbed-labels>:nth-child(5), .md-typeset .tabbed-set>input:nth-child(6):checked~.tabbed-labels>:nth-child(6), .md-typeset .tabbed-set>input:nth-child(7):checked~.tabbed-labels>:nth-child(7), .md-typeset .tabbed-set>input:nth-child(8):checked~.tabbed-labels>:nth-child(8), .md-typeset .tabbed-set>input:nth-child(9):checked~.tabbed-labels>:nth-child(9){
+.md-typeset
+  .tabbed-set
+  > input:first-child:checked
+  ~ .tabbed-labels
+  > :first-child,
+.md-typeset
+  .tabbed-set
+  > input:nth-child(10):checked
+  ~ .tabbed-labels
+  > :nth-child(10),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(11):checked
+  ~ .tabbed-labels
+  > :nth-child(11),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(12):checked
+  ~ .tabbed-labels
+  > :nth-child(12),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(13):checked
+  ~ .tabbed-labels
+  > :nth-child(13),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(14):checked
+  ~ .tabbed-labels
+  > :nth-child(14),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(15):checked
+  ~ .tabbed-labels
+  > :nth-child(15),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(16):checked
+  ~ .tabbed-labels
+  > :nth-child(16),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(17):checked
+  ~ .tabbed-labels
+  > :nth-child(17),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(18):checked
+  ~ .tabbed-labels
+  > :nth-child(18),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(19):checked
+  ~ .tabbed-labels
+  > :nth-child(19),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(2):checked
+  ~ .tabbed-labels
+  > :nth-child(2),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(20):checked
+  ~ .tabbed-labels
+  > :nth-child(20),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(3):checked
+  ~ .tabbed-labels
+  > :nth-child(3),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(4):checked
+  ~ .tabbed-labels
+  > :nth-child(4),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(5):checked
+  ~ .tabbed-labels
+  > :nth-child(5),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(6):checked
+  ~ .tabbed-labels
+  > :nth-child(6),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(7):checked
+  ~ .tabbed-labels
+  > :nth-child(7),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(8):checked
+  ~ .tabbed-labels
+  > :nth-child(8),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(9):checked
+  ~ .tabbed-labels
+  > :nth-child(9) {
   color: var(--light);
 }
 
@@ -776,7 +874,7 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset .tabbed-labels > label:hover {
-  color:var(--info-blue-600);
+  color: var(--info-blue-600);
   opacity: 1;
 }
 
@@ -876,7 +974,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   color: var(--search-color);
 }
 
-.md-search__icon.md-icon svg{
+.md-search__icon.md-icon svg {
   fill: var(--search-color);
 }
 
