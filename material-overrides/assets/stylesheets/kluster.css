@@ -12,14 +12,22 @@
   --primary-green-500: #425C67;
   --primary-green-300: #83a2af;
   --primary-green-200: #ABC0C9;
- 
+
+  --secondary-aqua-900: #00473C;
+  --secondary-aqua-700: #00D1AF;
+  --secondary-aqua-400: #80FFEA;
+
   --tertiary-indigo-700: #19024F;
-  --tertiary-indigo-300: #6525f8;
+  --tertiary-indigo-500: #2B0486;
   --tertiary-indigo-400: #4306D0;
+  --tertiary-indigo-300: #6525f8;
   --tertiary-indigo-200: #996FFB;
+  --tertiary-indigo-100: #CAB5FD;
 
+  --positive-mint-800:#035E2A;
+  --positive-mint-600: #06BC53;
   --positive-mint-400: #2FF985;
-
+  
   --negative-pink-700: #BA0C4B;
  
   --warning-yellow-500:#FCC434;
@@ -96,10 +104,12 @@
   --md-code-hl-color: #2a2a2a;
 
   /*custom code admonition colors*/
-  --code-admo-border-color: #035E2A;   /* positive 800 */
-  --code-admo-title-bg: #06BC53;       /* positive 600 */
-  --example-admo-border-color: #2B0486; /* Purple 500:  */
-  --example-admo-title-bg: #996FFB;     /* Purple 200: */
+  --code-admo-border-color: var(--positive-mint-800);
+  --code-admo-title-bg: var(--positive-mint-600);
+  --example-admo-border-color: var(--tertiary-indigo-500);
+  --example-admo-title-bg: var(--tertiary-indigo-200);
+  --note-admo-border-color: var(--secondary-aqua-900);
+  --note-admo-title-bg: var(--secondary-aqua-700);
 
   /* Nav List styles */
   --nav-link-hover-color: var(--dark);
@@ -158,10 +168,12 @@
   --md-footer-bg-color: var(--primary-green-800);
 
   /*custom code admonition colors*/
-  --code-admo-border-color: #2FF985;   /* positive 400 */
-  --code-admo-title-bg: #035E2A;       /* positive 800 */
-  --example-admo-border-color: #CAB5FD; /* Purple 100 */
-  --example-admo-title-bg: #19024F;     /* Purple 700 */
+  --code-admo-border-color: var(--positive-mint-400);
+  --code-admo-title-bg: var(--positive-mint-800);
+  --example-admo-border-color: var(--tertiary-indigo-100);
+  --example-admo-title-bg: var(--tertiary-indigo-700);
+  --note-admo-border-color: var(--secondary-aqua-400);
+  --note-admo-title-bg: var(--secondary-aqua-900);
 
   /* General styles */
   --border-color: var(--primary-green-500);
@@ -217,9 +229,6 @@
   --jupyter-border-color: var(--primary-green-600);
   --jupyter-result-color: var(--primary-green-300);
   --jupyter-result-border-color: var(--primary-green-200);
-  
-  
-
 }
 
 /* General styling */
@@ -507,20 +516,19 @@ li > nav.md-nav[data-md-level='4'] {
 }
 
 .md-typeset .admonition.note {
-  border-color: var(--md-primary-fg-color);
+  border-color: var(--note-admo-border-color);
 }
 
 /* Admonition icon background color */
 .md-typeset .note > .admonition-title:before,
 .md-typeset .note > summary:before {
-  background-color: var(--md-primary-fg-color);
+  background-color: var(--note-admo-border-color);
 }
 
 /* Admonition top background color */
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
-  background-color: var(--tertiary-indigo-700);
-  color: var(--light);
+  background-color: var(--note-admo-title-bg);
 }
 
 /* Styling for custom Admonition notes used for code */
