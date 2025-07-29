@@ -141,7 +141,7 @@
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
 
-  /*code variables*/
+  /* Code variables */
   --md-code-bg-color: #1e1e1e;
   --md-code-fg-color: var(--light);
 
