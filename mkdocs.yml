@@ -23,7 +23,8 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
+    - toc.follow
+    - navigation.expand
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
