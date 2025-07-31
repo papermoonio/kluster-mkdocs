@@ -2,7 +2,15 @@
   "data": [
     {
       "key": "/api-reference/",
-      "value": "/api-reference/reference/"
+      "value": "/"
+    },
+    {
+      "key": "/api-reference/reference/",
+      "value": "/"
+    },
+    {
+      "key": "/get-api-key/",
+      "value": "/verify/get-api-key/"
     },
     {
       "key": "/get-started/",
@@ -10,7 +18,7 @@
     },
     {
       "key": "/get-started/api/",
-      "value": "/verify/quickstart/reliability/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/dedicated-deployments/",
@@ -30,11 +38,11 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/get-api-key/"
+      "value": "/verify/get-api-key/"
     },
     {
       "key": "/get-started/integrations/",
-      "value": "/verify/reliability/workflow-integrations/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/crewai/",
@@ -78,31 +86,31 @@
     },
     {
       "key": "/get-started/mcp/cloud/api/",
-      "value": "/verify/mcp/cloud/api/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/cloud/platform/",
-      "value": "/verify/mcp/cloud/platform/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/get-started/",
-      "value": "/verify/mcp/get-started/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/integrations/",
-      "value": "/verify/mcp/client-integrations/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/overview/",
-      "value": "/verify/mcp/overview/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/self-hosted/",
-      "value": "/verify/mcp/self-hosted/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/tools/",
-      "value": "/verify/mcp/tools/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/models/",
@@ -114,11 +122,11 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/get-api-key/"
+      "value": "/verify/get-api-key/"
     },
     {
       "key": "/get-started/start-building/",
-      "value": "/verify/quickstart/reliability/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/start-building/batch/",
@@ -138,31 +146,35 @@
     },
     {
       "key": "/get-started/verify/reliability/chat-completion/",
-      "value": "/verify/reliability/chat-completion/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/verify/reliability/overview/",
-      "value": "/verify/reliability/overview/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/verify/reliability/verify-api/",
-      "value": "/verify/reliability/verify-api/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/verify/reliability/workflow-integrations/",
-      "value": "/verify/reliability/workflow-integrations/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/getting-started/",
-      "value": "/verify/quickstart/reliability/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/tutorials/",
-      "value": "/tutorials/klusterai-api/reliability/"
+      "value": "/"
     },
     {
       "key": "/tutorials/klusterai-api/",
-      "value": "/tutorials/klusterai-api/reliability/"
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/combat-hallucinations/",
+      "value": "/"
     },
     {
       "key": "/tutorials/klusterai-api/effective-prompt-engineering/",
@@ -206,7 +218,11 @@
     },
     {
       "key": "/tutorials/klusterai-api/reliability-check/",
-      "value": "/tutorials/klusterai-api/reliability/"
+      "value": "/"
+    },
+    {
+      "key": "/tutorials/klusterai-api/reliability/",
+      "value": "/"
     },
     {
       "key": "/tutorials/klusterai-api/sentiment-analysis-api/",
@@ -231,6 +247,58 @@
     {
       "key": "/tutorials/klusterai-api/uploads-api/",
       "value": "/"
+    },
+    {
+      "key": "/verify/mcp/client-integrations/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/cloud/api/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/cloud/platform/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/get-started/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/overview/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/sdk-integrations/openai-agents/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/self-hosted/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/mcp/tools/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/quickstart/reliability/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/reliability/chat-completion/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/reliability/overview/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/reliability/verify-api/",
+      "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/reliability/workflow-integrations/",
+      "value": "/verify/overview/"
     }
   ]
 }
