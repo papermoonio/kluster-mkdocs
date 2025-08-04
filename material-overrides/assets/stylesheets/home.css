@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-
 .md-content__inner {
   margin-top: 0;
 }
@@ -25,12 +23,10 @@
   box-shadow: unset;
 }
 
-/* New hero Styling */
+/* Hero Styling */
 .hero {
-  position: relative;
-  padding: 0.5em 1em 3em;
-  color: var(--light);
-  margin: 0 auto 1em;
+  padding: 0.5em 1em 2.6em;
+  margin: 1em auto 1em;
   text-align: center;
 }
 
@@ -40,8 +36,6 @@
 }
 
 .hero h1 {
-  color: var(--light);
-  font-family: 'Space Grotesk';
   font-weight: 800;
   font-size: 3.1rem;
   margin-bottom: 1rem;
@@ -49,55 +43,53 @@
 }
 
 .hero-sub {
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   font-family: 'Space Grotesk';
-  color: var(--light-green);
-  max-width: 35rem;
+  color: var(--primary-green-300);
+  max-width: 24rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero a.hero-link {
-  color: var(--light-green);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .hero a.hero-link:hover {
-    color: var(--blue-site);
+  color: var(--blue-site);
 }
 
 .hero .button-wrapper {
+  margin: 2rem 0 0;
   display: flex;
   justify-content: center;
 }
 
 .hero .framer-Bja7l.framer-1v7ikbi {
-    width: 170px; /* Adjust width of framer button */
+  width: 170px; /* Adjust width of framer button */
 }
 
 .feature-cards {
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .feature-card {
   padding: 1em;
-  border-radius: var(--md-border-radius);
+  border-radius: var(--border-radius);
   background-color: var(--dark);
-  border: var(--md-border-width) solid var(--light-green);
-  flex: 1 1 calc(25% - 1rem);
+  border: var(--card-border);
+  flex: 1 1 calc(33.333% - 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .feature-card h2 {
   padding: 1em 0 0.5em;
-  color: var(--light);
   font-weight: 800;
   font-family: 'Space Grotesk';
   margin: auto;
@@ -115,9 +107,7 @@
   padding: 0.5em 1em 0;
   margin: 0.5em 1em 0;
   font-family: 'Space Grotesk';
-  text-align: left;
   font-size: 1em;
-  color: var(--light);
   flex-grow: 1;
 }
 
@@ -127,89 +117,24 @@
   align-items: center;
   margin: 2em 0 1em;
   background-color: var(--dark);
-  border: var(--feat-button-width) solid var(--light);
-  padding: var(--feat-button-padding);
-  border-radius: var(--feat-button-radius);
+  border: var(--button-border);
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
   width: 80%;
-  height: var(--feat-button-height);
+  height: var(--button-height);
 }
 
 a.card-button {
   color: var(--light);
-  font-family: 'Space Grotesk';    
+  font-family: 'Space Grotesk';
   font-size: 0.8em;
 }
 
 a.card-button:hover {
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--info-blue-600);
+  border-color: var(--info-blue-600);
   color: var(--light);
   opacity: 1;
-}
-
-/* CTA and Buttons Styling */
-h2.cta-title {
-  color: var(--light-green);
-  font-family: 'Space Grotesk';
-  font-weight: 800;
-  text-align: center;
-  font-size: 1.50rem;
-  margin: 2rem 0;
-}
-
-.button-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1em;
-}
-
-.button-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: var(--dark);
-  padding: 1.5rem;
-  border-radius: var(--md-border-radius);
-  flex: 1 1 calc(33.333% - 1rem);
-  gap: 0.5em;
-  border: var(--md-border-width) solid var(--light-green);
-}
-
-a.button-card:hover {
-  opacity: 1;
-}
-
-.button-card .icon {
-  flex-shrink: 0;
-}
-
-.button-card .icon svg {
-  fill: var(--electric-indigo);
-  width: 36px;
-  height: 36px;
-}
-
-.button-info h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  color: var(--light);
-  font-family: 'Space Grotesk';
-  font-weight: 800;
-  transition: color 0.3s ease;
-}
-
-.button-card:hover > .button-info > h3{
-  color: var(--blue);
-  opacity: 1;
-}
-
-.button-info p {
-  font-family: 'Space Grotesk';
-  font-weight: 300;
-  margin: 0;
-  font-size: 1.05em;
-  color: var(--light);
 }
 
 /*Responsive Styling */
@@ -232,12 +157,18 @@ a.button-card:hover {
     padding: 0 1em;
   }
 
-  .feature-cards,
-  .button-grid {
+  .feature-cards {
     flex-direction: column;
     margin: 0 1em;
     margin: 0 auto;
     width: 90%;
+  }
+
+  .feature-card h2 {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0.75em 0 0.5em;
+    text-align: center;
   }
 
   .feature-card p {
@@ -248,13 +179,10 @@ a.button-card:hover {
     width: 80%;
   }
 
-  h2.cta-title {
-    font-size: 1.4rem;
-  }
 }
 
 @media screen and (max-width: 999px) and (min-width: 768px) {
-    .hero {
+  .hero {
     padding: 1.5em 2em;
     margin: 0 auto 2em;
   }
@@ -280,7 +208,7 @@ a.button-card:hover {
   }
 
   .feature-card {
-    flex: 1 1 calc(50% - 1rem); 
+    flex: 1 1 calc(50% - 1rem);
     max-width: 340px;
   }
 
@@ -290,7 +218,7 @@ a.button-card:hover {
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1024px) {
-    .hero {
+  .hero {
     padding: 1.5em 2em;
     margin: 0 auto 2em;
   }
@@ -308,8 +236,7 @@ a.button-card:hover {
     margin-right: auto;
   }
 
-  .feature-cards,
-  .button-grid {
+  .feature-cards {
     margin: 0 auto 1rem;
   }
 
@@ -318,7 +245,7 @@ a.button-card:hover {
   }
 
   .feature-card p {
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 1em;
     padding: 0.5em;
@@ -327,17 +254,6 @@ a.button-card:hover {
   a.card-button {
     padding: 0.4rem 1rem;
     margin-top: auto;
-  }  
-  
-  h2.cta-title {
-    font-size: 1.5rem;
-  }
-
-  .button-info h3 {
-    font-size: 1rem;
-  }
-
-  .button-info p {
-    font-size: 0.8rem;
+    text-wrap: nowrap;
   }
 }
