@@ -1482,6 +1482,7 @@ span.badge.integration {
   opacity: 1 !important;
   border-right: 0.05rem solid var(--jupyter-border-color);
 }
+
 .jp-RenderedText.jp-OutputArea-output {
   border: 0.5px solid var(--jupyter-result-border-color);
 }

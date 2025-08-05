@@ -24,6 +24,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.follow
+    - navigation.expand
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
