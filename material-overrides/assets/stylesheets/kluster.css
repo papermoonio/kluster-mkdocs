@@ -79,6 +79,7 @@
 
   /* Links */
   --md-typeset-a-color: var(--primary-green-500);
+  --link-hover-color: var(--info-blue-600);
 
   /* Footer */
   --md-footer-fg-color: var(--primary-green-500);
@@ -140,6 +141,11 @@
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
 
+  /* Top nav styles */
+  --top-nav-active-color: var(--dark);
+  --top-nav-hover-color: var(--dark);
+  --top-nav-underline-color: var(--dark);
+
   /* Jupyter styles */
   --jupyter-border-color: var(--primary-green-200);
   --jupyter-result-color: var(--primary-green-600);
@@ -169,6 +175,7 @@
 
   /* Links */
   --md-typeset-a-color: var(--primary-green-300);
+  --link-hover-color: var(--blue-site);
 
   --md-typeset-table-color: var(--primary-green-300);
 
@@ -246,6 +253,11 @@
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
 
+  /* Top nav styles */
+  --top-nav-active-color: var(--blue-site);
+  --top-nav-hover-color: var(--blue-site);
+  --top-nav-underline-color: var(--blue-site);
+
   /* Jupyter styles */
   --jupyter-border-color: var(--primary-green-600);
   --jupyter-result-color: var(--primary-green-300);
@@ -257,6 +269,7 @@
 .md-typeset a:hover {
   opacity: 0.75;
   transition: opacity 0.2s ease;
+  color: var(--link-hover-color);
 }
 
 .md-typeset h1 {
@@ -342,7 +355,7 @@
 .md-tabs__link:hover {
   transform: scale(1.01);
   transition: transform 0.3s ease;
-  color: var(--blue-site);
+  color: var(--top-nav-hover-color);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
@@ -359,11 +372,11 @@
 }
 
 .md-tabs__item--active > .md-tabs__link {
-  color: var(--blue-site);
+  color: var(--top-nav-active-color);
 }
 
 .framer-1w65mo2 {
-  background: var(--blue-site);
+  background: var(--top-nav-underline-color);
   bottom: 0;
   height: 1px;
   position: absolute;
