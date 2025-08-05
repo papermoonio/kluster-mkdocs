@@ -36,7 +36,7 @@
   --info-blue-50: #F0F3FF;
 
   /* Other colors */
-  --blue-site: #6e8dff; /* blue from the kluster.ia site */
+  --blue-site: #6e8dff; /* Blue from the kluster.ia site */
 
   /* General styles */
   --border-radius: 12px;
@@ -86,7 +86,7 @@
   --md-footer-fg-color--light: var(--primary-green-500);
   --md-footer-bg-color: var(--base-grey-50);
 
-  /* custom code admonition colors */
+  /* Custom code admonition colors */
   --code-admo-border-color: var(--positive-mint-800);
   --code-admo-title-bg: var(--positive-mint-600);
   --example-admo-border-color: var(--tertiary-indigo-500);
@@ -193,7 +193,7 @@
   --md-footer-fg-color--light: var(--primary-green-200);
   --md-footer-bg-color: var(--primary-green-800);
 
-  /*custom code admonition colors*/
+  /* Custom code admonition colors */
   --code-admo-border-color: var(--positive-mint-400);
   --code-admo-title-bg: var(--positive-mint-800);
   --example-admo-border-color: var(--tertiary-indigo-100);
