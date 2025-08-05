@@ -33,6 +33,7 @@
   --warning-yellow-500: #fcc434;
 
   --info-blue-600: #0a40ff;
+  --info-blue-50: #F0F3FF;
 
   /* Other colors */
   --blue-site: #6e8dff; /* blue from the kluster.ia site */
@@ -101,6 +102,7 @@
   --banner-background-color: var(--primary-green-500);
   --banner-link-color: var(--primary-green-200);
   --banner-icon-color: var(--light);
+  --banner-hover-color: var(--info-blue-50);
 
   /* Search */
   --search-background-color: var(--light);
@@ -201,7 +203,7 @@
   --banner-background-color: var(--dark);
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
-
+  --banner-hover-color: var(--info-blue-600);
   /* Search */
   --search-background-color: var(--dark);
   --search-border-color: var(--dark);
@@ -1242,7 +1244,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 }
 
 .md-banner .md-typeset a:hover {
-  color: var(--info-blue-600);
+  color: var(--banner-hover-color);
 }
 
 .md-banner__inner {
