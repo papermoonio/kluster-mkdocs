@@ -138,9 +138,10 @@
 
   /* Nav List styles */
   --nav-link-hover-color: var(--dark);
+  --nav-active-hover-color: var(--light);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
-
+ 
   /* Top nav styles */
   --top-nav-active-color: var(--dark);
   --top-nav-hover-color: var(--dark);
@@ -250,6 +251,7 @@
 
   /* Nav List styles */
   --nav-link-hover-color: var(--light);
+  --nav-active-hover-color: var(--light);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
 
@@ -1161,7 +1163,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   .md-nav__link[href]:focus,
   .md-nav__list .md-nav__link--active:hover,
   .md-nav__list .md-nav__link--active:focus {
-    color: var(--md-default-fg-color);
+    color: var(--nav-active-hover-color);
   }
 
   .nav__icon.plus {
