@@ -66,10 +66,6 @@
   justify-content: center;
 }
 
-.hero .framer-Bja7l.framer-1v7ikbi {
-  width: 170px; /* Adjust width of framer button */
-}
-
 .feature-cards {
   display: flex;
   justify-content: space-between;
