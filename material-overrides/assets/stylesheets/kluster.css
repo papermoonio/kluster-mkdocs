@@ -829,10 +829,11 @@ input.md-search__input[placeholder="Search"]::placeholder {
   display: inline-block;
   vertical-align: middle;
   transition: fill 0.3s ease;
+  margin-right: 0.5em;
 }
 
 .llms-copy-button:hover svg {
-  fill: var(--md-footer-bg-color);
+  fill: var(--light);
 }
 
 .framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd.llms-copy-button {
