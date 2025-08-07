@@ -62,6 +62,7 @@
   --md-default-fg-color--light: var(--primary-green-500);
   --md-default-fg-color--lightest: var(--primary-green-500);
   --md-accent-fg-color--transparent: var(--info-blue-50);
+  --md-accent-fg-color: var(--blue-site);
 
   /* Code variables */
   --md-code-bg-color: #242424;
@@ -159,6 +160,7 @@
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
+  --md-accent-fg-color: var(--blue-site);
 
   /* Code variables */
   --md-code-bg-color: #1e1e1e;
