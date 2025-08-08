@@ -1371,10 +1371,13 @@ span.badge.integration {
 }
 
 /* Image styling */
-.md-typeset p > img {
+.md-typeset p > img,
+.md-typeset p > a.glightbox > img {
   border: var(--img-border);
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display:block;
+  margin: 1em auto;
 }
 
 /* Where to go next cards styling */
