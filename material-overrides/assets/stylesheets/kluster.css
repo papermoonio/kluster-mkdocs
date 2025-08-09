@@ -29,10 +29,9 @@
   --positive-mint-600: #06bc53;
   --positive-mint-400: #2ff985;
 
-  --negative-pink-700: #ba0c4b;
-
   --warning-yellow-500: #fcc434;
 
+  --info-blue-700: #002CC7;
   --info-blue-600: #0a40ff;
   --info-blue-50: #F0F3FF;
 
@@ -610,6 +609,15 @@ li > nav.md-nav[data-md-level="4"] {
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
   background-color: var(--example-admo-border-color);
+}
+
+/* Parameters  styling */
+.md-typeset details.interface > summary::before {
+  display: none;
+}
+
+[dir="ltr"] .md-typeset details.interface > summary {
+  padding-left: 1em;
 }
 
 /* Styling for the Copy to Clipboard */
@@ -1356,7 +1364,7 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 }
 
 .md-typeset span.badge.learn {
-  background-color: var(--negative-pink-700);
+  background-color: var(--info-blue-700);
   color: var(--light);
 }
 
