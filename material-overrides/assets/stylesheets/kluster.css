@@ -126,7 +126,7 @@
   --card-wtgn-border: var(--border-width) solid var(--border-color);
   --card-wtgn-hover-color: var(--primary-green-200);
 
-    /* Tabs styles */
+  /* Tabs styles */
   --tabs-border: var(--border-width) solid var(--primary-green-200);
   --tabs-content-bg-color: var(--base-grey-50);
   --tabs-header-bg-color: var(--light);
