@@ -16,6 +16,7 @@
   --secondary-aqua-900: #00473c;
   --secondary-aqua-700: #00d1af;
   --secondary-aqua-400: #80ffea;
+  --secondary-aqua-200: #C2FFF5;
 
   --tertiary-indigo-700: #19024f;
   --tertiary-indigo-500: #2b0486;
@@ -101,7 +102,7 @@
   /* Banner styles */
   --banner-color: var(--light);
   --banner-background-color: var(--primary-green-500);
-  --banner-link-color: var(--primary-green-200);
+  --banner-link-color: var(--secondary-aqua-200);
   --banner-icon-color: var(--light);
   --banner-hover-color: var(--info-blue-50);
 
