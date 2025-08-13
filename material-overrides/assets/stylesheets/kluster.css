@@ -62,22 +62,6 @@
   --md-default-fg-color--light: var(--primary-green-500);
   --md-default-fg-color--lightest: var(--primary-green-500);
 
-  /* Code variables */
-  --md-code-bg-color: #242424;
-  --md-code-fg-color: var(--light);
-
-  --md-code-hl-keyword-color: #62aef7;
-  --md-code-hl-string-color: #91DD0E;
-  --md-code-hl-number-color: var(--light);
-  --md-code-hl-function-color: var(--light);
-  --md-code-hl-name-color: var(--light);
-  --md-code-hl-constant-color: var(--light);
-  --md-code-hl-comment-color: #7a7a7a;
-  --md-code-hl-punctuation-color: var(--light);
-  --md-code-hl-operator-color: var(--light);
-
-  --md-code-hl-color: #2a2a2a;
-
   /* Links */
   --md-typeset-a-color: var(--primary-green-500);
   --link-hover-color: var(--info-blue-600);
