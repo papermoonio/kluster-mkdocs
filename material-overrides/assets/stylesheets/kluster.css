@@ -803,7 +803,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /* llms-full button styling */
-
 .md-footer__buttons {
   display: flex;
   gap: 1em;
@@ -841,7 +840,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
   align-items: center;
 }
   
-
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-footer-meta__inner {
