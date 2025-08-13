@@ -864,11 +864,11 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-footer-meta__inner.md-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
 
   .md-copyright__highlight {
     text-align: center;
