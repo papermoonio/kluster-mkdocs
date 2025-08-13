@@ -1264,6 +1264,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 .md-banner .md-typeset a:hover {
   color: var(--banner-hover-color);
+  opacity: 1;
 }
 
 .md-banner__inner {
