@@ -785,6 +785,8 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 }
 
+/* Footer styling */
+
 .md-footer-meta {
   border-top: 1px solid var(--md-footer-fg-color);
   background-color: var(--md-footer-bg-color);
@@ -792,6 +794,21 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 .md-footer-meta__inner {
   align-items: center;
+}
+
+.md-footer-meta__inner.md-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.md-footer__center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .papermoon {
@@ -845,6 +862,13 @@ input.md-search__input[placeholder='Search']::placeholder {
   .md-footer-meta__inner {
     flex-direction: column;
   }
+
+  .md-footer-meta__inner.md-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
 
   .md-copyright__highlight {
     text-align: center;
@@ -1246,75 +1270,4 @@ li.rc-menu-item-group:has(> div[title='Models']) {
 .jupyter-wrapper
   .jp-RenderedText[data-mime-type='application/vnd.jupyter.stderr'] {
   padding: 0;
-}
-
-/* --- Footer layout (desktop default) --- */
-.md-footer-meta__inner {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* left | center | right */
-  align-items: center; /* vertical centering */
-  column-gap: 2rem;
-  row-gap: 0; /* single row */
-  padding-block: 1rem;
-}
-
-/* Place items explicitly */
-.md-footer__buttons {
-  grid-column: 1;
-  justify-self: start;
-}
-.papermoon {
-  grid-column: 2;
-  justify-self: center;
-}
-.md-footer-meta__inner .md-social,
-.md-footer-meta__inner [class*='social'] {
-  grid-column: 3;
-  justify-self: end;
-}
-
-/* Normalize child margins to avoid drift */
-.md-footer__buttons,
-.papermoon,
-.md-footer-meta__inner .md-social,
-.md-footer-meta__inner [class*='social'] {
-  margin: 0;
-}
-
-/* --- Tablet & Phone: stack and center --- */
-@media screen and (max-width: 60em) {
-  .md-footer-meta__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center horizontally */
-    text-align: center; /* center text */
-    gap: 0.75rem; /* even vertical spacing */
-    padding-block: 1rem;
-  }
-
-  .md-footer__buttons,
-  .papermoon,
-  .md-footer-meta__inner .md-social,
-  .md-footer-meta__inner [class*='social'] {
-    width: 35%;
-  }
-
-  .md-footer__buttons {
-    display: flex;
-    justify-content: center;
-  }
-  .papermoon {
-    display: flex;
-    justify-content: center;
-  }
-  .md-footer-meta__inner .md-social,
-  .md-footer-meta__inner [class*='social'] {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Keep your existing copy line centered */
-  .md-copyright__highlight {
-    text-align: center;
-  }
 }

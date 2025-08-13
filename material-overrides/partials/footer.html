@@ -82,13 +82,14 @@
           </div>
         </div>
       </div>
-      {% include "partials/copyright.html" %}
-
-      <div class="papermoon">
-        <span
-          >Made with 🩵 by
-          <a href="https://papermoon.io/" target="_blank">PaperMoon</a></span
-        >
+      <div class="md-footer__center-column">
+        {% include "partials/copyright.html" %}
+        <div class="papermoon">
+          <span
+            >Made with 🩵 by
+            <a href="https://papermoon.io/" target="_blank">PaperMoon</a></span
+          >
+        </div>
       </div>
       {% if config.extra.social %} {% include "partials/social.html" %} {% endif
       %}
