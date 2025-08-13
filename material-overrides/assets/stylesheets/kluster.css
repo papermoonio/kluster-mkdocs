@@ -344,8 +344,6 @@
 
 /* When any link is hovered, scale the entire list */
 .md-tabs__link:hover {
-  transform: scale(1.01);
-  transition: transform 0.3s ease;
   color: var(--top-nav-hover-color);
 }
 
