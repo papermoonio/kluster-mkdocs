@@ -868,7 +868,12 @@ input.md-search__input[placeholder='Search']::placeholder {
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
+    padding: 0.5rem 0.5rem; 
   }
+
+  .md-footer__buttons {
+  padding: 0;
+}
 
   .md-copyright__highlight {
     text-align: center;
