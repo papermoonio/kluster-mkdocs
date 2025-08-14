@@ -4,6 +4,7 @@
   --light: #ffffff;
 
   /* Brand colors */
+  --base-grey-300: #d4dad9;
   --base-grey-50: #e9eff1;
 
   --primary-green-900: #0E1316;
@@ -95,6 +96,7 @@
   --example-admo-title-bg: var(--tertiary-indigo-200);
   --note-admo-border-color: var(--secondary-aqua-900);
   --note-admo-title-bg: var(--secondary-aqua-700);
+  --summary-bg-color: var(--base-grey-300);
 
   /* General styles */
   --border-color: var(--primary-green-200);
@@ -205,6 +207,7 @@
   --example-admo-title-bg: var(--tertiary-indigo-700);
   --note-admo-border-color: var(--secondary-aqua-400);
   --note-admo-title-bg: var(--secondary-aqua-900);
+  --summary-bg-color: var(--primary-green-900);
 
   /* General styles */
   --border-color: var(--primary-green-500);
@@ -618,6 +621,12 @@ li > nav.md-nav[data-md-level="4"] {
 
 [dir="ltr"] .md-typeset details.interface > summary {
   padding-left: 1em;
+  background-color: var(--summary-bg-color);
+}
+
+.md-typeset details.interface {
+  border-color: var(--summary-bg-color);
+  box-shadow: none;
 }
 
 /* Styling for the Copy to Clipboard */
