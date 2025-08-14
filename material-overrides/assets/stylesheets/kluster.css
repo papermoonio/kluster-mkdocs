@@ -147,7 +147,7 @@
   --nav-active-hover-color: var(--light);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
-  --nav-mobile-border-color: var(--primary-green-200);
+  --nav-mobile-border-color: var(--base-grey-50);
   
   /* Top nav styles */
   --top-nav-active-color: var(--dark);
@@ -264,7 +264,7 @@
   --nav-active-hover-color: var(--light);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
-  --nav-mobile-border-color: var(--primary-green-700);
+  --nav-mobile-border-color: var(--primary-green-800);
 
   /* Top nav styles */
   --top-nav-active-color: var(--blue-site);
