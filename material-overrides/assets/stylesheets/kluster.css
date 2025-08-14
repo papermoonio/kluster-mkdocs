@@ -102,7 +102,6 @@
   /* Cards styles general */
   --card-background: var(--light);
   --card-border-color: var(--primary-green-500);
-  --divider-color: var(--dark);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--light);
@@ -214,7 +213,6 @@
   /* Cards styles general */
   --card-background: var(--dark);
   --card-border-color: var(--primary-green-300);
-  --divider-color: var(--light);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--dark);

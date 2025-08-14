@@ -95,7 +95,7 @@
 .feature-divider {
   width: 80%;
   height: 1px;
-  background-color: var(--divider-color);
+  background-color: var(--md-default-fg-color);
   margin: 0.5em 0;
 }
 
