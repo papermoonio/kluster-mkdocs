@@ -34,6 +34,8 @@
 
   --info-blue-700: #002CC7;
   --info-blue-600: #0a40ff;
+  --info-blue-500: #4E75FF;
+  --info-blue-400: #7090FF;
   --info-blue-50: #F0F3FF;
 
   /* Other colors */
@@ -62,7 +64,7 @@
   --md-default-fg-color--light: var(--primary-green-500);
   --md-default-fg-color--lightest: var(--primary-green-500);
   --md-accent-fg-color--transparent: var(--info-blue-50);
-  --md-accent-fg-color: var(--blue-site);
+  --md-accent-fg-color: var(--info-blue-400);
 
   /* Code variables */
   --md-code-bg-color: #242424;
@@ -162,7 +164,7 @@
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
-  --md-accent-fg-color: var(--blue-site);
+  --md-accent-fg-color: var(--info-blue-500);
 
   /* Code variables */
   --md-code-bg-color: #1e1e1e;
