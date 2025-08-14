@@ -1455,9 +1455,11 @@ span.badge.integration {
 .highlight-ipynb.hl-python::-webkit-scrollbar {
   height: 10px;
 }
+
 .highlight-ipynb.hl-python::-webkit-scrollbar-track {
   background: var(--md-default-bg-color);
 }
+
 .highlight-ipynb.hl-python::-webkit-scrollbar-thumb {
   background-color: var(--primary-green-500);
   border-radius: 6px;
