@@ -46,7 +46,7 @@
   font-size: 0.8rem;
   margin-bottom: 1rem;
   font-family: 'Space Grotesk';
-  color: var(--font-color);
+  color: var(--md-typeset-a-color);
   max-width: 24rem;
   margin-left: auto;
   margin-right: auto;

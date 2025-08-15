@@ -81,7 +81,6 @@
 
   /* General styles */
   --border-color: var(--primary-green-200);
-  --font-color: var(--primary-green-500);
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -138,7 +137,7 @@
   --jupyter-result-border-color: var(--primary-green-500);
 }
 
-[data-md-color-scheme='slate'] {
+[data-md-color-scheme='slate'][data-md-color-primary="indigo"] {
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
@@ -189,7 +188,6 @@
 
   /* General styles */
   --border-color: var(--primary-green-500);
-  --font-color: var(--primary-green-300);
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -347,7 +345,7 @@
 .md-tabs__link {
   font-size: 0.725rem;
   font-family: 'Space Grotesk', sans-serif;
-  color: var(--font-color);
+  color: var(--md-typeset-a-color);
   margin-top: 0;
   opacity: 1;
   padding: 10px 0;
