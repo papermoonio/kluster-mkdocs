@@ -595,20 +595,6 @@ li > nav.md-nav[data-md-level="4"] {
   background-color: var(--example-admo-border-color);
 }
 
-/* Parameters  styling */
-.md-typeset details.interface > summary::before {
-  display: none;
-}
-
-[dir="ltr"] .md-typeset details.interface > summary {
-  padding-left: 1em;
-  background-color: var(--summary-bg-color);
-}
-
-.md-typeset details.interface {
-  border-color: var(--summary-bg-color);
-  box-shadow: none;
-}
 
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
@@ -867,19 +853,19 @@ li > nav.md-nav[data-md-level="4"] {
 }
 
 /* Interface admonition styling */
-details.interface > summary::before {
+.md-typeset details.interface > summary::before {
   display: none;
 }
 
 .md-typeset details.interface {
-  border: 1px solid var(--light-green-30);
+  border: 1px solid var(--summary-bg-color);
   box-shadow: none;
   width: auto;
 }
 
 [dir="ltr"] .md-typeset details.interface > summary {
   padding: 1em 0 1em 1em;
-  background-color: var(--dark);
+  background-color: var(--summary-bg-color);
 }
 
 .md-typeset details.interface > summary:after {
@@ -893,7 +879,7 @@ details.interface > summary::before {
 }
 
 .md-typeset details.interface hr {
-  border-bottom: 1px solid var(--light-green-30);
+  border-bottom: 1px solid var(--summary-bg-color);
 }
 
 /* Child adomonition styling */
