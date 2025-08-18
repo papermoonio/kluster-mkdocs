@@ -18,6 +18,7 @@
   --secondary-aqua-900: #00473c;
   --secondary-aqua-700: #00d1af;
   --secondary-aqua-400: #80ffea;
+  --secondary-aqua-200: #C2FFF5;
 
   --tertiary-indigo-700: #19024f;
   --tertiary-indigo-500: #2b0486;
@@ -64,22 +65,6 @@
   --md-accent-fg-color--transparent: var(--info-blue-50);
   --md-accent-fg-color: var(--info-blue-400);
 
-  /* Code variables */
-  --md-code-bg-color: #242424;
-  --md-code-fg-color: var(--light);
-
-  --md-code-hl-keyword-color: #62aef7;
-  --md-code-hl-string-color: #91DD0E;
-  --md-code-hl-number-color: var(--light);
-  --md-code-hl-function-color: var(--light);
-  --md-code-hl-name-color: var(--light);
-  --md-code-hl-constant-color: var(--light);
-  --md-code-hl-comment-color: #7a7a7a;
-  --md-code-hl-punctuation-color: var(--light);
-  --md-code-hl-operator-color: var(--light);
-
-  --md-code-hl-color: #2a2a2a;
-
   /* Links */
   --md-typeset-a-color: var(--primary-green-500);
   --link-hover-color: var(--info-blue-600);
@@ -100,12 +85,11 @@
 
   /* General styles */
   --border-color: var(--primary-green-200);
-  --font-color: var(--primary-green-500);
 
   /* Banner styles */
   --banner-color: var(--light);
   --banner-background-color: var(--primary-green-500);
-  --banner-link-color: var(--primary-green-200);
+  --banner-link-color: var(--secondary-aqua-200);
   --banner-icon-color: var(--light);
   --banner-hover-color: var(--info-blue-50);
 
@@ -121,7 +105,6 @@
   /* Cards styles general */
   --card-background: var(--light);
   --card-border-color: var(--primary-green-500);
-  --divider-color: var(--dark);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--light);
@@ -133,7 +116,6 @@
   --tabs-content-bg-color: var(--base-grey-50);
   --tabs-header-bg-color: var(--light);
   --tabs-label-color: var(--primary-green-600);
-  --tabs-label-active-color: var(--dark);
 
   /* Table Styles */
   --table-border: var(--border-width) solid var(--border-color);
@@ -142,7 +124,9 @@
 
   /* Nav List styles */
   --nav-link-hover-color: var(--dark);
-  --nav-active-hover-color: var(--light);
+  --nav-active-hover-color: var(--dark);
+  --nav-active-text-color: var(--dark);
+  --nav-active-bg-color: var(--primary-green-200);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
   --nav-section-line-color: var(--primary-green-200);
@@ -159,7 +143,7 @@
   --jupyter-result-border-color: var(--primary-green-500);
 }
 
-[data-md-color-scheme='slate'] {
+[data-md-color-scheme='slate'][data-md-color-primary='indigo'] {
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
@@ -212,7 +196,6 @@
 
   /* General styles */
   --border-color: var(--primary-green-500);
-  --font-color: var(--primary-green-300);
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -220,7 +203,6 @@
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
   --banner-hover-color: var(--info-blue-600);
-  
   /* Search */
   --search-background-color: var(--dark);
   --search-border-color: var(--dark);
@@ -236,7 +218,6 @@
   /* Cards styles general */
   --card-background: var(--dark);
   --card-border-color: var(--primary-green-300);
-  --divider-color: var(--light);
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--dark);
@@ -248,7 +229,6 @@
   --tabs-content-bg-color: var(--primary-green-600);
   --tabs-header-bg-color: var(--dark);
   --tabs-label-color: var(--primary-green-200);
-  --tabs-label-active-color: var(--light);
 
   /* Table Styles */
   --table-border: var(--border-width) solid var(--border-color);
@@ -261,6 +241,8 @@
   /* Nav List styles */
   --nav-link-hover-color: var(--light);
   --nav-active-hover-color: var(--light);
+  --nav-active-text-color: var(--light);
+  --nav-active-bg-color: var(--primary-green-500);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
   --nav-section-line-color: var(--primary-green-500);
@@ -366,16 +348,13 @@
 
 /* When any link is hovered, scale the entire list */
 .md-tabs__link:hover {
-  transform: scale(1.01);
-  transition: transform 0.3s ease;
   color: var(--top-nav-hover-color);
 }
 
 /** Most of the styles for this particular class are copied from kluster.ai **/
 .md-tabs__link {
   font-size: 0.725rem;
-  font-family: 'Space Grotesk', sans-serif;
-  color: var(--font-color);
+  color: var(--md-typeset-a-color);
   margin-top: 0;
   opacity: 1;
   padding: 10px 0;
@@ -821,109 +800,6 @@ li > nav.md-nav[data-md-level="4"] {
   opacity: 1;
 }
 
-.md-typeset
-  .tabbed-set
-  > input:first-child:checked
-  ~ .tabbed-labels
-  > :first-child,
-.md-typeset
-  .tabbed-set
-  > input:nth-child(10):checked
-  ~ .tabbed-labels
-  > :nth-child(10),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(11):checked
-  ~ .tabbed-labels
-  > :nth-child(11),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(12):checked
-  ~ .tabbed-labels
-  > :nth-child(12),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(13):checked
-  ~ .tabbed-labels
-  > :nth-child(13),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(14):checked
-  ~ .tabbed-labels
-  > :nth-child(14),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(15):checked
-  ~ .tabbed-labels
-  > :nth-child(15),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(16):checked
-  ~ .tabbed-labels
-  > :nth-child(16),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(17):checked
-  ~ .tabbed-labels
-  > :nth-child(17),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(18):checked
-  ~ .tabbed-labels
-  > :nth-child(18),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(19):checked
-  ~ .tabbed-labels
-  > :nth-child(19),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(2):checked
-  ~ .tabbed-labels
-  > :nth-child(2),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(20):checked
-  ~ .tabbed-labels
-  > :nth-child(20),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(3):checked
-  ~ .tabbed-labels
-  > :nth-child(3),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(4):checked
-  ~ .tabbed-labels
-  > :nth-child(4),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(5):checked
-  ~ .tabbed-labels
-  > :nth-child(5),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(6):checked
-  ~ .tabbed-labels
-  > :nth-child(6),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(7):checked
-  ~ .tabbed-labels
-  > :nth-child(7),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(8):checked
-  ~ .tabbed-labels
-  > :nth-child(8),
-.md-typeset
-  .tabbed-set
-  > input:nth-child(9):checked
-  ~ .tabbed-labels
-  > :nth-child(9) {
-  color: var(--tabs-label-active-color);
-}
-
 .md-typeset .tabbed-labels > label {
   color: var(--tabs-label-color);
   opacity: 0.7;
@@ -971,7 +847,7 @@ li > nav.md-nav[data-md-level="4"] {
   background-color: rgb(255, 0, 0, 0.2);
   text-transform: capitalize;
   padding-left: 0.6666666667em;
-  border: 0.1px solid rgb(255, 0, 0);
+  border: 0.1px solid rgb(255 105 105);;
 }
 
 /* Add background for unsupported parameters */
@@ -988,6 +864,36 @@ li > nav.md-nav[data-md-level="4"] {
   text-transform: capitalize;
   padding-left: 0.6666666667em;
   border: 0.1px solid rgb(0, 128, 0);
+}
+
+/* Interface admonition styling */
+details.interface > summary::before {
+  display: none;
+}
+
+.md-typeset details.interface {
+  border: 1px solid var(--light-green-30);
+  box-shadow: none;
+  width: auto;
+}
+
+[dir="ltr"] .md-typeset details.interface > summary {
+  padding: 1em 0 1em 1em;
+  background-color: var(--dark);
+}
+
+.md-typeset details.interface > summary:after {
+  top: auto;
+}
+
+.md-typeset details.interface:has(~ details.interface),
+.md-typeset details.interface ~ details.interface {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.md-typeset details.interface hr {
+  border-bottom: 1px solid var(--light-green-30);
 }
 
 /* Child adomonition styling */
@@ -1178,8 +1084,8 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-nav__list .md-nav__link--active {
-    color: var(--light);
-    background-color: var(--primary-green-500);
+    color: var(--nav-active-text-color);
+    background-color: var(--nav-active-bg-color);
     border-radius: 6px; /*test same as kluster web make variable later */
     padding: 0.2rem;
     padding-left: 0.5rem;
@@ -1286,6 +1192,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 .md-banner .md-typeset a:hover {
   color: var(--banner-hover-color);
+  opacity: 1;
 }
 
 .md-banner__inner {
@@ -1488,9 +1395,11 @@ li.rc-menu-item-group:has(> div[title="Models"]) {
 .highlight-ipynb.hl-python::-webkit-scrollbar {
   height: 10px;
 }
+
 .highlight-ipynb.hl-python::-webkit-scrollbar-track {
   background: var(--md-default-bg-color);
 }
+
 .highlight-ipynb.hl-python::-webkit-scrollbar-thumb {
   background-color: var(--primary-green-500);
   border-radius: 6px;
