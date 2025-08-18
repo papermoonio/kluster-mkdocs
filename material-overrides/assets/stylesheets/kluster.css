@@ -137,7 +137,7 @@
   --jupyter-result-border-color: var(--primary-green-500);
 }
 
-[data-md-color-scheme='slate'][data-md-color-primary="indigo"] {
+[data-md-color-scheme='slate'][data-md-color-primary='indigo'] {
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
