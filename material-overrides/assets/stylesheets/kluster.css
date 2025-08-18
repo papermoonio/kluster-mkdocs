@@ -345,7 +345,6 @@
 /** Most of the styles for this particular class are copied from kluster.ai **/
 .md-tabs__link {
   font-size: 0.725rem;
-  font-family: 'Space Grotesk', sans-serif;
   color: var(--md-typeset-a-color);
   margin-top: 0;
   opacity: 1;
