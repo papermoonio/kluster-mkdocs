@@ -195,6 +195,7 @@
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
   --banner-hover-color: var(--info-blue-600);
+
   /* Search */
   --search-background-color: var(--dark);
   --search-border-color: var(--dark);
