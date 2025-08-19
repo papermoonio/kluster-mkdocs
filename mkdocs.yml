@@ -25,8 +25,6 @@ theme:
     - navigation.tabs.sticky
     - toc.follow
     - navigation.expand
-extra_javascript:
-  - js/clipboardCopy.js
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -41,6 +39,8 @@ extra_javascript:
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
+extra_javascript:
+  - js/clipboardCopy.js
 markdown_extensions:
   - admonition
   - attr_list
