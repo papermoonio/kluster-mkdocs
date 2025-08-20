@@ -16,7 +16,7 @@
   --secondary-aqua-900: #00473c;
   --secondary-aqua-700: #00d1af;
   --secondary-aqua-400: #80ffea;
-  --secondary-aqua-200: #C2FFF5;
+  --secondary-aqua-200: #c2fff5;
 
   --tertiary-indigo-700: #19024f;
   --tertiary-indigo-500: #2b0486;
@@ -34,7 +34,7 @@
   --warning-yellow-500: #fcc434;
 
   --info-blue-600: #0a40ff;
-  --info-blue-50: #F0F3FF;
+  --info-blue-50: #f0f3ff;
 
   /* Other colors */
   --blue-site: #6e8dff; /* Blue from the kluster.ia site */
@@ -125,7 +125,7 @@
   --nav-active-bg-color: var(--primary-green-200);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
- 
+
   /* Top nav styles */
   --top-nav-active-color: var(--dark);
   --top-nav-hover-color: var(--dark);
@@ -823,7 +823,7 @@ li > nav.md-nav[data-md-level='4'] {
   background-color: rgb(255, 0, 0, 0.2);
   text-transform: capitalize;
   padding-left: 0.6666666667em;
-  border: 0.1px solid rgb(255 105 105);;
+  border: 0.1px solid rgb(255 105 105);
 }
 
 /* Add background for unsupported parameters */
@@ -853,7 +853,7 @@ details.interface > summary::before {
   width: auto;
 }
 
-[dir="ltr"] .md-typeset details.interface > summary {
+[dir='ltr'] .md-typeset details.interface > summary {
   padding: 1em 0 1em 1em;
   background-color: var(--dark);
 }
@@ -983,11 +983,12 @@ input.md-search__input[placeholder='Search']::placeholder {
 }
 
 .md-footer-meta__inner.md-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .md-footer__center-column {
@@ -1027,7 +1028,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 .llms-copy-button:focus svg {
   width: 1.25em;
   height: 1.25em;
-  fill: var(--md-footer-fg-color);
+  fill: var(--light);
   display: inline-block;
   vertical-align: middle;
   transition: fill 0.3s ease;
@@ -1045,21 +1046,17 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
-  .md-footer-meta__inner {
-    flex-direction: column;
-  }
-
   .md-footer-meta__inner.md-grid {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    padding: 0.5rem 0.5rem; 
+    padding: 0.5rem 0.5rem;
   }
 
   .md-footer__buttons {
-  padding: 0;
-}
+    padding: 0;
+  }
 
   .md-copyright__highlight {
     text-align: center;
