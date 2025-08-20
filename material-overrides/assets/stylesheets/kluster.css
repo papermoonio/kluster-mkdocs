@@ -1058,8 +1058,8 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
 
   .md-footer__buttons {
-  padding: 0;
-}
+    padding: 0;
+  }
 
   .md-copyright__highlight {
     text-align: center;
