@@ -25,6 +25,7 @@ theme:
     - navigation.tabs.sticky
     - toc.follow
     - navigation.expand
+    - content.tooltips
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -40,6 +41,7 @@ extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - codehilite
@@ -53,6 +55,8 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets:
       base_path: kluster-docs/.snippets
+      auto_append:
+        - text/glossary.md
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
