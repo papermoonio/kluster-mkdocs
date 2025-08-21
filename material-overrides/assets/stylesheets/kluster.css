@@ -1426,3 +1426,8 @@ span.badge.integration {
   .jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"] {
   padding: 0;
 }
+
+/* Tooltip styling TEST */
+.md-tooltip2__inner {
+  border: solid 1px var(--dark);
+}
