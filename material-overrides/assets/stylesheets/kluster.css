@@ -1273,7 +1273,7 @@ span.badge.integration {
 }
 
 /* Image styling */
-.md-typeset img {
+.md-typeset p > a.glightbox > img {
   border: var(--img-border);
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
