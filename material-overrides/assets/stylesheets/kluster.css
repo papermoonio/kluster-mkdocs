@@ -1366,7 +1366,7 @@ span.badge.integration {
   margin: 0.5em 0;
 }
 
-.md-typeset .grid.cards>ul>li>:last-child {
+.md-typeset .grid.cards > ul > li > :last-child {
     margin-top: auto;
 }
 
