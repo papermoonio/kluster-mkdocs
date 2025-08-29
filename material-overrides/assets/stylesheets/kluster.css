@@ -848,14 +848,14 @@ details.interface > summary::before {
 }
 
 .md-typeset details.interface {
-  border: 1px solid var(--light-green-30);
+  border: 1px solid var(--border-color);
   box-shadow: none;
   width: auto;
 }
 
 [dir='ltr'] .md-typeset details.interface > summary {
   padding: 1em 0 1em 1em;
-  background-color: var(--dark);
+  background-color: var(--border-color);
 }
 
 .md-typeset details.interface > summary:after {
@@ -869,7 +869,7 @@ details.interface > summary::before {
 }
 
 .md-typeset details.interface hr {
-  border-bottom: 1px solid var(--light-green-30);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Child adomonition styling */
