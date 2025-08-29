@@ -28,6 +28,14 @@
   {%- endif -%}
 {%- endblock -%}
 
+{% block libs %}
+  {{ super() }}
+  <script>
+    // Anti-flicker
+    document.documentElement.classList.add('js-loading');
+  </script>
+{% endblock %}
+
 {% block announce %}
   <p>
     🛡️ Build with confidence—Verify Code checks your AI-generated code for errors and security risks in real time. <a href="/verify/code/overview/">See how it works</a>.
@@ -57,5 +65,108 @@
         ? (link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}")
         : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
     }
+  </script>
+
+  <script>
+    // Persistent navigation state script
+    (function () {
+      const STORAGE_KEY = "kluster.navState";
+
+      // Load saved navigation states
+      function load() {
+        try { 
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        }
+        catch { 
+          return {}; 
+        }
+      }
+
+      // Save navigation states
+      function save(state) {
+        try { 
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+        catch {}
+      }
+
+      // Apply saved states to navigation toggles
+      function applyOnce() {
+        const closed = load();
+        const toggles = document.querySelectorAll('.md-nav__toggle.md-toggle[id]');
+        
+        toggles.forEach(input => {
+          const shouldBeClosed = closed[input.id] === true;
+          
+          if (!shouldBeClosed && !input.checked) {
+            input.checked = true;
+          } else if (shouldBeClosed && input.checked) {
+            input.checked = false;
+          }
+          
+          if (shouldBeClosed) {
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        });
+        
+        setTimeout(() => {
+          toggles.forEach(input => {
+            if (closed[input.id] === true && input.checked) {
+              input.checked = false;
+              input.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          });
+        }, 50);
+      }
+
+      // Wire click event listeners
+      function wire() {
+        const closed = load();
+        const allLabels = document.querySelectorAll('label[for]');
+        
+        allLabels.forEach((label) => {
+          const inputId = label.getAttribute('for');
+          const input = document.getElementById(inputId);
+          
+          if (!input || !input.classList.contains('md-nav__toggle')) return;
+          
+          label.addEventListener('click', (e) => {
+            setTimeout(() => {
+              const key = input.id;
+              
+              if (!input.checked) {
+                closed[key] = true;
+              } else {
+                delete closed[key];
+              }
+              save(closed);
+            }, 25);
+          });
+        });
+      }
+
+      // Initialize navigation state management
+      function init() { 
+        setTimeout(() => {
+          applyOnce(); 
+          wire(); 
+          
+          setTimeout(() => applyOnce(), 100);
+          setTimeout(() => applyOnce(), 250);
+          setTimeout(() => applyOnce(), 400);
+          
+          setTimeout(() => {
+            document.documentElement.classList.remove('js-loading');
+          }, 500);
+        }, 150);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+
+    })();
   </script>
 {% endblock %}
