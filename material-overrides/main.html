@@ -29,11 +29,126 @@
 {%- endblock -%}
 
 {% block libs %}
-  {{ super() }}
-  <script>
-    // Anti-flicker
+   <script>
     document.documentElement.classList.add('js-loading');
+
+    (() => {
+      const BREAKPOINT_EM = 76.25;
+      const BREAKPOINT_PX = BREAKPOINT_EM * 16;
+
+      function isLargeScreen() {
+        return window.innerWidth >= BREAKPOINT_PX;
+      }
+
+      function getActiveSectionId() {
+        const activeLink = document.querySelector('.md-nav__link--active');
+        const section = activeLink?.closest('.nav__item--section');
+        return section?.id || null;
+      }
+
+      function applySectionState(section, isExpanded) {
+        const toggle = section.querySelector(':scope > .md-nav__toggle');
+        const nav = section.querySelector(':scope > nav.md-nav');
+        if (!toggle || !nav) return;
+
+        toggle.checked = isExpanded;
+        nav.setAttribute('aria-expanded', isExpanded);
+        section.classList.toggle('expanded', isExpanded);
+      }
+
+      const sections = [];
+      const toggles = new Map();
+
+      function setupSection(section) {
+        const id = section.id;
+        if (!id) return;
+
+        const toggle = section.querySelector(':scope > .md-nav__toggle');
+        const nav = section.querySelector(':scope > nav.md-nav');
+        if (!toggle || !nav) return;
+
+        // Save toggle ref for later updates
+        toggles.set(section, { toggle, nav });
+
+        // Attach listener once
+        if (!toggle.dataset.listenerAttached) {
+          toggle.addEventListener('change', () => {
+            const checked = toggle.checked;
+            if (isLargeScreen()) {
+              localStorage.setItem(id, checked);
+            }
+            applySectionState(section, checked);
+          });
+          toggle.dataset.listenerAttached = 'true';
+        }
+
+        sections.push(section);
+      }
+
+      function applyInitialState() {
+        const large = isLargeScreen();
+        const activeId = getActiveSectionId();
+
+        sections.forEach((section) => {
+          const id = section.id;
+          let isExpanded = false;
+
+          if (large) {
+            const saved = localStorage.getItem(id);
+            isExpanded = saved === null ? true : saved === 'true';
+
+            // Always expand the active section, even if localStorage says false
+            if (id === activeId) {
+              isExpanded = true;
+              localStorage.setItem(id, 'true');
+            }
+          } else {
+            // On small screens, only expand the active section
+            isExpanded = id === activeId;
+          }
+
+          applySectionState(section, isExpanded);
+        });
+      }
+
+      getTopNavigationState = () => {
+        const path = window.location.pathname;
+        // If on a reference page, highlight the reference top level nav item
+        if (path.includes('products/reference')) {
+          const tabs = document.querySelectorAll('.md-tabs__item');
+
+          tabs.forEach(tab => {
+            // Remove the active class from the active tab
+            if (tab.classList.contains('md-tabs__item--active')) {
+              tab.classList.remove('md-tabs__item--active');
+            }
+
+            // Add the active class to the tab that contains 'Reference'
+            if (tab.children[0].innerText.includes('Reference')) {
+              tab.classList.add('md-tabs__item--active');
+            }
+          });
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Handle left navigation state
+        document.querySelectorAll('.nav__item--section').forEach(setupSection);
+        applyInitialState();
+
+        // Handle top navigation state
+        getTopNavigationState();
+
+        document.documentElement.classList.remove('js-loading');
+      });
+
+      window.addEventListener('resize', () => {
+        applyInitialState();
+      });
+    })();
   </script>
+
+  {{ super() }}
 {% endblock %}
 
 {% block announce %}
@@ -65,108 +180,5 @@
         ? (link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}")
         : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
     }
-  </script>
-
-  <script>
-    // Persistent navigation state script
-    (function () {
-      const STORAGE_KEY = "kluster.navState";
-
-      // Load saved navigation states
-      function load() {
-        try { 
-          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-        }
-        catch { 
-          return {}; 
-        }
-      }
-
-      // Save navigation states
-      function save(state) {
-        try { 
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-        }
-        catch {}
-      }
-
-      // Apply saved states to navigation toggles
-      function applyOnce() {
-        const closed = load();
-        const toggles = document.querySelectorAll('.md-nav__toggle.md-toggle[id]');
-        
-        toggles.forEach(input => {
-          const shouldBeClosed = closed[input.id] === true;
-          
-          if (!shouldBeClosed && !input.checked) {
-            input.checked = true;
-          } else if (shouldBeClosed && input.checked) {
-            input.checked = false;
-          }
-          
-          if (shouldBeClosed) {
-            input.dispatchEvent(new Event('change', { bubbles: true }));
-          }
-        });
-        
-        setTimeout(() => {
-          toggles.forEach(input => {
-            if (closed[input.id] === true && input.checked) {
-              input.checked = false;
-              input.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-          });
-        }, 50);
-      }
-
-      // Wire click event listeners
-      function wire() {
-        const closed = load();
-        const allLabels = document.querySelectorAll('label[for]');
-        
-        allLabels.forEach((label) => {
-          const inputId = label.getAttribute('for');
-          const input = document.getElementById(inputId);
-          
-          if (!input || !input.classList.contains('md-nav__toggle')) return;
-          
-          label.addEventListener('click', (e) => {
-            setTimeout(() => {
-              const key = input.id;
-              
-              if (!input.checked) {
-                closed[key] = true;
-              } else {
-                delete closed[key];
-              }
-              save(closed);
-            }, 25);
-          });
-        });
-      }
-
-      // Initialize navigation state management
-      function init() { 
-        setTimeout(() => {
-          applyOnce(); 
-          wire(); 
-          
-          setTimeout(() => applyOnce(), 100);
-          setTimeout(() => applyOnce(), 250);
-          setTimeout(() => applyOnce(), 400);
-          
-          setTimeout(() => {
-            document.documentElement.classList.remove('js-loading');
-          }, 500);
-        }, 150);
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
-
-    })();
   </script>
 {% endblock %}
