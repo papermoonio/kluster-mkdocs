@@ -1086,6 +1086,7 @@ input.md-search__input[placeholder='Search']::placeholder {
   .js-loading .md-tabs__list {
     display: none !important;
   }
+
   .md-nav--lifted
     > .md-nav__list
     > .md-nav__item--active.md-nav__item--section {
