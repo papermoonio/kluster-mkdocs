@@ -39,6 +39,10 @@
   /* Other colors */
   --blue-site: #6e8dff; /* Blue from the kluster.ia site */
 
+  /* Layout sizing */
+  --header-height: 54px;
+  --toc-scroll-offset: calc(var(--header-height) + 1.2rem);
+
   /* General styles */
   --border-radius: 12px;
   --border-width: 1px;
@@ -256,6 +260,15 @@
   opacity: 0.75;
   transition: opacity 0.2s ease;
   color: var(--link-hover-color);
+}
+
+.md-typeset h1[id],
+.md-typeset h2[id],
+.md-typeset h3[id],
+.md-typeset h4[id],
+.md-typeset h5[id],
+.md-typeset h6[id] {
+  scroll-margin-top: var(--toc-scroll-offset);
 }
 
 .md-typeset h1 {
@@ -1202,6 +1215,12 @@ input.md-search__input[placeholder='Search']::placeholder {
   }
   .md-nav__icon.md-icon.mobile {
     display: block;
+  }
+}
+
+@media screen and (max-width: 76.2344em) {
+  :root {
+    --toc-scroll-offset: 1.5rem;
   }
 }
 
