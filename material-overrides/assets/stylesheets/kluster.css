@@ -1163,18 +1163,14 @@ input.md-search__input[placeholder='Search']::placeholder {
     display: none;
   }
 
-  .nav__item--section > input.md-toggle:checked + label.md-nav__link .nav__icon.plus { 
-    display: none; 
-  }
-  .nav__item--section > input.md-toggle:checked + label.md-nav__link .nav__icon.minus { 
-    display: block; 
+  .nav__item--section > input.md-toggle:checked + label.md-nav__link .nav__icon.plus,
+  .nav__item--section > input.md-toggle.md-toggle--indeterminate + label.md-nav__link .nav__icon.plus {
+  display: none;
   }
 
-  .nav__item--section > input.md-toggle.md-toggle--indeterminate + label.md-nav__link .nav__icon.plus { 
-    display: none; 
-  }
-  .nav__item--section > input.md-toggle.md-toggle--indeterminate + label.md-nav__link .nav__icon.minus { 
-    display: block; 
+  .nav__item--section > input.md-toggle:checked + label.md-nav__link .nav__icon.minus,
+  .nav__item--section > input.md-toggle.md-toggle--indeterminate + label.md-nav__link .nav__icon.minus {
+  display: block;
   }
 
   .nav__item--section > .md-nav__link[for] .md-icon:not(.plus):not(.minus) {
