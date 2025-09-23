@@ -10,3 +10,11 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.claude
+.claude-example
+.mcp.json
+.fran
+llms.txt    
+
+# Ignore kluster.ai Verify Code rules
+.github/instructions/kluster-code-verify.instructions.md
