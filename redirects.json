@@ -42,47 +42,47 @@
     },
     {
       "key": "/get-started/integrations/",
-      "value": "/verify/overview/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/integrations/crewai/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/eliza/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/immersive-translate/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/langchain/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/litellm/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/llama-ocr/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/msty/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/pydantic/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/sillytavern/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/integrations/typingmind/",
-      "value": "/"
+      "value": "/verify/overview/"
     },
     {
       "key": "/get-started/mcp/cloud/api/",
@@ -98,19 +98,19 @@
     },
     {
       "key": "/get-started/mcp/integrations/",
-      "value": "/verify/overview/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/mcp/overview/",
-      "value": "/verify/overview/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/mcp/self-hosted/",
-      "value": "/verify/overview/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/mcp/tools/",
-      "value": "/verify/overview/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/models/",
@@ -306,11 +306,11 @@
     },
     {
       "key": "/verify/integrations/mcp/",
-      "value": "/verify/integrations/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/verify/integrations/ide/",
-      "value": "/verify/integrations/"
+      "value": "/verify/quickstart/"
     }
   ]
 }
