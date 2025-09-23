@@ -10,11 +10,11 @@
     },
     {
       "key": "/get-api-key/",
-      "value": "/verify/get-api-key/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/",
-      "value": "/verify/get-api-key/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/api/",
@@ -38,7 +38,7 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/verify/get-api-key/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/integrations/",
@@ -122,7 +122,7 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/verify/get-api-key/"
+      "value": "/verify/quickstart/"
     },
     {
       "key": "/get-started/start-building/",
@@ -299,6 +299,18 @@
     {
       "key": "/verify/reliability/workflow-integrations/",
       "value": "/verify/overview/"
+    },
+    {
+      "key": "/verify/get-api-key/",
+      "value": "/verify/quickstart/"
+    },
+    {
+      "key": "/verify/integrations/mcp/",
+      "value": "/verify/integrations/"
+    },
+    {
+      "key": "/verify/integrations/ide/",
+      "value": "/verify/integrations/"
     }
   ]
 }
