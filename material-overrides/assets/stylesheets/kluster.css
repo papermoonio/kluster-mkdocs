@@ -41,7 +41,8 @@
 
   /* Layout sizing */
   --header-height: 54px;
-  --toc-scroll-offset: calc(var(--header-height) + 1.2rem);
+  --toc-offset-base: 1.6rem;
+  --toc-scroll-offset: calc(var(--header-height) + var(--toc-offset-base));
 
   /* General styles */
   --border-radius: 12px;
@@ -1220,7 +1221,7 @@ input.md-search__input[placeholder='Search']::placeholder {
 
 @media screen and (max-width: 76.2344em) {
   :root {
-    --toc-scroll-offset: 1.5rem;
+    --toc-offset-base: 1.4rem;
   }
 }
 
