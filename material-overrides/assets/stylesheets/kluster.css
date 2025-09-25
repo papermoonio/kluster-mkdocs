@@ -1223,6 +1223,9 @@ input.md-search__input[placeholder='Search']::placeholder {
   :root {
     --toc-offset-base: 1.4rem;
   }
+  .md-container {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 76.2344em) {
