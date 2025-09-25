@@ -1226,9 +1226,6 @@ input.md-search__input[placeholder='Search']::placeholder {
   .md-container {
     margin-top: 0;
   }
-}
-
-@media screen and (max-width: 76.2344em) {
   .md-header__button.md-logo {
     display: block;
   }
