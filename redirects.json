@@ -249,6 +249,18 @@
       "value": "/"
     },
     {
+      "key": "/verify/get-api-key/",
+      "value": "/verify/quickstart/"
+    },
+    {
+      "key": "/verify/integrations/ide/",
+      "value": "/verify/quickstart/"
+    },
+    {
+      "key": "/verify/integrations/mcp/",
+      "value": "/verify/quickstart/"
+    },
+    {
       "key": "/verify/mcp/client-integrations/",
       "value": "/verify/overview/"
     },
@@ -299,18 +311,6 @@
     {
       "key": "/verify/reliability/workflow-integrations/",
       "value": "/verify/overview/"
-    },
-    {
-      "key": "/verify/get-api-key/",
-      "value": "/verify/quickstart/"
-    },
-    {
-      "key": "/verify/integrations/mcp/",
-      "value": "/verify/quickstart/"
-    },
-    {
-      "key": "/verify/integrations/ide/",
-      "value": "/verify/quickstart/"
     }
   ]
 }
