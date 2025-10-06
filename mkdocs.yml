@@ -67,6 +67,21 @@ plugins:
   - search
   - awesome-nav
   - glightbox
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+      js_files:
+        - js/clipboardCopy.js
+      css_files:
+        - assets/stylesheets/terminal.css
+        - assets/stylesheets/timeline-neoteroi.css
+      scoped_css_templates:
+        home.html:
+          - assets/stylesheets/home.css
+        main.html:
+          - assets/stylesheets/kluster.css
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
