@@ -29,11 +29,10 @@
   --positive-mint-600: #06bc53;
   --positive-mint-400: #2ff985;
 
-  --negative-pink-700: #ba0c4b;
-
-  --warning-yellow-500: #fcc434;
-
+  --info-blue-700: #002cc7;
   --info-blue-600: #0a40ff;
+  --info-blue-500: #4e75ff;
+  --info-blue-400: #7090ff;
   --info-blue-50: #f0f3ff;
 
   /* Other colors */
@@ -61,6 +60,8 @@
   --md-default-fg-color: var(--dark);
   --md-default-fg-color--light: var(--primary-green-500);
   --md-default-fg-color--lightest: var(--primary-green-500);
+  --md-accent-fg-color--transparent: var(--info-blue-50);
+  --md-accent-fg-color: var(--info-blue-400);
 
   /* Links */
   --md-typeset-a-color: var(--primary-green-500);
@@ -125,6 +126,8 @@
   --nav-active-bg-color: var(--primary-green-200);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
+  --nav-section-line-color: var(--primary-green-200);
+  --nav-mobile-border-color: var(--base-grey-50);
 
   /* Top nav styles */
   --top-nav-active-color: var(--dark);
@@ -141,6 +144,7 @@
   --md-default-bg-color: var(--primary-green-800);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
+  --md-accent-fg-color: var(--info-blue-500);
 
   /* Code variables */
   --md-code-bg-color: #1e1e1e;
@@ -170,7 +174,7 @@
   --md-default-fg-color--lightest: var(--primary-green-200);
 
   --md-accent-fg-color-light: var(--dark-transparent-70);
-  --md-accent-fg-color--transparent: var(--light-green-transparent-33);
+  --md-accent-fg-color--transparent: var(--primary-green-900);
   --md-accent-bg-color: var(--tertiary-indigo-300);
 
   /* Footer */
@@ -195,7 +199,6 @@
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
   --banner-hover-color: var(--info-blue-600);
-
   /* Search */
   --search-background-color: var(--dark);
   --search-border-color: var(--dark);
@@ -238,6 +241,8 @@
   --nav-active-bg-color: var(--primary-green-500);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
+  --nav-section-line-color: var(--primary-green-500);
+  --nav-mobile-border-color: var(--primary-green-800);
 
   /* Top nav styles */
   --top-nav-active-color: var(--blue-site);
@@ -613,6 +618,17 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
 /* --- Left Navigation & TOC --- */
 @media screen and (min-width: 76.25em) {
+  /* To better handle page reloads and minimize flickering we use js-loading */
+  :not(.js-loading) .md-nav,
+  :not(.js-loading) .md-tabs__list {
+    opacity: 1;
+  }
+
+  .js-loading nav.md-nav,
+  .js-loading .md-tabs__list {
+    display: none !important;
+  }
+
   .md-nav--primary .md-nav__title {
     box-shadow: none;
   }
@@ -694,13 +710,23 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 
   .nav__item--section
-    > .md-nav__link[for]:has(+ .md-nav[data-md-level="2"][aria-expanded="true"])
+    > input.md-toggle:checked
+    + label.md-nav__link
+    .nav__icon.plus,
+  .nav__item--section
+    > input.md-toggle.md-toggle--indeterminate
+    + label.md-nav__link
     .nav__icon.plus {
     display: none;
   }
 
   .nav__item--section
-    > .md-nav__link[for]:has(+ .md-nav[data-md-level="2"][aria-expanded="true"])
+    > input.md-toggle:checked
+    + label.md-nav__link
+    .nav__icon.minus,
+  .nav__item--section
+    > input.md-toggle.md-toggle--indeterminate
+    + label.md-nav__link
     .nav__icon.minus {
     display: block;
   }
@@ -762,7 +788,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
     padding-bottom: 0.2rem;
   }
 
-  [dir=ltr] .md-nav--secondary .md-nav__list {
+  [dir="ltr"] .md-nav--secondary .md-nav__list {
     padding-right: 1.2rem; /* Same spacing as left nav */
   }
 }
@@ -1235,17 +1261,12 @@ details.child {
 }
 
 .md-typeset span.badge.learn {
-  background-color: var(--negative-pink-700);
+  background-color: var(--info-blue-700);
   color: var(--light);
 }
 
 .md-typeset span.badge.external {
   background-color: var(--positive-mint-400);
-  color: var(--dark);
-}
-
-span.badge.integration {
-  background-color: var(--warning-yellow-500);
   color: var(--dark);
 }
 

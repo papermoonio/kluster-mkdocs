@@ -22,7 +22,6 @@ theme:
     - content.code.copy
     - navigation.footer
     - toc.follow
-    - navigation.expand
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
