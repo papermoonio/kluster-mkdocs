@@ -1,29 +1,11 @@
-.md-content__inner {
-  margin-top: 0;
-}
-
-.md-content__inner:before {
-  height: 0;
-}
-
+/* --- Layout --- */
 .home {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
 
-.md-main__inner {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Image styling */
-.md-typeset img {
-  border-radius: unset;
-  box-shadow: unset;
-}
-
-/* Hero Styling */
+/* --- Hero --- */
 .hero {
   padding: 0.5em 1em 2.6em;
   margin: 1em auto 1em;
@@ -66,6 +48,7 @@
   justify-content: center;
 }
 
+/* --- Feature Cards --- */
 .feature-cards {
   display: flex;
   justify-content: space-between;
@@ -133,7 +116,7 @@ a.card-button:hover {
   opacity: 1;
 }
 
-/*Responsive Styling */
+/* --- Responsive Styling --- */
 @media screen and (max-width: 767px) {
   .hero {
     min-height: 15em;
