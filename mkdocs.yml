@@ -8,7 +8,7 @@ copyright: © 2025 kluster.ai. All rights reserved.
 theme:
   name: material
   custom_dir: material-overrides
-  favicon: assets/images/logo.png #test
+  favicon: assets/images/logo.png
   logo: assets/images/logofull.png
   icon:
     edit: material/github
@@ -21,8 +21,6 @@ theme:
     - announce.dismiss
     - content.code.copy
     - navigation.footer
-    - navigation.tabs
-    - navigation.tabs.sticky
     - toc.follow
   palette:
     - media: "(prefers-color-scheme: dark)"

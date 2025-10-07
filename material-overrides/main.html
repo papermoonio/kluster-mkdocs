@@ -29,8 +29,8 @@
 {%- endblock -%}
 
 {% block libs %}
-   <script>
-    document.documentElement.classList.add('js-loading');
+  <script>
+    document.documentElement.classList.add("js-loading");
 
     (() => {
       const BREAKPOINT_EM = 76.25;
@@ -41,19 +41,19 @@
       }
 
       function getActiveSectionId() {
-        const activeLink = document.querySelector('.md-nav__link--active');
-        const section = activeLink?.closest('.nav__item--section');
+        const activeLink = document.querySelector(".md-nav__link--active");
+        const section = activeLink?.closest(".nav__item--section");
         return section?.id || null;
       }
 
       function applySectionState(section, isExpanded) {
-        const toggle = section.querySelector(':scope > .md-nav__toggle');
-        const nav = section.querySelector(':scope > nav.md-nav');
+        const toggle = section.querySelector(":scope > .md-nav__toggle");
+        const nav = section.querySelector(":scope > nav.md-nav");
         if (!toggle || !nav) return;
 
         toggle.checked = isExpanded;
-        nav.setAttribute('aria-expanded', isExpanded);
-        section.classList.toggle('expanded', isExpanded);
+        nav.setAttribute("aria-expanded", isExpanded);
+        section.classList.toggle("expanded", isExpanded);
       }
 
       const sections = [];
@@ -63,8 +63,8 @@
         const id = section.id;
         if (!id) return;
 
-        const toggle = section.querySelector(':scope > .md-nav__toggle');
-        const nav = section.querySelector(':scope > nav.md-nav');
+        const toggle = section.querySelector(":scope > .md-nav__toggle");
+        const nav = section.querySelector(":scope > nav.md-nav");
         if (!toggle || !nav) return;
 
         // Save toggle ref for later updates
@@ -72,14 +72,14 @@
 
         // Attach listener once
         if (!toggle.dataset.listenerAttached) {
-          toggle.addEventListener('change', () => {
+          toggle.addEventListener("change", () => {
             const checked = toggle.checked;
             if (isLargeScreen()) {
               localStorage.setItem(id, checked);
             }
             applySectionState(section, checked);
           });
-          toggle.dataset.listenerAttached = 'true';
+          toggle.dataset.listenerAttached = "true";
         }
 
         sections.push(section);
@@ -95,12 +95,12 @@
 
           if (large) {
             const saved = localStorage.getItem(id);
-            isExpanded = saved === null ? true : saved === 'true';
+            isExpanded = saved === null ? true : saved === "true";
 
             // Always expand the active section, even if localStorage says false
             if (id === activeId) {
               isExpanded = true;
-              localStorage.setItem(id, 'true');
+              localStorage.setItem(id, "true");
             }
           } else {
             // On small screens, only expand the active section
@@ -111,15 +111,15 @@
         });
       }
 
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         // Handle left navigation state
-        document.querySelectorAll('.nav__item--section').forEach(setupSection);
+        document.querySelectorAll(".nav__item--section").forEach(setupSection);
         applyInitialState();
 
-        document.documentElement.classList.remove('js-loading');
+        document.documentElement.classList.remove("js-loading");
       });
 
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         applyInitialState();
       });
     })();
@@ -128,11 +128,11 @@
   {{ super() }}
 {% endblock %}
 
-{% block announce %}
+{# {% block announce %}
   <p>
     🛡️ Build with confidence—Verify Code checks your AI-generated code for errors and security risks in real time. <a href="/verify/">See how it works</a>.
   </p>
-{% endblock %}
+{% endblock %} #}
 
 {%- block container -%}
   <div class="md-content" data-md-component="content">
@@ -142,6 +142,55 @@
         {% include "partials/content.html" %}
       {% endblock %}
     </article>
+    {% if "navigation.footer" in features %}
+      {% if page.previous_page or page.next_page %}
+        {% if page.meta and page.meta.hide %}
+          {% set hidden = "hidden" if "footer" in page.meta.hide %}
+        {% endif %}
+        <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+          {% if page.previous_page %}
+            {% set direction = lang.t("footer.previous") %}
+            <a href="{{ page.previous_page.url | url }}" 
+              class="md-footer__link md-footer__link--prev" 
+              aria-label="{{ direction }}: {{ page.previous_page.title | e }}"
+            >
+              <div class="md-footer__button md-icon">
+                {% set icon = config.theme.icon.previous or "material/arrow-left" %}
+                {% include ".icons/" ~ icon ~ ".svg" %}
+              </div>
+              <div class="md-footer__title">
+                <span class="md-footer__direction">
+                  {{ direction }}
+                </span>
+                <div class="md-ellipsis">
+                  {{ page.previous_page.title }}
+                </div>
+              </div>
+            </a>
+          {% endif %}
+          {% if page.next_page %}
+            {% set direction = lang.t("footer.next") %}
+            <a href="{{ page.next_page.url | url }}" 
+              class="md-footer__link md-footer__link--next" 
+              aria-label="{{ direction }}: {{ page.next_page.title | e }}"
+            >
+              <div class="md-footer__title">
+                <span class="md-footer__direction">
+                  {{ direction }}
+                </span>
+                <div class="md-ellipsis">
+                  {{ page.next_page.title }}
+                </div>
+              </div>
+              <div class="md-footer__button md-icon">
+                {% set icon = config.theme.icon.next or "material/arrow-right" %}
+                {% include ".icons/" ~ icon ~ ".svg" %}
+              </div>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    {% endif %}
   </div>
 {%- endblock -%}
 
@@ -151,11 +200,37 @@
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
       const isDarkMode = window.matchMedia(
-        '(prefers-color-scheme: dark)'
+        "(prefers-color-scheme: dark)"
       ).matches;
       isDarkMode
         ? (link.href = "{{ 'assets/images/favicon-dark-mode.png' | url }}")
         : (link.href = "{{ 'assets/images/favicon-light-mode.png' | url }}");
     }
+  </script>
+
+  <script>
+    const content = document.querySelector(".md-content");
+    const header = document.querySelector(".md-header");
+    const footer = document.querySelector(".md-footer");
+
+    function updateContentHeight() {
+      if (content && header && footer) {
+        const contentHeight = content.offsetHeight;
+        const headerHeight = header.offsetHeight;
+        const footerHeight = footer.offsetHeight;
+
+        const pageHeight = headerHeight + footerHeight + contentHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (pageHeight < viewportHeight) {
+          content.style.minHeight = `${viewportHeight - headerHeight - footerHeight}px`;
+        } else {
+          content.style.minHeight = "auto";
+        }
+      }
+    }
+
+    updateContentHeight();
+    window.addEventListener("resize", updateContentHeight);
   </script>
 {% endblock %}

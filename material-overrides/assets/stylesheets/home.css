@@ -1,32 +1,19 @@
-.md-content__inner {
-  margin-top: 0;
-}
-
-.md-content__inner:before {
-  height: 0;
-}
-
+/* --- Layout --- */
 .home {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
 
-.md-main__inner {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+@media screen and (min-width: 76.25em) {
+  [dir=ltr] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
+    margin-right: 1.2rem;
+  }
 }
 
-/* Image styling */
-.md-typeset img {
-  border-radius: unset;
-  box-shadow: unset;
-}
-
-/* Hero Styling */
+/* --- Hero --- */
 .hero {
   padding: 0.5em 1em 2.6em;
-  margin: 1em auto 1em;
   text-align: center;
 }
 
@@ -61,11 +48,12 @@
 }
 
 .hero .button-wrapper {
-  margin: 2rem 0 0;
+  margin: 1rem 0 0;
   display: flex;
   justify-content: center;
 }
 
+/* --- Feature Cards --- */
 .feature-cards {
   display: flex;
   justify-content: space-between;
@@ -133,7 +121,7 @@ a.card-button:hover {
   opacity: 1;
 }
 
-/*Responsive Styling */
+/* --- Responsive Styling --- */
 @media screen and (max-width: 767px) {
   .hero {
     min-height: 15em;
