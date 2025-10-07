@@ -543,6 +543,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   justify-items: center;
   padding: 0.5rem;
   border: 1px solid var(--border-color);
+  gap: 0.5rem;
 }
 
 .md-footer__center-column {
@@ -560,42 +561,35 @@ input.md-search__input[placeholder="Search"]::placeholder {
   color: var(--md-footer-fg-color);
 }
 
+.md-copyright,
+.md-social {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /* llms-full button styling */
 .md-footer__buttons {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-  z-index: 3;
-  padding: 0.4rem;
+  width: 100%;
 }
 
-.llms-copy-button {
-  min-width: max-content;
+.md-footer__buttons .llms-copy-button {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   align-items: center;
-  padding: 0.4rem;
+  justify-content: center;
+  font-size: 0.64rem;
+  width: 100%;
+  color: var(--md-footer-fg-color--light);
+}
+
+.md-footer__buttons .llms-copy-button:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
-.llms-copy-button svg,
-.llms-copy-button:focus svg {
-  width: 1.25em;
-  height: 1.25em;
-  fill: var(--light);
-  display: inline-block;
-  vertical-align: middle;
-  transition: fill 0.3s ease;
-  margin-right: 0.5em;
-}
-
-.llms-copy-button:hover svg {
-  fill: var(--light);
-}
-
-.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd.llms-copy-button {
-  display: flex;
-  align-items: center;
+.md-footer__buttons svg {
+  max-height: 1rem;
+  fill: var(--md-footer-fg-color--light);
 }
 
 /* Mobile Footer styling */
@@ -726,7 +720,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
   .md-nav--secondary .md-nav__title[for="__toc"] {
     padding-left: 1.1rem;
-    padding-bottom: calc(1em - 0.4rem);
+    padding-bottom: 0.5rem;
   }
 
   .md-nav__icon:hover {
