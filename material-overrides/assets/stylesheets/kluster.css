@@ -338,121 +338,29 @@
 /* Header button styling (copied from kluster.ai) */
 .button-container {
   margin: 1em;
-  align-items: center;
+}
+
+.button-container.md-typeset .md-button {
   display: flex;
-  flex: none;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 10px;
-  height: min-content;
-  justify-content: center;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  width: min-content;
-}
-
-.framer-1suqwmq-container {
-  opacity: 1;
-  will-change: transform;
-  transform: none;
-  flex: none;
-  height: var(--button-height);
-  position: relative;
-  width: auto;
-}
-
-.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd {
-  background-color: rgb(81, 0, 255);
-  border-radius: 8px;
-  opacity: 1;
-}
-
-.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
-  .framer-1a164ql {
-  background: var(--info-blue-600);
-}
-
-.framer-Bja7l.framer-1v7ikbi.framer-v-1v7ikbi.framer-aotcnd:hover
-  .framer-uvujyo {
+  border-radius: 2em;
   background-color: var(--info-blue-600);
+  border-color: var(--info-blue-600)
 }
 
-.framer-Bja7l.framer-1v7ikbi {
-  display: flex;
-  flex-direction: column;
-  height: var(--button-height);
-  justify-content: center;
-  overflow: visible;
-  padding: 0 20px;
-  position: relative;
+.button-container.md-typeset .md-button:hover {
+  opacity: 0.9;
 }
 
-.framer-follse {
-  border-radius: var(--button-radius);
-  inset: 0;
-  mix-blend-mode: lighten;
-  overflow: hidden;
-  position: absolute;
-  will-change: none, transform;
-  z-index: 2;
-  width: 100%; /* Ensures it doesn't overflow */
-  height: 100%;
-}
-
-.framer-follse > div {
-  position: absolute;
-  border-radius: inherit;
-  inset: 0px;
-}
-
-.framer-follse img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  object-position: center center;
-  object-fit: cover;
-}
-
-.framer-1a164ql {
-  border-radius: var(--button-radius);
-  opacity: 1;
-  inset: -1px;
-  overflow: hidden;
-  position: absolute;
-  z-index: 3;
-}
-
-.framer-uvujyo {
-  background-color: var(--dark);
-  border-radius: var(--button-radius);
-  opacity: 1;
-  inset: 1px;
-  overflow: hidden;
-  position: absolute;
-  z-index: 3;
-}
-
-.framer-p6mefi {
-  outline: none;
-  display: flex;
-  flex-direction: column;
-  opacity: 1;
-  position: relative;
-  white-space: nowrap;
-  width: auto;
-  z-index: 4;
-  text-align: center;
-}
-
-.framer-text {
-  display: flex;
-  justify-content: center;
+.button-container.md-typeset .md-button a {
   color: var(--light);
-  margin: 0px;
-  padding: 0px;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button-container.md-typeset .md-button a:hover,
+.button-container.md-typeset .md-button a:focus {
+  color: var(--light);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 76.2344em) {
