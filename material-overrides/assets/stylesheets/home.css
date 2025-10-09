@@ -155,6 +155,7 @@ a.card-button:hover {
   border-color: var(--info-blue-600);
   color: var(--light);
   opacity: 1;
+  text-decoration: none;
 }
 
 /* --- Responsive Styling --- */
