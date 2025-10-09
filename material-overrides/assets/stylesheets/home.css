@@ -101,7 +101,7 @@
   padding: 1em;
   border-radius: var(--border-radius);
   background-color: var(--card-background);
-  border: var(--card-border);
+  border: var(--border-width) solid var(--md-default-fg-color);
   flex: 1 1 calc(33.333% - 1rem);
   display: flex;
   flex-direction: column;
