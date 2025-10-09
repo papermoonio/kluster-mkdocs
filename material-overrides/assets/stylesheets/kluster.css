@@ -56,21 +56,22 @@
 
 :root,
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: var(--base-grey-50);
+  --md-default-bg-color: var(--light);
   --md-default-fg-color: var(--dark);
   --md-default-fg-color--light: var(--primary-green-500);
   --md-default-fg-color--lightest: var(--primary-green-500);
   --md-accent-fg-color--transparent: var(--info-blue-50);
   --md-accent-fg-color: var(--info-blue-400);
 
+  --secondary-bg-color: var(--base-grey-50);
+
   /* Links */
-  --md-typeset-a-color: var(--primary-green-500);
-  --link-hover-color: var(--info-blue-600);
+  --md-typeset-a-color: var(--info-blue-500);
 
   /* Footer */
   --md-footer-fg-color: var(--primary-green-500);
   --md-footer-fg-color--light: var(--primary-green-500);
-  --md-footer-bg-color: var(--base-grey-50);
+  --md-footer-bg-color: var(--md-default-bg-color);
 
   /* Custom code admonition colors */
   --code-admo-border-color: var(--positive-mint-800);
@@ -81,7 +82,7 @@
   --note-admo-title-bg: var(--secondary-aqua-700);
 
   /* General styles */
-  --border-color: var(--primary-green-200);
+  --border-color: var(--secondary-bg-color);
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -97,7 +98,7 @@
   --search-result-color: var(--dark);
   --search-result-bg-color: var(--light);
   --search-input-bg-color: var(--light);
-  --search-hover-color: var(--primary-green-200);
+  --search-hover-color: var(--secondary-bg-color);
 
   /* Cards styles general */
   --card-background: var(--light);
@@ -105,8 +106,7 @@
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--light);
-  --card-wtgn-border: var(--border-width) solid var(--border-color);
-  --card-wtgn-hover-color: var(--primary-green-200);
+  --card-wtgn-border: var(--border-width) solid var(--dark);
 
   /* Tabs styles */
   --tabs-border: var(--border-width) solid var(--primary-green-200);
@@ -116,14 +116,14 @@
 
   /* Table Styles */
   --table-border: var(--border-width) solid var(--border-color);
-  --table-header-bg-color: var(--light);
-  --table-divider-color: var(--primary-green-200);
+  --table-header-bg-color: var(--secondary-bg-color);
+  --table-divider-color: var(--border-color);
 
   /* Nav List styles */
   --nav-link-hover-color: var(--dark);
   --nav-active-hover-color: var(--dark);
   --nav-active-text-color: var(--dark);
-  --nav-active-bg-color: var(--primary-green-200);
+  --nav-active-bg-color: var(--secondary-bg-color);
   --nav-font-color: var(--dark);
   --nav-bg-color: var(--primary-green-200);
   --nav-section-line-color: var(--primary-green-200);
@@ -141,10 +141,12 @@
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
-  --md-default-bg-color: var(--primary-green-800);
+  --md-default-bg-color: var(--dark);
   --md-default-fg-color: var(--light);
   --md-default-fg-color--light: var(--primary-green-200);
   --md-accent-fg-color: var(--info-blue-500);
+
+  --secondary-bg-color: var(--primary-green-800);
 
   /* Code variables */
   --md-code-bg-color: #1e1e1e;
@@ -163,8 +165,7 @@
   --md-code-hl-color: #2a2a2a;
 
   /* Links */
-  --md-typeset-a-color: var(--primary-green-300);
-  --link-hover-color: var(--blue-site);
+  --md-typeset-a-color: var(--info-blue-400);
 
   --md-typeset-table-color: var(--primary-green-300);
 
@@ -180,7 +181,7 @@
   /* Footer */
   --md-footer-fg-color: var(--primary-green-300);
   --md-footer-fg-color--light: var(--primary-green-200);
-  --md-footer-bg-color: var(--primary-green-800);
+  --md-footer-bg-color: var(--md-default-bg-color);
 
   /* Custom code admonition colors */
   --code-admo-border-color: var(--positive-mint-400);
@@ -191,7 +192,7 @@
   --note-admo-title-bg: var(--secondary-aqua-900);
 
   /* General styles */
-  --border-color: var(--primary-green-500);
+  --border-color: var(--secondary-bg-color);
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -199,14 +200,15 @@
   --banner-link-color: var(--primary-green-300);
   --banner-icon-color: var(--primary-green-300);
   --banner-hover-color: var(--info-blue-600);
+
   /* Search */
   --search-background-color: var(--dark);
-  --search-border-color: var(--dark);
+  --search-border-color: var(--primary-green-300);
   --search-color: var(--primary-green-300);
   --search-result-color: var(--light);
   --search-result-bg-color: var(--dark);
   --search-input-bg-color: var(--primary-green-700);
-  --search-hover-color: var(--primary-green-500);
+  --search-hover-color: var(--secondary-bg-color);
 
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
@@ -217,19 +219,18 @@
 
   /* Cards styles Where To Go Next */
   --card-wtgn-bg-color: var(--dark);
-  --card-wtgn-border: var(--border-width) solid var(--border-color);
-  --card-wtgn-hover-color: var(--primary-green-500);
+  --card-wtgn-border: var(--border-width) solid var(--light);
 
   /* Tabs styles */
-  --tabs-border: var(--border-width) solid var(--dark);
-  --tabs-content-bg-color: var(--primary-green-600);
+  --tabs-border: var(--border-width) solid var(--secondary-bg-color);
+  --tabs-content-bg-color: var(--secondary-bg-color);
   --tabs-header-bg-color: var(--dark);
   --tabs-label-color: var(--primary-green-200);
 
   /* Table Styles */
   --table-border: var(--border-width) solid var(--border-color);
-  --table-header-bg-color: var(--dark);
-  --table-divider-color: var(--dark);
+  --table-header-bg-color: var(--secondary-bg-color);
+  --table-divider-color: var(--border-color);
 
   /* Screenshots Styles */
   --img-border: var(--border-width) solid var(--border-color);
@@ -238,7 +239,7 @@
   --nav-link-hover-color: var(--light);
   --nav-active-hover-color: var(--light);
   --nav-active-text-color: var(--light);
-  --nav-active-bg-color: var(--primary-green-500);
+  --nav-active-bg-color: var(--secondary-bg-color);
   --nav-font-color: var(--light);
   --nav-bg-color: var(--primary-green-500);
   --nav-section-line-color: var(--primary-green-500);
@@ -257,7 +258,7 @@
 
 /* --- Layout --- */
 .md-grid {
-  max-width: 66rem;
+  max-width: unset;
 }
 
 .md-main__inner {
@@ -268,14 +269,20 @@
 
 .md-content {
   border-left: 1px solid var(--border-color);
+  max-width: calc(1400px - 12.6rem);
+  padding: 1.2rem;
+}
+
+.md-sidebar {
+  width: 12.6rem;
 }
 
 /* --- Typography --- */
 .md-typeset a:focus,
 .md-typeset a:hover {
-  opacity: 0.75;
   transition: opacity 0.2s ease;
-  color: var(--link-hover-color);
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
 }
 
 .md-typeset h1 {
@@ -487,12 +494,16 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 
   .md-search-result__meta {
-    background-color: var(--primary-green-500);
-    color: var(--light);
+    background-color: var(--search-hover-color);
   }
 
   .md-search-result__item {
     box-shadow: 0 -0.05rem var(--primary-green-500);
+  }
+
+  .md-search-result__link:focus,
+  .md-search-result__link:hover {
+    background-color: var(--search-hover-color);
   }
 
   .md-search__input {
@@ -618,139 +629,68 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
 /* --- Left Navigation & TOC --- */
 @media screen and (min-width: 76.25em) {
-  /* To better handle page reloads and minimize flickering we use js-loading */
-  :not(.js-loading) .md-nav,
-  :not(.js-loading) .md-tabs__list {
-    opacity: 1;
-  }
-
-  .js-loading nav.md-nav,
-  .js-loading .md-tabs__list {
-    display: none !important;
-  }
-
-  .md-nav--primary .md-nav__title {
-    box-shadow: none;
-  }
-
   .md-nav--lifted
     > .md-nav__list
     > .md-nav__item--active.md-nav__item--section {
     margin-left: -0.5rem;
   }
 
-  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-    padding-left: 0.7rem;
-    margin-left: 0;
-    margin-bottom: 0.5em;
+  .md-nav__item--section {
+    margin: 0 0 1.25em 0;
   }
 
-  .md-nav[data-md-level="1"]
-    > .md-nav__list:first-of-type
-    > .md-nav__item:not(.nav__item--section) {
-    margin-bottom: calc(1em - 0.4rem);
-  }
-
-  .nav__item--section > label.md-nav__link:hover {
+  .md-nav__item--section > label.md-nav__link[for],
+  .md-nav--secondary .md-nav__title {
     color: var(--md-default-fg-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding-left: 0.7rem;
   }
 
-  .md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item {
-    padding: 0;
+  [dir=ltr] .md-nav--primary .md-nav__list {
+    padding-left: 0.8rem;
   }
 
+  /* Indent level 2 nav items and add section lines */
   .md-nav[data-md-level="2"] > .md-nav__list {
-    padding-left: 1.2rem;
-  }
-
-  .md-nav[data-md-level="2"] > .md-nav__list .md-nav .md-nav__list,
-  .md-nav[data-md-level="2"]
-    > .md-nav__list
-    .md-nav
-    .md-nav__list
-    .md-nav__link {
-    padding-left: 0.5rem;
-  }
-
-  .md-nav__link {
-    padding: 0.2rem;
-    padding-left: 0.5rem;
-    margin-top: 0;
-    margin-bottom: calc(1em - 0.4rem);
-  }
-
-  .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-    box-shadow: none;
-  }
-
-  .md-nav__list .md-ellipsis {
-    width: 100%;
-  }
-
-  .md-nav__list .md-nav__link--active {
-    color: var(--nav-active-text-color);
-    background-color: var(--nav-active-bg-color);
-    border-radius: 6px;
-    padding: 0.2rem;
-    padding-left: 0.5rem;
-  }
-
-  .md-nav__link[for]:focus,
-  .md-nav__link[href]:focus,
-  .md-nav__list .md-nav__link--active:hover,
-  .md-nav__list .md-nav__link--active:focus {
-    color: var(--nav-active-hover-color);
-  }
-
-  .nav__icon.plus {
-    display: block;
-  }
-  .nav__icon.minus {
-    display: none;
-  }
-
-  .nav__item--section
-    > input.md-toggle:checked
-    + label.md-nav__link
-    .nav__icon.plus,
-  .nav__item--section
-    > input.md-toggle.md-toggle--indeterminate
-    + label.md-nav__link
-    .nav__icon.plus {
-    display: none;
-  }
-
-  .nav__item--section
-    > input.md-toggle:checked
-    + label.md-nav__link
-    .nav__icon.minus,
-  .nav__item--section
-    > input.md-toggle.md-toggle--indeterminate
-    + label.md-nav__link
-    .nav__icon.minus {
-    display: block;
-  }
-
-  .nav__item--section > .md-nav__link[for] .md-icon:not(.plus):not(.minus) {
-    display: none;
-  }
-
-  .nav__icon.md-icon svg {
-    height: 0.8rem;
-    width: auto;
+    border-left: 1px solid var(--border-color);
+    padding-left: 0.4rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0;
   }
 
   [dir="ltr"] .md-nav--primary .md-nav__item > .md-nav__link {
     gap: 0.4rem;
   }
 
-  .md-nav--secondary .md-nav__title[for="__toc"] {
-    padding-left: 1.1rem;
-    padding-bottom: 0.5rem;
+  .md-nav__link {
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .md-nav__list .md-nav__link--active,
+  .md-nav__list .md-nav__link:hover {
+    color: var(--nav-active-text-color);
+    background-color: var(--nav-active-bg-color);
+    border-radius: 6px;
+    padding-left: 0.5rem;
+  }
+
+  .md-nav__list .md-nav__link:focus {
+    color: var(--nav-active-text-color);
   }
 
   .md-nav__icon:hover {
     background-color: transparent;
+  }
+
+  .md-nav--secondary .md-nav__title[for="__toc"] {
+    padding: 0.5rem 0.6rem 0.5rem 1.1rem;
   }
 }
 
@@ -771,14 +711,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
   .md-nav--primary .md-nav__item {
     border-top: none;
-  }
-
-  .nav__icon.plus,
-  .nav__icon.minus {
-    display: none;
-  }
-  .md-nav__icon.md-icon.mobile {
-    display: block;
   }
 }
 
@@ -1159,21 +1091,17 @@ details.child {
 }
 
 .md-typeset .grid.cards > ul > li:hover {
-  border-color: var(--card-wtgn-hover-color);
+  border: var(--card-wtgn-border);
   box-shadow: none;
 }
 
 .md-typeset .grid.cards > ul > li > hr {
-  border-bottom: 0.05rem solid var(--primary-green-300);
+  border-bottom: var(--card-wtgn-border);
   margin: 0.5em 0;
 }
 
 .md-typeset .grid.cards > ul > li > :last-child:has(> a) {
   margin-top: auto;
-}
-
-.md-typeset .grid.cards > ul > li > p > a:hover {
-  color: var(--info-blue-600);
 }
 
 /* --- Type Badges (i.e., String, Boolean, Required, etc.) --- */

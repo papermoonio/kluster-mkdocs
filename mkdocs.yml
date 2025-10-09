@@ -21,6 +21,7 @@ theme:
     - announce.dismiss
     - content.code.copy
     - navigation.footer
+    - navigation.sections
     - toc.follow
   palette:
     - media: "(prefers-color-scheme: dark)"
