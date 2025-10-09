@@ -287,6 +287,17 @@
 
 .md-typeset h1 {
   color: var(--md-default-fg-color);
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-size: 36px;
+  margin: 1.75rem 0 1rem;
+}
+
+.md-typeset h3 {
+  font-size: 24px;
 }
 
 .md-typeset h1,
@@ -301,6 +312,12 @@
 
 .md-typeset code {
   color: var(--md-code-hl-string-color);
+}
+
+@media screen and (max-width: 60em) {
+  .md-typeset h2 {
+    font-size: 30px;
+  }
 }
 
 /* --- Header --- */
