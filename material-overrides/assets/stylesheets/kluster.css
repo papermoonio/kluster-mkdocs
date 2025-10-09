@@ -289,6 +289,12 @@
   color: var(--md-default-fg-color);
 }
 
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 600;
+}
+
 .md-typeset pre > code {
   border-radius: 10px;
 }
@@ -670,7 +676,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
     margin-top: 0;
     margin-bottom: 0.2rem;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .md-nav__list .md-nav__link--active,
