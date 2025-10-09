@@ -218,6 +218,7 @@ a.card-button:hover {
   font-size: 10px;
   padding: 13px 36px 13px 18px;
   overflow: hidden;
+  width: 100%;
 }
 
 .feature-card > :last-child {
@@ -225,121 +226,24 @@ a.card-button:hover {
 }
 
 /* --- Responsive Styling --- */
-@media screen and (max-width: 767px) {
-  .hero {
-    min-height: 15em;
-    padding: 1em;
-    margin: 0 1em 2.5em;
-  }
-
-  .hero h1 {
-    letter-spacing: -2px;
+@media screen and (max-width: 1024px) {
+  .md-typeset .hero h1 {
     font-size: 48px;
-    margin-top: 0.5em;
   }
 
   .hero-sub {
-    font-size: 0.75rem;
-    max-width: 24rem;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-sub {
+    max-width: 90%;
     padding: 0 1em;
   }
 
   .feature-cards {
-    flex-direction: column;
-    margin: 0 1em;
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .feature-card h2 {
-    font-size: 1rem;
-    line-height: 1.2;
-    padding: 0.75em 0 0.5em;
-    text-align: center;
-  }
-
-  .feature-card p {
-    font-size: 0.85rem;
-  }
-
-  a.card-button {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 999px) and (min-width: 768px) {
-  .hero {
-    padding: 1.5em 2em;
-    margin: 0 auto 2em;
-  }
-
-  .hero h1 {
-    font-size: 48px;
-    letter-spacing: -2px;
-    margin-bottom: 1rem;
-  }
-
-  .hero-sub {
-    font-size: 0.8rem;
-    max-width: 28rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .feature-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5rem;
-  }
-
-  .feature-card {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: 340px;
-  }
-
-  .feature-cards-wrapper {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
-  .hero {
-    padding: 1.5em 2em;
-    margin: 0 auto 2em;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    letter-spacing: -3px;
-    margin-bottom: 1rem;
-  }
-
-  .hero-sub {
-    font-size: 0.8rem;
-    max-width: 28rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .feature-cards {
-    margin: 0 auto 1rem;
-  }
-
-  .feature-card h2 {
-    font-size: 1rem;
-  }
-
-  .feature-card p {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    margin-bottom: 1em;
-    padding: 0.5em;
-  }
-
-  a.card-button {
-    padding: 0.4rem 1rem;
-    margin-top: auto;
-    text-wrap: nowrap;
   }
 }
