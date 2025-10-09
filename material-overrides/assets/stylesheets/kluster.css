@@ -344,7 +344,7 @@
   display: flex;
   border-radius: 2em;
   background-color: var(--info-blue-600);
-  border-color: var(--info-blue-600)
+  border-color: var(--info-blue-600);
 }
 
 .button-container.md-typeset .md-button:hover {
@@ -553,6 +553,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
     margin: 0 0 1.25em 0;
   }
 
+  .md-nav__item--section > label {
+    border-bottom: 1px solid var(--border-color);
+  }
+
   .md-nav__item--section > label.md-nav__link[for],
   .md-nav--secondary .md-nav__title {
     color: var(--md-default-fg-color);
@@ -562,21 +566,32 @@ input.md-search__input[placeholder="Search"]::placeholder {
     padding-left: 0.7rem;
   }
 
-  [dir=ltr] .md-nav--primary .md-nav__list {
+  [dir="ltr"] .md-nav--primary .md-nav__list {
     padding-left: 0.8rem;
   }
 
   /* Indent level 2 nav items and add section lines */
   .md-nav[data-md-level="2"] > .md-nav__list {
-    border-left: 1px solid var(--border-color);
-    padding-left: 0.4rem;
-    margin-left: 0.5rem;
+    padding-left: 0;
+    margin-left: 0;
     margin-bottom: 0.4rem;
     padding-bottom: 0;
   }
 
+  .md-nav[data-md-level="2"] > .md-nav__list > .md-nav__item a {
+    padding-left: 0.3rem;
+  }
+
   [dir="ltr"] .md-nav--primary .md-nav__item > .md-nav__link {
     gap: 0.4rem;
+  }
+
+  [dir="ltr"]
+    .md-nav--primary
+    .md-nav[data-md-level="2"]
+    .md-nav__item
+    > .md-nav__link {
+    gap: 0.6rem;
   }
 
   .md-nav__link {
@@ -609,6 +624,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 @media screen and (max-width: 76.234375em) {
+  .md-sidebar {
+    width: 12.1rem;
+  }
+
   .md-nav__title .md-nav__button.md-logo img {
     height: 2em;
   }
@@ -623,8 +642,32 @@ input.md-search__input[placeholder="Search"]::placeholder {
     color: var(--md-default-fg-color);
   }
 
+  .md-nav--primary .md-nav__title ~ .md-nav__list {
+    box-shadow: none;
+    border-top: 1px solid var(--nav-mobile-border-color);
+  }
+
+  .md-nav__list .md-nav__link--active,
+  .md-nav__list .md-nav__link:hover {
+    color: var(--md-default-fg-color);
+    background-color: var(--nav-active-bg-color);
+  }
+
+  .md-nav__list .md-nav__link--active {
+    padding-left: 0.8rem;
+  }
+
   .md-nav--primary .md-nav__item {
     border-top: none;
+  }
+
+  .md-nav--primary .md-nav__item--active > .md-nav__link,
+  .md-nav--primary .md-nav__item--active > .md-nav__link:hover {
+    color: var(--md-default-fg-color);
+  }
+
+  .label-icon {
+    display: none;
   }
 }
 
