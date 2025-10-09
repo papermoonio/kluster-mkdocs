@@ -33,7 +33,7 @@
 
 .hero h1 {
   font-weight: 800;
-  font-size: 3.1rem;
+  font-size: 72px;
   margin-bottom: 1rem;
   letter-spacing: -4px;
 }
@@ -168,7 +168,7 @@ a.card-button:hover {
 
   .hero h1 {
     letter-spacing: -2px;
-    font-size: 2rem;
+    font-size: 48px;
     margin-top: 0.5em;
   }
 
@@ -208,7 +208,7 @@ a.card-button:hover {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 48px;
     letter-spacing: -2px;
     margin-bottom: 1rem;
   }
