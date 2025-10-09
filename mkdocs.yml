@@ -88,12 +88,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/kluster-ai/
       name: LinkedIn
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/klusterai/
-      name: Instagram
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/profile.php?id=61558614587340
-      name: Facebook
   analytics:
     provider: google
     property: AW-11500721833
