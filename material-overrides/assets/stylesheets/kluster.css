@@ -824,7 +824,8 @@ details.child {
 
 .md-clipboard:focus,
 .md-clipboard:hover {
-  color: var(--info-blue-600);
+  color: var(--primary-green-300);
+  opacity: 0.7;
 }
 
 .md-dialog {
