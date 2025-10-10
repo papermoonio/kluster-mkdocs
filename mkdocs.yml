@@ -8,7 +8,7 @@ copyright: © 2025 kluster.ai. All rights reserved.
 theme:
   name: material
   custom_dir: material-overrides
-  favicon: assets/images/logo.png #test
+  favicon: assets/images/logo.png
   logo: assets/images/logofull.png
   icon:
     edit: material/github
@@ -21,10 +21,9 @@ theme:
     - announce.dismiss
     - content.code.copy
     - navigation.footer
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - toc.follow
     - navigation.expand
+    - navigation.sections
+    - toc.follow
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -104,12 +103,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/kluster-ai/
       name: LinkedIn
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/klusterai/
-      name: Instagram
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/profile.php?id=61558614587340
-      name: Facebook
   analytics:
     provider: google
     property: AW-11500721833
