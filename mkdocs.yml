@@ -84,11 +84,6 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
-  - mkdocs-jupyter:
-      ignore_h1_titles: true
-      include_requirejs: true
-      ignore: ['*.py']
-      custom_mathjax_url: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe'
 validation:
   absolute_links: ignore
 extra:
