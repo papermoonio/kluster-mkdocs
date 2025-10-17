@@ -16,5 +16,8 @@ __pycache__/
 .fran
 llms.txt    
 
-# Ignore kluster.ai Verify Code rules
+# Ignore kluster.ai Code Reviews rules
 .github/instructions/kluster-code-verify.instructions.md
+
+
+.kluster
