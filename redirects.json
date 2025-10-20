@@ -10,15 +10,15 @@
     },
     {
       "key": "/get-api-key/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/api/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/dedicated-deployments/",
@@ -38,79 +38,79 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/integrations/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/integrations/crewai/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/eliza/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/immersive-translate/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/langchain/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/litellm/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/llama-ocr/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/msty/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/pydantic/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/sillytavern/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/integrations/typingmind/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/mcp/cloud/api/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/mcp/cloud/platform/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/mcp/get-started/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/mcp/integrations/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/mcp/overview/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/mcp/self-hosted/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/mcp/tools/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/models/",
@@ -122,11 +122,11 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/get-started/start-building/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/start-building/batch/",
@@ -142,27 +142,27 @@
     },
     {
       "key": "/get-started/verify/overview/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/verify/reliability/chat-completion/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/verify/reliability/overview/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/verify/reliability/verify-api/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/get-started/verify/reliability/workflow-integrations/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/getting-started/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/tutorials/",
@@ -249,68 +249,104 @@
       "value": "/"
     },
     {
+      "key": "/verify/",
+      "value": "/code-reviews/"
+    },
+    {
+      "key": "/verify/configuration/",
+      "value": "/code-reviews/configuration/"
+    },
+    {
+      "key": "/verify/configuration/options/",
+      "value": "/code-reviews/configuration/options/"
+    },
+    {
+      "key": "/verify/configuration/rules/",
+      "value": "/code-reviews/configuration/rules/"
+    },
+    {
+      "key": "/verify/examples/",
+      "value": "/code-reviews/examples/"
+    },
+    {
+      "key": "/verify/examples/cursor-firebase-nextjs/",
+      "value": "/code-reviews/examples/cursor-firebase-nextjs/"
+    },
+    {
+      "key": "/verify/examples/vscode-admin-endpoint/",
+      "value": "/code-reviews/examples/vscode-admin-endpoint/"
+    },
+    {
       "key": "/verify/get-api-key/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/verify/integrations/ide/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/verify/integrations/mcp/",
-      "value": "/verify/quickstart/"
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/verify/mcp/client-integrations/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/cloud/api/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/cloud/platform/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/get-started/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/overview/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/sdk-integrations/openai-agents/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/self-hosted/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/mcp/tools/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
+    },
+    {
+      "key": "/verify/quickstart/",
+      "value": "/code-reviews/quickstart/"
     },
     {
       "key": "/verify/quickstart/reliability/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/reliability/chat-completion/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/reliability/overview/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/reliability/verify-api/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
     },
     {
       "key": "/verify/reliability/workflow-integrations/",
-      "value": "/verify/overview/"
+      "value": "/code-reviews/overview/"
+    },
+    {
+      "key": "/verify/tools/",
+      "value": "/code-reviews/tools/"
     }
   ]
 }
