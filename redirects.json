@@ -249,6 +249,34 @@
       "value": "/"
     },
     {
+      "key": "/verify/",
+      "value": "/code-reviews/"
+    },
+    {
+      "key": "/verify/configuration/",
+      "value": "/code-reviews/configuration/"
+    },
+    {
+      "key": "/verify/configuration/options/",
+      "value": "/code-reviews/configuration/options/"
+    },
+    {
+      "key": "/verify/configuration/rules/",
+      "value": "/code-reviews/configuration/rules/"
+    },
+    {
+      "key": "/verify/examples/",
+      "value": "/code-reviews/examples/"
+    },
+    {
+      "key": "/verify/examples/cursor-firebase-nextjs/",
+      "value": "/code-reviews/examples/cursor-firebase-nextjs/"
+    },
+    {
+      "key": "/verify/examples/vscode-admin-endpoint/",
+      "value": "/code-reviews/examples/vscode-admin-endpoint/"
+    },
+    {
       "key": "/verify/get-api-key/",
       "value": "/code-reviews/quickstart/"
     },
@@ -293,6 +321,10 @@
       "value": "/code-reviews/overview/"
     },
     {
+      "key": "/verify/quickstart/",
+      "value": "/code-reviews/quickstart/"
+    },
+    {
       "key": "/verify/quickstart/reliability/",
       "value": "/code-reviews/overview/"
     },
@@ -313,40 +345,8 @@
       "value": "/code-reviews/overview/"
     },
     {
-      "key": "/verify/",
-      "value": "/code-reviews/"
-    },
-    {
-      "key": "/verify/quickstart/",
-      "value": "/code-reviews/quickstart/"
-    },
-    {
       "key": "/verify/tools/",
       "value": "/code-reviews/tools/"
-    },
-    {
-      "key": "/verify/configuration/",
-      "value": "/code-reviews/configuration/"
-    },
-    {
-      "key": "/verify/configuration/options/",
-      "value": "/code-reviews/configuration/options/"
-    },
-    {
-      "key": "/verify/configuration/rules/",
-      "value": "/code-reviews/configuration/rules/"
-    },
-    {
-      "key": "/verify/examples/",
-      "value": "/code-reviews/examples/"
-    },
-    {
-      "key": "/verify/examples/cursor-firebase-nextjs/",
-      "value": "/code-reviews/examples/cursor-firebase-nextjs/"
-    },
-    {
-      "key": "/verify/examples/vscode-admin-endpoint/",
-      "value": "/code-reviews/examples/vscode-admin-endpoint/"
     }
   ]
 }
