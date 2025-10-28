@@ -119,6 +119,24 @@
   padding-top: 2.6em;
 }
 
+.feature-cards--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+}
+
+/* Center a single leftover card on the last row (for 3-column layout) */
+@media screen and (min-width: 768px) {
+  /* Centering rules for the main 3-col grid only */
+  .feature-cards:not(.feature-cards--two) > :nth-child(3n+1):nth-last-child(2) { grid-column: 1; }
+  .feature-cards:not(.feature-cards--two) > :nth-child(3n+2):nth-last-child(1) { grid-column: 3; }
+  .feature-cards > :nth-child(3n+1):nth-last-child(1) {
+    grid-column: 2;
+  }
+}
+
 .feature-card {
   padding: 24px;
   border-radius: var(--border-radius);
