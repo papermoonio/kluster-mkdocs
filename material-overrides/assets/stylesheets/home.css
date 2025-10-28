@@ -124,6 +124,7 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1.5rem;
 }
 
 /* Center a single leftover card on the last row (for 3-column layout) */
