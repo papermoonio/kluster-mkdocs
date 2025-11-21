@@ -9,12 +9,16 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/quickstart/",
+      "value": "/code-reviews/installation/"
+    },
+    {
       "key": "/get-api-key/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/api/",
@@ -38,11 +42,11 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/integrations/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/integrations/crewai/",
@@ -98,19 +102,19 @@
     },
     {
       "key": "/get-started/mcp/integrations/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/mcp/overview/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/mcp/self-hosted/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/mcp/tools/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/models/",
@@ -122,7 +126,7 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/get-started/start-building/",
@@ -278,15 +282,15 @@
     },
     {
       "key": "/verify/get-api-key/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/verify/integrations/ide/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/verify/integrations/mcp/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/verify/mcp/client-integrations/",
@@ -322,7 +326,7 @@
     },
     {
       "key": "/verify/quickstart/",
-      "value": "/code-reviews/quickstart/"
+      "value": "/code-reviews/installation/"
     },
     {
       "key": "/verify/quickstart/reliability/",
