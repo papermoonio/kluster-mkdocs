@@ -9,6 +9,10 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/quickstart/",
+      "value": "/code-reviews/installation/"
+    },
+    {
       "key": "/get-api-key/",
       "value": "/code-reviews/installation/"
     },
