@@ -724,7 +724,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
 /* --- Admonitions --- */
