@@ -717,7 +717,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
   position: relative;
   padding-bottom: 56.25%;
   margin: 1.5em 0;
-  border-radius: 0.5rem;
 }
 
 .embed-container iframe {
