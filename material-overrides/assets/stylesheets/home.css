@@ -243,3 +243,15 @@ a.card-button:hover {
     max-width: 900px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .hero-sub {
+    max-width: 90%;
+    padding: 0 1em;
+  }
+
+  .feature-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
