@@ -130,8 +130,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 900px;
 }
 
 .feature-card .image-bg {
@@ -239,16 +237,9 @@ a.card-button:hover {
   .hero-sub {
     font-size: 18px;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-sub {
-    max-width: 90%;
-    padding: 0 1em;
-  }
 
   .feature-cards {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
   }
 }
