@@ -1205,7 +1205,6 @@ details.child {
 }
 
 /* --- Cookie Consent --- */
-
 .md-consent__inner{
   background-color: var(--consent-bg-color);
 }
