@@ -53,6 +53,7 @@
   font-size: 72px;
   margin-bottom: 1rem;
   letter-spacing: -4px;
+  line-height: 1.25em;
 }
 
 .hero-sub {
@@ -230,6 +231,14 @@ a.card-button:hover {
 
 /* --- Responsive Styling --- */
 @media screen and (max-width: 1024px) {
+  .md-content {
+    padding: 0;
+  }
+
+  .hero{
+    padding: 0.5em 0 2.6em;
+  }
+
   .md-typeset .hero h1 {
     font-size: 48px;
   }
@@ -246,8 +255,7 @@ a.card-button:hover {
 
 @media screen and (max-width: 767px) {
   .hero-sub {
-    max-width: 90%;
-    padding: 0 1em;
+    max-width: 100%;
   }
 
   .feature-cards {
