@@ -21,7 +21,6 @@ theme:
     - announce.dismiss
     - content.code.copy
     - navigation.footer
-    - navigation.expand
     - navigation.sections
     - toc.follow
   palette:
