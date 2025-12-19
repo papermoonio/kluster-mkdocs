@@ -273,11 +273,6 @@
           href="{{ nav_item.url | url }}"
           class="md-nav__link md-nav__link--active"
         >
-          {% if level > 2 %}
-            <span class="twemoji label-icon">
-              {% include ".icons/material/chevron-right.svg" %}
-            </span>
-          {% endif %}
           {{ render_content(nav_item) }}
         </a>
 
@@ -294,11 +289,6 @@
     {% if nav_item.url != "" %}
       <li class="{{ class }}">
         <a href="{{ nav_item.url | url }}" class="md-nav__link">
-          {% if level > 2 %}
-            <span class="twemoji label-icon">
-              {% include ".icons/material/chevron-right.svg" %}
-            </span>
-          {% endif %}
           {{ render_content(nav_item) }}
         </a>
       </li>
