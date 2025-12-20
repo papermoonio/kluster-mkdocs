@@ -798,7 +798,8 @@ details.interface > summary::before {
 }
 
 .md-typeset details.interface > summary:after {
-  top: auto;
+  top: 50%;
+  translate: 0 -50%;
 }
 
 .md-typeset details.interface:has(~ details.interface),
@@ -837,6 +838,14 @@ details.child {
   width: fit-content;
   border: 1px solid var(--platinum);
   box-shadow: none;
+}
+
+/* FAQ admonition */
+.md-typeset details.faq.interface>summary h2 {
+  margin: 0 1em;
+  padding: 1em 1em 1em 0;
+  font-size: 1em;
+  line-height: 1.2;
 }
 
 /* --- Copy to Clipboard --- */
