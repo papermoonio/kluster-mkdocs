@@ -10,11 +10,11 @@
     },
     {
       "key": "/get-api-key/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/api/",
@@ -38,11 +38,11 @@
     },
     {
       "key": "/get-started/get-api-key/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/integrations/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/integrations/crewai/",
@@ -98,19 +98,19 @@
     },
     {
       "key": "/get-started/mcp/integrations/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/mcp/overview/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/mcp/self-hosted/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/mcp/tools/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/models/",
@@ -122,7 +122,7 @@
     },
     {
       "key": "/get-started/start-api/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/get-started/start-building/",
@@ -266,27 +266,27 @@
     },
     {
       "key": "/verify/examples/",
-      "value": "/code-reviews/examples/"
+      "value": "/code-reviews/agent-mode/examples/"
     },
     {
       "key": "/verify/examples/cursor-firebase-nextjs/",
-      "value": "/code-reviews/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/verify/examples/vscode-admin-endpoint/",
-      "value": "/code-reviews/examples/vscode-admin-endpoint/"
+      "value": "/code-reviews/agent-mode/examples/vscode-admin-endpoint/"
     },
     {
       "key": "/verify/get-api-key/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/verify/integrations/ide/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/verify/integrations/mcp/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/verify/mcp/client-integrations/",
@@ -322,7 +322,7 @@
     },
     {
       "key": "/verify/quickstart/",
-      "value": "/code-reviews/installation/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/verify/quickstart/reliability/",
@@ -346,7 +346,47 @@
     },
     {
       "key": "/verify/tools/",
-      "value": "/code-reviews/tools/"
+      "value": "/code-reviews/reference/mcp-tools/"
+    },
+    {
+      "key": "/code-reviews/installation/",
+      "value": "/code-reviews/get-started/installation/"
+    },
+    {
+      "key": "/code-reviews/quickstart/",
+      "value": "/code-reviews/agent-mode/automatic-agent-reviews/quickstart/"
+    },
+    {
+      "key": "/code-reviews/tools/",
+      "value": "/code-reviews/reference/mcp-tools/"
+    },
+    {
+      "key": "/code-reviews/examples/",
+      "value": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/"
+    },
+    {
+      "key": "/code-reviews/examples/cursor-firebase-nextjs/",
+      "value": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/"
+    },
+    {
+      "key": "/code-reviews/examples/vscode-admin-endpoint/",
+      "value": "/code-reviews/agent-mode/examples/vscode-admin-endpoint/"
+    },
+    {
+      "key": "/code-reviews/quickstart/auto-review/",
+      "value": "/code-reviews/agent-mode/automatic-agent-reviews/quickstart/"
+    },
+    {
+      "key": "/code-reviews/quickstart/manual-review/",
+      "value": "/code-reviews/instant-ide-mode/instant-actions/quickstart/"
+    },
+    {
+      "key": "/code-reviews/quickstart/dependency-checks/",
+      "value": "/code-reviews/agent-mode/automatic-agent-reviews/dependency-checks/"
+    },
+    {
+      "key": "/code-reviews/faq/activation-codes/",
+      "value": "/code-reviews/activation-codes/"
     }
   ]
 }
