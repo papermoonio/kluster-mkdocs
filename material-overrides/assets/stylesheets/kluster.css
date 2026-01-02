@@ -564,8 +564,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
     border-bottom: 1px solid var(--border-color);
   }
 
-  .md-nav__item--section > label.md-nav__link[for],
-  .md-nav--secondary .md-nav__title {
+  .md-nav__item--section > label.md-nav__link[for] {
     color: var(--md-default-fg-color);
     text-transform: uppercase;
     font-size: 12px;
@@ -579,18 +578,13 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
   /* Indent level 2 nav items and add section lines */
   .md-nav[data-md-level="2"] > .md-nav__list {
-    padding-left: 0;
-    margin-left: 0;
     margin-bottom: 0.4rem;
     padding-bottom: 0;
   }
 
-  .md-nav[data-md-level="2"] > .md-nav__list > .md-nav__item a {
-    padding-left: 0.3rem;
-  }
-
   [dir="ltr"] .md-nav--primary .md-nav__item > .md-nav__link {
     gap: 0.4rem;
+    margin-right: 0;
   }
 
   [dir="ltr"]
@@ -599,14 +593,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
     .md-nav__item
     > .md-nav__link {
     gap: 0.6rem;
-  }
-
-  .md-nav__link {
-    padding: 0.5rem;
-    margin-top: 0;
-    margin-bottom: 0.2rem;
-    font-size: 14px;
-    font-weight: 600;
   }
 
   .md-nav__list .md-nav__link--active,
@@ -623,10 +609,6 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
   .md-nav__icon:hover {
     background-color: transparent;
-  }
-
-  .md-nav--secondary .md-nav__title[for="__toc"] {
-    padding: 0.5rem 0.6rem 0.5rem 1.1rem;
   }
 }
 
@@ -679,13 +661,30 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 @media screen and (min-width: 60em) {
-  .md-nav--secondary .md-nav__title {
-    box-shadow: none;
-    padding-bottom: 0.2rem;
-  }
-
   [dir="ltr"] .md-nav--secondary .md-nav__list {
     padding-right: 1.2rem; /* Same spacing as left nav */
+  }
+
+  .md-nav__link {
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .md-nav--secondary .md-nav__title {
+    color: var(--md-default-fg-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding-left: 0.7rem;
+    padding-bottom: 0.2rem;
+    box-shadow: none;
+  }
+
+  .md-nav--secondary .md-nav__title[for="__toc"] {
+    padding: 0.5rem 0.6rem 0.5rem 1.1rem;
   }
 }
 
