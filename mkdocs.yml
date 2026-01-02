@@ -86,6 +86,14 @@ plugins:
 validation:
   absolute_links: ignore
 extra:
+  consent:
+    title: This website uses cookies
+    description: >-
+      We use essential cookies to make the website work. We would also like to use cookies to understand how you use the website and how you interact with certain features. We may share this information with our analytics partners. For further details, please see our <a href="https://www.kluster.ai/privacy-policy" target="_blank" rel="noopener">cookie policy</a>.
+    actions:
+      - accept
+      - manage
+      - reject
   generator: !!bool false
   social:
     - icon: fontawesome/brands/discord
