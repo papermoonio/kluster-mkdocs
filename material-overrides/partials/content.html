@@ -40,13 +40,13 @@
       {% set is_excluded_h2 =
         h2_id_lower in [
           "general",
-          "auto-review",
-          "manual-review"
+          "agent-mode",
+          "instant-ide-mode"
         ]
         or normalized_h2_text in [
           "General",
-          "Auto Review",
-          "Manual Review"
+          "Agent Mode",
+          "Instant IDE Mode"
         ]
       %}
       
