@@ -850,6 +850,14 @@ details.child {
   opacity: 0.7;
 }
 
+.md-code__nav {
+  background-color: transparent;
+}
+
+pre:hover > .md-code__nav {
+  background: transparent;
+}
+
 .md-dialog {
   text-align: center;
 }
