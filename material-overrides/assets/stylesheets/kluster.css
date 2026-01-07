@@ -849,14 +849,7 @@ details.child {
 }
 
 /* FAQ admonition */
-.md-typeset details.faq.interface > summary h2 {
-  margin: 0 1em;
-  padding: 1em 1em 1em 0;
-  font-size: 1em;
-  line-height: 1.2;
-}
-
-details.interface.faq summary h3 {
+.md-typeset details.interface.faq > summary h3 {
   margin: 0.5em 0 0.5em;
   font-size: 18px;
 }
@@ -871,7 +864,7 @@ details.interface.faq summary h3 {
 }
 
 @media screen and (max-width: 60em) {
-  details.interface.faq summary h3 {
+  .md-typeset details.interface.faq > summary h3 {
     margin: 0.5em 1em 0.5em;
   }
 }
