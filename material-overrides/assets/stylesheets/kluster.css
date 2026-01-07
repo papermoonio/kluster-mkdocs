@@ -856,6 +856,25 @@ details.child {
   line-height: 1.2;
 }
 
+details.interface.faq summary h3 {
+  margin: .5em 0 .5em;
+  font-size: 18px;
+}
+
+[dir="ltr"] .md-typeset details.interface.faq > summary {
+  padding: 0.5em 0 0.5em 1em;
+}
+
+.md-typeset details.interface.faq:has(~ details.interface.faq), .md-typeset details.interface.faq ~ details.interface.faq {
+  margin-bottom: 1.2em;
+}
+
+@media screen and (max-width: 60em) {
+  details.interface.faq summary h3 {
+    margin: .5em 1em .5em;
+}
+}
+
 /* --- Copy to Clipboard --- */
 .md-code__button {
   color: var(--primary-green-300);
