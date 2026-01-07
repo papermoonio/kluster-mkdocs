@@ -36,9 +36,23 @@
         {% set h3_id = h3_attributes[id_start:id_end] %}
       {% endif %}
 
-      {# Get content after h3 until next h3 or end of page #}
+      {# Get content after h3 #}
       {% set h3_closing_tag_length = 5 %} {# Length of '</h3>' #}
-      {% set section_content = section[h3_end + h3_closing_tag_length:] %}
+      {% set after_h3 = section[h3_end + h3_closing_tag_length:] %}
+
+      {% set next_h2_rel = after_h3.find('<h2') %}
+      {% set next_h3_rel = after_h3.find('<h3') %}
+
+      {% set section_content = after_h3 %}
+      {% set trailing_outside_details = '' %}
+
+      {% if next_h2_rel != -1 and (next_h3_rel == -1 or next_h2_rel < next_h3_rel) %}
+        {% set section_content = after_h3[:next_h2_rel] %}
+        {% set trailing_outside_details = after_h3[next_h2_rel:] %}
+      {% elif next_h3_rel != -1 %}
+        {# If another h3 appears within this chunk (rare), stop before it #}
+        {% set section_content = after_h3[:next_h3_rel] %}
+      {% endif %}
 
       {# Generate unique details ID #}
       {% set details_id = ('faq-' ~ page.url ~ '-' ~ section_counter)
@@ -55,6 +69,9 @@
         </summary>
         {{ section_content | safe }}
       </details>
+      {% if trailing_outside_details %}
+        {{ trailing_outside_details | safe }}
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% else %}
