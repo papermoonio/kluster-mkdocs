@@ -53,7 +53,7 @@
   /* Admonition SVGs (base64 encoded) - use Material icons */
   --md-admonition-icon--note: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNNDEwLjMgMjMxbDExLjMtMTEuMy0zMy45LTMzLjktNjIuMS02Mi4xTDI5MS43IDg5LjhsLTExLjMgMTEuMy0yMi42IDIyLjZMNTguNiAzMjIuOWMtMTAuNCAxMC40LTE4IDIzLjMtMjIuMiAzNy40TDEgNDgwLjdjLTIuNSA4LjQtLjIgMTcuNSA2LjEgMjMuN3MxNS4zIDguNSAyMy43IDYuMWwxMjAuMy0zNS40YzE0LjEtNC4yIDI3LTExLjggMzcuNC0yMi4yTDM4Ny43IDI1My43IDQxMC4zIDIzMXpNMTYwIDM5OS40bC05LjEgMjIuN2MtNCAzLjEtOC41IDUuNC0xMy4zIDYuOUw1OS40IDQ1MmwyMy03OC4xYzEuNC00LjkgMy44LTkuNCA2LjktMTMuM2wyMi43LTkuMXYzMmMwIDguOCA3LjIgMTYgMTYgMTZoMzJ6TTM2Mi43IDE4LjdMMzQ4LjMgMzMuMiAzMjUuNyA1NS44IDMxNC4zIDY3LjFsMzMuOSAzMy45IDYyLjEgNjIuMSAzMy45IDMzLjkgMTEuMy0xMS4zIDIyLjYtMjIuNiAxNC41LTE0LjVjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTguN2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS00Ny40IDE2OGwtMTQ0IDE0NGMtNi4yIDYuMi0xNi40IDYuMi0yMi42IDBzLTYuMi0xNi40IDAtMjIuNmwxNDQtMTQ0YzYuMi02LjIgMTYuNC02LjIgMjIuNiAwczYuMiAxNi40IDAgMjIuNnoiLz48L3N2Zz4=");
 
- /* Cookie Consent */
+  /* Cookie Consent */
   --consent-bg-color: var(--light);
 }
 
@@ -137,7 +137,7 @@
   --top-nav-hover-color: var(--dark);
   --top-nav-underline-color: var(--dark);
 
-     /* Cookie Consent */
+  /* Cookie Consent */
   --consent-bg-color: var(--light);
 }
 
@@ -849,11 +849,24 @@ details.child {
 }
 
 /* FAQ admonition */
-.md-typeset details.faq.interface>summary h2 {
-  margin: 0 1em;
-  padding: 1em 1em 1em 0;
-  font-size: 1em;
-  line-height: 1.2;
+.md-typeset details.interface.faq > summary h3 {
+  margin: 0.5em 0 0.5em;
+  font-size: 18px;
+}
+
+[dir="ltr"] .md-typeset details.interface.faq > summary {
+  padding: 0.5em 0 0.5em 1em;
+}
+
+.md-typeset details.interface.faq:has(~ details.interface.faq),
+.md-typeset details.interface.faq ~ details.interface.faq {
+  margin-bottom: 1.2em;
+}
+
+@media screen and (max-width: 60em) {
+  .md-typeset details.interface.faq > summary h3 {
+    margin: 0.5em 1em 0.5em;
+  }
 }
 
 /* --- Copy to Clipboard --- */
