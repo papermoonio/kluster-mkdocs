@@ -18,7 +18,7 @@
     },
     {
       "key": "/get-started/api/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/dedicated-deployments/",
@@ -46,55 +46,55 @@
     },
     {
       "key": "/get-started/integrations/crewai/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/eliza/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/immersive-translate/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/langchain/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/litellm/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/llama-ocr/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/msty/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/pydantic/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/sillytavern/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/integrations/typingmind/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/mcp/cloud/api/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/mcp/cloud/platform/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/mcp/get-started/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/mcp/integrations/",
@@ -126,7 +126,7 @@
     },
     {
       "key": "/get-started/start-building/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/start-building/batch/",
@@ -142,27 +142,27 @@
     },
     {
       "key": "/get-started/verify/overview/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/verify/reliability/chat-completion/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/verify/reliability/overview/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/verify/reliability/verify-api/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/get-started/verify/reliability/workflow-integrations/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/getting-started/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/tutorials/",
@@ -290,35 +290,35 @@
     },
     {
       "key": "/verify/mcp/client-integrations/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/cloud/api/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/cloud/platform/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/get-started/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/overview/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/sdk-integrations/openai-agents/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/self-hosted/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/mcp/tools/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/quickstart/",
@@ -326,23 +326,23 @@
     },
     {
       "key": "/verify/quickstart/reliability/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/reliability/chat-completion/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/reliability/overview/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/reliability/verify-api/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/reliability/workflow-integrations/",
-      "value": "/code-reviews/overview/"
+      "value": "/code-reviews/review-modes/"
     },
     {
       "key": "/verify/tools/",
