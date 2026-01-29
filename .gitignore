@@ -16,9 +16,3 @@ __pycache__/
 .mcp.json
 .fran
 llms.txt    
-
-# Ignore kluster.ai Code Reviews rules
-.github/instructions/kluster-code-verify.instructions.md
-
-
-.kluster
