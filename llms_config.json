@@ -1,0 +1,49 @@
+{
+    "schema_version": "1.2",
+
+    "project": {
+        "id": "klusterai",
+        "name": "kluster.ai",
+        "project_url": "https://www.kluster.ai",
+        "docs_base_url": "https://docs.kluster.ai"
+    },
+
+    "repository": {
+        "host": "github",
+        "org": "kluster-ai",
+        "repo": "docs",
+        "default_branch": "main",
+        "docs_path": ".",
+        "ai_artifacts_path": "ai/pages"
+    },
+
+    "content": {
+        "docs_dir": ".",
+        "base_context_categories": ["Basics", "Reference"],
+        "categories_order": [
+            "Basics",
+            "Human-written code",
+            "AI-generated code",
+            "On-demand review",
+            "Automatic review",
+            "Reference"
+        ],
+        "exclusions": {
+            "skip_basenames": [
+                "index.md",
+                "README.md",
+                ".CONTRIBUTING.md",
+                "LICENSE.md"
+            ],
+            "skip_paths": [".snippets", ".github"]
+        }
+    },
+
+    "outputs": {
+        "public_root": "/ai/",
+        "files": {
+            "llms_full": "llms-full.jsonl",
+            "pages_dir": "pages"
+        }
+    }
+}
