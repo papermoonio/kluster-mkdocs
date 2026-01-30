@@ -19,7 +19,7 @@
   display: inline-flex;
   margin-left: auto;
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   overflow: visible;
   position: relative;
 }
@@ -182,8 +182,8 @@
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background-color: var(--md-primary-bg-color);
-  color: var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   font-size: 0.875rem;
