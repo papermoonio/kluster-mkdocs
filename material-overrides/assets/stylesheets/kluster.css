@@ -924,6 +924,11 @@ pre:hover > .md-code__nav {
   text-align: center;
 }
 
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
 /* Tables in tabs */
 .tabbed-content .md-typeset__scrollwrap {
   margin: 0;
