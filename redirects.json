@@ -250,11 +250,11 @@
     },
     {
       "key": "/verify/",
-      "value": "/code-reviews/"
+      "value": "/code-reviews/get-started/installation/"
     },
     {
       "key": "/verify/configuration/",
-      "value": "/code-reviews/configuration/"
+      "value": "/code-reviews/configuration/options/"
     },
     {
       "key": "/verify/configuration/options/",
@@ -266,7 +266,7 @@
     },
     {
       "key": "/verify/examples/",
-      "value": "/code-reviews/ai-generated-code/examples/"
+      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/verify/examples/cursor-firebase-nextjs/",
@@ -390,11 +390,11 @@
     },
     {
       "key": "/code-reviews/instant-ide-mode/",
-      "value": "/code-reviews/human-written-code/"
+      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/",
-      "value": "/code-reviews/human-written-code/on-demand-reviews/"
+      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/quickstart/",
@@ -402,7 +402,7 @@
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/",
-      "value": "/code-reviews/human-written-code/automatic-background-reviews/"
+      "value": "/code-reviews/human-written-code/automatic-background-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/quickstart/",
@@ -414,7 +414,7 @@
     },
     {
       "key": "/code-reviews/agent-mode/",
-      "value": "/code-reviews/ai-generated-code/"
+      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/agent-mode/manual-agent-reviews/",
@@ -422,7 +422,7 @@
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/"
+      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/quickstart/",
@@ -434,7 +434,7 @@
     },
     {
       "key": "/code-reviews/agent-mode/examples/",
-      "value": "/code-reviews/ai-generated-code/examples/"
+      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/",
