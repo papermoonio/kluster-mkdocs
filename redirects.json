@@ -266,15 +266,15 @@
     },
     {
       "key": "/verify/examples/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/verify/examples/cursor-firebase-nextjs/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/verify/examples/vscode-admin-endpoint/",
-      "value": "/code-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
       "key": "/verify/get-api-key/",
@@ -354,7 +354,7 @@
     },
     {
       "key": "/code-reviews/quickstart/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/tools/",
@@ -362,27 +362,27 @@
     },
     {
       "key": "/code-reviews/examples/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/code-reviews/examples/cursor-firebase-nextjs/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/code-reviews/examples/vscode-admin-endpoint/",
-      "value": "/code-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
       "key": "/code-reviews/quickstart/auto-review/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/quickstart/manual-review/",
-      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/quickstart/dependency-checks/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
     },
     {
       "key": "/code-reviews/faq/activation-codes/",
@@ -390,59 +390,91 @@
     },
     {
       "key": "/code-reviews/instant-ide-mode/",
-      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/",
-      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/quickstart/",
-      "value": "/code-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/",
-      "value": "/code-reviews/human-written-code/automatic-background-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/quickstart/",
-      "value": "/code-reviews/human-written-code/automatic-background-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/how-it-works/",
-      "value": "/code-reviews/human-written-code/automatic-background-reviews/how-it-works/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/"
     },
     {
       "key": "/code-reviews/agent-mode/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/agent-mode/manual-agent-reviews/",
-      "value": "/code-reviews/ai-generated-code/on-demand-reviews/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/quickstart/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/dependency-checks/",
-      "value": "/code-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/",
-      "value": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/vscode-admin-endpoint/",
-      "value": "/code-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/on-demand-reviews/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/on-demand-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     }
   ]
 }
