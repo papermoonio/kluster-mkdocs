@@ -40,6 +40,7 @@
     display: block;
     line-height: 1.25;
     overflow-wrap: break-word;
+    white-space: pre-wrap;
     white-space-collapse: preserve;
 }
 
@@ -49,18 +50,16 @@
     vertical-align: middle;
 }
 
-[data-ty="input"]:before,
-[data-ty-prompt]:before {
+[data-ty="input"]:before {
     color: var(--mint);
     content: 'kluster@ubuntu-jammy:';
-    size: 12px;
+    font-size: 12px;
 }
 
-[data-ty="input-windows"]:before,
-[data-ty-prompt]:before {
+[data-ty="input-windows"]:before {
     color: var(--mint);
     content: 'kluster@windows:';
-    size: 12px;
+    font-size: 12px;
 }
 
 .file-path:before {
