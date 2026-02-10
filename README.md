@@ -70,7 +70,7 @@ metadata["widgets"][WIDGET_STATE_MIMETYPE]["state"]
 KeyError: 'state'
 ```
 
-This is due to some problems when rendering widgets. To circunvent the issue, you can run the following:
+This is due to issues rendering widgets. To circumvent the issue, you can run the following:
 
 ```
 jq -M 'del(.metadata.widgets)' your-file.ipynb > your-file-fixed.ipynb
