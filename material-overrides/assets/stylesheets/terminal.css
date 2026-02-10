@@ -56,6 +56,13 @@
     size: 12px;
 }
 
+[data-ty="input-windows"]:before,
+[data-ty-prompt]:before {
+    color: var(--mint);
+    content: 'kluster@windows:';
+    size: 12px;
+}
+
 .file-path:before {
     content: '~$';
     color: var(--vibrant-coral);
