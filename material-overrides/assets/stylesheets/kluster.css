@@ -650,7 +650,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .md-nav__list .md-nav__link:hover {
     color: var(--md-default-fg-color);
     background-color: var(--nav-active-bg-color);
-    border-radius: var(--hover-border-radius); 
+    border-radius: var(--hover-border-radius);
   }
 
   .md-nav__list .md-nav__link--active {
