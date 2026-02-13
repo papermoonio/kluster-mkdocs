@@ -1281,3 +1281,8 @@ pre:hover > .md-code__nav {
   background-color: var(--info-blue-600);
   opacity: 1;
 }
+
+/* --- Cookie Consent --- */
+.md-consent__inner {
+  background-color: var(--consent-bg-color);  
+}
