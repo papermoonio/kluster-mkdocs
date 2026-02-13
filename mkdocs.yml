@@ -4,6 +4,7 @@ home_url: https://www.kluster.ai/
 home_name: kluster.ai
 site_dir: /var/www/kluster-docs-static
 docs_dir: kluster-docs
+edit_uri: https://github.com/kluster-ai/docs/edit/main/
 copyright: © 2026 kluster.ai. All rights reserved.
 theme:
   name: material
@@ -23,6 +24,7 @@ theme:
     - navigation.footer
     - navigation.sections
     - toc.follow
+    - content.action.edit
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
