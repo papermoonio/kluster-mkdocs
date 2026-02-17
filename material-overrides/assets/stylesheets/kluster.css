@@ -40,6 +40,7 @@
 
   /* General styles */
   --border-radius: 12px;
+  --hover-border-radius: 6px;
   --border-width: 1px;
 
   /* Buttons styles */
@@ -608,7 +609,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .md-nav__list .md-nav__link:hover {
     color: var(--nav-active-text-color);
     background-color: var(--nav-active-bg-color);
-    border-radius: 6px;
+    border-radius: var(--hover-border-radius);
     padding-left: 0.5rem;
   }
 
@@ -649,6 +650,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .md-nav__list .md-nav__link:hover {
     color: var(--md-default-fg-color);
     background-color: var(--nav-active-bg-color);
+    border-radius: var(--hover-border-radius);
   }
 
   .md-nav__list .md-nav__link--active {
@@ -738,7 +740,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
 .page-actions .edit-section a.md-content__button.md-icon:hover {
   background-color: var(--nav-active-bg-color);
-  border-radius: 6px;
+  border-radius: var(--hover-border-radius);
 }
 
 /* --- Permalinks --- */
