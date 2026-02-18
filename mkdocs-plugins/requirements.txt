@@ -1,0 +1,9 @@
+mkdocs==1.6.1
+
+# For minify plugin
+htmlmin2>=0.1.13
+jsmin>=3.0.1
+csscompressor>=0.9.5
+
+# For page toggle plugin
+beautifulsoup4==4.14.2
