@@ -99,7 +99,7 @@ plugins:
         background_image: null
         background_color: "#060809"
         logo: images/kluster-logo.png
-        title: kluster.ai Documentation
+        title: kluster.ai documentation
 validation:
   absolute_links: ignore
 extra:
