@@ -52,7 +52,7 @@
   --card-border: var(--border-width) solid var(--card-border-color);
 
   /* Admonition SVGs (base64 encoded) - use Material icons */
-  --md-admonition-icon--note: url("data:image/svg+xml;base64,PCEtLSBSZXBsYWNlIHRoZSBjb250ZW50cyBvZiB0aGlzIGVkaXRvciB3aXRoIHlvdXIgU1ZHIGNvZGUgLS0+Cgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBhcmlhLWhpZGRlbj0idHJ1ZSI+CiAgPHBhdGggZD0iTTMgMTcuMjVWMjFoMy43NUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMyAxNy4yNXptMi45MiAyLjgzSDV2LS45Mmw5LjA2LTkuMDYuOTIuOTJMNS45MiAyMC4wOHpNMjAuNzEgNy4wNGExLjAwMyAxLjAwMyAwIDAgMCAwLTEuNDJMMTguMzcgMy4yOWExLjAwMyAxLjAwMyAwIDAgMC0xLjQyIDBsLTEuODMgMS44MyAzLjc1IDMuNzUgMS44NC0xLjgzeiIvPgo8L3N2Zz4=");
+  --md-admonition-icon--note: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20aria-hidden%3D%27true%27%3E%3Cpath%20d%3D%27M3%2017.25V21h3.75L17.81%209.94l-3.75-3.75L3%2017.25zm2.92%202.83H5v-.92l9.06-9.06.92.92L5.92%2020.08zM20.71%207.04a1.003%201.003%200%200%200%200-1.42L18.37%203.29a1.003%201.003%200%200%200-1.42%200l-1.83%201.83%203.75%203.75%201.84-1.83z%27%2F%3E%3C%2Fsvg%3E");
 
   /* Cookie Consent */
   --consent-bg-color: var(--light);
