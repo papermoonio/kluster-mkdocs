@@ -695,6 +695,11 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 }
 
+/* --- Breadcrumbs --- */
+.md-path__item:not(:first-child) {
+  align-items: center;
+}
+
 /* --- Page actions --- */
 .page-actions {
   display: flex;
