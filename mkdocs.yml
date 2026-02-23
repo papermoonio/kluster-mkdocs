@@ -25,6 +25,7 @@ theme:
     - navigation.sections
     - toc.follow
     - content.action.edit
+    - navigation.path
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
