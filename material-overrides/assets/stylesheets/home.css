@@ -1,43 +1,36 @@
 :root,
 [data-md-color-scheme="default"] {
-  --code-bg-color: #F9FAFB;
-  --code-fg-color: #1f2937;
-  --code-border-color: #e5e7eb;
+  --md-typeset-color: var(--md-default-fg-color--light);
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
-  --code-bg-color: #111827;
-  --code-fg-color: var(--light);
-  --code-border-color: #374151;
+  --md-typeset-color: var(--md-default-fg-color--light);
 }
 
-/* --- Layout --- */
-.md-content {
-  border-left: 1px solid var(--border-color);
-  padding: 1.2rem;
+/* --- Fonts --- */
+.md-typeset h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 0.15rem;
+  letter-spacing: -0.5px;
 }
 
-.md-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 76.25em) {
-  [dir="ltr"]
-    .md-sidebar--primary:not([hidden])
-    ~ .md-content
-    > .md-content__inner {
-    margin-right: 1.2rem;
-  }
-}
-
-/* --- Home page content sections --- */
-.md-content__inner > h2 {
+.md-typeset h2 {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
   font-size: 1.25rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.md-typeset h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.md-typeset p {
+  font-size: 0.75rem;
 }
 
 /* --- Tight hero --- */
@@ -46,103 +39,183 @@
   padding: 0.75rem 1rem 1.25rem;
 }
 
-.hero-tight h1 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin: 0 0 0.15rem;
-  letter-spacing: -0.5px;
-}
-
 .hero-tight p {
   font-size: 0.85rem;
-  color: var(--md-default-fg-color--light);
   margin: 0;
 }
 
 /* --- Install section --- */
-.install-section h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.install-tabs-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: stretch;
-  margin: 0 auto;
-}
-
-.install-column h3 {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color--light);
+.install-section {
+  margin-bottom: 2rem;
 }
 
 .install-column > p {
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
   margin-bottom: 0.6rem;
 }
 
-
-/* --- CSS-only tabs --- */
-.tab-group {
-  display: flex;
-  flex-wrap: wrap;
+/* --- Install-box tab overrides (Material tabbed-set) --- */
+/* Start: Override default Material tab styles */
+.md-typeset .tabbed-set {
+  border: none;
+  background-color: transparent;
 }
 
-.tab-group input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
+.md-typeset .tabbed-content:has(p),
+.md-typeset .tabbed-content:has(ul),
+.md-typeset .tabbed-content:has(ol) {
+  background-color: transparent;
+  padding: 0;
 }
 
-.tab-group label {
-  padding: 0.3rem 0.5rem;
+.md-typeset .tabbed-content {
+  border-top: none;
+}
+
+.md-typeset .tabbed-block > .highlight:first-child > pre > code,
+.md-typeset .tabbed-block > pre:first-child > code {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.js .md-typeset .tabbed-labels:before {
+  background: var(--info-blue-600);
+}
+
+.md-typeset
+  .tabbed-set
+  > input:first-child:checked
+  ~ .tabbed-labels
+  > :first-child,
+.md-typeset
+  .tabbed-set
+  > input:nth-child(10):checked
+  ~ .tabbed-labels
+  > :nth-child(10),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(11):checked
+  ~ .tabbed-labels
+  > :nth-child(11),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(12):checked
+  ~ .tabbed-labels
+  > :nth-child(12),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(13):checked
+  ~ .tabbed-labels
+  > :nth-child(13),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(14):checked
+  ~ .tabbed-labels
+  > :nth-child(14),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(15):checked
+  ~ .tabbed-labels
+  > :nth-child(15),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(16):checked
+  ~ .tabbed-labels
+  > :nth-child(16),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(17):checked
+  ~ .tabbed-labels
+  > :nth-child(17),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(18):checked
+  ~ .tabbed-labels
+  > :nth-child(18),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(19):checked
+  ~ .tabbed-labels
+  > :nth-child(19),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(2):checked
+  ~ .tabbed-labels
+  > :nth-child(2),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(20):checked
+  ~ .tabbed-labels
+  > :nth-child(20),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(3):checked
+  ~ .tabbed-labels
+  > :nth-child(3),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(4):checked
+  ~ .tabbed-labels
+  > :nth-child(4),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(5):checked
+  ~ .tabbed-labels
+  > :nth-child(5),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(6):checked
+  ~ .tabbed-labels
+  > :nth-child(6),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(7):checked
+  ~ .tabbed-labels
+  > :nth-child(7),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(8):checked
+  ~ .tabbed-labels
+  > :nth-child(8),
+.md-typeset
+  .tabbed-set
+  > input:nth-child(9):checked
+  ~ .tabbed-labels
+  > :nth-child(9) {
+  color: var(--info-blue-600);
+}
+
+.md-typeset .tabbed-block > .highlight:first-child > pre {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.md-typeset .highlight pre {
+  padding-right: 2.5rem;
+  background: var(--md-code-bg-color);
+  border-radius: 10px;
+}
+/* End: Override default Material tab styles */
+
+.install-box .tabbed-set {
+  margin: 0;
+}
+
+.install-box .tabbed-labels {
+  gap: 0;
+}
+
+.install-box .tabbed-labels label {
   font-size: 0.72rem;
   font-weight: 600;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  color: var(--md-default-fg-color--light);
-  transition: color 0.2s;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-.tab-group label:hover {
-  color: var(--md-default-fg-color);
-}
-
-.tab-group input[type="radio"]:checked + label {
-  color: var(--info-blue-600);
-  border-bottom-color: var(--info-blue-600);
-}
-
-.tab-panels {
-  flex-basis: 100%;
+.install-box .tabbed-content {
   margin-top: 0.5rem;
-  min-height: 4.5rem;
 }
 
-.tab-panel {
-  display: none;
+.install-box .tabbed-block {
   text-align: center;
-}
-
-/* Show panel based on which radio is checked */
-#term-claude:checked ~ .tab-panels #panel-claude,
-#term-codex:checked ~ .tab-panels #panel-codex,
-#term-cli:checked ~ .tab-panels #panel-cli {
-  display: block;
 }
 
 /* --- IDE button grid (2x2) --- */
@@ -153,19 +226,18 @@
   margin-top: 0.25rem;
 }
 
-.ide-btn {
-  display: inline-flex;
+.md-typeset .md-button.ide-btn {
+  background: var(--info-blue-600);
+  border: 1px solid var(--info-blue-600);
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 0.75rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: inherit;
   text-decoration: none;
-  background: transparent;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .ide-btn:hover {
@@ -193,59 +265,10 @@
   }
 }
 
-.tab-panel .highlight pre {
-  margin: 0.25rem 0 0.5rem;
-  border-radius: 6px;
-}
-
-.tab-panel .highlight pre code {
-  font-size: 0.7rem;
-}
-
-
-
-.install-note {
-  font-size: 0.72rem;
-  color: var(--md-default-fg-color--light);
-  margin: 0.25rem 0 0;
-}
-
-.install-guide-link {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.install-guide-link a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.78rem;
-  color: var(--info-blue-600);
-}
-
-.install-guide-link .twemoji svg {
-  height: 0.9rem;
-  width: 0.9rem;
-}
-
-.install-tabs-container::after {
-  left: 50% !important;
-}
-
 /* --- Selector section (Stripe-style interactive chooser) --- */
 .selector-section {
   margin: 0 auto;
   max-width: 1100px;
-}
-
-.selector-section h2 {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
 .selector-container {
@@ -258,7 +281,7 @@
 .selector-menu {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.25rem;
 }
 
 .selector-item {
@@ -266,13 +289,11 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1rem 1.2rem;
-  border: none;
   border-left: 3px solid transparent;
-  background: transparent;
   cursor: pointer;
-  text-align: left;
-  font-family: inherit;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
@@ -280,23 +301,27 @@
   background: rgba(10, 64, 255, 0.03);
 }
 
+.selector-item:not(.active):hover {
+  border-radius: 0.5rem;
+}
+
 .selector-item.active[data-color="blue"] {
-  border-left-color: #3B82F6;
+  border-left-color: #3b82f6;
   background: rgba(59, 130, 246, 0.06);
 }
 
 .selector-item.active[data-color="amber"] {
-  border-left-color: #F59E0B;
+  border-left-color: #f59e0b;
   background: rgba(245, 158, 11, 0.06);
 }
 
 .selector-item.active[data-color="green"] {
-  border-left-color: #10B981;
+  border-left-color: #10b981;
   background: rgba(16, 185, 129, 0.06);
 }
 
 .selector-item.active[data-color="purple"] {
-  border-left-color: #8B5CF6;
+  border-left-color: #8b5cf6;
   background: rgba(139, 92, 246, 0.06);
 }
 
@@ -319,22 +344,22 @@
 
 .selector-icon--blue {
   background: rgba(59, 130, 246, 0.15);
-  color: #3B82F6;
+  color: #3b82f6;
 }
 
 .selector-icon--amber {
   background: rgba(245, 158, 11, 0.15);
-  color: #F59E0B;
+  color: #f59e0b;
 }
 
 .selector-icon--green {
   background: rgba(16, 185, 129, 0.15);
-  color: #10B981;
+  color: #10b981;
 }
 
 .selector-icon--purple {
   background: rgba(139, 92, 246, 0.15);
-  color: #8B5CF6;
+  color: #8b5cf6;
 }
 
 .selector-text {
@@ -364,7 +389,10 @@
   align-items: center;
   flex-shrink: 0;
   color: var(--md-default-fg-color--light);
-  transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    color 0.2s ease;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -443,22 +471,67 @@
     padding: 0.8rem;
   }
   .selector-item.active[data-color="blue"] {
-    border-bottom-color: #3B82F6;
+    border-bottom-color: #3b82f6;
     border-left-color: transparent;
   }
   .selector-item.active[data-color="amber"] {
-    border-bottom-color: #F59E0B;
+    border-bottom-color: #f59e0b;
     border-left-color: transparent;
   }
   .selector-item.active[data-color="green"] {
-    border-bottom-color: #10B981;
+    border-bottom-color: #10b981;
     border-left-color: transparent;
   }
   .selector-item.active[data-color="purple"] {
-    border-bottom-color: #8B5CF6;
+    border-bottom-color: #8b5cf6;
     border-left-color: transparent;
   }
   .selector-desc {
     display: none;
   }
+}
+
+/* Reduce top spacing on home page */
+.md-content__inner {
+  padding-top: 0;
+}
+
+/* --- Install section --- */
+.install-box {
+  padding: 1.2rem;
+  overflow: hidden;
+}
+
+/* Vertical divider between the two install columns */
+.install-tabs-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.install-tabs-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 1px;
+  background: var(--md-default-fg-color--lightest);
+  transform: translateX(-0.5px); /* center the 1px line */
+}
+@media screen and (max-width: 767px) {
+  .install-tabs-container::after {
+    display: none;
+  }
+}
+
+/* --- Heading highlight pill (matches kluster.ai: text-[#0A40FF] bg-[#0A40FF]/10 px-2 py-1 rounded-lg) --- */
+.text-highlight {
+  color: #0a40ff;
+  background: rgba(10, 64, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
 }
