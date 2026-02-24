@@ -28,7 +28,7 @@
   margin-top: 0;
   margin-bottom: 0.4rem;
   font-size: 0.8rem;
-  color: var(--md-default-fg-color)
+  color: var(--md-default-fg-color);
 }
 
 .md-typeset p {
@@ -531,9 +531,9 @@
   }
 }
 
-/* --- Heading highlight pill (matches kluster.ai: text-[#0A40FF] bg-[#0A40FF]/10 px-2 py-1 rounded-lg) --- */
+/* --- Heading highlight pill (matches kluster.ai: text-[var(--info-blue-600)] bg-[var(--info-blue-600)]/10 px-2 py-1 rounded-lg) --- */
 .text-highlight {
-  color: #0a40ff;
+  color: var(--info-blue-600);
   background: rgba(10, 64, 255, 0.1);
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
