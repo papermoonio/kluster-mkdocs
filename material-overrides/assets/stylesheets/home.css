@@ -402,6 +402,7 @@
 .selector-link svg {
   width: 1.5rem;
   height: 1.5rem;
+  fill: var(--md-default-fg-color);
 }
 
 .selector-item:hover .selector-link,
