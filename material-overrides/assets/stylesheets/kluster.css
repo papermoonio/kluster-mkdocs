@@ -700,6 +700,11 @@ input.md-search__input[placeholder="Search"]::placeholder {
   align-items: center;
 }
 
+.md-path__link:hover {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+}
+
 /* --- Page actions --- */
 .page-actions {
   display: flex;
