@@ -50,6 +50,12 @@
 }
 
 /* --- Layout --- */
+.md-content {
+  max-width: calc(12.1rem + 75%);
+  margin: 0 auto;
+  padding: 0 12.6rem 0 1rem;
+}
+
 /* Reduce top spacing on home page */
 .md-content__inner {
   padding-top: 0;
@@ -61,6 +67,17 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   align-items: center;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 76.2344em) {
+  .md-content {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 /* --- Tight hero --- */
@@ -75,10 +92,6 @@
 }
 
 /* --- Install section --- */
-.install-section {
-  margin-bottom: 2rem;
-}
-
 .install-column > p {
   margin-bottom: 0.6rem;
 }
@@ -118,6 +131,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   margin-top: 0.25rem;
+  width: max-content;
 }
 
 .md-typeset .md-button.ide-btn {
@@ -506,7 +520,7 @@
   .selector-item {
     padding: 0.8rem;
     align-items: center;
-    min-height: 83.19px
+    min-height: 83.19px;
   }
 
   .selector-desc {
@@ -530,4 +544,34 @@
   .selector-container {
     padding: 1.2rem 0;
   }
+}
+
+/* --- Grid cards --- */
+.md-typeset .grid.cards > ul > li {
+  border-color: var(--home-button-border);
+  padding: 0;
+}
+
+.md-typeset .grid.cards > ul > li a,
+.md-typeset .grid.cards > ul > li a:hover {
+  text-decoration: none;
+  color: var(--md-typeset-color);
+}
+
+.md-typeset .grid.cards > ul > li a {
+  padding: 0.8rem;
+}
+
+.md-typeset .grid.cards > ul > li a h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.md-typeset .grid.cards > ul > li a h3 .twemoji:last-child {
+  margin-left: auto;
+  font-size: 1.2em;
+  flex-shrink: 0;
 }

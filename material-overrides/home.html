@@ -14,7 +14,7 @@
     <h1>Real-time code reviews, powered by AI</h1>
     <p>Catch bugs, security risks, and regressions as you code.</p>
   </div>
-  <section class="install-section">
+  <section class="install-section section">
     <h2>Get started in <span class="text-highlight">2 minutes</span></h2>
     <div class="install-tabs-container container">
       <div class="install-column install-box">
@@ -77,7 +77,7 @@
     </div>
   </section>
 
-  <section class="selector-section">
+  <section class="selector-section section">
     <h2>Start <span class="text-highlight">reviewing</span> your code</h2>
     <div class="selector-container container">
       <div class="selector-menu" role="tablist" aria-label="Review mode selector">
@@ -96,7 +96,6 @@
               Review code you wrote
               <a href="/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
                  class="selector-link" aria-label="Learn more about reviewing code you wrote">
-                {% include ".icons/octicons/arrow-right-24.svg" %}
               </a>
             </div>
             <p class="selector-desc">
@@ -119,7 +118,6 @@
               Review AI-generated code
               <a href="/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
                  class="selector-link" aria-label="Learn more about reviewing AI-generated code">
-                {% include ".icons/octicons/arrow-right-24.svg" %}
               </a>
             </div>
             <p class="selector-desc">
@@ -142,7 +140,6 @@
               Scan your entire repository
               <a href="/code-reviews/repo-reviews/quickstart/"
                  class="selector-link" aria-label="Learn more about scanning your repository">
-                {% include ".icons/octicons/arrow-right-24.svg" %}
               </a>
             </div>
             <p class="selector-desc">
@@ -165,7 +162,6 @@
               Review from the terminal
               <a href="/code-reviews/cli/quickstart/"
                  class="selector-link" aria-label="Learn more about reviewing from the terminal">
-                {% include ".icons/octicons/arrow-right-24.svg" %}
               </a>
             </div>
             <p class="selector-desc">
@@ -184,6 +180,58 @@
       </div>
     </div>
   </section>
+    <section class="configure-section section">
+    <h2>Configure your <span class="text-highlight">code reviews</span></h2>
+    <div class="grid cards">
+      <ul>
+        <li>
+          <a href="/code-reviews/configuration/options/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/tune-vertical.svg" %}</span><span>Options</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Adjust sensitivity, analysis depth, issue types, and more.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/configuration/rules/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/file-document-edit-outline.svg" %}</span><span>Custom rules</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Define your own review standards or learn rules from your GitHub repository.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/configuration/klusterignore/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/file-hidden.svg" %}</span><span>.klusterignore</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Exclude files and directories from reviews.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="explore-section section">
+    <h2>Explore <span class="text-highlight">review modes</span> and resources</h2>
+    <div class="grid cards">
+      <ul>
+        <li>
+          <a href="/code-reviews/review-modes/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/shield-bug-outline.svg" %}</span><span>Code Reviews</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Understand the four review modes and seven issue types kluster.ai detects.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/faq/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/frequently-asked-questions.svg" %}</span><span>Frequently Asked Questions</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Answers to common questions about kluster.ai Code Reviews.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/troubleshooting/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/wrench-outline.svg" %}</span><span>Troubleshooting</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Solutions for known issues and error messages.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var menu = document.querySelector('.selector-menu');
@@ -244,6 +292,4 @@
       });
     });
   </script>
-
-  {{ super() }}
 {% endblock %}
