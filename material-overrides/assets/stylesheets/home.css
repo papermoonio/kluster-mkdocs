@@ -41,6 +41,28 @@
   font-size: 0.75rem;
 }
 
+/* --- Heading highlight pill (matches kluster.ai: text-[var(--info-blue-600)] bg-[var(--info-blue-600)]/10 px-2 py-1 rounded-lg) --- */
+.text-highlight {
+  color: var(--info-blue-600);
+  background: rgba(10, 64, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* --- Layout --- */
+/* Reduce top spacing on home page */
+.md-content__inner {
+  padding-top: 0;
+}
+
+/* Section containers */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 /* --- Tight hero --- */
 .hero-tight {
   text-align: center;
@@ -61,11 +83,84 @@
   margin-bottom: 0.6rem;
 }
 
+.install-box {
+  padding: 1.2rem;
+  overflow: hidden;
+}
+
+/* Vertical divider between the two install columns */
+.install-tabs-container {
+  position: relative;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.install-tabs-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 1px;
+  background: var(--md-default-fg-color--lightest);
+  transform: translateX(-0.5px); /* center the 1px line */
+}
+
+@media screen and (max-width: 767px) {
+  .install-tabs-container::after {
+    display: none;
+  }
+}
+
+/* --- IDE button grid (2x2) --- */
+.ide-btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.md-typeset .md-button.ide-btn {
+  background: var(--home-button-bg);
+  border: 1px solid var(--home-button-border);
+  color: var(--home-button-fg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.md-typeset .md-button.ide-btn:hover {
+  background: var(--home-button-border);
+  text-decoration: none;
+}
+
+.ide-icon {
+  display: inline-flex;
+}
+
+.ide-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .ide-btn-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Install-box tab overrides (Material tabbed-set) --- */
 /* Start: Override default Material tab styles */
 .md-typeset .tabbed-set {
   border: none;
   background-color: transparent;
+  margin: 0;
 }
 
 .md-typeset .tabbed-content:has(p),
@@ -77,6 +172,7 @@
 
 .md-typeset .tabbed-content {
   border-top: none;
+  margin-top: 0.5rem;
 }
 
 .md-typeset .tabbed-block > .highlight:first-child > pre > code,
@@ -201,93 +297,22 @@
   background: var(--md-code-bg-color);
   border-radius: 10px;
 }
-/* End: Override default Material tab styles */
 
-.install-box .tabbed-set {
-  margin: 0;
-}
-
-.install-box .tabbed-labels {
-  gap: 0;
-}
-
-.install-box .tabbed-labels label {
+.md-typeset .tabbed-labels > label {
   font-size: 0.72rem;
   font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
-.install-box .tabbed-content {
-  margin-top: 0.5rem;
-}
-
-.install-box .tabbed-block {
+.md-typeset .tabbed-block {
   text-align: center;
 }
 
-/* --- IDE button grid (2x2) --- */
-.ide-btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.md-typeset .md-button.ide-btn {
-  background: var(--home-button-bg);
-  border: 1px solid var(--home-button-border);
-  color: var(--home-button-fg);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.md-typeset .md-button.ide-btn:hover {
-  border-color: var(--home-button-border);
-  background: var(--home-button-border);
-  color: var(--home-button-fg);
-  opacity: 1;
-  text-decoration: none;
-}
-
-.ide-icon {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.ide-icon svg {
-  width: 1rem;
-  height: 1rem;
-  fill: currentColor;
-}
-
-@media screen and (max-width: 767px) {
-  .ide-btn-grid {
-    grid-template-columns: 1fr;
-  }
+/* Install note link */
+.md-typeset .install-note a {
+  color: var(--info-blue-600);
 }
 
 /* --- Selector section (Stripe-style interactive chooser) --- */
-.selector-section {
-  margin: 0 auto;
-  max-width: 1100px;
-}
-
-.selector-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: center;
-}
-
 .selector-menu {
   display: flex;
   flex-direction: column;
@@ -388,8 +413,7 @@
 }
 
 .selector-desc {
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
+  margin-bottom: 0;
   margin-top: 0.25rem;
   line-height: 1.4;
 }
@@ -411,12 +435,6 @@
   width: 1.5rem;
   height: 1.5rem;
   fill: var(--md-default-fg-color);
-}
-
-.selector-item:hover .selector-link,
-.selector-item.active .selector-link {
-  opacity: 1;
-  color: var(--info-blue-600);
 }
 
 .selector-item:hover .selector-link svg {
@@ -456,93 +474,60 @@
   .md-content {
     padding: 0;
   }
+
   .selector-container {
     gap: 1rem;
   }
-  .selector-desc {
+
+  .md-typeset p {
     font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .install-tabs-container {
+  .container {
     grid-template-columns: 1fr;
+    gap: 0;
   }
+
+  .install-section {
+    margin-bottom: 0;
+  }
+
   .selector-container {
-    grid-template-columns: 1fr;
+    padding: 1.2rem;
   }
+
   .selector-preview {
     order: -1;
     min-height: 200px;
   }
+
   .selector-item {
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    border-radius: 0.5rem;
     padding: 0.8rem;
+    align-items: center;
+    min-height: 83.19px
   }
-  .selector-item.active[data-color="blue"] {
-    border-bottom-color: #3b82f6;
-    border-left-color: transparent;
-  }
-  .selector-item.active[data-color="amber"] {
-    border-bottom-color: #f59e0b;
-    border-left-color: transparent;
-  }
-  .selector-item.active[data-color="green"] {
-    border-bottom-color: #10b981;
-    border-left-color: transparent;
-  }
-  .selector-item.active[data-color="purple"] {
-    border-bottom-color: #8b5cf6;
-    border-left-color: transparent;
-  }
+
   .selector-desc {
     display: none;
   }
-}
 
-/* Reduce top spacing on home page */
-.md-content__inner {
-  padding-top: 0;
-}
+  .selector-icon {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+  }
 
-/* --- Install section --- */
-.install-box {
-  padding: 1.2rem;
-  overflow: hidden;
-}
-
-/* Vertical divider between the two install columns */
-.install-tabs-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: stretch;
-  margin: 0 auto;
-}
-
-.install-tabs-container::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 1.2rem;
-  bottom: 1.2rem;
-  width: 1px;
-  background: var(--md-default-fg-color--lightest);
-  transform: translateX(-0.5px); /* center the 1px line */
-}
-@media screen and (max-width: 767px) {
-  .install-tabs-container::after {
-    display: none;
+  .selector-icon svg {
+    width: 1rem;
+    height: 1rem;
   }
 }
 
-/* --- Heading highlight pill (matches kluster.ai: text-[var(--info-blue-600)] bg-[var(--info-blue-600)]/10 px-2 py-1 rounded-lg) --- */
-.text-highlight {
-  color: var(--info-blue-600);
-  background: rgba(10, 64, 255, 0.1);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+@media screen and (max-width: 640px) {
+  .install-box,
+  .selector-container {
+    padding: 1.2rem 0;
+  }
 }
