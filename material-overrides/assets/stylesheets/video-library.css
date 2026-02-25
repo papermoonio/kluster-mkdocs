@@ -1,0 +1,110 @@
+.md-typeset .video-library-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.md-typeset .video-library-item {
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--md-default-bg-color) 85%, var(--secondary-bg-color) 15%);
+  padding: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .video-library-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-typeset-a-color);
+}
+
+.md-typeset .video-library-item.is-open {
+  grid-column: 1 / -1;
+  border-color: var(--md-typeset-a-color);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.md-typeset .video-library-title-wrap {
+  min-height: 5.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset .video-library-title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  display: block;
+}
+
+.md-typeset .video-library-divider {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--card-border-color);
+}
+
+.md-typeset .video-library-media-button,
+.md-typeset .video-library-player {
+  width: 100%;
+  margin: 0.9rem 0 0.7rem;
+  display: block;
+}
+
+.md-typeset .video-library-media-button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.md-typeset .video-library-media-button:focus-visible {
+  outline: 2px solid var(--md-typeset-a-color);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.md-typeset .video-library-thumb {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--card-border-color);
+  display: block;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.md-typeset .video-library-item:hover .video-library-thumb {
+  transform: scale(1.01);
+  border-color: var(--md-typeset-a-color);
+}
+
+.md-typeset .video-library-media-button[hidden],
+.md-typeset .video-library-player[hidden] {
+  display: none;
+}
+
+.md-typeset .video-library-description {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.md-typeset .video-library-empty {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .video-anchor {
+  scroll-margin-top: 5.5rem;
+}
+
+@media screen and (max-width: 45em) {
+  .md-typeset .video-library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .video-library-title-wrap {
+    min-height: auto;
+  }
+
+  .md-typeset .video-library-title {
+    font-size: 1.2rem;
+  }
+}

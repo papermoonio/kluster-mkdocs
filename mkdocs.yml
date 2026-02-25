@@ -84,6 +84,8 @@ plugins:
       scoped_css_templates:
         home.html:
           - assets/stylesheets/home.css
+        video-library.html:
+          - assets/stylesheets/video-library.css
         main.html:
           - assets/stylesheets/kluster.css
   - macros:

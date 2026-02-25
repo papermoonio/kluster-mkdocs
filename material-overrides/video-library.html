@@ -1,0 +1,290 @@
+{% extends "main.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/video-library.css' | url }}" />
+{% endblock %}
+
+{% block content %}
+  {% include "partials/tags.html" %}
+  {{ page.content | safe }}
+
+  {% set videos = page.meta.videos if page and page.meta and page.meta.videos else [] %}
+
+  <div class="video-library-grid">
+    {% for video in videos %}
+      {% if video.youtube_id and video.title %}
+        {% set video_key = video.youtube_id | lower %}
+        {% set normalized_video_key = video_key | replace("-", "") | replace("_", "") %}
+        {% set full_title_slug = video.title
+          | lower
+          | replace("&", " and ")
+          | replace(":", "")
+          | replace(".", "")
+          | replace("'", "")
+          | replace('"', "")
+          | replace("/", " ")
+          | replace(",", "")
+          | replace("?", "")
+          | replace("!", "")
+          | replace("+", " ")
+          | replace("-", " ")
+          | replace("_", " ")
+          | trim
+          | replace("  ", " ")
+          | replace(" ", "-")
+        %}
+        {% set short_title_slug = full_title_slug.split("-")[:8] | join("-") %}
+        {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
+        {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}
+        {% set player_id = "player-" ~ normalized_video_key %}
+        <article id="{{ article_id }}" class="video-library-item video-anchor" data-video-key="{{ normalized_video_key }}">
+          <div class="video-library-title-wrap">
+            <span class="video-library-title">{{ video.title }}</span>
+          </div>
+          <hr class="video-library-divider" />
+          <button
+            type="button"
+            class="video-library-media-button"
+            data-open-video
+            aria-controls="{{ player_id }}"
+            aria-expanded="false"
+          >
+            {% set has_absolute_thumbnail = video.thumbnail and (video.thumbnail[:7] == "http://" or video.thumbnail[:8] == "https://") %}
+            {% set thumb_src = video.thumbnail if video.thumbnail else "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
+            <img
+              class="video-library-thumb off-glb"
+              src="{{ thumb_src if has_absolute_thumbnail else thumb_src | url }}"
+              alt="Thumbnail for {{ video.title }}"
+              loading="lazy"
+            />
+          </button>
+          <div id="{{ player_id }}" class="video-library-player" hidden>
+            <div class="embed-container">
+              <iframe
+                data-base-src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+                src="about:blank"
+                title="{{ video.title }}"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          {% if video.description %}
+            <p class="video-library-description">{{ video.description }}</p>
+          {% endif %}
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if not videos %}
+    <p class="video-library-empty">No videos are configured for this page yet.</p>
+  {% endif %}
+
+  {% include "partials/source-file.html" %}
+  {% include "partials/feedback.html" %}
+  {% include "partials/comments.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var grid = document.querySelector(".video-library-grid");
+      var items = Array.from(document.querySelectorAll(".video-library-item"));
+      if (!items.length) {
+        return;
+      }
+
+      function slugify(value) {
+        return value
+          .toLowerCase()
+          .trim()
+          .replace(/&/g, " and ")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function normalizeVideoKey(value) {
+        return (value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function extractVideoKeyFromHash(hash) {
+        if (!hash || !hash.startsWith("video-")) {
+          return "";
+        }
+
+        var hashBody = hash.slice("video-".length);
+        if (!hashBody) {
+          return "";
+        }
+
+        var segments = hashBody.split("-").filter(Boolean);
+        var candidate = segments.length ? segments[segments.length - 1] : hashBody;
+        return normalizeVideoKey(candidate);
+      }
+
+      function getPlayer(item) {
+        return item.querySelector(".video-library-player");
+      }
+
+      function getThumbButton(item) {
+        return item.querySelector(".video-library-media-button");
+      }
+
+      function getIframe(item) {
+        return item.querySelector("iframe[data-base-src]");
+      }
+
+      function setExpandedState(item, expanded) {
+        item.querySelectorAll("[data-open-video]").forEach(function (control) {
+          control.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+      }
+
+      function resetPlayback(item) {
+        var iframe = getIframe(item);
+        if (!iframe) {
+          return;
+        }
+
+        iframe.setAttribute("src", "about:blank");
+      }
+
+      function openPlayback(item, autoplay) {
+        var iframe = getIframe(item);
+        if (!iframe) {
+          return;
+        }
+
+        var url = new URL(iframe.dataset.baseSrc);
+        url.searchParams.set("rel", "0");
+        if (autoplay) {
+          url.searchParams.set("autoplay", "1");
+        }
+        iframe.setAttribute("src", url.toString());
+      }
+
+      function closeItem(item) {
+        item.classList.remove("is-open");
+        var player = getPlayer(item);
+        var thumbButton = getThumbButton(item);
+        if (player) {
+          player.hidden = true;
+        }
+        if (thumbButton) {
+          thumbButton.hidden = false;
+        }
+        setExpandedState(item, false);
+        resetPlayback(item);
+      }
+
+      function moveAdjacentLeftCardOutOfWay(item) {
+        if (!grid || item.parentElement !== grid) {
+          return;
+        }
+
+        var leftCard = item.previousElementSibling;
+        if (!leftCard || !leftCard.classList.contains("video-library-item")) {
+          return;
+        }
+
+        var itemRect = item.getBoundingClientRect();
+        var leftRect = leftCard.getBoundingClientRect();
+        var sameRow = Math.abs(itemRect.top - leftRect.top) < 10;
+        var itemIsRightColumn = itemRect.left > leftRect.left;
+
+        if (!sameRow || !itemIsRightColumn) {
+          return;
+        }
+
+        grid.insertBefore(leftCard, item.nextSibling);
+      }
+
+      function openItem(item, autoplay, updateHash, shouldScroll) {
+        items.forEach(function (other) {
+          if (other !== item) {
+            closeItem(other);
+          }
+        });
+
+        moveAdjacentLeftCardOutOfWay(item);
+
+        item.classList.add("is-open");
+        var player = getPlayer(item);
+        var thumbButton = getThumbButton(item);
+        if (player) {
+          player.hidden = false;
+        }
+        if (thumbButton) {
+          thumbButton.hidden = true;
+        }
+
+        setExpandedState(item, true);
+        openPlayback(item, autoplay);
+
+        if (updateHash) {
+          history.replaceState(null, "", "#" + item.id);
+        }
+
+        if (shouldScroll) {
+          item.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      function resolveHashTarget(hash) {
+        var directMatch = document.getElementById(hash);
+        if (directMatch && directMatch.classList.contains("video-library-item")) {
+          return directMatch;
+        }
+
+        var hashVideoKey = extractVideoKeyFromHash(hash);
+        if (hashVideoKey) {
+          var keyMatch = items.find(function (item) {
+            return normalizeVideoKey(item.dataset.videoKey) === hashVideoKey;
+          });
+          if (keyMatch) {
+            return keyMatch;
+          }
+        }
+
+        return items.find(function (item) {
+          var titleEl = item.querySelector(".video-library-title");
+          if (!titleEl) {
+            return false;
+          }
+
+          var titleSlug = slugify(titleEl.textContent);
+          return titleSlug === hash || "video-" + titleSlug === hash;
+        });
+      }
+
+      items.forEach(function (item) {
+        closeItem(item);
+        item.querySelectorAll("[data-open-video]").forEach(function (control) {
+          control.addEventListener("click", function (event) {
+            event.preventDefault();
+            openItem(item, true, true, false);
+          });
+        });
+      });
+
+      function openFromHash() {
+        var hash = window.location.hash.replace("#", "");
+        if (!hash) {
+          return;
+        }
+
+        var target = resolveHashTarget(hash);
+        if (target) {
+          openItem(target, false, false, true);
+        }
+      }
+
+      openFromHash();
+      window.addEventListener("hashchange", openFromHash);
+    });
+  </script>
+{% endblock %}
