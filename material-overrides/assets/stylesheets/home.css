@@ -1,10 +1,16 @@
 :root,
 [data-md-color-scheme="default"] {
   --md-typeset-color: var(--md-default-fg-color--light);
+  --home-button-fg: #060809;
+  --home-button-bg: #0608090d;
+  --home-button-border: #0608091a;
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
   --md-typeset-color: var(--md-default-fg-color--light);
+  --home-button-fg: #f8fafc;
+  --home-button-bg: #ffffff0d;
+  --home-button-border: #ffffff1a;
 }
 
 /* --- Fonts --- */
@@ -229,8 +235,9 @@
 }
 
 .md-typeset .md-button.ide-btn {
-  background: var(--info-blue-600);
-  border: 1px solid var(--info-blue-600);
+  background: var(--home-button-bg);
+  border: 1px solid var(--home-button-border);
+  color: var(--home-button-fg);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -242,11 +249,12 @@
     background 0.2s ease;
 }
 
-.ide-btn:hover {
-  border-color: var(--info-blue-600);
-  background: rgba(10, 64, 255, 0.05);
+.md-typeset .md-button.ide-btn:hover {
+  border-color: var(--home-button-border);
+  background: var(--home-button-border);
+  color: var(--home-button-fg);
+  opacity: 1;
   text-decoration: none;
-  color: inherit;
 }
 
 .ide-icon {
