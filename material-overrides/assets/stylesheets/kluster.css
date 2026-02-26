@@ -266,12 +266,29 @@
 
 .md-content {
   border-left: 1px solid var(--border-color);
-  max-width: calc(1400px - 12.6rem);
+  border-right: 1px solid var(--border-color);
   padding: 1.2rem;
+}
+
+.md-content__inner {
+  max-width: 40rem;
 }
 
 .md-sidebar {
   width: 12.6rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  [dir="ltr"]
+    .md-sidebar--secondary:not([hidden])
+    ~ .md-content
+    > .md-content__inner,
+  [dir="rtl"]
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin: 0 auto;
+  }
 }
 
 /* --- Typography --- */
@@ -733,7 +750,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 .page-actions .edit-section a.md-content__button.md-icon {
   display: flex;
   align-items: center;
-  padding: .5rem 2.5rem .5rem  .5rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   margin-left: 0.6rem;
   margin-bottom: 0.2rem;
   gap: 0.4rem;
@@ -1226,11 +1243,14 @@ pre:hover > .md-code__nav {
 }
 
 .md-banner__inner p {
-  margin: 0.5em;
+  margin: 0;
 }
 
 .md-banner__inner.md-grid.md-typeset {
   cursor: default;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  padding: 0.5rem;
 }
 
 /* --- Where to Go Next Badges --- */
