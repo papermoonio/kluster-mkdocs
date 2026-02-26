@@ -38,7 +38,12 @@
         {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
         {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}
         {% set player_id = "player-" ~ normalized_video_key %}
-        <article id="{{ article_id }}" class="video-library-item video-anchor" data-video-key="{{ normalized_video_key }}">
+        <article
+          id="{{ article_id }}"
+          class="video-library-item video-anchor"
+          data-video-key="{{ normalized_video_key }}"
+          data-title-slug="{{ full_title_slug }}"
+        >
           <div class="video-library-title-wrap">
             <span class="video-library-title">{{ video.title }}</span>
           </div>
@@ -50,8 +55,15 @@
             aria-controls="{{ player_id }}"
             aria-expanded="false"
           >
-            {% set has_absolute_thumbnail = video.thumbnail and (video.thumbnail[:7] == "http://" or video.thumbnail[:8] == "https://") %}
-            {% set thumb_src = video.thumbnail if video.thumbnail else "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
+            {% set default_thumb_src = "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
+            {% set configured_thumb = video.thumbnail if video.thumbnail else default_thumb_src %}
+            {% set normalized_thumb = configured_thumb | lower %}
+            {% set has_allowed_absolute = normalized_thumb[:7] == "http://" or normalized_thumb[:8] == "https://" or normalized_thumb[:2] == "//" %}
+            {% set first_segment = normalized_thumb.split("/", 1)[0] %}
+            {% set has_disallowed_scheme = (":" in first_segment) and (not has_allowed_absolute) %}
+            {% set thumb_src = default_thumb_src if has_disallowed_scheme else configured_thumb %}
+            {% set normalized_final_thumb = thumb_src | lower %}
+            {% set has_absolute_thumbnail = normalized_final_thumb[:7] == "http://" or normalized_final_thumb[:8] == "https://" or normalized_final_thumb[:2] == "//" %}
             <img
               class="video-library-thumb off-glb"
               src="{{ thumb_src if has_absolute_thumbnail else thumb_src | url }}"
@@ -71,6 +83,15 @@
               ></iframe>
             </div>
           </div>
+          <button
+            type="button"
+            class="video-library-close-button"
+            data-close-video
+            aria-controls="{{ player_id }}"
+            hidden
+          >
+            Close video
+          </button>
           {% if video.description %}
             <p class="video-library-description">{{ video.description }}</p>
           {% endif %}
@@ -98,8 +119,8 @@
         return;
       }
 
-      function slugify(value) {
-        return value
+      function slugifyCompatibility(value) {
+        return (value || "")
           .toLowerCase()
           .trim()
           .replace(/&/g, " and ")
@@ -138,6 +159,10 @@
         return item.querySelector("iframe[data-base-src]");
       }
 
+      function getCloseButton(item) {
+        return item.querySelector(".video-library-close-button");
+      }
+
       function setExpandedState(item, expanded) {
         item.querySelectorAll("[data-open-video]").forEach(function (control) {
           control.setAttribute("aria-expanded", expanded ? "true" : "false");
@@ -159,7 +184,17 @@
           return;
         }
 
-        var url = new URL(iframe.dataset.baseSrc);
+        var baseSrc = iframe.dataset.baseSrc;
+        if (!baseSrc) {
+          return;
+        }
+
+        var url;
+        try {
+          url = new URL(baseSrc);
+        } catch (error) {
+          return;
+        }
         url.searchParams.set("rel", "0");
         if (autoplay) {
           url.searchParams.set("autoplay", "1");
@@ -171,11 +206,15 @@
         item.classList.remove("is-open");
         var player = getPlayer(item);
         var thumbButton = getThumbButton(item);
+        var closeButton = getCloseButton(item);
         if (player) {
           player.hidden = true;
         }
         if (thumbButton) {
           thumbButton.hidden = false;
+        }
+        if (closeButton) {
+          closeButton.hidden = true;
         }
         setExpandedState(item, false);
         resetPlayback(item);
@@ -215,11 +254,15 @@
         item.classList.add("is-open");
         var player = getPlayer(item);
         var thumbButton = getThumbButton(item);
+        var closeButton = getCloseButton(item);
         if (player) {
           player.hidden = false;
         }
         if (thumbButton) {
           thumbButton.hidden = true;
+        }
+        if (closeButton) {
+          closeButton.hidden = false;
         }
 
         setExpandedState(item, true);
@@ -251,13 +294,19 @@
         }
 
         return items.find(function (item) {
+          var templateSlug = (item.dataset.titleSlug || "").trim();
+          if (templateSlug && (templateSlug === hash || "video-" + templateSlug === hash)) {
+            return true;
+          }
+
+          // Compatibility fallback for links generated from legacy JS slug behavior.
           var titleEl = item.querySelector(".video-library-title");
           if (!titleEl) {
             return false;
           }
 
-          var titleSlug = slugify(titleEl.textContent);
-          return titleSlug === hash || "video-" + titleSlug === hash;
+          var compatibilitySlug = slugifyCompatibility(titleEl.textContent);
+          return compatibilitySlug === hash || "video-" + compatibilitySlug === hash;
         });
       }
 
@@ -269,10 +318,51 @@
             openItem(item, true, true, false);
           });
         });
+        item.querySelectorAll("[data-close-video]").forEach(function (control) {
+          control.addEventListener("click", function (event) {
+            event.preventDefault();
+            closeItem(item);
+            var thumbButton = getThumbButton(item);
+            if (thumbButton) {
+              thumbButton.focus();
+            }
+          });
+        });
+      });
+
+      function closeOpenItemFromKeyboard() {
+        var openItem = items.find(function (item) {
+          return item.classList.contains("is-open");
+        });
+        if (openItem) {
+          closeItem(openItem);
+          var thumbButton = getThumbButton(openItem);
+          if (thumbButton) {
+            thumbButton.focus();
+          }
+        }
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape" && event.key !== "Esc") {
+          return;
+        }
+
+        var activeElement = document.activeElement;
+        var isInsideVideoLibrary =
+          activeElement &&
+          typeof activeElement.closest === "function" &&
+          activeElement.closest(".video-library-grid");
+
+        if (!isInsideVideoLibrary) {
+          return;
+        }
+
+        closeOpenItemFromKeyboard();
       });
 
       function openFromHash() {
-        var hash = window.location.hash.replace("#", "");
+        var hash = window.location.hash.slice(1);
         if (!hash) {
           return;
         }
