@@ -19,23 +19,46 @@
 
     "content": {
         "docs_dir": ".",
-        "base_context_categories": ["Basics", "Reference"],
-        "categories_order": [
-            "Basics",
-            "Human-written code",
-            "AI-generated code",
-            "On-demand review",
-            "Automatic review",
-            "Reference"
-        ],
+        "base_context_categories": ["basics", "reference"],
+        "categories_info": {
+                "basics": {
+                    "id": "basics",
+                    "name": "Basics",
+                    "description": "Fundamental concepts, getting started guides, and essential information about kluster.ai."
+                },
+                "human_written_code": {
+                    "id": "human_written_code",
+                    "name": "Human Written Code",
+                    "description": "Information and guides related to using kluster.ai to review human-written code."
+                },
+                "ai_generated_code": {
+                    "id": "ai_generated_code",
+                    "name": "AI Generated Code",
+                    "description": "Information and guides related to using kluster.ai to review AI-generated code."
+                },
+                "on_demand_review": {
+                    "id": "on_demand_review",
+                    "name": "On-Demand Review",
+                    "description": "Information and guides related to using kluster.ai for on-demand reviews, providing insights and feedback based on specific criteria or user requests."
+                },
+                "automatic_review": {
+                    "id": "automatic_review",
+                    "name": "Automatic Review",
+                    "description": "Information and guides related to using kluster.ai for automatic reviews, ensuring quality and relevance based on predefined algorithms and standards."
+                },
+                "reference": {
+                    "id": "reference",
+                    "name": "Reference",
+                    "description": "Comprehensive reference materials, including MCP tools, configuration options, and detailed response schema information."
+                }
+            },
         "exclusions": {
             "skip_basenames": [
-                "index.md",
                 "README.md",
-                ".CONTRIBUTING.md",
-                "LICENSE.md"
+                "LICENSE.md", 
+                "ai-resources.md"
             ],
-            "skip_paths": [".snippets", ".github"]
+            "skip_paths": ["venv"]
         }
     },
 
