@@ -141,9 +141,9 @@
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
-  flex: 1;
-  min-width: 9.6em;
-  max-width: 9.6em;
+  min-width: max-content;
+  justify-content: center;
+  flex: 48%;
 }
 
 .md-typeset .md-button.ide-btn:hover {
@@ -169,7 +169,10 @@
 
 @media screen and (max-width: 344px) {
   .ide-btn-grid .md-button.ide-btn {
-    min-width: fit-content;
+    flex: 100%;
+    max-width: fit-content;
+    min-width: 9.6em;
+    margin: 0 auto;
   }
 }
 
