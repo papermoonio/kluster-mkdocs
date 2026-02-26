@@ -347,6 +347,10 @@
   gap: 0.25rem;
 }
 
+.selector-container {
+  grid-template-columns: 2fr 3fr;
+}
+
 .selector-item {
   display: flex;
   align-items: flex-start;
