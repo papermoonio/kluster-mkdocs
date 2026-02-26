@@ -571,6 +571,11 @@
   padding: 0;
 }
 
+.md-typeset .grid.cards > ul > li:hover {
+  border: 1px solid var(--home-button-border);
+  background: var(--home-button-bg);
+}
+
 .md-typeset .grid.cards > ul > li a,
 .md-typeset .grid.cards > ul > li a:hover {
   text-decoration: none;
