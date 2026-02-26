@@ -25,8 +25,8 @@
 }
 
 .md-typeset .video-library-title-wrap {
-  min-height: 5.4rem;
-  margin-bottom: 0.5rem;
+  min-height: 0;
+  margin-bottom: 0.25rem;
 }
 
 .md-typeset .video-library-title-wrap,
