@@ -22,8 +22,27 @@
     {% endfor %}
 
     {% if category_has_videos.value %}
+      {% set category_slug = category_name
+        | lower
+        | replace("&", " and ")
+        | replace(":", "")
+        | replace(".", "")
+        | replace("'", "")
+        | replace('"', "")
+        | replace("/", " ")
+        | replace(",", "")
+        | replace("?", "")
+        | replace("!", "")
+        | replace("+", " ")
+        | replace("-", " ")
+        | replace("_", " ")
+        | trim
+        | replace("  ", " ")
+        | replace(" ", "-")
+      %}
+      {% set category_anchor_id = "video-category-" ~ category_slug %}
       <section class="video-library-category" data-video-category="{{ category_name }}">
-        <h3 class="video-library-category-title">{{ category_name }}</h3>
+        <h3 id="{{ category_anchor_id }}" class="video-library-category-title">{{ category_name }}</h3>
         <div class="video-library-grid">
           {% for video in videos %}
             {% if video.category == category_name and video.youtube_id and video.title %}
@@ -129,7 +148,8 @@
 {% block scripts %}
   {{ super() }}
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    (function () {
+      function initVideoLibraryPage() {
       var grids = Array.from(document.querySelectorAll(".video-library-grid"));
       var items = Array.from(document.querySelectorAll(".video-library-item"));
       if (!items.length) {
@@ -457,8 +477,76 @@
         }
       }
 
+      function injectCategoryLinksIntoToc() {
+        var tocNav = document.querySelector('nav[aria-label="Table of contents"]');
+        if (!tocNav) {
+          return;
+        }
+
+        var browseLink = tocNav.querySelector('.md-nav__link[href="#browse-videos"]');
+        var browseItem = browseLink ? browseLink.closest(".md-nav__item") : null;
+        if (!browseItem) {
+          return;
+        }
+
+        var existingGeneratedList = browseItem.querySelector(".video-library-toc-categories");
+        if (existingGeneratedList) {
+          existingGeneratedList.remove();
+        }
+
+        var categoryTitles = Array.from(document.querySelectorAll(".video-library-category-title[id]"));
+        if (!categoryTitles.length) {
+          return;
+        }
+
+        var nestedList = document.createElement("ul");
+        nestedList.className = "md-nav__list video-library-toc-categories";
+
+        categoryTitles.forEach(function (title) {
+          var titleText = (title.textContent || "").trim();
+          if (!titleText) {
+            return;
+          }
+
+          var listItem = document.createElement("li");
+          listItem.className = "md-nav__item";
+
+          var link = document.createElement("a");
+          link.className = "md-nav__link";
+          link.setAttribute("href", "#" + title.id);
+          link.textContent = titleText;
+
+          listItem.appendChild(link);
+          nestedList.appendChild(listItem);
+        });
+
+        if (!nestedList.children.length) {
+          return;
+        }
+
+        browseItem.appendChild(nestedList);
+      }
+
+      injectCategoryLinksIntoToc();
       openFromHash();
-      window.addEventListener("hashchange", openFromHash);
-    });
+      if (window.__videoLibraryHashHandler) {
+        window.removeEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+      window.__videoLibraryHashHandler = openFromHash;
+      window.addEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+
+      if (
+        typeof window !== "undefined" &&
+        window.document$ &&
+        typeof window.document$.subscribe === "function"
+      ) {
+        window.document$.subscribe(initVideoLibraryPage);
+      } else if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initVideoLibraryPage);
+      } else {
+        initVideoLibraryPage();
+      }
+    })();
   </script>
 {% endblock %}

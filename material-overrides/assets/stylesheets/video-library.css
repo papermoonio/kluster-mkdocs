@@ -23,6 +23,7 @@
   margin: 0 0 0.65rem;
   font-size: 1.2rem;
   line-height: 1.3;
+  scroll-margin-top: 5.5rem;
 }
 
 .md-typeset .video-library-grid {
