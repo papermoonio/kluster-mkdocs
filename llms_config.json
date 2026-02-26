@@ -54,6 +54,7 @@
             },
         "exclusions": {
             "skip_basenames": [
+                "index.md",
                 "README.md",
                 "LICENSE.md", 
                 "ai-resources.md"
