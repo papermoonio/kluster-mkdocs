@@ -695,6 +695,16 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 }
 
+/* --- Breadcrumbs --- */
+.md-path__item:not(:first-child) {
+  align-items: center;
+}
+
+.md-path__link:hover {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+}
+
 /* --- Page actions --- */
 .page-actions {
   display: flex;
