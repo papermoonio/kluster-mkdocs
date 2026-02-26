@@ -9,6 +9,10 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/",
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
