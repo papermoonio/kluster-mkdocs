@@ -561,6 +561,11 @@
 }
 
 /* --- Grid cards --- */
+.configure-section .grid.cards,
+.explore-section .grid.cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .md-typeset .grid.cards > ul > li {
   border-color: var(--home-button-border);
   padding: 0;
@@ -588,4 +593,11 @@
   margin-left: auto;
   font-size: 1.2em;
   flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .configure-section .grid.cards,
+  .explore-section .grid.cards {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
 }
