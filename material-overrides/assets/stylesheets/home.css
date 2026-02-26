@@ -165,7 +165,21 @@
 
 @media screen and (max-width: 767px) {
   .ide-btn-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .ide-btn-grid .md-button.ide-btn {
+    flex: 1;
+    min-width: 10em;
+    max-width: 10em;
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .ide-btn-grid .md-button.ide-btn {
+    min-width: fit-content;
   }
 }
 
