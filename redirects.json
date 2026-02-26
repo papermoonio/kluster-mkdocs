@@ -9,6 +9,10 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/activation-codes/",
+      "value": "/code-reviews/faq/activation-codes/"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
@@ -73,10 +77,6 @@
       "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
-      "key": "/code-reviews/faq/activation-codes/",
-      "value": "/code-reviews/activation-codes/"
-    },
-    {
       "key": "/code-reviews/human-written-code/automatic-background-reviews/how-it-works/",
       "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/"
     },
@@ -135,6 +135,10 @@
     {
       "key": "/code-reviews/tools/",
       "value": "/code-reviews/reference/mcp-tools/"
+    },
+    {
+      "key": "/code-reviews/troubleshooting/",
+      "value": "/code-reviews/faq/troubleshooting/"
     },
     {
       "key": "/get-api-key/",
