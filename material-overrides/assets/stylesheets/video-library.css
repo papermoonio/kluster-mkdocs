@@ -7,11 +7,30 @@
   --video-library-open-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
+.md-typeset .video-library-category {
+  margin: 0;
+}
+
+.md-typeset .video-library-category + .video-library-category {
+  margin-top: 1.5rem;
+}
+
+.md-typeset .video-library-category:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.md-typeset .video-library-category-title {
+  margin: 0 0 0.65rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  scroll-margin-top: 5.5rem;
+}
+
 .md-typeset .video-library-grid {
   display: grid;
   gap: 0.85rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin: 1rem 0 2rem;
+  margin: 0;
 }
 
 .md-typeset .video-library-item {
@@ -40,14 +59,12 @@
 }
 
 .md-typeset .video-library-title-wrap,
-.md-typeset .video-library-divider,
-.md-typeset .video-library-description {
+.md-typeset .video-library-divider {
   display: none;
 }
 
 .md-typeset .video-library-item.is-open .video-library-title-wrap,
-.md-typeset .video-library-item.is-open .video-library-divider,
-.md-typeset .video-library-item.is-open .video-library-description {
+.md-typeset .video-library-item.is-open .video-library-divider {
   display: block;
 }
 
@@ -113,14 +130,13 @@
 .md-typeset .video-library-thumb {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid var(--card-border-color);
+  border: 0;
   display: block;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .md-typeset .video-library-item:hover .video-library-thumb {
   transform: scale(1.01);
-  border-color: var(--md-typeset-a-color);
 }
 
 .md-typeset .video-library-media-button[hidden],
@@ -130,10 +146,21 @@
 }
 
 .md-typeset .video-library-description {
-  margin: 0;
+  margin: 0.65rem 0 0;
   color: var(--md-default-fg-color--light);
   font-size: 0.85rem;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.md-typeset .video-library-item.is-open .video-library-description {
+  margin-top: 0;
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 
 .md-typeset .video-library-empty {
@@ -145,6 +172,15 @@
 }
 
 @media screen and (max-width: 45em) {
+  .md-typeset .video-library-category + .video-library-category {
+    margin-top: 1.25rem;
+  }
+
+  .md-typeset .video-library-category-title {
+    margin-bottom: 0.55rem;
+    font-size: 1.05rem;
+  }
+
   .md-typeset .video-library-grid {
     grid-template-columns: 1fr;
   }

@@ -10,97 +10,133 @@
   {{ page.content | safe }}
 
   {% set videos = page.meta.videos if page and page.meta and page.meta.videos else [] %}
+  {% set category_order = ["Get Started", "Review in IDE", "More Features"] %}
+  {% set rendered_video_count = namespace(value=0) %}
 
-  <div class="video-library-grid">
+  {% for category_name in category_order %}
+    {% set category_has_videos = namespace(value=false) %}
     {% for video in videos %}
-      {% if video.youtube_id and video.title %}
-        {% set video_key = video.youtube_id | lower %}
-        {% set normalized_video_key = video_key | replace("-", "") | replace("_", "") %}
-        {% set full_title_slug = video.title
-          | lower
-          | replace("&", " and ")
-          | replace(":", "")
-          | replace(".", "")
-          | replace("'", "")
-          | replace('"', "")
-          | replace("/", " ")
-          | replace(",", "")
-          | replace("?", "")
-          | replace("!", "")
-          | replace("+", " ")
-          | replace("-", " ")
-          | replace("_", " ")
-          | trim
-          | replace("  ", " ")
-          | replace(" ", "-")
-        %}
-        {% set short_title_slug = full_title_slug.split("-")[:8] | join("-") %}
-        {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
-        {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}
-        {% set player_id = "player-" ~ normalized_video_key %}
-        <article
-          id="{{ article_id }}"
-          class="video-library-item video-anchor"
-          data-video-key="{{ normalized_video_key }}"
-          data-title-slug="{{ full_title_slug }}"
-        >
-          <div class="video-library-title-wrap">
-            <span class="video-library-title">{{ video.title }}</span>
-          </div>
-          <hr class="video-library-divider" />
-          <button
-            type="button"
-            class="video-library-media-button"
-            data-open-video
-            aria-controls="{{ player_id }}"
-            aria-expanded="false"
-          >
-            {% set default_thumb_src = "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
-            {% set configured_thumb = video.thumbnail if video.thumbnail else default_thumb_src %}
-            {% set normalized_thumb = configured_thumb | lower %}
-            {% set has_allowed_absolute = normalized_thumb[:7] == "http://" or normalized_thumb[:8] == "https://" or normalized_thumb[:2] == "//" %}
-            {% set first_segment = normalized_thumb.split("/", 1)[0] %}
-            {% set has_disallowed_scheme = (":" in first_segment) and (not has_allowed_absolute) %}
-            {% set thumb_src = default_thumb_src if has_disallowed_scheme else configured_thumb %}
-            {% set normalized_final_thumb = thumb_src | lower %}
-            {% set has_absolute_thumbnail = normalized_final_thumb[:7] == "http://" or normalized_final_thumb[:8] == "https://" or normalized_final_thumb[:2] == "//" %}
-            <img
-              class="video-library-thumb off-glb"
-              src="{{ thumb_src if has_absolute_thumbnail else thumb_src | url }}"
-              alt="Thumbnail for {{ video.title }}"
-              loading="lazy"
-            />
-          </button>
-          <div id="{{ player_id }}" class="video-library-player" hidden>
-            <div class="embed-container">
-              <iframe
-                data-base-src="https://www.youtube.com/embed/{{ video.youtube_id }}"
-                src="about:blank"
-                title="{{ video.title }}"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="video-library-close-button"
-            data-close-video
-            aria-controls="{{ player_id }}"
-            hidden
-          >
-            Close video
-          </button>
-          {% if video.description %}
-            <p class="video-library-description">{{ video.description }}</p>
-          {% endif %}
-        </article>
+      {% if video.category == category_name and video.youtube_id and video.title %}
+        {% set category_has_videos.value = true %}
       {% endif %}
     {% endfor %}
-  </div>
 
-  {% if not videos %}
+    {% if category_has_videos.value %}
+      {% set category_slug = category_name
+        | lower
+        | replace("&", " and ")
+        | replace(":", "")
+        | replace(".", "")
+        | replace("'", "")
+        | replace('"', "")
+        | replace("/", " ")
+        | replace(",", "")
+        | replace("?", "")
+        | replace("!", "")
+        | replace("+", " ")
+        | replace("-", " ")
+        | replace("_", " ")
+        | trim
+        | replace("  ", " ")
+        | replace(" ", "-")
+      %}
+      {% set category_anchor_id = "video-category-" ~ category_slug %}
+      <section class="video-library-category" data-video-category="{{ category_name }}">
+        <h3 id="{{ category_anchor_id }}" class="video-library-category-title">{{ category_name }}</h3>
+        <div class="video-library-grid">
+          {% for video in videos %}
+            {% if video.category == category_name and video.youtube_id and video.title %}
+              {% set rendered_video_count.value = rendered_video_count.value + 1 %}
+              {% set video_key = video.youtube_id | lower %}
+              {% set normalized_video_key = video_key | replace("-", "") | replace("_", "") %}
+              {% set full_title_slug = video.title
+                | lower
+                | replace("&", " and ")
+                | replace(":", "")
+                | replace(".", "")
+                | replace("'", "")
+                | replace('"', "")
+                | replace("/", " ")
+                | replace(",", "")
+                | replace("?", "")
+                | replace("!", "")
+                | replace("+", " ")
+                | replace("-", " ")
+                | replace("_", " ")
+                | trim
+                | replace("  ", " ")
+                | replace(" ", "-")
+              %}
+              {% set short_title_slug = full_title_slug.split("-")[:8] | join("-") %}
+              {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
+              {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}
+              {% set player_id = "player-" ~ normalized_video_key %}
+              <article
+                id="{{ article_id }}"
+                class="video-library-item video-anchor"
+                data-video-key="{{ normalized_video_key }}"
+                data-title-slug="{{ full_title_slug }}"
+              >
+                <div class="video-library-title-wrap">
+                  <span class="video-library-title">{{ video.title }}</span>
+                </div>
+                <hr class="video-library-divider" />
+                <button
+                  type="button"
+                  class="video-library-media-button"
+                  data-open-video
+                  aria-controls="{{ player_id }}"
+                  aria-expanded="false"
+                >
+                  {% set default_thumb_src = "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
+                  {% set configured_thumb = video.thumbnail if video.thumbnail else default_thumb_src %}
+                  {% set normalized_thumb = configured_thumb | lower %}
+                  {% set has_allowed_absolute = normalized_thumb[:7] == "http://" or normalized_thumb[:8] == "https://" or normalized_thumb[:2] == "//" %}
+                  {% set first_segment = normalized_thumb.split("/", 1)[0] %}
+                  {% set has_disallowed_scheme = (":" in first_segment) and (not has_allowed_absolute) %}
+                  {% set thumb_src = default_thumb_src if has_disallowed_scheme else configured_thumb %}
+                  {% set normalized_final_thumb = thumb_src | lower %}
+                  {% set has_absolute_thumbnail = normalized_final_thumb[:7] == "http://" or normalized_final_thumb[:8] == "https://" or normalized_final_thumb[:2] == "//" %}
+                  <img
+                    class="video-library-thumb off-glb"
+                    src="{{ thumb_src if has_absolute_thumbnail else thumb_src | url }}"
+                    alt="Thumbnail for {{ video.title }}"
+                    loading="lazy"
+                  />
+                </button>
+                <div id="{{ player_id }}" class="video-library-player" hidden>
+                  <div class="embed-container">
+                    <iframe
+                      data-base-src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+                      src="about:blank"
+                      title="{{ video.title }}"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="video-library-close-button"
+                  data-close-video
+                  aria-controls="{{ player_id }}"
+                  hidden
+                >
+                  Close video
+                </button>
+                {% if video.description %}
+                  <p class="video-library-description">{{ video.description }}</p>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+  {% if rendered_video_count.value == 0 %}
     <p class="video-library-empty">No videos are configured for this page yet.</p>
   {% endif %}
 
@@ -112,12 +148,21 @@
 {% block scripts %}
   {{ super() }}
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var grid = document.querySelector(".video-library-grid");
+    (function () {
+      function initVideoLibraryPage() {
+      var grids = Array.from(document.querySelectorAll(".video-library-grid"));
       var items = Array.from(document.querySelectorAll(".video-library-item"));
       if (!items.length) {
         return;
       }
+      var originalOrderByGrid = new Map();
+
+      grids.forEach(function (grid) {
+        var gridItems = Array.from(grid.children).filter(function (child) {
+          return child.classList && child.classList.contains("video-library-item");
+        });
+        originalOrderByGrid.set(grid, gridItems);
+      });
 
       function slugifyCompatibility(value) {
         return (value || "")
@@ -220,36 +265,80 @@
         resetPlayback(item);
       }
 
-      function moveAdjacentLeftCardOutOfWay(item) {
-        if (!grid || item.parentElement !== grid) {
+      function getGridForItem(item) {
+        var parent = item ? item.parentElement : null;
+        if (!parent || !parent.classList.contains("video-library-grid")) {
+          return null;
+        }
+
+        return parent;
+      }
+
+      function restoreOriginalOrder(grid) {
+        if (!grid) {
           return;
         }
 
-        var leftCard = item.previousElementSibling;
-        if (!leftCard || !leftCard.classList.contains("video-library-item")) {
+        var originalOrder = originalOrderByGrid.get(grid);
+        if (!originalOrder || !originalOrder.length) {
+          return;
+        }
+
+        originalOrder.forEach(function (originalItem) {
+          if (originalItem.parentElement === grid) {
+            grid.appendChild(originalItem);
+          }
+        });
+      }
+
+      function restoreAllOriginalOrder() {
+        grids.forEach(function (grid) {
+          restoreOriginalOrder(grid);
+        });
+      }
+
+      function moveSameRowCardsBeforeItem(item) {
+        var grid = getGridForItem(item);
+        if (!grid) {
           return;
         }
 
         var itemRect = item.getBoundingClientRect();
-        var leftRect = leftCard.getBoundingClientRect();
-        var sameRow = Math.abs(itemRect.top - leftRect.top) < 10;
-        var itemIsRightColumn = itemRect.left > leftRect.left;
+        var referenceNode = item.nextSibling;
+        var precedingCardsInSameRow = [];
+        var sibling = item.previousElementSibling;
 
-        if (!sameRow || !itemIsRightColumn) {
-          return;
+        while (sibling) {
+          if (!sibling.classList.contains("video-library-item")) {
+            sibling = sibling.previousElementSibling;
+            continue;
+          }
+
+          var siblingRect = sibling.getBoundingClientRect();
+          var sameRow = Math.abs(itemRect.top - siblingRect.top) < 10;
+          if (!sameRow) {
+            break;
+          }
+
+          precedingCardsInSameRow.push(sibling);
+          sibling = sibling.previousElementSibling;
         }
 
-        grid.insertBefore(leftCard, item.nextSibling);
+        precedingCardsInSameRow.reverse().forEach(function (card) {
+          grid.insertBefore(card, referenceNode);
+        });
       }
 
       function openItem(item, autoplay, updateHash, shouldScroll) {
+        restoreAllOriginalOrder();
+
         items.forEach(function (other) {
           if (other !== item) {
             closeItem(other);
           }
         });
 
-        moveAdjacentLeftCardOutOfWay(item);
+        moveSameRowCardsBeforeItem(item);
 
         item.classList.add("is-open");
         var player = getPlayer(item);
@@ -269,7 +358,10 @@
         openPlayback(item, autoplay);
 
         if (updateHash) {
-          history.replaceState(null, "", "#" + item.id);
+          var nextHash = "#" + item.id;
+          if (window.location.hash !== nextHash) {
+            history.pushState(null, "", nextHash);
+          }
         }
 
         if (shouldScroll) {
@@ -322,6 +414,7 @@
           control.addEventListener("click", function (event) {
             event.preventDefault();
             closeItem(item);
+            restoreAllOriginalOrder();
             var thumbButton = getThumbButton(item);
             if (thumbButton) {
               thumbButton.focus();
@@ -336,6 +429,7 @@
         });
         if (openItem) {
           closeItem(openItem);
+          restoreAllOriginalOrder();
           var thumbButton = getThumbButton(openItem);
           if (thumbButton) {
             thumbButton.focus();
@@ -364,6 +458,16 @@
       function openFromHash() {
         var hash = window.location.hash.slice(1);
         if (!hash) {
+          var hasOpenItems = false;
+          items.forEach(function (item) {
+            if (item.classList.contains("is-open")) {
+              closeItem(item);
+              hasOpenItems = true;
+            }
+          });
+          if (hasOpenItems) {
+            restoreAllOriginalOrder();
+          }
           return;
         }
 
@@ -373,8 +477,76 @@
         }
       }
 
+      function injectCategoryLinksIntoToc() {
+        var tocNav = document.querySelector('nav[aria-label="Table of contents"]');
+        if (!tocNav) {
+          return;
+        }
+
+        var browseLink = tocNav.querySelector('.md-nav__link[href="#browse-videos"]');
+        var browseItem = browseLink ? browseLink.closest(".md-nav__item") : null;
+        if (!browseItem) {
+          return;
+        }
+
+        var existingGeneratedList = browseItem.querySelector(".video-library-toc-categories");
+        if (existingGeneratedList) {
+          existingGeneratedList.remove();
+        }
+
+        var categoryTitles = Array.from(document.querySelectorAll(".video-library-category-title[id]"));
+        if (!categoryTitles.length) {
+          return;
+        }
+
+        var nestedList = document.createElement("ul");
+        nestedList.className = "md-nav__list video-library-toc-categories";
+
+        categoryTitles.forEach(function (title) {
+          var titleText = (title.textContent || "").trim();
+          if (!titleText) {
+            return;
+          }
+
+          var listItem = document.createElement("li");
+          listItem.className = "md-nav__item";
+
+          var link = document.createElement("a");
+          link.className = "md-nav__link";
+          link.setAttribute("href", "#" + title.id);
+          link.textContent = titleText;
+
+          listItem.appendChild(link);
+          nestedList.appendChild(listItem);
+        });
+
+        if (!nestedList.children.length) {
+          return;
+        }
+
+        browseItem.appendChild(nestedList);
+      }
+
+      injectCategoryLinksIntoToc();
       openFromHash();
-      window.addEventListener("hashchange", openFromHash);
-    });
+      if (window.__videoLibraryHashHandler) {
+        window.removeEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+      window.__videoLibraryHashHandler = openFromHash;
+      window.addEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+
+      if (
+        typeof window !== "undefined" &&
+        window.document$ &&
+        typeof window.document$.subscribe === "function"
+      ) {
+        window.document$.subscribe(initVideoLibraryPage);
+      } else if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initVideoLibraryPage);
+      } else {
+        initVideoLibraryPage();
+      }
+    })();
   </script>
 {% endblock %}
