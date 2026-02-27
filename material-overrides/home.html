@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 
 {% block htmltitle %}
-  <title>kluster.ai Documentation</title>
+  <title>kluster.ai Docs - AI-Powered Code Reviews for IDEs</title>
 {% endblock %}
 
 {% block styles %}
@@ -10,138 +10,286 @@
 {% endblock %}
 
 {% block content %}
-  <div class="hero">
-    <div class="hero-content">
-      <h1>
-        Real-time code reviews,<br> in your favorite IDE
-      </h1>
-      <p class="hero-sub">
-        Catch bugs, security risks, and regressions as you code. <a href="https://platform.kluster.ai/signup" target="_blank" rel="noopener noreferrer">kluster.ai</a> reviews every change in real time inside your IDE.
-      </p>
-
-
-      <div class="button-wrapper">
-        <button class="md-button">
-          <a href="/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/">Start reviewing now {% include ".icons/material/arrow-right.svg" %}</a>
-        </button>
-      </div>
-    </div>
+  <div class="hero-tight">
+    <h1>Real-time code reviews, powered by AI</h1>
+    <p>Catch bugs, security risks, and regressions as you code.</p>
   </div>
-
-  <hr>
-
-  <div class="feature-cards">
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/cursor-logo.png' | url }}" alt="Cursor logo" class="feature-image" />
+  <section class="install-section section">
+    <h2>Get started in <span class="text-highlight">2 minutes</span></h2>
+    <div class="install-tabs-container container">
+      <div class="install-column install-box">
+        <h3>IDE extensions</h3>
+        <p>Install with one click in your editor.</p>
+        <div class="ide-btn-grid">
+          <a href="cursor:extension/klusterai.kluster-verify-code" target="\_blank" class="ide-btn md-button">
+            <span class="ide-icon">{% include ".icons/simple/cursor.svg" %}</span>
+            Cursor
+          </a>
+          <a href="vscode:extension/klusterai.kluster-verify-code" target="\_blank" class="ide-btn md-button">
+            <span class="ide-icon">{% include ".icons/material/microsoft-visual-studio-code.svg" %}</span>
+            VS Code
+          </a>
+          <a href="windsurf:extension/klusterai.kluster-verify-code" target="\_blank" class="ide-btn md-button">
+            <span class="ide-icon">{% include ".icons/simple/windsurf.svg" %}</span>
+            Windsurf
+          </a>
+          <a href="antigravity:extension/klusterai.kluster-verify-code" target="\_blank" class="ide-btn md-button">
+            <span class="ide-icon">{% include ".icons/antigravity/antigravity.svg" %}</span>
+            Antigravity
+          </a>
+        </div>
       </div>
-      <div class="text-wrapper">
-        <h2>Cursor</h2>
-        <p>Install kluster.ai directly in Cursor with one click</p>
+      <div class="install-column install-box">
+        <h3>Terminal tools</h3>
+        <p>Run from your terminal or AI assistant.</p>
+        <div class="tabbed-set tabbed-alternate" data-tabs="1:3">
+          <input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio">
+          <input id="__tabbed_1_2" name="__tabbed_1" type="radio">
+          <input id="__tabbed_1_3" name="__tabbed_1" type="radio">
+          <div class="tabbed-labels">
+            <label for="__tabbed_1_1">Claude Code</label>
+            <label for="__tabbed_1_2">Codex CLI</label>
+            <label for="__tabbed_1_3">CLI</label>
+          </div>
+          <div class="tabbed-content">
+            <div class="tabbed-block">
+              <div class="highlight"><pre id="__code_0"><span></span><nav class="md-code__nav"><button class="md-code__button" title="Copy to clipboard" data-clipboard-target="#__code_0 > code" data-md-type="copy"></button></nav><code>npx -y @klusterai/ide-installer YOUR_API_KEY claude
+</code></pre></div>
+            </div>
+            <div class="tabbed-block">
+              <div class="highlight"><pre id="__code_1"><span></span><nav class="md-code__nav"><button class="md-code__button" title="Copy to clipboard" data-clipboard-target="#__code_1 > code" data-md-type="copy"></button></nav><code>npx -y @klusterai/ide-installer YOUR_API_KEY codex
+</code></pre></div>
+            </div>
+            <div class="tabbed-block">
+              <p class="install-note">macOS / Linux / WSL:</p>
+              <div class="highlight"><pre id="__code_2"><span></span><nav class="md-code__nav"><button class="md-code__button" title="Copy to clipboard" data-clipboard-target="#__code_2 > code" data-md-type="copy"></button></nav><code>curl -fsSL https://cli.kluster.ai/install.sh | sh
+</code></pre></div>
+              <p class="install-note">Windows (PowerShell):</p>
+              <div class="highlight"><pre id="__code_3"><span></span><nav class="md-code__nav"><button class="md-code__button" title="Copy to clipboard" data-clipboard-target="#__code_3 > code" data-md-type="copy"></button></nav><code>irm https://cli.kluster.ai/install.ps1 | iex
+</code></pre></div>
+            </div>
+          </div>
+          <div class="tabbed-control tabbed-control--prev" hidden=""><button class="tabbed-button" tabindex="-1" aria-hidden="true"></button></div>
+          <div class="tabbed-control tabbed-control--next" hidden=""><button class="tabbed-button" tabindex="-1" aria-hidden="true"></button></div>
+        </div>
+        <p class="install-note">Get your install snippet from <a href="https://platform.kluster.ai" target="\_blank">platform.kluster.ai</a>.</p>
       </div>
-      <a href="cursor:extension/klusterai.kluster-code-reviews" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/octicons/download-16.svg" %}
-        </span>
-        Add to Cursor
-      </a>
     </div>
+  </section>
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/vscode-logo.png' | url }}" alt="VS Code logo" class="feature-image" />
+  <section class="selector-section section">
+    <h2>Start <span class="text-highlight">reviewing</span> your code</h2>
+    <div class="selector-container container">
+      <div class="selector-menu" role="tablist" aria-label="Review mode selector">
+        <div class="selector-item active"
+             role="tab"
+             aria-selected="true"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="0"
+             data-color="blue">
+          <span class="selector-icon selector-icon--blue">
+            {% include ".icons/material/keyboard.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Review code you wrote
+              <a href="/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+                 class="selector-link" aria-label="Learn more about reviewing code you wrote">
+              </a>
+            </div>
+            <p class="selector-desc">
+              Catch bugs and security risks as you write code.
+            </p>
+          </div>
+        </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="1"
+             data-color="amber">
+          <span class="selector-icon selector-icon--amber">
+            {% include ".icons/material/robot.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Review AI-generated code
+              <a href="/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+                 class="selector-link" aria-label="Learn more about reviewing AI-generated code">
+              </a>
+            </div>
+            <p class="selector-desc">
+              Verify every AI-generated change before it ships.
+            </p>
+          </div>
+        </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="2"
+             data-color="green">
+          <span class="selector-icon selector-icon--green">
+            {% include ".icons/material/source-repository.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Scan your entire repository
+              <a href="/code-reviews/repo-reviews/quickstart/"
+                 class="selector-link" aria-label="Learn more about scanning your repository">
+              </a>
+            </div>
+            <p class="selector-desc">
+              Find system-wide bugs across your full codebase.
+            </p>
+          </div>
+        </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="3"
+             data-color="purple">
+          <span class="selector-icon selector-icon--purple">
+            {% include ".icons/material/console.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Review from the terminal
+              <a href="/code-reviews/cli/quickstart/"
+                 class="selector-link" aria-label="Learn more about reviewing from the terminal">
+              </a>
+            </div>
+            <p class="selector-desc">
+              Integrate with git hooks and CI/CD pipelines.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="text-wrapper">
-        <h2>VS Code</h2>
-        <p>Install kluster.ai directly in VS Code with one click</p>
+      <div class="selector-preview" id="preview-panel" role="tabpanel">
+        <div class="selector-preview-inner">
+          <img src="assets/images/homepage-manualreview.gif"
+               alt="kluster.ai code review demo"
+               class="selector-gif"
+               loading="lazy" />
+        </div>
       </div>
-      <a href="vscode:extension/klusterai.kluster-code-reviews" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/octicons/download-16.svg" %}
-        </span>
-        Add to VS Code
-      </a>
     </div>
+  </section>
+    <section class="configure-section section">
+    <h2>Configure your <span class="text-highlight">code reviews</span></h2>
+    <div class="grid cards">
+      <ul>
+        <li>
+          <a href="/code-reviews/configuration/options/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/tune-vertical.svg" %}</span><span>Options</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Adjust sensitivity, analysis depth, issue types, and more.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/configuration/rules/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/file-document-edit-outline.svg" %}</span><span>Custom rules</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Define your own review standards or learn rules from your GitHub repository.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/configuration/klusterignore/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/file-hidden.svg" %}</span><span>.klusterignore</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Exclude files and directories from reviews.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/claude-logo.png' | url }}" alt="Claude logo" class="feature-image" />
-      </div>
-      <div class="text-wrapper">
-        <h2>Claude Code</h2>
-        <p>Copy the install command and run it in your terminal</p>
-      </div>
-      <a href="https://platform.kluster.ai/" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/material/arrow-right.svg" %}
-        </span>
-        Get Started
-      </a>
+  <section class="explore-section section">
+    <h2>Explore <span class="text-highlight">review modes</span> and resources</h2>
+    <div class="grid cards">
+      <ul>
+        <li>
+          <a href="/code-reviews/review-modes/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/shield-bug-outline.svg" %}</span><span>Code Reviews</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Understand the four review modes and seven issue types kluster.ai detects.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/faq/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/frequently-asked-questions.svg" %}</span><span>Frequently Asked Questions</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Answers to common questions about kluster.ai Code Reviews.</p>
+          </a>
+        </li>
+        <li>
+          <a href="/code-reviews/troubleshooting/" class="card-link">
+            <h3><span class="twemoji lg middle">{% include ".icons/material/wrench-outline.svg" %}</span><span>Troubleshooting</span><span class="twemoji">{% include ".icons/octicons/arrow-right-24.svg" %}</span></h3>
+            <p>Solutions for known issues and error messages.</p>
+          </a>
+        </li>
+      </ul>
     </div>
+  </section>
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/windsurf-logo.svg' | url }}" alt="Windsurf logo" class="feature-image" />
-      </div>
-      <div class="text-wrapper">
-        <h2>Windsurf</h2>
-        <p>Install kluster.ai directly in Windsurf with one click</p>
-      </div>
-      <a href="windsurf:extension/klusterai.kluster-code-reviews" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/octicons/download-16.svg" %}
-        </span>
-        Add to Windsurf
-      </a>
-    </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menu = document.querySelector('.selector-menu');
+      if (!menu) return;
+      var items = menu.querySelectorAll('.selector-item');
+      var gif = document.querySelector('.selector-gif');
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/antigravity-logo.png' | url }}" alt="Antigravity logo" class="feature-image" />
-      </div>
-      <div class="text-wrapper">
-        <h2>Antigravity</h2>
-        <p>Install kluster.ai directly in Antigravity with one click</p>
-      </div>
-      <a href="antigravity:extension/klusterai.kluster-code-reviews" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/octicons/download-16.svg" %}
-        </span>
-        Add to Antigravity
-      </a>
-    </div>
+      var previews = [
+        'assets/images/homepage-manualreview.gif',
+        'assets/images/homepage-manualreview.gif',
+        'assets/images/homepage-manualreview.gif',
+        'assets/images/homepage-manualreview.gif'
+      ];
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/open-ai-logo.png' | url }}" alt="Codex logo" class="feature-image" />
-      </div>
-      <div class="text-wrapper">
-        <h2>Codex VS Code</h2>
-        <p>Install kluster.ai directly with one click</p>
-      </div>
-      <a href="vscode:extension/klusterai.kluster-code-reviews" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/octicons/download-16.svg" %}
-        </span>
-        Add to VS Code
-      </a>
-    </div>
+      items.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          if (e.target.closest('.selector-link')) return;
+          var index = parseInt(item.getAttribute('data-index'));
+          if (item.classList.contains('active')) return;
 
-    <div class="feature-card">
-      <div class="image-bg">
-        <img src="{{ 'assets/images/open-ai-logo.png' | url }}" alt="Codex logo" class="feature-image" />
-      </div>
-      <div class="text-wrapper">
-        <h2>Codex CLI</h2>
-        <p>Copy the install command and run it in your terminal</p>
-      </div>
-      <a href="https://platform.kluster.ai/" target="_blank" class="card-button">
-        <span class="twemoji label-icon">
-          {% include ".icons/material/arrow-right.svg" %}
-        </span>
-        Get Started
-      </a>
-    </div>
-  </div>
-  
+          items.forEach(function(el) {
+            el.classList.remove('active');
+            el.setAttribute('aria-selected', 'false');
+          });
+
+          item.classList.add('active');
+          item.setAttribute('aria-selected', 'true');
+
+          gif.classList.add('fading');
+          setTimeout(function() {
+            gif.src = previews[index];
+            gif.classList.remove('fading');
+          }, 300);
+        });
+
+        item.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            item.click();
+          }
+        });
+      });
+
+      menu.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          var current = menu.querySelector('.selector-item.active');
+          var idx = parseInt(current.getAttribute('data-index'));
+          var next;
+          if (e.key === 'ArrowDown') {
+            next = idx < items.length - 1 ? idx + 1 : 0;
+          } else {
+            next = idx > 0 ? idx - 1 : items.length - 1;
+          }
+          items[next].click();
+          items[next].focus();
+        }
+      });
+    });
+  </script>
 {% endblock %}
