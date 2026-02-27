@@ -515,19 +515,39 @@ input.md-search__input[placeholder="Search"]::placeholder {
   gap: 0.5rem;
 }
 
-.md-footer__center-column {
+.md-footer-meta__inner.md-grid > * {
   display: flex;
+  width: 100%;
+}
+
+.md-footer__center-column {
   flex-direction: column;
   align-items: center;
   white-space: nowrap;
 }
 
-.papermoon {
-  font-size: 0.64rem;
+.md-footer-meta__inner.md-grid > :last-child {
+  justify-content: flex-end;
 }
 
-.md-footer-meta .md-footer-meta__inner .papermoon a {
-  color: var(--md-footer-fg-color);
+.md-footer__buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.8rem;
+}
+
+.footer-nav-link {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.papermoon {
+  font-size: 0.64rem;
+  color: var(--md-footer-fg-color--light);
+}
+
+html .md-footer-meta.md-typeset .papermoon a {
+  font-weight: 600;
 }
 
 .md-copyright,
@@ -547,6 +567,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
   font-size: 0.7rem;
 }
 
+.md-social__link svg {
+  fill: var(--primary-green-300);
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-main__inner {
@@ -561,6 +585,11 @@ input.md-search__input[placeholder="Search"]::placeholder {
     padding: 0.5rem;
   }
 
+  .md-footer-meta__inner.md-grid > *,
+  .md-footer-meta__inner.md-grid > :last-child {
+    justify-content: center;
+  }
+
   .md-copyright__highlight {
     text-align: center;
   }
@@ -568,6 +597,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 
 @media screen and (min-width: 768px) {
   /* Overall layout adjustments to push footer to bottom */
+  .md-sidebar__scrollwrap,
   .md-main {
     padding-bottom: 3rem;
   }
