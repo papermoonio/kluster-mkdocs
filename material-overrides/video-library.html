@@ -13,6 +13,26 @@
   {% set category_order = ["Get Started", "Review in IDE", "More Features"] %}
   {% set rendered_video_count = namespace(value=0) %}
 
+  {%- macro slugify(value) -%}
+    {{ value
+      | lower
+      | replace("&", " and ")
+      | replace(":", "")
+      | replace(".", "")
+      | replace("'", "")
+      | replace('"', "")
+      | replace("/", " ")
+      | replace(",", "")
+      | replace("?", "")
+      | replace("!", "")
+      | replace("+", " ")
+      | replace("-", " ")
+      | replace("_", " ")
+      | trim
+      | replace("  ", " ")
+      | replace(" ", "-") }}
+  {%- endmacro -%}
+
   {% for category_name in category_order %}
     {% set category_has_videos = namespace(value=false) %}
     {% for video in videos %}
@@ -27,26 +47,8 @@
           {% for video in videos %}
             {% if video.category == category_name and video.youtube_id and video.title %}
               {% set rendered_video_count.value = rendered_video_count.value + 1 %}
-              {% set video_key = video.youtube_id | lower %}
-              {% set normalized_video_key = video_key | replace("-", "") | replace("_", "") %}
-              {% set full_title_slug = video.title
-                | lower
-                | replace("&", " and ")
-                | replace(":", "")
-                | replace(".", "")
-                | replace("'", "")
-                | replace('"', "")
-                | replace("/", " ")
-                | replace(",", "")
-                | replace("?", "")
-                | replace("!", "")
-                | replace("+", " ")
-                | replace("-", " ")
-                | replace("_", " ")
-                | trim
-                | replace("  ", " ")
-                | replace(" ", "-")
-              %}
+              {% set normalized_video_key = video.youtube_id | lower | replace("-", "") | replace("_", "") %}
+              {% set full_title_slug = slugify(video.title) %}
               {% set short_title_slug = full_title_slug.split("-")[:8] | join("-") %}
               {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
               {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}

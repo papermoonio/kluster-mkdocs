@@ -18,14 +18,13 @@
 .md-typeset .video-library-grid {
   display: grid;
   gap: 0.85rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
 }
 
 .md-typeset .video-library-item {
   border: 1px solid var(--card-border-color);
   border-radius: 12px;
-  background: var(--md-default-bg-color);
   background: color-mix(in srgb, var(--md-default-bg-color) 85%, var(--secondary-bg-color) 15%);
   padding: 1rem;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -33,7 +32,6 @@
 
 .md-typeset .video-library-item:hover {
   transform: translateY(-2px);
-  border-color: var(--md-typeset-a-color);
 }
 
 .md-typeset .video-library-item.is-open {
@@ -137,12 +135,9 @@
 .md-typeset .video-library-description {
   margin: 0.65rem 0 0;
   color: var(--md-default-fg-color--light);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: block;
 }
 
 .md-typeset .video-library-item.is-open .video-library-description {
@@ -158,6 +153,12 @@
 
 .md-typeset .video-anchor {
   scroll-margin-top: 5.5rem;
+}
+
+@media screen and (max-width: 60em) {
+  .md-typeset .video-library-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 45em) {
