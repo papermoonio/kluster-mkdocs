@@ -525,6 +525,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
   justify-content: center;
 }
 
+.footer-nav-link {
+  font-size: 0.7rem;
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-main__inner {
