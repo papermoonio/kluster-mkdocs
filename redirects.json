@@ -9,6 +9,10 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/",
+      "value": "/code-reviews/get-started/installation/"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
