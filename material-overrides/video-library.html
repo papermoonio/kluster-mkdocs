@@ -42,10 +42,7 @@
     {% endfor %}
 
     {% if category_has_videos.value %}
-      {% set category_slug = slugify(category_name) %}
-      {% set category_anchor_id = "video-category-" ~ category_slug %}
       <section class="video-library-category" data-video-category="{{ category_name }}">
-        <h3 id="{{ category_anchor_id }}" class="video-library-category-title">{{ category_name }}</h3>
         <div class="video-library-grid">
           {% for video in videos %}
             {% if video.category == category_name and video.youtube_id and video.title %}
@@ -135,6 +132,28 @@
   <script>
     (function () {
       function initVideoLibraryPage() {
+      function relocateCategorySections() {
+        var categoryMap = {
+          "Get Started": "get-started",
+          "Review in IDE": "review-in-ide",
+          "More Features": "more-features"
+        };
+        var sections = Array.from(document.querySelectorAll(".video-library-category"));
+        sections.forEach(function (section) {
+          var categoryName = section.getAttribute("data-video-category");
+          var headingId = categoryMap[categoryName];
+          if (!headingId) {
+            return;
+          }
+          var heading = document.getElementById(headingId);
+          if (!heading) {
+            return;
+          }
+          heading.after(section);
+        });
+      }
+
+      relocateCategorySections();
       var grids = Array.from(document.querySelectorAll(".video-library-grid"));
       var items = Array.from(document.querySelectorAll(".video-library-item"));
       if (!items.length) {
@@ -462,57 +481,6 @@
         }
       }
 
-      function injectCategoryLinksIntoToc() {
-        var tocNav = document.querySelector('nav[aria-label="Table of contents"]');
-        if (!tocNav) {
-          return;
-        }
-
-        var browseLink = tocNav.querySelector('.md-nav__link[href="#browse-videos"]');
-        var browseItem = browseLink ? browseLink.closest(".md-nav__item") : null;
-        if (!browseItem) {
-          return;
-        }
-
-        var existingGeneratedList = browseItem.querySelector(".video-library-toc-categories");
-        if (existingGeneratedList) {
-          existingGeneratedList.remove();
-        }
-
-        var categoryTitles = Array.from(document.querySelectorAll(".video-library-category-title[id]"));
-        if (!categoryTitles.length) {
-          return;
-        }
-
-        var nestedList = document.createElement("ul");
-        nestedList.className = "md-nav__list video-library-toc-categories";
-
-        categoryTitles.forEach(function (title) {
-          var titleText = (title.textContent || "").trim();
-          if (!titleText) {
-            return;
-          }
-
-          var listItem = document.createElement("li");
-          listItem.className = "md-nav__item";
-
-          var link = document.createElement("a");
-          link.className = "md-nav__link";
-          link.setAttribute("href", "#" + title.id);
-          link.textContent = titleText;
-
-          listItem.appendChild(link);
-          nestedList.appendChild(listItem);
-        });
-
-        if (!nestedList.children.length) {
-          return;
-        }
-
-        browseItem.appendChild(nestedList);
-      }
-
-      injectCategoryLinksIntoToc();
       openFromHash();
       if (window.__videoLibraryHashHandler) {
         window.removeEventListener("hashchange", window.__videoLibraryHashHandler);
