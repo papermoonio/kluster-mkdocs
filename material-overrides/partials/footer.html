@@ -1,9 +1,15 @@
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+      {% if config.extra.footer_nav %}
       <div class="md-footer__buttons">
-        <button class="llms-copy-button full-llms" data-action="copy" data-value="llms-full.jsonl">{% include ".icons/material/content-copy.svg" %} Copy llms-full.jsonl</button>
+        {% for item in config.extra.footer_nav %}
+        <a href="{{ item.url | url }}" class="footer-nav-link">
+          {{ item.title }}
+        </a>
+        {% endfor %}
       </div>
+      {% endif %}
       <div class="md-footer__center-column">
         {% include "partials/copyright.html" %}
         <div class="papermoon">

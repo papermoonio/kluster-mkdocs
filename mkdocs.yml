@@ -25,6 +25,7 @@ theme:
     - navigation.sections
     - toc.follow
     - content.action.edit
+    - navigation.path
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -43,6 +44,8 @@ extra_css:
 extra_javascript:
   - js/clipboardCopy.js
   - js/copy-to-llms.js
+hooks:
+  - hooks/footer_nav.py
 markdown_extensions:
   - admonition
   - attr_list
@@ -84,6 +87,8 @@ plugins:
       scoped_css_templates:
         home.html:
           - assets/stylesheets/home.css
+        video-library.html:
+          - assets/stylesheets/video-library.css
         main.html:
           - assets/stylesheets/kluster.css
   - macros:
@@ -91,6 +96,15 @@ plugins:
         - kluster-docs/variables.yml
   - resolve_md: 
       llms_config: llms_config.json
+  - social:
+      enabled: !ENV [SOCIAL_CARDS, True]
+      cards_layout_dir: layouts
+      cards_layout: kluster
+      cards_layout_options:
+        background_image: null
+        background_color: "#060809"
+        logo: images/kluster-logo.png
+        title: kluster.ai documentation
 validation:
   absolute_links: ignore
 extra:

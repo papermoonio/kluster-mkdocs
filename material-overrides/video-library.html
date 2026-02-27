@@ -1,0 +1,505 @@
+{% extends "main.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/video-library.css' | url }}" />
+{% endblock %}
+
+{% block content %}
+  {% include "partials/tags.html" %}
+  {{ page.content | safe }}
+
+  {% set videos = page.meta.videos if page and page.meta and page.meta.videos else [] %}
+  {% set category_order = ["Get Started", "Review in IDE", "More Features"] %}
+  {% set rendered_video_count = namespace(value=0) %}
+
+  {%- macro slugify(value) -%}
+    {{ value
+      | lower
+      | replace("&", " and ")
+      | replace(":", "")
+      | replace(".", "")
+      | replace("'", "")
+      | replace('"', "")
+      | replace("/", " ")
+      | replace(",", "")
+      | replace("?", "")
+      | replace("!", "")
+      | replace("+", " ")
+      | replace("-", " ")
+      | replace("_", " ")
+      | trim
+      | replace("  ", " ")
+      | replace(" ", "-") }}
+  {%- endmacro -%}
+
+  {% for category_name in category_order %}
+    {% set category_has_videos = namespace(value=false) %}
+    {% for video in videos %}
+      {% if video.category == category_name and video.youtube_id and video.title %}
+        {% set category_has_videos.value = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if category_has_videos.value %}
+      <section class="video-library-category" data-video-category="{{ category_name }}">
+        <div class="video-library-grid">
+          {% for video in videos %}
+            {% if video.category == category_name and video.youtube_id and video.title %}
+              {% set rendered_video_count.value = rendered_video_count.value + 1 %}
+              {% set normalized_video_key = video.youtube_id | lower | replace("-", "") | replace("_", "") %}
+              {% set full_title_slug = slugify(video.title) %}
+              {% set short_title_slug = full_title_slug.split("-")[:8] | join("-") %}
+              {% set short_title_slug = short_title_slug if short_title_slug else "video" %}
+              {% set article_id = "video-" ~ short_title_slug ~ "-" ~ normalized_video_key %}
+              {% set player_id = "player-" ~ normalized_video_key %}
+              <article
+                id="{{ article_id }}"
+                class="video-library-item video-anchor"
+                data-video-key="{{ normalized_video_key }}"
+                data-title-slug="{{ full_title_slug }}"
+              >
+                <div class="video-library-title-wrap">
+                  <span class="video-library-title">{{ video.title }}</span>
+                </div>
+                <hr class="video-library-divider" />
+                <button
+                  type="button"
+                  class="video-library-media-button"
+                  data-open-video
+                  aria-controls="{{ player_id }}"
+                  aria-expanded="false"
+                >
+                  {% set default_thumb_src = "https://i.ytimg.com/vi/" ~ video.youtube_id ~ "/hqdefault.jpg" %}
+                  {% set configured_thumb = video.thumbnail if video.thumbnail else default_thumb_src %}
+                  {% set normalized_thumb = configured_thumb | lower %}
+                  {% set has_allowed_absolute = normalized_thumb[:7] == "http://" or normalized_thumb[:8] == "https://" or normalized_thumb[:2] == "//" %}
+                  {% set first_segment = normalized_thumb.split("/", 1)[0] %}
+                  {% set has_disallowed_scheme = (":" in first_segment) and (not has_allowed_absolute) %}
+                  {% set thumb_src = default_thumb_src if has_disallowed_scheme else configured_thumb %}
+                  {% set normalized_final_thumb = thumb_src | lower %}
+                  {% set has_absolute_thumbnail = normalized_final_thumb[:7] == "http://" or normalized_final_thumb[:8] == "https://" or normalized_final_thumb[:2] == "//" %}
+                  <img
+                    class="video-library-thumb off-glb"
+                    src="{{ thumb_src if has_absolute_thumbnail else thumb_src | url }}"
+                    alt="Thumbnail for {{ video.title }}"
+                    loading="lazy"
+                  />
+                </button>
+                <div id="{{ player_id }}" class="video-library-player" hidden>
+                  <div class="embed-container">
+                    <iframe
+                      data-base-src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+                      src="about:blank"
+                      title="{{ video.title }}"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="video-library-close-button"
+                  data-close-video
+                  aria-controls="{{ player_id }}"
+                  hidden
+                >
+                  Close video
+                </button>
+                {% if video.description %}
+                  <p class="video-library-description">{{ video.description }}</p>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+  {% if rendered_video_count.value == 0 %}
+    <p class="video-library-empty">No videos are configured for this page yet.</p>
+  {% endif %}
+
+  {% include "partials/source-file.html" %}
+  {% include "partials/feedback.html" %}
+  {% include "partials/comments.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    (function () {
+      function initVideoLibraryPage() {
+      function relocateCategorySections() {
+        var categoryMap = {
+          "Get Started": "get-started",
+          "Review in IDE": "review-in-ide",
+          "More Features": "more-features"
+        };
+        var sections = Array.from(document.querySelectorAll(".video-library-category"));
+        sections.forEach(function (section) {
+          var categoryName = section.getAttribute("data-video-category");
+          var headingId = categoryMap[categoryName];
+          if (!headingId) {
+            return;
+          }
+          var heading = document.getElementById(headingId);
+          if (!heading) {
+            return;
+          }
+          heading.after(section);
+        });
+      }
+
+      relocateCategorySections();
+      var grids = Array.from(document.querySelectorAll(".video-library-grid"));
+      var items = Array.from(document.querySelectorAll(".video-library-item"));
+      if (!items.length) {
+        return;
+      }
+      var originalOrderByGrid = new Map();
+
+      grids.forEach(function (grid) {
+        var gridItems = Array.from(grid.children).filter(function (child) {
+          return child.classList && child.classList.contains("video-library-item");
+        });
+        originalOrderByGrid.set(grid, gridItems);
+      });
+
+      function slugifyCompatibility(value) {
+        return (value || "")
+          .toLowerCase()
+          .trim()
+          .replace(/&/g, " and ")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function normalizeVideoKey(value) {
+        return (value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function extractVideoKeyFromHash(hash) {
+        if (!hash || !hash.startsWith("video-")) {
+          return "";
+        }
+
+        var hashBody = hash.slice("video-".length);
+        if (!hashBody) {
+          return "";
+        }
+
+        var segments = hashBody.split("-").filter(Boolean);
+        var candidate = segments.length ? segments[segments.length - 1] : hashBody;
+        return normalizeVideoKey(candidate);
+      }
+
+      function getPlayer(item) {
+        return item.querySelector(".video-library-player");
+      }
+
+      function getThumbButton(item) {
+        return item.querySelector(".video-library-media-button");
+      }
+
+      function getIframe(item) {
+        return item.querySelector("iframe[data-base-src]");
+      }
+
+      function getCloseButton(item) {
+        return item.querySelector(".video-library-close-button");
+      }
+
+      function setExpandedState(item, expanded) {
+        item.querySelectorAll("[data-open-video]").forEach(function (control) {
+          control.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+      }
+
+      function resetPlayback(item) {
+        var iframe = getIframe(item);
+        if (!iframe) {
+          return;
+        }
+
+        iframe.setAttribute("src", "about:blank");
+      }
+
+      function openPlayback(item, autoplay) {
+        var iframe = getIframe(item);
+        if (!iframe) {
+          return;
+        }
+
+        var baseSrc = iframe.dataset.baseSrc;
+        if (!baseSrc) {
+          return;
+        }
+
+        var url;
+        try {
+          url = new URL(baseSrc);
+        } catch (error) {
+          return;
+        }
+        url.searchParams.set("rel", "0");
+        if (autoplay) {
+          url.searchParams.set("autoplay", "1");
+        }
+        iframe.setAttribute("src", url.toString());
+      }
+
+      function closeItem(item) {
+        item.classList.remove("is-open");
+        var player = getPlayer(item);
+        var thumbButton = getThumbButton(item);
+        var closeButton = getCloseButton(item);
+        if (player) {
+          player.hidden = true;
+        }
+        if (thumbButton) {
+          thumbButton.hidden = false;
+        }
+        if (closeButton) {
+          closeButton.hidden = true;
+        }
+        setExpandedState(item, false);
+        resetPlayback(item);
+      }
+
+      function getGridForItem(item) {
+        var parent = item ? item.parentElement : null;
+        if (!parent || !parent.classList.contains("video-library-grid")) {
+          return null;
+        }
+
+        return parent;
+      }
+
+      function restoreOriginalOrder(grid) {
+        if (!grid) {
+          return;
+        }
+
+        var originalOrder = originalOrderByGrid.get(grid);
+        if (!originalOrder || !originalOrder.length) {
+          return;
+        }
+
+        originalOrder.forEach(function (originalItem) {
+          if (originalItem.parentElement === grid) {
+            grid.appendChild(originalItem);
+          }
+        });
+      }
+
+      function restoreAllOriginalOrder() {
+        grids.forEach(function (grid) {
+          restoreOriginalOrder(grid);
+        });
+      }
+
+      function moveSameRowCardsBeforeItem(item) {
+        var grid = getGridForItem(item);
+        if (!grid) {
+          return;
+        }
+
+        var itemRect = item.getBoundingClientRect();
+        var referenceNode = item.nextSibling;
+        var precedingCardsInSameRow = [];
+        var sibling = item.previousElementSibling;
+
+        while (sibling) {
+          if (!sibling.classList.contains("video-library-item")) {
+            sibling = sibling.previousElementSibling;
+            continue;
+          }
+
+          var siblingRect = sibling.getBoundingClientRect();
+          var sameRow = Math.abs(itemRect.top - siblingRect.top) < 10;
+          if (!sameRow) {
+            break;
+          }
+
+          precedingCardsInSameRow.push(sibling);
+          sibling = sibling.previousElementSibling;
+        }
+
+        precedingCardsInSameRow.reverse().forEach(function (card) {
+          grid.insertBefore(card, referenceNode);
+        });
+      }
+
+      function openItem(item, autoplay, updateHash, shouldScroll) {
+        restoreAllOriginalOrder();
+
+        items.forEach(function (other) {
+          if (other !== item) {
+            closeItem(other);
+          }
+        });
+
+        moveSameRowCardsBeforeItem(item);
+
+        item.classList.add("is-open");
+        var player = getPlayer(item);
+        var thumbButton = getThumbButton(item);
+        var closeButton = getCloseButton(item);
+        if (player) {
+          player.hidden = false;
+        }
+        if (thumbButton) {
+          thumbButton.hidden = true;
+        }
+        if (closeButton) {
+          closeButton.hidden = false;
+        }
+
+        setExpandedState(item, true);
+        openPlayback(item, autoplay);
+
+        if (updateHash) {
+          var nextHash = "#" + item.id;
+          if (window.location.hash !== nextHash) {
+            history.pushState(null, "", nextHash);
+          }
+        }
+
+        if (shouldScroll) {
+          item.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      function resolveHashTarget(hash) {
+        var directMatch = document.getElementById(hash);
+        if (directMatch && directMatch.classList.contains("video-library-item")) {
+          return directMatch;
+        }
+
+        var hashVideoKey = extractVideoKeyFromHash(hash);
+        if (hashVideoKey) {
+          var keyMatch = items.find(function (item) {
+            return normalizeVideoKey(item.dataset.videoKey) === hashVideoKey;
+          });
+          if (keyMatch) {
+            return keyMatch;
+          }
+        }
+
+        return items.find(function (item) {
+          var templateSlug = (item.dataset.titleSlug || "").trim();
+          if (templateSlug && (templateSlug === hash || "video-" + templateSlug === hash)) {
+            return true;
+          }
+
+          // Compatibility fallback for links generated from legacy JS slug behavior.
+          var titleEl = item.querySelector(".video-library-title");
+          if (!titleEl) {
+            return false;
+          }
+
+          var compatibilitySlug = slugifyCompatibility(titleEl.textContent);
+          return compatibilitySlug === hash || "video-" + compatibilitySlug === hash;
+        });
+      }
+
+      items.forEach(function (item) {
+        closeItem(item);
+        item.querySelectorAll("[data-open-video]").forEach(function (control) {
+          control.addEventListener("click", function (event) {
+            event.preventDefault();
+            openItem(item, true, true, false);
+          });
+        });
+        item.querySelectorAll("[data-close-video]").forEach(function (control) {
+          control.addEventListener("click", function (event) {
+            event.preventDefault();
+            closeItem(item);
+            restoreAllOriginalOrder();
+            var thumbButton = getThumbButton(item);
+            if (thumbButton) {
+              thumbButton.focus();
+            }
+          });
+        });
+      });
+
+      function closeOpenItemFromKeyboard() {
+        var openItem = items.find(function (item) {
+          return item.classList.contains("is-open");
+        });
+        if (openItem) {
+          closeItem(openItem);
+          restoreAllOriginalOrder();
+          var thumbButton = getThumbButton(openItem);
+          if (thumbButton) {
+            thumbButton.focus();
+          }
+        }
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape" && event.key !== "Esc") {
+          return;
+        }
+
+        var activeElement = document.activeElement;
+        var isInsideVideoLibrary =
+          activeElement &&
+          typeof activeElement.closest === "function" &&
+          activeElement.closest(".video-library-grid");
+
+        if (!isInsideVideoLibrary) {
+          return;
+        }
+
+        closeOpenItemFromKeyboard();
+      });
+
+      function openFromHash() {
+        var hash = window.location.hash.slice(1);
+        if (!hash) {
+          var hasOpenItems = false;
+          items.forEach(function (item) {
+            if (item.classList.contains("is-open")) {
+              closeItem(item);
+              hasOpenItems = true;
+            }
+          });
+          if (hasOpenItems) {
+            restoreAllOriginalOrder();
+          }
+          return;
+        }
+
+        var target = resolveHashTarget(hash);
+        if (target) {
+          openItem(target, false, false, true);
+        }
+      }
+
+      openFromHash();
+      if (window.__videoLibraryHashHandler) {
+        window.removeEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+      window.__videoLibraryHashHandler = openFromHash;
+      window.addEventListener("hashchange", window.__videoLibraryHashHandler);
+      }
+
+      if (
+        typeof window !== "undefined" &&
+        window.document$ &&
+        typeof window.document$.subscribe === "function"
+      ) {
+        window.document$.subscribe(initVideoLibraryPage);
+      } else if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initVideoLibraryPage);
+      } else {
+        initVideoLibraryPage();
+      }
+    })();
+  </script>
+{% endblock %}

@@ -9,6 +9,10 @@
       "value": "/"
     },
     {
+      "key": "/code-reviews/",
+      "value": "/code-reviews/get-started/installation/"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
     },
@@ -73,8 +77,12 @@
       "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
+      "key": "/code-reviews/activation-codes/",
+      "value": "/code-reviews/faq/#activation-codes"
+    },
+    {
       "key": "/code-reviews/faq/activation-codes/",
-      "value": "/code-reviews/activation-codes/"
+      "value": "/code-reviews/faq/#activation-codes"
     },
     {
       "key": "/code-reviews/human-written-code/automatic-background-reviews/how-it-works/",
