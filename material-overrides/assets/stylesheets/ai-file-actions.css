@@ -8,16 +8,20 @@
   display: inline-flex;
   margin-left: auto;
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   overflow: visible;
   position: relative;
   white-space: nowrap;
 }
 
+.ai-file-actions-container:hover {
+  background-color: var(--search-hover-color);
+}
+
 /* --- Common Button Styles --- */
 .ai-file-actions-btn {
   padding: 0.6em 0.9em;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
   border: none;
   cursor: pointer;
@@ -30,16 +34,20 @@
 
 /* --- Hover effects on buttons --- */
 .ai-file-actions-btn:hover {
-  background-color: var(--md-default-bg-color);
+  background-color: var(--search-hover-color);
   color: var(--md-default-fg-color);
+}
+
+.ai-file-actions-btn:active {
+  background-color: var(--nav-active-bg-color);
 }
 
 /* --- Left Button (Copy) --- */
 .ai-file-actions-copy {
   border-right: 1px solid var(--border-color);
   gap: 0.5em;
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .ai-file-actions-container:hover .ai-file-actions-copy {
@@ -48,13 +56,13 @@
 
 /* --- Right Button (Trigger) --- */
 .ai-file-actions-trigger {
-  border-top-right-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   padding: 0.6em 0.7em;
 }
 
 .ai-file-actions-trigger.active {
-  background-color: var(--md-default-bg-color);
+  background-color: var(--nav-active-bg-color);
 }
 
 /* --- Icons --- */
@@ -89,15 +97,15 @@
   position: absolute;
   top: calc(100% + 4px);
   right: 0;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--md-default-bg-color);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 3;
-  min-width: 140px;
+  min-width: 160px;
   overflow: hidden;
   flex-direction: column;
-  padding: 5px;
+  padding: 0.25rem;
 }
 
 [data-md-color-scheme] .ai-file-actions-menu {
@@ -137,8 +145,12 @@
 }
 
 .md-typeset a.ai-file-actions-item:hover {
-  background-color: var(--md-default-bg-color);
+  background-color: var(--search-hover-color);
   color: var(--md-default-fg-color);
+}
+
+.md-typeset a.ai-file-actions-item:active {
+  background-color: var(--nav-active-bg-color);
 }
 
 /* --- Table-scoped overrides --- */
