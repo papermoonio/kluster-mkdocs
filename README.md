@@ -1,6 +1,6 @@
 # Mkdocs Framework and Material Theme for the kluster.ai Docs
 
-This repo contains the Mkdocs config files, theme overrides, and custom CSS for the [kluster.ai](https://kluster.ai) documentation site.
+This repo contains the Mkdocs config files, theme overrides, and custom CSS for the [kluster.ai](https://www.kluster.ai/) documentation site.
 
 - [Mkdocs](https://www.mkdocs.org/)
 - [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
@@ -80,14 +80,10 @@ Check the `fixed` file, confirm the changes and then rename accordingly.
 
 ## Updating Documentation
 
-The project includes a unified tool for updating documentation components when API changes or new models are released:
+This repository currently does not include the previously documented `scripts/kluster_model_update/update_docs.py` automation script.
+To update docs safely during handover, edit content directly in `kluster-docs/` and validate locally:
 
 ```bash
-# Update all documentation components
-python scripts/kluster_model_update/update_docs.py
-
-# Test commands 
-python scripts/kluster_model_update/update_docs.py --dry-run
+# Build docs locally after edits
+mkdocs build
 ```
-
-For more details, see [kluster-docs Documentation Update Tool](/scripts/kluster_model_update/README.md.)

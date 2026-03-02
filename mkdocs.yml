@@ -25,6 +25,7 @@ theme:
     - navigation.sections
     - toc.follow
     - content.action.edit
+    - navigation.path
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -42,6 +43,8 @@ extra_css:
   - assets/stylesheets/ai-file-actions.css
 extra_javascript:
   - js/ai-file-actions.js
+hooks:
+  - hooks/footer_nav.py
 markdown_extensions:
   - admonition
   - attr_list
@@ -82,6 +85,8 @@ plugins:
       scoped_css_templates:
         home.html:
           - assets/stylesheets/home.css
+        video-library.html:
+          - assets/stylesheets/video-library.css
         main.html:
           - assets/stylesheets/kluster.css
   - macros:
@@ -117,7 +122,7 @@ extra:
       link: https://discord.com/invite/klusterai
       name: Discord
     - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/klusterai
+      link: https://x.com/klusterai
       name: X
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/kluster-ai/

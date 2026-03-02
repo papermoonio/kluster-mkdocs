@@ -471,6 +471,14 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 /* --- Footer --- */
+.md-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
 .md-footer__inner.md-grid {
   width: 100%;
 }
@@ -510,8 +518,23 @@ input.md-search__input[placeholder="Search"]::placeholder {
   padding-bottom: 0;
 }
 
+/* llms-full button styling */
+.md-footer__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-nav-link {
+  font-size: 0.7rem;
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
+  .md-main__inner {
+    padding-bottom: 7rem; /* footer stacks to 1 column, so taller */
+  }
+
   .md-footer-meta__inner.md-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -520,14 +543,18 @@ input.md-search__input[placeholder="Search"]::placeholder {
     padding: 0.5rem;
   }
 
-  .md-footer__buttons {
-    padding: 0;
-  }
-
   .md-copyright__highlight {
     text-align: center;
   }
 }
+
+@media screen and (min-width: 768px) {
+  /* Overall layout adjustments to push footer to bottom */
+  .md-main {
+    padding-bottom: 3rem;
+  }
+}
+
 
 /* --- Left Navigation & TOC --- */
 @media screen and (min-width: 76.25em) {
@@ -668,6 +695,16 @@ input.md-search__input[placeholder="Search"]::placeholder {
   .md-nav--secondary .md-nav__title[for="__toc"] {
     padding: 0.5rem 0.6rem 0.5rem 1.1rem;
   }
+}
+
+/* --- Breadcrumbs --- */
+.md-path__item:not(:first-child) {
+  align-items: center;
+}
+
+.md-path__link:hover {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
 }
 
 /* --- Page actions --- */

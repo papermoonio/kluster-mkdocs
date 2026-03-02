@@ -1,9 +1,15 @@
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer__ai-resources">
-        <a href="/ai-resources/">AI Resources</a>
+      {% if config.extra.footer_nav %}
+      <div class="md-footer__buttons">
+        {% for item in config.extra.footer_nav %}
+        <a href="{{ item.url | url }}" class="footer-nav-link">
+          {{ item.title }}
+        </a>
+        {% endfor %}
       </div>
+      {% endif %}
       <div class="md-footer__center-column">
         {% include "partials/copyright.html" %}
         <div class="papermoon">
