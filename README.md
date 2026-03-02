@@ -1,6 +1,6 @@
 # Mkdocs Framework and Material Theme for the kluster.ai Docs
 
-This repo contains the Mkdocs config files, theme overrides, and custom CSS for the [kluster.ai](https://kluster.ai) documentation site.
+This repo contains the Mkdocs config files, theme overrides, and custom CSS for the [kluster.ai](https://www.kluster.ai/) documentation site.
 
 - [Mkdocs](https://www.mkdocs.org/)
 - [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
