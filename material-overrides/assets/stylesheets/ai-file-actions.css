@@ -70,6 +70,7 @@
 .ai-file-actions-icon.loading-spinner {
   margin: 0;
 }
+
 /* Size and color for the chevron icon */
 .ai-file-actions-chevron {
   background-size: 1em 1em;
@@ -202,6 +203,7 @@
 .ai-file-actions-container .loading-spinner {
   animation: spinner-rotate 2s linear infinite;
 }
+
 .ai-file-actions-container .loading-spinner circle {
   animation: spinner-dash 1.5s ease-in-out infinite;
 }
