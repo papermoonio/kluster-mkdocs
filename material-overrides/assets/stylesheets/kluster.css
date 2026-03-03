@@ -359,33 +359,32 @@
 }
 
 /* Header button styling (copied from kluster.ai) */
-.button-container.md-typeset .md-button {
+.button-container.md-typeset a.md-button {
   display: flex;
   border-radius: 2em;
   background-color: var(--info-blue-600);
   border-color: var(--info-blue-600);
   height: 1.8rem;
   padding: 0.45rem 1rem;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.button-container.md-typeset .md-button:hover {
+.button-container.md-typeset a.md-button:hover,
+.button-container.md-typeset a.md-button:focus {
   background: var(--primary-green-500);
+  color: var(--light);
   border-color: var(--primary-green-500);
+  text-decoration: none;
 }
 
-.button-container.md-typeset .md-button a {
+.button-container.md-typeset a.md-button {
   color: var(--light);
   font-weight: 600;
   font-size: 14px;
   display: flex;
   gap: 0.5em;
   align-items: center;
-}
-
-.button-container.md-typeset .md-button a:hover,
-.button-container.md-typeset .md-button a:focus {
-  color: var(--light);
-  text-decoration: none;
 }
 
 .md-header__button:hover {
