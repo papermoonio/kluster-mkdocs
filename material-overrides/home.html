@@ -72,7 +72,7 @@
           <div class="tabbed-control tabbed-control--prev" hidden=""><button class="tabbed-button" tabindex="-1" aria-hidden="true"></button></div>
           <div class="tabbed-control tabbed-control--next" hidden=""><button class="tabbed-button" tabindex="-1" aria-hidden="true"></button></div>
         </div>
-        <p class="install-note">Get your install snippet from <a href="https://platform.kluster.ai" target="\_blank">platform.kluster.ai</a>.</p>
+        <p class="install-note">Get your install snippet from <a href="https://platform.kluster.ai" target="_blank">platform.kluster.ai</a>.</p>
       </div>
     </div>
   </section>
@@ -162,7 +162,6 @@
         <div class="selector-preview-inner">
           <video src="{{ 'assets/images/homepage-manualreview.webm' | url }}"
                  class="selector-gif"
-                 loading="lazy"
                  autoplay
                  loop
                  muted
@@ -240,7 +239,6 @@
 
       items.forEach(function(item) {
         item.addEventListener('click', function(e) {
-          if (e.target.closest('.selector-link')) return;
           var index = parseInt(item.getAttribute('data-index'));
           if (item.classList.contains('active')) return;
 

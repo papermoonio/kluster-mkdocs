@@ -448,29 +448,6 @@
   line-height: 1.4;
 }
 
-.selector-link {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  color: var(--md-default-fg-color--light);
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease,
-    color 0.2s ease;
-  opacity: 0.6;
-  text-decoration: none;
-}
-
-.selector-link svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--md-default-fg-color);
-}
-
-.selector-item:hover .selector-link svg {
-  transform: translateX(3px);
-}
-
 .selector-preview {
   display: flex;
   align-items: center;
