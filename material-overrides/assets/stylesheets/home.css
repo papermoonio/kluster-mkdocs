@@ -1,16 +1,10 @@
 :root,
 [data-md-color-scheme="default"] {
   --md-typeset-color: var(--md-default-fg-color--light);
-  --home-button-fg: #060809;
-  --home-button-bg: #0608090d;
-  --home-button-border: #0608091a;
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
   --md-typeset-color: var(--md-default-fg-color--light);
-  --home-button-fg: #f8fafc;
-  --home-button-bg: #ffffff0d;
-  --home-button-border: #ffffff1a;
 }
 
 /* --- Fonts --- */
@@ -134,9 +128,9 @@
 }
 
 .md-typeset .md-button.ide-btn {
-  background: var(--home-button-bg);
-  border: 1px solid var(--home-button-border);
-  color: var(--home-button-fg);
+  background: var(--secondary-button-bg);
+  border: 1px solid var(--nav-border-color);
+  color: var(--secondary-button-fg);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -151,7 +145,7 @@
 }
 
 .md-typeset .md-button.ide-btn:hover {
-  background: var(--home-button-border);
+  background: var(--nav-border-color);
   text-decoration: none;
 }
 
@@ -546,13 +540,13 @@
 }
 
 .md-typeset .grid.cards > ul > li {
-  border-color: var(--home-button-border);
+  border-color: var(--nav-border-color);
   padding: 0;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
-  border: 1px solid var(--home-button-border);
-  background: var(--home-button-bg);
+  border: 1px solid var(--nav-border-color);
+  background: var(--secondary-button-bg);
 }
 
 .md-typeset .grid.cards > ul > li a,
