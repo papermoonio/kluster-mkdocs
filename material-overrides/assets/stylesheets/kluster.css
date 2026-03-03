@@ -347,10 +347,6 @@
   height: 28px;
 }
 
-.md-header__button[for="__drawer"] svg {
-  fill: var(--primary-green-300);
-}
-
 .md-header__buttons {
   display: flex;
   gap: 1em;
@@ -416,9 +412,9 @@
   }
 }
 
-@media screen and (max-width: 60em) {
-  .md-header__buttons {
-    gap: 0;
+@media screen and (max-width: 59.99em) {
+[data-md-toggle=search]:not(:checked)~.md-header div.md-search {
+  display: none;
   }
 }
 
