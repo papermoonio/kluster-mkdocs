@@ -50,6 +50,10 @@
 }
 
 /* --- Layout --- */
+.md-content {
+  border-right: none;
+}
+
 .md-content__inner {
   max-width: 1300px;
 }
