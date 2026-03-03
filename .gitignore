@@ -5,6 +5,7 @@ kluster-docs*/
 docs*/
 site
 venv-test
+.cache
 
 # Ignore Python bytecode
 __pycache__/
