@@ -515,6 +515,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
   gap: 0.5rem;
 }
 
+.md-footer-meta__inner.md-grid > :first-child {
+  justify-content: start;
+}
+
 .md-footer-meta__inner.md-grid > * {
   display: flex;
   width: 100%;
@@ -586,6 +590,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   .md-footer-meta__inner.md-grid > *,
+  .md-footer-meta__inner.md-grid > :first-child,
   .md-footer-meta__inner.md-grid > :last-child {
     justify-content: center;
   }
@@ -602,7 +607,6 @@ html .md-footer-meta.md-typeset .papermoon a {
     padding-bottom: 3rem;
   }
 }
-
 
 /* --- Left Navigation & TOC --- */
 @media screen and (min-width: 76.25em) {

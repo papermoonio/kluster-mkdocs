@@ -40,10 +40,9 @@ theme:
 extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
-  - assets/stylesheets/copy-to-llms.css
+  - assets/stylesheets/ai-file-actions.css
 extra_javascript:
-  - js/clipboardCopy.js
-  - js/copy-to-llms.js
+  - js/ai-file-actions.js
 hooks:
   - hooks/footer_nav.py
 markdown_extensions:
@@ -78,12 +77,11 @@ plugins:
       minify_css: true
       cache_safe: true
       js_files:
-        - js/clipboardCopy.js
-        - js/copy-to-llms.js
+        - js/ai-file-actions.js
       css_files:
         - assets/stylesheets/terminal.css
         - assets/stylesheets/timeline-neoteroi.css
-        - assets/stylesheets/copy-to-llms.css
+        - assets/stylesheets/ai-file-actions.css
       scoped_css_templates:
         home.html:
           - assets/stylesheets/home.css
@@ -94,6 +92,8 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
+  - ai_resources_page
+  - ai_page_actions
   - resolve_md: 
       llms_config: llms_config.json
   - social:
@@ -122,7 +122,7 @@ extra:
       link: https://discord.com/invite/klusterai
       name: Discord
     - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/klusterai
+      link: https://x.com/klusterai
       name: X
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/kluster-ai/
