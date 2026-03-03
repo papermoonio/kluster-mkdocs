@@ -95,8 +95,6 @@
   --banner-hover-color: var(--info-blue-50);
 
   /* Search */
-  --search-background-color: var(--light);
-  --search-color: var(--primary-green-500);
   --search-result-color: var(--dark);
   --search-result-bg-color: var(--light);
   --search-input-bg-color: var(--light);
@@ -198,8 +196,6 @@
   --nav-border-color: #ffffff1a;
 
   /* Search */
-  --search-background-color: var(--dark);
-  --search-color: var(--primary-green-300);
   --search-result-color: var(--light);
   --search-result-bg-color: var(--dark);
   --search-input-bg-color: var(--primary-green-700);
