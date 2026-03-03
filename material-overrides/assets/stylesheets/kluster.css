@@ -85,6 +85,7 @@
 
   /* General styles */
   --border-color: var(--secondary-bg-color);
+  --nav-border-color: #0608091a;
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -95,7 +96,6 @@
 
   /* Search */
   --search-background-color: var(--light);
-  --search-border-color: var(--primary-green-500);
   --search-color: var(--primary-green-500);
   --search-result-color: var(--dark);
   --search-result-bg-color: var(--light);
@@ -138,6 +138,10 @@
 
   /* Cookie Consent */
   --consent-bg-color: var(--light);
+
+  /* Buttons */
+  --secondary-button-fg: var(--dark);
+  --secondary-button-bg: #0608090d;
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
@@ -191,6 +195,7 @@
 
   /* General styles */
   --border-color: var(--secondary-bg-color);
+  --nav-border-color: #ffffff1a;
 
   /* Banner styles */
   --banner-color: var(--light);
@@ -201,7 +206,6 @@
 
   /* Search */
   --search-background-color: var(--dark);
-  --search-border-color: var(--primary-green-300);
   --search-color: var(--primary-green-300);
   --search-result-color: var(--light);
   --search-result-bg-color: var(--dark);
@@ -210,6 +214,9 @@
 
   /* Buttons styles */
   --button-border: var(--border-width) solid var(--light);
+
+  --secondary-button-fg: #f8fafc;
+  --secondary-button-bg: #ffffff0d;
 
   /* Cards styles general */
   --card-background: var(--dark);
@@ -349,10 +356,6 @@
 }
 
 /* Header button styling (copied from kluster.ai) */
-.button-container {
-  margin: 1em;
-}
-
 .button-container.md-typeset .md-button {
   display: flex;
   border-radius: 2em;
@@ -374,6 +377,14 @@
 .button-container.md-typeset .md-button a:focus {
   color: var(--light);
   text-decoration: none;
+}
+
+.md-header__button.md-icon {
+  margin: 0;
+  border: 1px solid var(--nav-border-color);
+  border-radius: var(--border-radius);
+  padding: 6px;
+  height: 1.8rem;
 }
 
 @media screen and (max-width: 76.2344em) {
@@ -446,7 +457,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
   }
 
   .md-header .md-search__form {
-    border: var(--border-width) solid var(--search-border-color);
+    border: var(--border-width) solid var(--nav-border-color);
   }
 
   [data-md-toggle="search"]:checked ~ .md-header .button-container {
@@ -1275,6 +1286,12 @@ pre:hover > .md-code__nav {
   color: var(--light);
   background-color: var(--info-blue-600);
   opacity: 1;
+}
+
+.md-typeset .md-button.secondary {
+  background-color: var(--secondary-button-bg);
+  color: var(--secondary-button-fg);
+  border-color: var(--nav-border-color);
 }
 
 /* --- Cookie Consent --- */
