@@ -192,13 +192,6 @@
   /* General styles */
   --border-color: var(--secondary-bg-color);
 
-  /* Banner styles */
-  --banner-color: var(--light);
-  --banner-background-color: var(--dark);
-  --banner-link-color: var(--primary-green-300);
-  --banner-icon-color: var(--primary-green-300);
-  --banner-hover-color: var(--info-blue-600);
-
   /* Search */
   --search-background-color: var(--dark);
   --search-border-color: var(--primary-green-300);
@@ -1282,8 +1275,6 @@ pre:hover > .md-code__nav {
 
 .md-banner__inner.md-grid.md-typeset {
   cursor: default;
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
   padding: 0.5rem;
 }
 
