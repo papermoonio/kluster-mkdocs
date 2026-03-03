@@ -172,13 +172,14 @@
       </div>
       <div class="selector-preview" id="preview-panel" role="tabpanel">
         <div class="selector-preview-inner">
-          <video src="assets/images/homepage-manualreview.webm"
-               alt="kluster.ai code review demo"
-               class="selector-gif"
-               loading="lazy"
-               autoplay
-               loop
-               muted />
+          <video src="{{ 'assets/images/homepage-manualreview.webm' | url }}"
+                 class="selector-gif"
+                 loading="lazy"
+                 autoplay
+                 loop
+                 muted
+                 aria-label="kluster.ai code review demo">
+          </video>
         </div>
       </div>
     </div>
