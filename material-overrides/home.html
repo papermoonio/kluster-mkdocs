@@ -232,10 +232,10 @@
       var gif = document.querySelector('.selector-gif');
 
       var previews = [
-        'assets/images/homepage-manualreview.webm',
-        'assets/images/homepage-aiautoreview.webm',
-        'assets/images/homepage-reporeviews.webm',
-        'assets/images/homepage-klustercli.webm'
+        "{{ 'assets/images/homepage-manualreview.webm' | url }}",
+        "{{ 'assets/images/homepage-aiautoreview.webm' | url }}",
+        "{{ 'assets/images/homepage-reporeviews.webm' | url }}",
+        "{{ 'assets/images/homepage-klustercli.webm' | url }}"
       ];
 
       items.forEach(function(item) {
