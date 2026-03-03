@@ -172,10 +172,13 @@
       </div>
       <div class="selector-preview" id="preview-panel" role="tabpanel">
         <div class="selector-preview-inner">
-          <img src="assets/images/homepage-manualreview.gif"
+          <video src="assets/images/homepage-manualreview.webm"
                alt="kluster.ai code review demo"
                class="selector-gif"
-               loading="lazy" />
+               loading="lazy"
+               autoplay
+               loop
+               muted />
         </div>
       </div>
     </div>
@@ -240,10 +243,10 @@
       var gif = document.querySelector('.selector-gif');
 
       var previews = [
-        'assets/images/homepage-manualreview.gif',
-        'assets/images/homepage-manualreview.gif',
-        'assets/images/homepage-manualreview.gif',
-        'assets/images/homepage-manualreview.gif'
+        'assets/images/homepage-manualreview.webm',
+        'assets/images/homepage-aiautoreview.webm',
+        'assets/images/homepage-reporeviews.webm',
+        'assets/images/homepage-klustercli.webm'
       ];
 
       items.forEach(function(item) {

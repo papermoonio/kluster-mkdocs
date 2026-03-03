@@ -341,7 +341,8 @@
 }
 
 .selector-container {
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 7fr;
+  align-items: center;
 }
 
 .selector-item {
@@ -478,14 +479,14 @@
 
 .selector-preview-inner {
   width: 100%;
-  height: 100%;
   position: relative;
 }
 
 .selector-gif {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Ensures height scales naturally with width */
+  background-color: transparent; /* Forces browser letterboxing to be invisible */
   border-radius: 0.75rem;
   transition: opacity 0.3s ease;
 }
