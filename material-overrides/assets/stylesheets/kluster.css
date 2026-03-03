@@ -509,7 +509,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 }
 
 .md-footer-meta__inner.md-grid > :first-child {
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .md-footer-meta__inner.md-grid > * {
@@ -551,17 +551,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 .md-social {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-/* llms-full button styling */
-.md-footer__buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.footer-nav-link {
-  font-size: 0.7rem;
 }
 
 .md-social__link svg {
