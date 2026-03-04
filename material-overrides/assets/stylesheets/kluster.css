@@ -610,6 +610,10 @@ html .md-footer-meta.md-typeset .papermoon a {
 
 /* --- Left Navigation & TOC --- */
 @media screen and (min-width: 76.25em) {
+  .md-nav--primary .md-nav__title {
+    box-shadow: none;
+  }
+
   .md-nav--lifted
     > .md-nav__list
     > .md-nav__item--active.md-nav__item--section {
@@ -661,6 +665,12 @@ html .md-footer-meta.md-typeset .papermoon a {
     background-color: var(--nav-active-bg-color);
     border-radius: var(--hover-border-radius);
     padding-left: 0.5rem;
+  }
+
+  /* Align top-level plain nav items (e.g. Home) with section headers */
+  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link--active,
+  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link:hover {
+    padding-left: 0.7rem;
   }
 
   .md-nav__list .md-nav__link:focus {
@@ -1350,3 +1360,16 @@ pre:hover > .md-code__nav {
 .md-consent__inner {
   background-color: var(--consent-bg-color);
 }
+
+/* --- Home nav item --- */
+.md-nav__link .nav-home {
+  font-weight: 700;
+  display: flex;
+  gap: 0.50em;
+  align-items: center;
+}
+
+.md-nav__link .nav-home span.twemoji {
+  display: flex;
+}
+

@@ -49,7 +49,16 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    {{ ref.title }}
+    {% if ref.title == "Home" %}
+      <span class="nav-home">
+        <span class="twemoji">
+          {% include ".icons/octicons/home-16.svg" %}
+        </span>
+        {{ ref.title }}
+      </span>
+    {% else %}
+      {{ ref.title }}
+    {% endif %}
 
     <!-- Navigation link subtitle -->
     {% if nav_item.meta and nav_item.meta.subtitle %}
@@ -246,57 +255,50 @@
 
     <!-- Currently active page -->
     {% elif nav_item == page %}
+      <li class="{{ class }}">
+        {% set toc = page.toc %}
 
-      {# Don't render the Home page as an option #}
-      {% if nav_item.url != "" %}
-        <li class="{{ class }}">
-          {% set toc = page.toc %}
+        <!-- State toggle -->
+        <input
+          class="md-nav__toggle md-toggle"
+          type="checkbox"
+          id="__toc"
+        />
 
-          <!-- State toggle -->
-          <input
-            class="md-nav__toggle md-toggle"
-            type="checkbox"
-            id="__toc"
-          />
+        <!-- Hack: see partials/toc.html for more information -->
+        {% set first = toc | first %}
+        {% if first and first.level == 1 %}
+          {% set toc = first.children %}
+        {% endif %}
 
-          <!-- Hack: see partials/toc.html for more information -->
-          {% set first = toc | first %}
-          {% if first and first.level == 1 %}
-            {% set toc = first.children %}
-          {% endif %}
-
-          <!-- Navigation link to table of contents -->
-          {% if toc %}
-            <label class="md-nav__link md-nav__link--active" for="__toc">
-              {{ render_content(nav_item) }}
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          {% endif %}
-          
-          <a
-            href="{{ nav_item.url | url }}"
-            class="md-nav__link md-nav__link--active"
-          >
+        <!-- Navigation link to table of contents -->
+        {% if toc %}
+          <label class="md-nav__link md-nav__link--active" for="__toc">
             {{ render_content(nav_item) }}
-          </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        {% endif %}
 
-          <!-- Table of contents -->
-          {% if toc %}
-            {% include "partials/toc.html" %}
-          {% endif %}
-        </li>
-      {% endif %}
+        <a
+          href="{{ nav_item.url | url }}"
+          class="md-nav__link md-nav__link--active"
+        >
+          {{ render_content(nav_item) }}
+        </a>
+
+        <!-- Table of contents -->
+        {% if toc %}
+          {% include "partials/toc.html" %}
+        {% endif %}
+      </li>
 
     <!-- Navigation item -->
     {% else %}
-      {# Don't render the Home page as an option #}
-      {% if nav_item.url != "" %}
-        <li class="{{ class }}">
-          <a href="{{ nav_item.url | url }}" class="md-nav__link">
-            {{ render_content(nav_item) }}
-          </a>
-        </li>
-      {% endif %}
+      <li class="{{ class }}">
+        <a href="{{ nav_item.url | url }}" class="md-nav__link">
+          {{ render_content(nav_item) }}
+        </a>
+      </li>
     {% endif %}
   {% endif %}{# end footer_nav check #}
 {% endmacro %}
