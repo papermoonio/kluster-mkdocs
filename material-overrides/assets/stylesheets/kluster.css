@@ -669,7 +669,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 
   /* Align top-level plain nav items (e.g. Home) with section headers */
   .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link--active,
-  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link:hover {
+  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link {
     padding-left: 0.7rem;
   }
 
