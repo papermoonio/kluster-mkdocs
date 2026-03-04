@@ -87,3 +87,7 @@ To update docs safely during handover, edit content directly in `kluster-docs/` 
 # Build docs locally after edits
 mkdocs build
 ```
+
+## Disable the LLM File Plugins
+
+You may wish to disable the LLM file plugins to allow for faster build times for local development. You can disable the LLM file plugins by running `export ENABLED_LLMS_PLUGINS=false` before serving or building the docs.
