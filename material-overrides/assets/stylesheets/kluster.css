@@ -609,6 +609,18 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* --- Left Navigation & TOC --- */
+/* Home nav item */
+.md-nav__link .nav-home {
+  font-weight: 700;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.md-nav__link .nav-home span.twemoji {
+  display: flex;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-nav--primary .md-nav__title {
     box-shadow: none;
@@ -669,7 +681,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 
   /* Align top-level plain nav items (e.g. Home) with section headers */
   .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link--active,
-  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link:hover {
+  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link {
     padding-left: 0.7rem;
   }
 
@@ -1359,17 +1371,5 @@ pre:hover > .md-code__nav {
 /* --- Cookie Consent --- */
 .md-consent__inner {
   background-color: var(--consent-bg-color);
-}
-
-/* --- Home nav item --- */
-.md-nav__link .nav-home {
-  font-weight: 700;
-  display: flex;
-  gap: 0.50em;
-  align-items: center;
-}
-
-.md-nav__link .nav-home span.twemoji {
-  display: flex;
 }
 
