@@ -50,6 +50,11 @@
                 "id": "reference",
                 "name": "Reference",
                 "description": "Comprehensive reference materials, including MCP tools, configuration options, and detailed response schema information."
+            },
+            "external_knowledge": {
+                "id": "external_knowledge",
+                "name": "External Knowledge",
+                "description": "Information and guides related to connecting external tools like Jira to kluster.ai so code reviews can verify code against real project requirements and ticket specifications."
             }
         },
         "exclusions": {
