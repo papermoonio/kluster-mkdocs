@@ -55,6 +55,21 @@
                 "id": "external_knowledge",
                 "name": "External Knowledge",
                 "description": "Information and guides related to connecting external tools like Jira to kluster.ai so code reviews can verify code against real project requirements and ticket specifications."
+            },
+            "repo_reviews": {
+                "id": "repo_reviews",
+                "name": "Repo reviews",
+                "description": "Information and guides related to using kluster.ai Repo Reviews to perform system-wide codebase analysis and find cross-module bugs."
+            },
+            "cli": {
+                "id": "cli",
+                "name": "CLI",
+                "description": "Information and guides related to using the kluster CLI for terminal-based code reviews, git hook integration, and CI/CD pipeline automation."
+            },
+            "configuration": {
+                "id": "configuration",
+                "name": "Configuration",
+                "description": "Information and guides related to configuring kluster.ai Code Reviews, including options, custom rules, and ignore patterns."
             }
         },
         "exclusions": {
@@ -62,7 +77,8 @@
                 "index.md",
                 "README.md",
                 "LICENSE.md",
-                "ai-resources.md"
+                "ai-resources.md",
+                "video-library.md"
             ],
             "skip_paths": ["venv"]
         }
