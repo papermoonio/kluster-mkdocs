@@ -24,52 +24,42 @@
             "basics": {
                 "id": "basics",
                 "name": "Basics",
-                "description": "Fundamental concepts, getting started guides, and essential information about kluster.ai."
+                "description": "Foundational information for getting started with kluster.ai, including installation across supported IDEs (Cursor, VS Code, Windsurf, Antigravity), review mode overview, workflow selection guidance, and core concepts like issue types and sensitivity levels."
             },
-            "human_written_code": {
-                "id": "human_written_code",
-                "name": "Human Written Code",
-                "description": "Information and guides related to using kluster.ai to review human-written code."
-            },
-            "ai_generated_code": {
-                "id": "ai_generated_code",
-                "name": "AI Generated Code",
-                "description": "Information and guides related to using kluster.ai to review AI-generated code."
-            },
-            "on_demand_review": {
-                "id": "on_demand_review",
-                "name": "On-Demand Review",
-                "description": "Information and guides related to using kluster.ai for on-demand reviews, providing insights and feedback based on specific criteria or user requests."
-            },
-            "automatic_review": {
-                "id": "automatic_review",
-                "name": "Automatic Review",
-                "description": "Information and guides related to using kluster.ai for automatic reviews, ensuring quality and relevance based on predefined algorithms and standards."
-            },
-            "reference": {
-                "id": "reference",
-                "name": "Reference",
-                "description": "Comprehensive reference materials, including MCP tools, configuration options, and detailed response schema information."
-            },
-            "external_knowledge": {
-                "id": "external_knowledge",
-                "name": "External Knowledge",
-                "description": "Information and guides related to connecting external tools like Jira to kluster.ai so code reviews can verify code against real project requirements and ticket specifications."
+            "ide_reviews": {
+                "id": "ide_reviews",
+                "name": "IDE Reviews",
+                "description": "Complete guide to running code reviews inside your IDE, covering both human-written and AI-generated code workflows. Includes on-demand reviews, automatic background reviews, dependency checks, and end-to-end examples for Cursor, VS Code, Windsurf, Antigravity, and Claude Code."
             },
             "repo_reviews": {
                 "id": "repo_reviews",
-                "name": "Repo reviews",
-                "description": "Information and guides related to using kluster.ai Repo Reviews to perform system-wide codebase analysis and find cross-module bugs."
+                "name": "Repo Reviews",
+                "description": "System-wide codebase analysis that detects cross-module bugs, silent error propagation, state inconsistencies, and assumption violations that single-file reviews miss. Covers setup via the web dashboard and kluster CLI, with GitHub, GitLab, and Bitbucket integration."
             },
             "cli": {
                 "id": "cli",
                 "name": "CLI",
-                "description": "Information and guides related to using the kluster CLI for terminal-based code reviews, git hook integration, and CI/CD pipeline automation."
+                "description": "Using the kluster CLI for terminal-based code reviews, including installation, reviewing staged changes, diffs, and individual files. Also covers git hook integration for pre-commit and pre-push automation, repo reviews from the command line, and CI/CD pipeline usage."
             },
             "configuration": {
                 "id": "configuration",
                 "name": "Configuration",
-                "description": "Information and guides related to configuring kluster.ai Code Reviews, including options, custom rules, and ignore patterns."
+                "description": "Customizing kluster.ai code review behavior, including sensitivity levels (Low through Critical), issue type scoping, analysis depth (Instant vs. Deep), custom rules, .klusterignore patterns for excluding files, and per-project settings."
+            },
+            "external_knowledge": {
+                "id": "external_knowledge",
+                "name": "External Knowledge",
+                "description": "Connecting external project management tools like Jira to kluster.ai so code reviews can validate implementation against real ticket requirements and specifications. Covers setup, branch naming conventions, and prompt-based ticket detection for CLI tools."
+            },
+            "troubleshooting": {
+                "id": "troubleshooting",
+                "name": "Troubleshooting",
+                "description": "Solutions for common issues including installation errors, MCP timeouts, module import problems, and cache clearing. Also covers frequently asked questions about supported languages, IDE compatibility, team features, and the differences between Instant and Deep analysis."
+            },
+            "reference": {
+                "id": "reference",
+                "name": "Reference",
+                "description": "Technical reference materials including the full MCP tools specification, response schema for programmatic integration, and CLI command reference with exit codes and output formatting options."
             }
         },
         "exclusions": {
