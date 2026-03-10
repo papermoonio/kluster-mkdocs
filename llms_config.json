@@ -24,42 +24,42 @@
             "basics": {
                 "id": "basics",
                 "name": "Basics",
-                "description": "Foundational information for getting started with kluster.ai, including installation across supported IDEs (Cursor, VS Code, Windsurf, Antigravity), review mode overview, workflow selection guidance, and core concepts like issue types and sensitivity levels."
+                "description": "Getting started with kluster.ai: installation for supported IDEs, review modes, workflow selection, and core concepts."
             },
             "ide_reviews": {
                 "id": "ide_reviews",
                 "name": "IDE Reviews",
-                "description": "Complete guide to running code reviews inside your IDE, covering both human-written and AI-generated code workflows. Includes on-demand reviews, automatic background reviews, dependency checks, and end-to-end examples for Cursor, VS Code, Windsurf, Antigravity, and Claude Code."
+                "description": "Running code reviews inside your IDE for human-written and AI-generated code, including on-demand, background, and dependency reviews."
             },
             "repo_reviews": {
                 "id": "repo_reviews",
                 "name": "Repo Reviews",
-                "description": "System-wide codebase analysis that detects cross-module bugs, silent error propagation, state inconsistencies, and assumption violations that single-file reviews miss. Covers setup via the web dashboard and kluster CLI, with GitHub, GitLab, and Bitbucket integration."
+                "description": "System-wide codebase analysis detecting cross-module bugs and inconsistencies, with GitHub, GitLab, and Bitbucket integration."
             },
             "cli": {
                 "id": "cli",
                 "name": "CLI",
-                "description": "Using the kluster CLI for terminal-based code reviews, including installation, reviewing staged changes, diffs, and individual files. Also covers git hook integration for pre-commit and pre-push automation, repo reviews from the command line, and CI/CD pipeline usage."
+                "description": "Terminal-based code reviews via the kluster CLI, including git hook automation, repo reviews, and CI/CD pipeline usage."
             },
             "configuration": {
                 "id": "configuration",
                 "name": "Configuration",
-                "description": "Customizing kluster.ai code review behavior, including sensitivity levels (Low through Critical), issue type scoping, analysis depth (Instant vs. Deep), custom rules, .klusterignore patterns for excluding files, and per-project settings."
+                "description": "Customizing review behavior: sensitivity levels, issue type scoping, analysis depth, custom rules, and .klusterignore patterns."
             },
             "external_knowledge": {
                 "id": "external_knowledge",
                 "name": "External Knowledge",
-                "description": "Connecting external project management tools like Jira to kluster.ai so code reviews can validate implementation against real ticket requirements and specifications. Covers setup, branch naming conventions, and prompt-based ticket detection for CLI tools."
+                "description": "Connecting tools like Jira so reviews can validate code against ticket requirements. Covers setup and branch naming conventions."
             },
             "troubleshooting": {
                 "id": "troubleshooting",
                 "name": "Troubleshooting",
-                "description": "Solutions for common issues including installation errors, MCP timeouts, module import problems, and cache clearing. Also covers frequently asked questions about supported languages, IDE compatibility, team features, and the differences between Instant and Deep analysis."
+                "description": "Solutions for common issues like installation errors, MCP timeouts, and cache clearing, plus FAQs on languages, IDEs, and analysis modes."
             },
             "reference": {
                 "id": "reference",
                 "name": "Reference",
-                "description": "Technical reference materials including the full MCP tools specification, response schema for programmatic integration, and CLI command reference with exit codes and output formatting options."
+                "description": "Technical reference for MCP tools, response schema, and CLI commands with exit codes and output formatting."
             }
         },
         "exclusions": {
