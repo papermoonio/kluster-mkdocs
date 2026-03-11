@@ -622,7 +622,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* Nav items with inline icons (e.g. :simple-github: GitHub) */
-.md-nav__link > .nav-title.twemoji {
+.md-nav__link .nav-title.twemoji {
   display: inline;
   white-space: normal;
 }
@@ -633,7 +633,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   width: 1.3em;
 }
 
-.md-nav__link > .nav-title.twemoji > span svg {
+.md-nav__link .nav-title.twemoji > span svg {
   margin-left: 0;
 }
 
