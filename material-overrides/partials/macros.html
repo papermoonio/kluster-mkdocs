@@ -1,0 +1,48 @@
+{#-
+  Shared macros for kluster documentation
+-#}
+
+{% macro render_title_with_icon(title, wrapper_class="") %}
+  {% set parts = title.split(':') %}
+  {% if parts|length > 2 and (title.startswith(':') or parts[-1] == '') %}
+    {% if title.startswith(':') %}
+      {# Icon is at the start — :icon-name: Text with: colons #}
+      {% set icon_name = parts[1] %}
+      {% set text = parts[2:]|join(':') %}
+      {% set icon_path = icon_name.replace('-', '/', 1) %}
+      {% if wrapper_class %}
+        <span class="{{ wrapper_class }}">
+          <span aria-hidden="true">
+            {% include ".icons/" ~ icon_path ~ ".svg" %}
+          </span>
+          {{ text|e }}
+        </span>
+      {% else %}
+        <span aria-hidden="true">
+          {% include ".icons/" ~ icon_path ~ ".svg" %}
+        </span>
+        {{ text|e }}
+      {% endif %}
+    {% else %}
+      {# Icon is at the end — Text with: colons :icon-name: #}
+      {% set icon_name = parts[-2] %}
+      {% set text = parts[:-2]|join(':') %}
+      {% set icon_path = icon_name.replace('-', '/', 1) %}
+      {% if wrapper_class %}
+        <span class="{{ wrapper_class }}">
+          {{ text|e }}
+          <span aria-hidden="true">
+            {% include ".icons/" ~ icon_path ~ ".svg" %}
+          </span>
+        </span>
+      {% else %}
+        {{ text|e }}
+        <span aria-hidden="true">
+          {% include ".icons/" ~ icon_path ~ ".svg" %}
+        </span>
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {{ title|e }}
+  {% endif %}
+{% endmacro %}

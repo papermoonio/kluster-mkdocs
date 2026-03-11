@@ -70,6 +70,11 @@
                 "id": "configuration",
                 "name": "Configuration",
                 "description": "Information and guides related to configuring kluster.ai Code Reviews, including options, custom rules, and ignore patterns."
+            },
+            "pr_reviews": {
+                "id": "pr_reviews",
+                "name": "PR Reviews",
+                "description": "Information and guides related to using kluster.ai PR Reviews to automatically review pull requests on GitHub, GitLab, and Bitbucket."
             }
         },
         "exclusions": {

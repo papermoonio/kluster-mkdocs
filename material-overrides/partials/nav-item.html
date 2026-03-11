@@ -20,6 +20,8 @@
   IN THE SOFTWARE.
 -->
 
+{% from "partials/macros.html" import render_title_with_icon %}
+
 <!-- Render navigation link status -->
 {% macro render_status(nav_item, type) %}
   {% set class = "md-status md-status--" ~ type %}
@@ -57,7 +59,7 @@
         {{ ref.title }}
       </span>
     {% else %}
-      {{ ref.title }}
+      {{ render_title_with_icon(ref.title, "twemoji nav-title") | safe }}
     {% endif %}
 
     <!-- Navigation link subtitle -->
