@@ -8,11 +8,11 @@
 }
 
 .table-code-copy-btn {
-    display: inline-flex;
-    padding: 0.15rem;
-    color: var(--md-default-fg-color--lighter);
-    cursor: pointer;
-    transition: opacity 0.15s, color 0.15s;
+  display: inline-flex;
+  padding: 0.15rem;
+  color: var(--md-default-fg-color--lighter);
+  cursor: pointer;
+  transition: opacity 0.15s, color 0.15s;
 }
 
 .table-code-copy-wrapper:hover .table-code-copy-btn,
