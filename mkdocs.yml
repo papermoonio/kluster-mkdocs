@@ -41,8 +41,10 @@ extra_css:
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
   - assets/stylesheets/ai-file-actions.css
+  - assets/stylesheets/table-code-copy.css
 extra_javascript:
   - js/ai-file-actions.js
+  - js/table-code-copy.js
 hooks:
   - hooks/footer_nav.py
 markdown_extensions:

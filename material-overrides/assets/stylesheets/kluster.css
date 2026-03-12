@@ -621,6 +621,22 @@ html .md-footer-meta.md-typeset .papermoon a {
   display: flex;
 }
 
+/* Nav items with inline icons (e.g. :simple-github: GitHub) */
+.md-nav__link .nav-title.twemoji {
+  display: inline;
+  white-space: normal;
+}
+
+.md-nav__link .nav-title.twemoji svg {
+  vertical-align: sub;
+  margin: 0 0.5em 0 0;
+  width: 1.3em;
+}
+
+.md-nav__link .nav-title.twemoji > span svg {
+  margin-left: 0;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-nav--primary .md-nav__title {
     box-shadow: none;
