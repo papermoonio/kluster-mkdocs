@@ -80,7 +80,7 @@ plugins:
       cache_safe: true
       js_files:
         - js/ai-file-actions.js
-        - js/table-code-copy.js        
+        - js/table-code-copy.js
       css_files:
         - assets/stylesheets/terminal.css
         - assets/stylesheets/timeline-neoteroi.css
