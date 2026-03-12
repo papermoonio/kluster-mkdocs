@@ -621,7 +621,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   display: flex;
 }
 
-/* Nav items with inline icons (e.g. :simple-github: GitHub or GitHub :simple-github:) */
+/* Nav items with inline icons */
 .md-nav__link .md-ellipsis > .nav-title.twemoji {
   display: inline-flex;
   align-items: baseline;
