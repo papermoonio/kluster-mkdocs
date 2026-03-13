@@ -318,6 +318,8 @@
 
 .md-typeset pre > code {
   border-radius: 10px;
+  /* Make space for copy button*/
+  padding-right: 1.5rem;
 }
 
 .md-typeset code {
@@ -412,8 +414,8 @@
 }
 
 @media screen and (max-width: 59.99em) {
-[data-md-toggle=search]:not(:checked)~.md-header div.md-search {
-  display: none;
+  [data-md-toggle="search"]:not(:checked) ~ .md-header div.md-search {
+    display: none;
   }
 }
 
@@ -692,8 +694,14 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   /* Align top-level plain nav items (e.g. Home) with section headers */
-  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link--active,
-  .md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--section) > .md-nav__link {
+  .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item:not(.md-nav__item--section)
+    > .md-nav__link--active,
+  .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item:not(.md-nav__item--section)
+    > .md-nav__link {
     padding-left: 0.7rem;
   }
 
@@ -1043,6 +1051,10 @@ pre:hover > .md-code__nav {
 
 .md-typeset__table table thead th:last-child {
   border-top-right-radius: var(--border-radius);
+}
+
+.md-typeset__table tr td pre code {
+  border: 1px solid var(--md-typeset-table-color--light);
 }
 
 .md-typeset__scrollwrap {
