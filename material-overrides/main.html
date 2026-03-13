@@ -10,6 +10,167 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 {% endblock %}
 
+{% block libs %}
+  <script>
+    document.documentElement.classList.add("js-loading");
+
+    (() => {
+      const STORAGE_PREFIX = "kluster.nav.toggle";
+      const SECTION_SELECTOR = ".md-sidebar--primary .md-nav__item--nested";
+
+      function getSections() {
+        return Array.from(document.querySelectorAll(SECTION_SELECTOR));
+      }
+
+      function getDirectChildBySelector(element, selector) {
+        return Array.from(element.children).find((child) =>
+          child.matches(selector)
+        );
+      }
+
+      function getToggle(section) {
+        return getDirectChildBySelector(section, ".md-nav__toggle");
+      }
+
+      function getNestedNav(section) {
+        return getDirectChildBySelector(section, "nav.md-nav");
+      }
+
+      function getStorageKey(toggleId) {
+        return `${STORAGE_PREFIX}.${toggleId}`;
+      }
+
+      function readStoredState(toggleId) {
+        try {
+          const value = localStorage.getItem(getStorageKey(toggleId));
+          if (value === null) return null;
+          return value === "true";
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function writeStoredState(toggleId, expanded) {
+        try {
+          localStorage.setItem(getStorageKey(toggleId), String(expanded));
+        } catch (error) {
+          // Ignore storage failures (private mode, blocked storage, etc.)
+        }
+      }
+
+      function applyState(section, expanded) {
+        const toggle = getToggle(section);
+        const nestedNav = getNestedNav(section);
+        if (!toggle || !nestedNav) return;
+
+        toggle.checked = expanded;
+        nestedNav.setAttribute("aria-expanded", String(expanded));
+      }
+
+      function getActiveSectionSet() {
+        const activeLinks = document.querySelectorAll(
+          ".md-sidebar--primary .md-nav__link--active"
+        );
+        const activeSections = new Set();
+
+        activeLinks.forEach((activeLink) => {
+          let currentSection = activeLink.closest(".md-nav__item--nested");
+
+          while (currentSection) {
+            activeSections.add(currentSection);
+            currentSection = currentSection.parentElement?.closest(
+              ".md-nav__item--nested"
+            );
+          }
+        });
+
+        return activeSections;
+      }
+
+      function applyInitialState() {
+        const activeSections = getActiveSectionSet();
+
+        getSections().forEach((section) => {
+          const toggle = getToggle(section);
+          if (!toggle || !toggle.id) return;
+
+          const savedValue = readStoredState(toggle.id);
+          let expanded = savedValue === null ? true : savedValue;
+
+          if (activeSections.has(section)) {
+            expanded = true;
+            writeStoredState(toggle.id, true);
+          }
+
+          applyState(section, expanded);
+        });
+      }
+
+      function attachListeners() {
+        getSections().forEach((section) => {
+          const toggle = getToggle(section);
+          const nestedNav = getNestedNav(section);
+          if (!toggle || !nestedNav || !toggle.id) return;
+          if (toggle.dataset.persistListenerAttached) return;
+
+          toggle.addEventListener("change", () => {
+            const expanded = toggle.checked;
+            nestedNav.setAttribute("aria-expanded", String(expanded));
+            writeStoredState(toggle.id, expanded);
+          });
+
+          toggle.dataset.persistListenerAttached = "true";
+        });
+      }
+
+      function initializeSidebarState() {
+        attachListeners();
+        applyInitialState();
+      }
+
+      function runAndRevealNavigation() {
+        try {
+          initializeSidebarState();
+        } finally {
+          document.documentElement.classList.remove("js-loading");
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", runAndRevealNavigation, {
+          once: true,
+        });
+      } else {
+        runAndRevealNavigation();
+      }
+
+      window.addEventListener("load", initializeSidebarState);
+      window.addEventListener("resize", applyInitialState);
+
+      // Compatibility if navigation.instant gets enabled in the future.
+      const subscribeToInstantNavigation = () => {
+        if (
+          window.document$ &&
+          typeof window.document$.subscribe === "function"
+        ) {
+          window.document$.subscribe(() => {
+            initializeSidebarState();
+          });
+        }
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", subscribeToInstantNavigation, {
+          once: true,
+        });
+      } else {
+        subscribeToInstantNavigation();
+      }
+    })();
+  </script>
+  {{ super() }}
+{% endblock %}
+
 {% block site_meta %}
   {{ super() }}
   {% if page and page.meta and page.meta.keywords %}

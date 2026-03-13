@@ -609,6 +609,20 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* --- Left Navigation & TOC --- */
+html:not(.js-loading) .md-sidebar--primary .md-nav--primary {
+  opacity: 1;
+}
+
+html.js-loading .md-sidebar--primary .md-nav--primary {
+  visibility: hidden;
+}
+
+/* Force current Kluster nav icons (no plus/minus variants) */
+.md-sidebar--primary .nav__icon.plus,
+.md-sidebar--primary .nav__icon.minus {
+  display: none !important;
+}
+
 /* Home nav item */
 .md-nav__link .nav-home {
   font-weight: 700;
