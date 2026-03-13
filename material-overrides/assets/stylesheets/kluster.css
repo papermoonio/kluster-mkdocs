@@ -621,20 +621,16 @@ html .md-footer-meta.md-typeset .papermoon a {
   display: flex;
 }
 
-/* Nav items with inline icons (e.g. :simple-github: GitHub) */
-.md-nav__link .nav-title.twemoji {
-  display: inline;
-  white-space: normal;
+/* Nav items with inline icons */
+.md-nav__link .md-ellipsis > .nav-title.twemoji {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
 }
 
-.md-nav__link .nav-title.twemoji svg {
+.md-nav__link .md-ellipsis > .nav-title.twemoji svg {
   vertical-align: sub;
-  margin: 0 0.5em 0 0;
   width: 1.3em;
-}
-
-.md-nav__link .nav-title.twemoji > span svg {
-  margin-left: 0;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -1388,4 +1384,3 @@ pre:hover > .md-code__nav {
 .md-consent__inner {
   background-color: var(--consent-bg-color);
 }
-
