@@ -609,14 +609,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* --- Left Navigation & TOC --- */
-html:not(.js-loading) .md-sidebar--primary .md-nav--primary {
-  opacity: 1;
-}
-
-html.js-loading .md-sidebar--primary .md-nav--primary {
-  visibility: hidden;
-}
-
 /* Force current Kluster nav icons (no plus/minus variants) */
 .md-sidebar--primary .nav__icon.plus,
 .md-sidebar--primary .nav__icon.minus {
@@ -648,6 +640,26 @@ html.js-loading .md-sidebar--primary .md-nav--primary {
 }
 
 @media screen and (min-width: 76.25em) {
+  .md-nav {
+    transition: opacity 0.2s ease;
+    opacity: 0;
+  }
+
+  /* To better handle page reloads and minimize flickering */
+  :not(.js-loading) .md-nav,
+  :not(.js-loading) .md-tabs__list {
+    opacity: 1;
+  }
+
+  .js-loading nav.md-nav,
+  .js-loading .md-tabs__list {
+    display: none !important;
+  }
+
+  .md-nav__item--nested.js-state-target:not(.expanded) > nav.md-nav {
+    display: none;
+  }
+
   .md-nav--primary .md-nav__title {
     box-shadow: none;
   }

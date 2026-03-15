@@ -15,157 +15,141 @@
     document.documentElement.classList.add("js-loading");
 
     (() => {
-      const STORAGE_PREFIX = "kluster.nav.toggle";
-      const SECTION_SELECTOR = ".md-sidebar--primary .md-nav__item--nested";
+      const BREAKPOINT_EM = 76.25;
+      const BREAKPOINT_PX = BREAKPOINT_EM * 16;
+      const STORAGE_PREFIX = "kluster.nav.section";
+      const PERSIST_MIN_LEVEL = 2;
+      const NESTED_ITEM_SELECTOR = ".md-sidebar--primary .md-nav__item--nested";
 
-      function getSections() {
-        return Array.from(document.querySelectorAll(SECTION_SELECTOR));
+      function isLargeScreen() {
+        return window.innerWidth >= BREAKPOINT_PX;
       }
 
-      function getDirectChildBySelector(element, selector) {
-        return Array.from(element.children).find((child) =>
-          child.matches(selector)
+      function getItemToggle(item) {
+        return item.querySelector(":scope > .md-nav__toggle");
+      }
+
+      function getItemNav(item) {
+        return item.querySelector(":scope > nav.md-nav");
+      }
+
+      function getItemLevel(item) {
+        const level = parseInt(getItemNav(item)?.getAttribute("data-md-level"), 10);
+        return Number.isNaN(level) ? null : level;
+      }
+
+      function isPersistedItem(item) {
+        const level = getItemLevel(item);
+        return (
+          level !== null &&
+          level >= PERSIST_MIN_LEVEL &&
+          Boolean(getItemToggle(item)) &&
+          Boolean(getItemNav(item))
         );
-      }
-
-      function getToggle(section) {
-        return getDirectChildBySelector(section, ".md-nav__toggle");
-      }
-
-      function getNestedNav(section) {
-        return getDirectChildBySelector(section, "nav.md-nav");
       }
 
       function getStorageKey(toggleId) {
         return `${STORAGE_PREFIX}.${toggleId}`;
       }
 
-      function readStoredState(toggleId) {
-        try {
-          const value = localStorage.getItem(getStorageKey(toggleId));
-          if (value === null) return null;
-          return value === "true";
-        } catch (error) {
-          return null;
-        }
+      function getPersistedItems() {
+        return Array.from(document.querySelectorAll(NESTED_ITEM_SELECTOR)).filter(
+          isPersistedItem
+        );
       }
 
-      function writeStoredState(toggleId, expanded) {
-        try {
-          localStorage.setItem(getStorageKey(toggleId), String(expanded));
-        } catch (error) {
-          // Ignore storage failures (private mode, blocked storage, etc.)
-        }
-      }
-
-      function applyState(section, expanded) {
-        const toggle = getToggle(section);
-        const nestedNav = getNestedNav(section);
-        if (!toggle || !nestedNav) return;
-
-        toggle.checked = expanded;
-        nestedNav.setAttribute("aria-expanded", String(expanded));
-      }
-
-      function getActiveSectionSet() {
+      function getActivePersistedToggleIds() {
         const activeLinks = document.querySelectorAll(
           ".md-sidebar--primary .md-nav__link--active"
         );
-        const activeSections = new Set();
+        const ids = new Set();
 
         activeLinks.forEach((activeLink) => {
-          let currentSection = activeLink.closest(".md-nav__item--nested");
+          let item = activeLink.closest(".md-nav__item--nested");
 
-          while (currentSection) {
-            activeSections.add(currentSection);
-            currentSection = currentSection.parentElement?.closest(
-              ".md-nav__item--nested"
-            );
+          while (item) {
+            if (isPersistedItem(item)) {
+              const toggle = getItemToggle(item);
+              if (toggle?.id) ids.add(toggle.id);
+            }
+            item = item.parentElement?.closest(".md-nav__item--nested");
           }
         });
 
-        return activeSections;
+        return ids;
+      }
+
+      function applySectionState(item, isExpanded) {
+        const toggle = getItemToggle(item);
+        const nav = getItemNav(item);
+        if (!toggle || !nav) return;
+
+        toggle.checked = isExpanded;
+        nav.setAttribute("aria-expanded", String(isExpanded));
+        item.classList.add("js-state-target");
+        item.classList.toggle("expanded", isExpanded);
+      }
+
+      const persistedItems = [];
+
+      function setupSection(item) {
+        const toggle = getItemToggle(item);
+        const nav = getItemNav(item);
+        if (!toggle || !nav || !toggle.id) return;
+
+        item.classList.add("js-state-target");
+
+        if (!toggle.dataset.listenerAttached) {
+          toggle.addEventListener("change", () => {
+            const checked = toggle.checked;
+            if (isLargeScreen()) {
+              localStorage.setItem(getStorageKey(toggle.id), String(checked));
+            }
+            applySectionState(item, checked);
+          });
+          toggle.dataset.listenerAttached = "true";
+        }
+
+        persistedItems.push(item);
       }
 
       function applyInitialState() {
-        const activeSections = getActiveSectionSet();
+        const large = isLargeScreen();
+        const activeToggleIds = getActivePersistedToggleIds();
 
-        getSections().forEach((section) => {
-          const toggle = getToggle(section);
+        persistedItems.forEach((item) => {
+          const toggle = getItemToggle(item);
           if (!toggle || !toggle.id) return;
 
-          const savedValue = readStoredState(toggle.id);
-          let expanded = savedValue === null ? true : savedValue;
+          let isExpanded = false;
 
-          if (activeSections.has(section)) {
-            expanded = true;
-            writeStoredState(toggle.id, true);
+          if (large) {
+            const saved = localStorage.getItem(getStorageKey(toggle.id));
+            isExpanded = saved === null ? true : saved === "true";
+
+            // Always expand the active section, even if storage says false
+            if (activeToggleIds.has(toggle.id)) {
+              isExpanded = true;
+              localStorage.setItem(getStorageKey(toggle.id), "true");
+            }
+          } else {
+            // On small screens, only expand the active section
+            isExpanded = activeToggleIds.has(toggle.id);
           }
 
-          applyState(section, expanded);
+          applySectionState(item, isExpanded);
         });
       }
 
-      function attachListeners() {
-        getSections().forEach((section) => {
-          const toggle = getToggle(section);
-          const nestedNav = getNestedNav(section);
-          if (!toggle || !nestedNav || !toggle.id) return;
-          if (toggle.dataset.persistListenerAttached) return;
-
-          toggle.addEventListener("change", () => {
-            const expanded = toggle.checked;
-            nestedNav.setAttribute("aria-expanded", String(expanded));
-            writeStoredState(toggle.id, expanded);
-          });
-
-          toggle.dataset.persistListenerAttached = "true";
-        });
-      }
-
-      function initializeSidebarState() {
-        attachListeners();
+      document.addEventListener("DOMContentLoaded", () => {
+        getPersistedItems().forEach(setupSection);
         applyInitialState();
-      }
+        document.documentElement.classList.remove("js-loading");
+      });
 
-      function runAndRevealNavigation() {
-        try {
-          initializeSidebarState();
-        } finally {
-          document.documentElement.classList.remove("js-loading");
-        }
-      }
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", runAndRevealNavigation, {
-          once: true,
-        });
-      } else {
-        runAndRevealNavigation();
-      }
-
-      window.addEventListener("load", initializeSidebarState);
-      window.addEventListener("resize", applyInitialState);
-
-      // Compatibility if navigation.instant gets enabled in the future.
-      const subscribeToInstantNavigation = () => {
-        if (
-          window.document$ &&
-          typeof window.document$.subscribe === "function"
-        ) {
-          window.document$.subscribe(() => {
-            initializeSidebarState();
-          });
-        }
-      };
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", subscribeToInstantNavigation, {
-          once: true,
-        });
-      } else {
-        subscribeToInstantNavigation();
-      }
+      window.addEventListener("resize", () => {
+        applyInitialState();
+      });
     })();
   </script>
   {{ super() }}
