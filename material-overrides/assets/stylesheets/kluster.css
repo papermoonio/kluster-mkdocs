@@ -609,7 +609,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* --- Left Navigation & TOC --- */
-/* Force current Kluster nav icons (no plus/minus variants) */
 .md-sidebar--primary .nav__icon.plus,
 .md-sidebar--primary .nav__icon.minus {
   display: none !important;
@@ -640,11 +639,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 @media screen and (min-width: 76.25em) {
-  .md-nav {
-    transition: opacity 0.2s ease;
-    opacity: 0;
-  }
-
   /* To better handle page reloads and minimize flickering */
   :not(.js-loading) .md-nav,
   :not(.js-loading) .md-tabs__list {
