@@ -13,6 +13,10 @@
       "value": "/code-reviews/get-started/installation/"
     },
     {
+      "key": "/code-reviews/activation-codes/",
+      "value": "/code-reviews/faq/#activation-codes"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
@@ -77,10 +81,6 @@
       "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
-      "key": "/code-reviews/activation-codes/",
-      "value": "/code-reviews/faq/#activation-codes"
-    },
-    {
       "key": "/code-reviews/human-written-code/automatic-background-reviews/how-it-works/",
       "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
     },
@@ -90,6 +90,26 @@
     },
     {
       "key": "/code-reviews/human-written-code/on-demand-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/",
       "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
@@ -139,30 +159,6 @@
     {
       "key": "/code-reviews/tools/",
       "value": "/code-reviews/reference/mcp-tools/"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
-    },
-    {
-      "key": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/get-api-key/",
