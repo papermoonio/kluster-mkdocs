@@ -666,6 +666,16 @@ html .md-footer-meta.md-typeset .papermoon a {
     padding-left: 0.8rem;
   }
 
+  /* Condense spacing inside nested sections (left nav only) */
+  .md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > .md-nav__link,
+  .md-nav--primary .md-nav[data-md-level="2"] .md-nav__item > .md-nav__link,
+  .md-nav--primary .md-nav[data-md-level="3"] .md-nav__item > .md-nav__link,
+  .md-nav--primary .md-nav[data-md-level="4"] .md-nav__item > .md-nav__link {
+    padding-top: 0.40rem;
+    padding-bottom: 0.40rem;
+    margin-bottom: 0.10rem;
+  }
+
   /* Indent level 2 nav items and add section lines */
   .md-nav[data-md-level="2"] > .md-nav__list {
     margin-bottom: 0.4rem;
