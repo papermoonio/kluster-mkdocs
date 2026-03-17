@@ -13,24 +13,28 @@
       "value": "/code-reviews/get-started/installation/"
     },
     {
+      "key": "/code-reviews/activation-codes/",
+      "value": "/code-reviews/faq/#activation-codes"
+    },
+    {
       "key": "/code-reviews/agent-mode/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/dependency-checks/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
     },
     {
       "key": "/code-reviews/agent-mode/automatic-agent-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/"
     },
     {
       "key": "/code-reviews/agent-mode/examples/cursor-firebase-nextjs/",
@@ -46,11 +50,11 @@
     },
     {
       "key": "/code-reviews/ai-generated-code/automatic-reviews/dependency-checks/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
     },
     {
       "key": "/code-reviews/ai-generated-code/automatic-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/ai-generated-code/examples/cursor-firebase-nextjs/",
@@ -66,7 +70,7 @@
     },
     {
       "key": "/code-reviews/examples/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/"
     },
     {
       "key": "/code-reviews/examples/cursor-firebase-nextjs/",
@@ -77,20 +81,36 @@
       "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
-      "key": "/code-reviews/activation-codes/",
-      "value": "/code-reviews/faq/#activation-codes"
-    },
-    {
       "key": "/code-reviews/human-written-code/automatic-background-reviews/how-it-works/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
     },
     {
       "key": "/code-reviews/human-written-code/automatic-background-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/human-written-code/on-demand-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
+    },
+    {
+      "key": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/",
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/installation/",
@@ -98,43 +118,43 @@
     },
     {
       "key": "/code-reviews/instant-ide-mode/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/how-it-works/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/how-it-works/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/#how-it-works"
     },
     {
       "key": "/code-reviews/instant-ide-mode/background-auto-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/automatic-background-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/instant-ide-mode/instant-actions/quickstart/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/quickstart/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/quickstart/auto-review/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/"
     },
     {
       "key": "/code-reviews/quickstart/dependency-checks/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/dependency-checks/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/#dependency-checks"
     },
     {
       "key": "/code-reviews/quickstart/manual-review/",
-      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/quickstart/"
+      "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
       "key": "/code-reviews/tools/",
@@ -398,7 +418,7 @@
     },
     {
       "key": "/verify/examples/",
-      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/"
+      "value": "/code-reviews/ide-reviews/ai-generated-code/examples/"
     },
     {
       "key": "/verify/examples/cursor-firebase-nextjs/",
