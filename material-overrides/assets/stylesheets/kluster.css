@@ -671,9 +671,9 @@ html .md-footer-meta.md-typeset .papermoon a {
   .md-nav--primary .md-nav[data-md-level="2"] .md-nav__item > .md-nav__link,
   .md-nav--primary .md-nav[data-md-level="3"] .md-nav__item > .md-nav__link,
   .md-nav--primary .md-nav[data-md-level="4"] .md-nav__item > .md-nav__link {
-    padding-top: 0.40rem;
-    padding-bottom: 0.40rem;
-    margin-bottom: 0.10rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.1rem;
   }
 
   /* Indent level 2 nav items and add section lines */
