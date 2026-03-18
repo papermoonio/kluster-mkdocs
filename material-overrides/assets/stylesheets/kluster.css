@@ -806,6 +806,21 @@ html .md-footer-meta.md-typeset .papermoon a {
   align-items: center;
 }
 
+.md-path__link .md-ellipsis > .path-title.twemoji {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-path__link .md-ellipsis > .path-title.twemoji > span[aria-hidden="true"] {
+  display: flex;
+}
+
+.md-path__link .md-ellipsis > .path-title.twemoji svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
 .md-path__link:hover {
   color: var(--md-typeset-a-color);
   text-decoration: underline;
