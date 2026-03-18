@@ -35,6 +35,13 @@
   font-size: 0.75rem;
 }
 
+/* --- Left nav --- */
+.md-sidebar--primary .md-nav--primary .md-nav__link,
+.md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav__link[for],
+.md-sidebar--primary .md-nav--primary .md-nav__link .md-nav__icon {
+  color: var(--md-default-fg-color);
+}
+
 /* --- Heading highlight pill (matches kluster.ai: text-[var(--info-blue-600)] bg-[var(--info-blue-600)]/10 px-2 py-1 rounded-lg) --- */
 .text-highlight {
   color: var(--info-blue-600);
