@@ -577,6 +577,21 @@ html .md-footer-meta.md-typeset .papermoon a {
   fill: var(--primary-green-300);
 }
 
+.md-footer__title .md-ellipsis > .footer-title.twemoji {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-footer__title .md-ellipsis > .footer-title.twemoji > span[aria-hidden="true"] {
+  display: flex;
+}
+
+.md-footer__title .md-ellipsis > .footer-title.twemoji svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-main__inner {
