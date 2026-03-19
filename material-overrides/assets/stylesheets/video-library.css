@@ -174,3 +174,43 @@
     font-size: 1.2rem;
   }
 }
+
+/* ---- Video Library Badges ---- */
+
+.md-typeset .video-library-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0;
+}
+
+.md-typeset .video-library-item.is-open .video-library-badges {
+  margin: 0 0 0.25rem;
+}
+
+.md-typeset .video-library-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 15%, transparent);
+  background: color-mix(in srgb, var(--md-default-fg-color) 8%, transparent);
+  color: var(--md-default-fg-color--light);
+}
+
+/* Tool badges — filled with brand color */
+.md-typeset .video-library-badge--cursor {
+  border-color: transparent;
+  background-color: var(--tertiary-indigo-300);
+  color: var(--light);
+}
+
+.md-typeset .video-library-badge--vs-code {
+  border-color: transparent;
+  background-color: var(--info-blue-600);
+  color: var(--light);
+}

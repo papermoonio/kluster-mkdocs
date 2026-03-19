@@ -10,7 +10,7 @@
   {{ page.content | safe }}
 
   {% set videos = page.meta.videos if page and page.meta and page.meta.videos else [] %}
-  {% set category_order = ["Get Started", "Review in IDE", "More Features"] %}
+  {% set category_order = ["Get Started", "Review in IDE", "CLI", "Integrations & More"] %}
   {% set rendered_video_count = namespace(value=0) %}
 
   {%- macro slugify(value) -%}
@@ -107,6 +107,14 @@
                 >
                   Close video
                 </button>
+                {% if video.badges %}
+                  <div class="video-library-badges">
+                    {% for badge in video.badges %}
+                      {% set badge_slug = badge | lower | replace(" ", "-") %}
+                      <span class="video-library-badge video-library-badge--{{ badge_slug }}">{{ badge }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
                 {% if video.description %}
                   <p class="video-library-description">{{ video.description }}</p>
                 {% endif %}
@@ -136,7 +144,8 @@
         var categoryMap = {
           "Get Started": "get-started",
           "Review in IDE": "review-in-ide",
-          "More Features": "more-features"
+          "CLI": "cli",
+          "Integrations & More": "integrations-more"
         };
         var sections = Array.from(document.querySelectorAll(".video-library-category"));
         sections.forEach(function (section) {
