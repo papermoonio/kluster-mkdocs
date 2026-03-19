@@ -661,12 +661,12 @@ html .md-footer-meta.md-typeset .papermoon a {
     margin-left: -0.5rem;
   }
 
-  .md-nav__item--section {
-    margin: 0 0 1em 0;
+  .md-nav--primary > .md-nav__list > .md-nav__item.md-nav__item--section {
+    margin: 0.8rem 0 0.8rem 0;
   }
 
-  .md-nav__item--section > label {
-    border-bottom: 1px solid var(--border-color);
+  .md-nav--primary > .md-nav__list > .md-nav__item.md-nav__item--section > label {
+    border-bottom: none;
   }
 
   .md-nav__item--section > label.md-nav__link[for] {
@@ -681,6 +681,12 @@ html .md-footer-meta.md-typeset .papermoon a {
     padding-left: 0.8rem;
   }
 
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.1rem;
+  }
+
   /* Condense spacing inside nested sections (left nav only) */
   .md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > .md-nav__link,
   .md-nav--primary .md-nav[data-md-level="2"] .md-nav__item > .md-nav__link,
@@ -691,9 +697,9 @@ html .md-footer-meta.md-typeset .papermoon a {
     margin-bottom: 0.1rem;
   }
 
-  /* Indent level 2 nav items and add section lines */
-  .md-nav[data-md-level="2"] > .md-nav__list {
-    margin-bottom: 0.4rem;
+  /* Indent level 2 nav items */
+  .md-nav--primary .md-nav[data-md-level="2"] > .md-nav__list {
+    margin-bottom: 0.2rem;
     padding-bottom: 0;
   }
 
@@ -716,6 +722,13 @@ html .md-footer-meta.md-typeset .papermoon a {
     background-color: var(--nav-active-bg-color);
     border-radius: var(--hover-border-radius);
     padding-left: 0.5rem;
+  }
+
+  .md-nav--primary .md-nav__link,
+  .md-nav--primary .md-nav__link--active,
+  .md-nav--primary .md-nav__link:hover {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
   }
 
   /* Align top-level plain nav items (e.g. Home) with section headers */
