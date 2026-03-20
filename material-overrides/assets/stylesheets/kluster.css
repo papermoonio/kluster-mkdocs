@@ -677,7 +677,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 
   /* Indent level 2 nav items */
   .md-nav--primary .md-nav[data-md-level="2"] > .md-nav__list {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
     padding-bottom: 0;
   }
 
@@ -787,7 +787,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   .md-nav__link {
     padding: 0.4rem 0.5rem;
     margin-top: 0;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.15rem;
     font-size: 14px;
     font-weight: 600;
   }
