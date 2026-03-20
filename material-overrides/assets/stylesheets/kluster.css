@@ -662,11 +662,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   .md-nav--primary > .md-nav__list > .md-nav__item.md-nav__item--section {
-    margin: 0.8rem 0 0.8rem 0;
-  }
-
-  .md-nav--primary > .md-nav__list > .md-nav__item.md-nav__item--section > label {
-    border-bottom: none;
+    margin: 1rem 0;
   }
 
   .md-nav__item--section > label.md-nav__link[for] {
@@ -679,22 +675,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 
   [dir="ltr"] .md-nav--primary .md-nav__list {
     padding-left: 0.8rem;
-  }
-
-  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    margin-bottom: 0.1rem;
-  }
-
-  /* Condense spacing inside nested sections (left nav only) */
-  .md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > .md-nav__link,
-  .md-nav--primary .md-nav[data-md-level="2"] .md-nav__item > .md-nav__link,
-  .md-nav--primary .md-nav[data-md-level="3"] .md-nav__item > .md-nav__link,
-  .md-nav--primary .md-nav[data-md-level="4"] .md-nav__item > .md-nav__link {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    margin-bottom: 0.1rem;
   }
 
   /* Indent level 2 nav items */
@@ -807,9 +787,9 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   .md-nav__link {
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
     margin-top: 0;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
     font-size: 14px;
     font-weight: 600;
   }
