@@ -577,6 +577,21 @@ html .md-footer-meta.md-typeset .papermoon a {
   fill: var(--primary-green-300);
 }
 
+.md-footer__title .md-ellipsis > .footer-title.twemoji {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-footer__title .md-ellipsis > .footer-title.twemoji > span[aria-hidden="true"] {
+  display: flex;
+}
+
+.md-footer__title .md-ellipsis > .footer-title.twemoji svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
 /* Mobile Footer styling */
 @media screen and (max-width: 767px) {
   .md-main__inner {
@@ -613,7 +628,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 /* --- Left Navigation & TOC --- */
 /* Home nav item */
 .md-nav__link .nav-home {
-  font-weight: 700;
   display: flex;
   gap: 0.5em;
   align-items: center;
@@ -626,7 +640,6 @@ html .md-footer-meta.md-typeset .papermoon a {
 /* Nav items with inline icons */
 .md-nav__link .md-ellipsis > .nav-title.twemoji {
   display: inline-flex;
-  align-items: baseline;
   gap: 0.5em;
 }
 
@@ -646,12 +659,8 @@ html .md-footer-meta.md-typeset .papermoon a {
     margin-left: -0.5rem;
   }
 
-  .md-nav__item--section {
-    margin: 0 0 1.25em 0;
-  }
-
-  .md-nav__item--section > label {
-    border-bottom: 1px solid var(--border-color);
+  .md-nav--primary > .md-nav__list > .md-nav__item.md-nav__item--section {
+    margin: 1rem 0;
   }
 
   .md-nav__item--section > label.md-nav__link[for] {
@@ -666,9 +675,9 @@ html .md-footer-meta.md-typeset .papermoon a {
     padding-left: 0.8rem;
   }
 
-  /* Indent level 2 nav items and add section lines */
-  .md-nav[data-md-level="2"] > .md-nav__list {
-    margin-bottom: 0.4rem;
+  /* Indent level 2 nav items */
+  .md-nav--primary .md-nav[data-md-level="2"] > .md-nav__list {
+    margin-bottom: 0.3rem;
     padding-bottom: 0;
   }
 
@@ -691,6 +700,13 @@ html .md-footer-meta.md-typeset .papermoon a {
     background-color: var(--nav-active-bg-color);
     border-radius: var(--hover-border-radius);
     padding-left: 0.5rem;
+  }
+
+  .md-nav--primary .md-nav__link,
+  .md-nav--primary .md-nav__link--active,
+  .md-nav--primary .md-nav__link:hover {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
   }
 
   /* Align top-level plain nav items (e.g. Home) with section headers */
@@ -745,7 +761,7 @@ html .md-footer-meta.md-typeset .papermoon a {
     border-radius: var(--hover-border-radius);
   }
 
-  .md-nav__list .md-nav__link--active {
+  .md-nav--primary .md-nav__list .md-nav__link--active {
     padding-left: 0.8rem;
   }
 
@@ -769,9 +785,9 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   .md-nav__link {
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
     margin-top: 0;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
     font-size: 14px;
     font-weight: 600;
   }
@@ -794,6 +810,21 @@ html .md-footer-meta.md-typeset .papermoon a {
 /* --- Breadcrumbs --- */
 .md-path__item:not(:first-child) {
   align-items: center;
+}
+
+.md-path__link .md-ellipsis > .path-title.twemoji {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-path__link .md-ellipsis > .path-title.twemoji > span[aria-hidden="true"] {
+  display: flex;
+}
+
+.md-path__link .md-ellipsis > .path-title.twemoji svg {
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 .md-path__link:hover {
