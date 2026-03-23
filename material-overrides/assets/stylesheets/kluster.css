@@ -735,6 +735,12 @@ html .md-footer-meta.md-typeset .papermoon a {
     width: 12.1rem;
   }
 
+  .md-nav--primary .md-nav__link,
+  .md-nav--primary .md-nav__item--section > .md-nav__link[for] {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .md-nav__title .md-nav__button.md-logo img {
     height: 2em;
   }
