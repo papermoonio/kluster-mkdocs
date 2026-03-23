@@ -735,6 +735,16 @@ html .md-footer-meta.md-typeset .papermoon a {
     width: 12.1rem;
   }
 
+  .md-nav__title > .nav-title.twemoji {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .md-nav__title > .nav-title.twemoji > span[aria-hidden="true"] {
+    display: flex;
+  }
+
   .md-nav--primary .md-nav__link,
   .md-nav--primary .md-nav__item--section > .md-nav__link[for] {
     font-size: 14px;
