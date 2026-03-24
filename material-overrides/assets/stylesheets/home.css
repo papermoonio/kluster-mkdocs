@@ -148,7 +148,7 @@
     background 0.2s ease;
   min-width: max-content;
   justify-content: center;
-  flex: 48%;
+  flex: 0 1 48%;
 }
 
 .md-typeset .md-button.ide-btn:hover {
