@@ -700,13 +700,6 @@ html .md-footer-meta.md-typeset .papermoon a {
     padding-left: 0.5rem;
   }
 
-  .md-nav--primary .md-nav__link,
-  .md-nav--primary .md-nav__link--active,
-  .md-nav--primary .md-nav__link:hover {
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-  }
-
   /* Align top-level plain nav items (e.g. Home) with section headers */
   .md-nav--primary
     > .md-nav__list
