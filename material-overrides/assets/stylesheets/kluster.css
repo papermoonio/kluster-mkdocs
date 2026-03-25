@@ -573,6 +573,10 @@ html .md-footer-meta.md-typeset .papermoon a {
   padding-bottom: 0;
 }
 
+.md-footer__title {
+    margin-bottom: 0;
+}
+
 .md-social__link svg {
   fill: var(--primary-green-300);
 }
