@@ -818,6 +818,15 @@ html .md-footer-meta.md-typeset .papermoon a {
   .md-nav--secondary .md-nav__title[for="__toc"] {
     padding: 0.5rem 0.6rem 0.5rem 1.1rem;
   }
+
+  .md-nav--secondary .md-nav__link {
+    opacity: 0.75;
+  }
+
+  .md-nav--secondary .md-nav__link--active,
+  .md-nav--secondary .md-nav__link:hover {
+    opacity: 1;
+  }
 }
 
 /* --- Breadcrumbs --- */
