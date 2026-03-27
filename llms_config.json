@@ -65,6 +65,11 @@
                 "id": "pr_reviews",
                 "name": "PR Reviews",
                 "description": "Information and guides related to using kluster.ai PR Reviews to automatically review pull requests on GitHub, GitLab, and Bitbucket."
+            },
+            "changelog": {
+                "id": "changelog",
+                "name": "Changelog",
+                "description": "Chronological timeline of kluster.ai Code Reviews product updates, new features, bug fixes, and improvements."
             }
         },
         "exclusions": {
@@ -72,7 +77,8 @@
                 "README.md",
                 "LICENSE.md",
                 "ai-resources.md",
-                "video-library.md"
+                "video-library.md",
+                "changelogs.md"
             ],
             "skip_paths": ["venv"]
         }
