@@ -75,7 +75,6 @@
 /* ------------------------------------------------------------------ */
 
 .nt-timeline-before {
-    content: "";
     height: 15px;
 }
 
@@ -89,7 +88,6 @@
 }
 
 .nt-timeline-after {
-    content: "";
     height: 60px;
     margin-bottom: 20px;
 }
