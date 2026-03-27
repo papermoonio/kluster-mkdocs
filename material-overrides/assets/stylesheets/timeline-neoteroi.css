@@ -25,7 +25,11 @@
 }
 
 .nt-timeline.vertical.left .nt-timeline-items {
-  background: linear-gradient(to bottom, var(--info-blue-500), var(--info-blue-500))
+  background: linear-gradient(
+      to bottom,
+      var(--info-blue-500),
+      var(--info-blue-500)
+    )
     no-repeat 30px / 2px 100%;
 }
 
@@ -44,8 +48,6 @@
   height: 15px;
 }
 
-/* Local color exception: the system exposes an opaque accent token, so the fade
-   keeps explicit transparent blue stops until alpha-aware tokens exist. */
 .nt-timeline.vertical.left .nt-timeline-before {
   background: linear-gradient(rgb(78 117 255 / 0) 0%, var(--info-blue-500) 100%)
     no-repeat 30px / 2px 100%;
