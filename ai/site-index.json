@@ -1,0 +1,1919 @@
+{
+  "version_hash": "sha256:4c11565e2e4e1b885c286267224f901ece888420c028a4c38a64f4e152999257",
+  "page_count": 30,
+  "pages": [
+    {
+      "id": "code-reviews-cli-git-hooks",
+      "title": "Git Hooks",
+      "slug": "code-reviews-cli-git-hooks",
+      "categories": [
+        "CLI"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-git-hooks.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/git-hooks/",
+      "preview": "Automate kluster.ai code reviews with git hooks. Install pre-commit or pre-push hooks to catch issues before they reach your repository.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Hook types",
+          "anchor": "hook-types"
+        },
+        {
+          "depth": 2,
+          "title": "How hooks work",
+          "anchor": "how-hooks-work"
+        },
+        {
+          "depth": 2,
+          "title": "Install hooks",
+          "anchor": "install-hooks"
+        },
+        {
+          "depth": 2,
+          "title": "Configure blocking severity",
+          "anchor": "configure-blocking-severity"
+        },
+        {
+          "depth": 3,
+          "title": "Warn-only mode",
+          "anchor": "warn-only-mode"
+        },
+        {
+          "depth": 2,
+          "title": "Check hook status",
+          "anchor": "check-hook-status"
+        },
+        {
+          "depth": 2,
+          "title": "Bypass hooks",
+          "anchor": "bypass-hooks"
+        },
+        {
+          "depth": 2,
+          "title": "Uninstall hooks",
+          "anchor": "uninstall-hooks"
+        },
+        {
+          "depth": 2,
+          "title": "Custom hook paths",
+          "anchor": "custom-hook-paths"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 889,
+        "token_estimate": 1786,
+        "headings": 10,
+        "sections_indexed": 10
+      },
+      "version_hash": "sha256:52fc9c35b45a55127f269d75df5e34fe9824a454959728f8696f6b29d4b380b4",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-git-hooks.md"
+    },
+    {
+      "id": "code-reviews-cli-installation",
+      "title": "CLI Installation",
+      "slug": "code-reviews-cli-installation",
+      "categories": [
+        "Basics",
+        "CLI"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-installation.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/installation/",
+      "preview": "Install kluster-cli on macOS, Linux, or Windows. Set up shell completions, configure your PATH, and keep the CLI up to date.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Install kluster-cli",
+          "anchor": "install-kluster-cli"
+        },
+        {
+          "depth": 3,
+          "title": "Verify installation",
+          "anchor": "verify-installation"
+        },
+        {
+          "depth": 3,
+          "title": "Login",
+          "anchor": "login"
+        },
+        {
+          "depth": 2,
+          "title": "Supported platforms",
+          "anchor": "supported-platforms"
+        },
+        {
+          "depth": 2,
+          "title": "Update",
+          "anchor": "update"
+        },
+        {
+          "depth": 2,
+          "title": "Uninstall",
+          "anchor": "uninstall"
+        },
+        {
+          "depth": 2,
+          "title": "Shell completions (optional) { #shell-completions }",
+          "anchor": "shell-completions-optional-shell-completions"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 828,
+        "token_estimate": 1827,
+        "headings": 8,
+        "sections_indexed": 8
+      },
+      "version_hash": "sha256:d1215f98100645a5d44434afdff2b1b0d8c042402d5ca72e79c8b9c04ce279ce",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-installation.md"
+    },
+    {
+      "id": "code-reviews-cli-quickstart",
+      "title": "CLI Quickstart",
+      "slug": "code-reviews-cli-quickstart",
+      "categories": [
+        "Basics",
+        "CLI"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-quickstart.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/quickstart/",
+      "preview": "Learn how to install kluster-cli, authenticate with your API key, and review your first changes. No IDE or CI pipeline required.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "1. Install",
+          "anchor": "1-install"
+        },
+        {
+          "depth": 2,
+          "title": "2. Login",
+          "anchor": "2-login"
+        },
+        {
+          "depth": 2,
+          "title": "3. Review your code",
+          "anchor": "3-review-your-code"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 765,
+        "token_estimate": 1680,
+        "headings": 5,
+        "sections_indexed": 5
+      },
+      "version_hash": "sha256:dc114a942aabf73ecbd3a10a6ea98bdc64d88004c0ba14c2547a6456ee651e0b",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-quickstart.md"
+    },
+    {
+      "id": "code-reviews-cli-reference",
+      "title": "CLI Reference",
+      "slug": "code-reviews-cli-reference",
+      "categories": [
+        "CLI",
+        "Reference"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-reference.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/reference/",
+      "preview": "Reference for kluster.ai CLI commands, configuration options, and exit codes, with quick lookups for flags, config settings, and environment variables.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Commands",
+          "anchor": "commands"
+        },
+        {
+          "depth": 2,
+          "title": "Configuration",
+          "anchor": "configuration"
+        },
+        {
+          "depth": 3,
+          "title": "Config file",
+          "anchor": "config-file"
+        },
+        {
+          "depth": 3,
+          "title": "Environment variables",
+          "anchor": "environment-variables"
+        },
+        {
+          "depth": 3,
+          "title": "Output formats",
+          "anchor": "output-formats"
+        },
+        {
+          "depth": 3,
+          "title": "Configuration priority",
+          "anchor": "configuration-priority"
+        },
+        {
+          "depth": 2,
+          "title": "Authentication",
+          "anchor": "authentication"
+        },
+        {
+          "depth": 2,
+          "title": "Exit codes",
+          "anchor": "exit-codes"
+        },
+        {
+          "depth": 3,
+          "title": "Review commands",
+          "anchor": "review-commands"
+        },
+        {
+          "depth": 3,
+          "title": "Git hooks",
+          "anchor": "git-hooks"
+        },
+        {
+          "depth": 3,
+          "title": "General errors",
+          "anchor": "general-errors"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 700,
+        "token_estimate": 1700,
+        "headings": 12,
+        "sections_indexed": 12
+      },
+      "version_hash": "sha256:54874100972c7a85a1888c47278ece23a62169dbff730402f23fe6d8e148e0bc",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-reference.md"
+    },
+    {
+      "id": "code-reviews-cli-repo-reviews",
+      "title": "Repo Reviews from CLI",
+      "slug": "code-reviews-cli-repo-reviews",
+      "categories": [
+        "Repo Reviews",
+        "CLI"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-repo-reviews.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/repo-reviews/",
+      "preview": "Trigger and monitor system-wide repo reviews from your terminal using kluster-cli, with a terminal-first workflow for codebase analysis.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Start a repo review",
+          "anchor": "start-a-repo-review"
+        },
+        {
+          "depth": 2,
+          "title": "Check review status and results",
+          "anchor": "check-review-status-and-results"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 524,
+        "token_estimate": 1022,
+        "headings": 4,
+        "sections_indexed": 4
+      },
+      "version_hash": "sha256:241cb460a028341382713086e4f0e2d69defc4f1469be4f724cdc4967cef3394",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-repo-reviews.md"
+    },
+    {
+      "id": "code-reviews-cli-review-commands",
+      "title": "Review Commands",
+      "slug": "code-reviews-cli-review-commands",
+      "categories": [
+        "CLI"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-review-commands.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/cli/review-commands/",
+      "preview": "Review staged changes, diffs, branches, and individual files with kluster-cli. Choose between instant and deep analysis modes.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Review staged changes",
+          "anchor": "review-staged-changes"
+        },
+        {
+          "depth": 2,
+          "title": "Review a diff",
+          "anchor": "review-a-diff"
+        },
+        {
+          "depth": 2,
+          "title": "Review files",
+          "anchor": "review-files"
+        },
+        {
+          "depth": 2,
+          "title": "Analysis modes",
+          "anchor": "analysis-modes"
+        },
+        {
+          "depth": 2,
+          "title": "CI/CD and scripting",
+          "anchor": "cicd-and-scripting"
+        },
+        {
+          "depth": 2,
+          "title": "Review history",
+          "anchor": "review-history"
+        },
+        {
+          "depth": 3,
+          "title": "List recent reviews",
+          "anchor": "list-recent-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "View review details",
+          "anchor": "view-review-details"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 1532,
+        "token_estimate": 3686,
+        "headings": 9,
+        "sections_indexed": 9
+      },
+      "version_hash": "sha256:495f1bfee43e4ca879bdf2c6877734ae88122f1ac8b2933b68af65e9fa8dcb48",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-cli-review-commands.md"
+    },
+    {
+      "id": "code-reviews-configuration-klusterignore",
+      "title": ".klusterignore",
+      "slug": "code-reviews-configuration-klusterignore",
+      "categories": [
+        "Basics",
+        "Configuration"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-klusterignore.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/configuration/klusterignore/",
+      "preview": "Exclude files and folders from kluster.ai Code Reviews with a .gitignore-compatible .klusterignore file, using patterns, wildcards, and negation.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Supported workflows",
+          "anchor": "supported-workflows"
+        },
+        {
+          "depth": 2,
+          "title": "Quickstart",
+          "anchor": "quickstart"
+        },
+        {
+          "depth": 2,
+          "title": "Syntax",
+          "anchor": "syntax"
+        },
+        {
+          "depth": 2,
+          "title": "How it affects reviews",
+          "anchor": "how-it-affects-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        },
+        {
+          "depth": 2,
+          "title": "Troubleshooting",
+          "anchor": "troubleshooting"
+        }
+      ],
+      "stats": {
+        "word_count": 435,
+        "token_estimate": 801,
+        "headings": 6,
+        "sections_indexed": 6
+      },
+      "version_hash": "sha256:848156888d765edd2ef1792d1c32c77f823b95f6f0c7d50305d7f9fa8c683bf4",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-klusterignore.md"
+    },
+    {
+      "id": "code-reviews-configuration-options",
+      "title": "Options",
+      "slug": "code-reviews-configuration-options",
+      "categories": [
+        "Configuration"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-options.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/configuration/options/",
+      "preview": "Configure kluster.ai Code Review settings, from analysis depth and sensitivity levels to issue types and enabled tools used to verify code across your workflow.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Sensitivity settings",
+          "anchor": "sensitivity-settings"
+        },
+        {
+          "depth": 2,
+          "title": "Code review scope",
+          "anchor": "code-review-scope"
+        },
+        {
+          "depth": 2,
+          "title": "Enabled tools",
+          "anchor": "enabled-tools"
+        },
+        {
+          "depth": 2,
+          "title": "Analysis level",
+          "anchor": "analysis-level"
+        },
+        {
+          "depth": 3,
+          "title": "Human-driven development",
+          "anchor": "human-driven-development"
+        },
+        {
+          "depth": 3,
+          "title": "AI-driven development",
+          "anchor": "ai-driven-development"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 602,
+        "token_estimate": 1034,
+        "headings": 7,
+        "sections_indexed": 7
+      },
+      "version_hash": "sha256:09fbaa3fd9d7cbfd885d956d37864a65726e65e3b36bac773791f938e7a30e12",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-options.md"
+    },
+    {
+      "id": "code-reviews-configuration-rules",
+      "title": "Custom rules",
+      "slug": "code-reviews-configuration-rules",
+      "categories": [
+        "Configuration"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-rules.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/configuration/rules/",
+      "preview": "Learn how to define and manage custom code review rules to enforce consistent code quality, using manual rules or learned rules from GitHub repositories.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Rule types",
+          "anchor": "rule-types"
+        },
+        {
+          "depth": 2,
+          "title": "Set up instructions",
+          "anchor": "set-up-instructions"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 315,
+        "token_estimate": 523,
+        "headings": 3,
+        "sections_indexed": 3
+      },
+      "version_hash": "sha256:f56e57a5b2d9e4623bc255dfba5ec223f75af882e367b9bd4639473f40490b17",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-configuration-rules.md"
+    },
+    {
+      "id": "code-reviews-external-knowledge-jira",
+      "title": "Set Up Jira Integration for Code Reviews",
+      "slug": "code-reviews-external-knowledge-jira",
+      "categories": [
+        "External Knowledge"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-jira.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/external-knowledge/jira/",
+      "preview": "Connect Jira to kluster.ai to review code against ticket requirements. Set up Jira Cloud or self-hosted Jira and learn how ticket context flows into reviews.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Connect Jira",
+          "anchor": "connect-jira"
+        },
+        {
+          "depth": 3,
+          "title": "Jira Cloud (OAuth)",
+          "anchor": "jira-cloud-oauth"
+        },
+        {
+          "depth": 3,
+          "title": "Self-hosted Jira (API token)",
+          "anchor": "self-hosted-jira-api-token"
+        },
+        {
+          "depth": 2,
+          "title": "How Jira context flows into reviews",
+          "anchor": "how-jira-context-flows-into-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "Example workflow",
+          "anchor": "example-workflow"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 1632,
+        "token_estimate": 3120,
+        "headings": 6,
+        "sections_indexed": 6
+      },
+      "version_hash": "sha256:9c20e95b73a751480df38b48d7f52552ab8b9c6628304b9c0eebd3324b4dcd2b",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-jira.md"
+    },
+    {
+      "id": "code-reviews-external-knowledge-quickstart",
+      "title": "External Knowledge Quickstart for Reviews",
+      "slug": "code-reviews-external-knowledge-quickstart",
+      "categories": [
+        "Basics",
+        "External Knowledge"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-quickstart.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/external-knowledge/quickstart/",
+      "preview": "Connect external sources like Jira to kluster.ai so code reviews can verify your code against real project requirements and specifications.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Connecting to external tools",
+          "anchor": "connecting-to-external-tools"
+        },
+        {
+          "depth": 2,
+          "title": "Available integrations",
+          "anchor": "available-integrations"
+        }
+      ],
+      "stats": {
+        "word_count": 256,
+        "token_estimate": 434,
+        "headings": 2,
+        "sections_indexed": 2
+      },
+      "version_hash": "sha256:5e9570ff968109bd59e0c552058e97043cd202c20ded840a2e2c21dd35113b2d",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-quickstart.md"
+    },
+    {
+      "id": "code-reviews-faq",
+      "title": "Code Reviews Frequently Asked Questions",
+      "slug": "code-reviews-faq",
+      "categories": [
+        "Troubleshooting"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-faq.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/faq/",
+      "preview": "Find answers to common questions about kluster.ai Code Review, covering setup, supported IDEs, review modes, security, and troubleshooting topics.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "General",
+          "anchor": "general"
+        },
+        {
+          "depth": 3,
+          "title": "What is the difference between human-written code and AI-generated code reviews?",
+          "anchor": "what-is-the-difference-between-human-written-code-and-ai-generated-code-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "I mostly write code without AI—is kluster.ai useful for me?",
+          "anchor": "i-mostly-write-code-without-aiis-klusterai-useful-for-me"
+        },
+        {
+          "depth": 3,
+          "title": "When should I run an on-demand review?",
+          "anchor": "when-should-i-run-an-on-demand-review"
+        },
+        {
+          "depth": 3,
+          "title": "Do the two modes ever conflict or overlap?",
+          "anchor": "do-the-two-modes-ever-conflict-or-overlap"
+        },
+        {
+          "depth": 3,
+          "title": "What IDEs and CLI tools are supported?",
+          "anchor": "what-ides-and-cli-tools-are-supported"
+        },
+        {
+          "depth": 3,
+          "title": "What programming languages are supported?",
+          "anchor": "what-programming-languages-are-supported"
+        },
+        {
+          "depth": 3,
+          "title": "Can I review a full codebase?",
+          "anchor": "can-i-review-a-full-codebase"
+        },
+        {
+          "depth": 3,
+          "title": "Can I use kluster.ai with any AI model?",
+          "anchor": "can-i-use-klusterai-with-any-ai-model"
+        },
+        {
+          "depth": 3,
+          "title": "Can I exclude files or folders from reviews?",
+          "anchor": "can-i-exclude-files-or-folders-from-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "How can I invite a team member?",
+          "anchor": "how-can-i-invite-a-team-member"
+        },
+        {
+          "depth": 3,
+          "title": "How frequently does kluster.ai update its vulnerability detection?",
+          "anchor": "how-frequently-does-klusterai-update-its-vulnerability-detection"
+        },
+        {
+          "depth": 3,
+          "title": "How can I provide feedback about issues detected by kluster.ai?",
+          "anchor": "how-can-i-provide-feedback-about-issues-detected-by-klusterai"
+        },
+        {
+          "depth": 3,
+          "title": "What should I do if kluster.ai flags a false positive?",
+          "anchor": "what-should-i-do-if-klusterai-flags-a-false-positive"
+        },
+        {
+          "depth": 3,
+          "title": "Do kluster.ai reviews improve over time?",
+          "anchor": "do-klusterai-reviews-improve-over-time"
+        },
+        {
+          "depth": 3,
+          "title": "What is the difference between Instant and Deep analysis for code reviews?",
+          "anchor": "what-is-the-difference-between-instant-and-deep-analysis-for-code-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "AI-generated code",
+          "anchor": "ai-generated-code"
+        },
+        {
+          "depth": 3,
+          "title": "What triggers an automatic review?",
+          "anchor": "what-triggers-an-automatic-review"
+        },
+        {
+          "depth": 3,
+          "title": "How does AI-generated code review handle intent verification differently than human-written code review?",
+          "anchor": "how-does-ai-generated-code-review-handle-intent-verification-differently-than-human-written-code-review"
+        },
+        {
+          "depth": 3,
+          "title": "Does kluster.ai apply changes automatically?",
+          "anchor": "does-klusterai-apply-changes-automatically"
+        },
+        {
+          "depth": 3,
+          "title": "Can I disable automatic reviews temporarily?",
+          "anchor": "can-i-disable-automatic-reviews-temporarily"
+        },
+        {
+          "depth": 3,
+          "title": "Does it work with multi-file edits?",
+          "anchor": "does-it-work-with-multi-file-edits"
+        },
+        {
+          "depth": 3,
+          "title": "How does dependency checking work?",
+          "anchor": "how-does-dependency-checking-work"
+        },
+        {
+          "depth": 3,
+          "title": "How do I rollback changes made based on kluster.ai feedback?",
+          "anchor": "how-do-i-rollback-changes-made-based-on-klusterai-feedback"
+        },
+        {
+          "depth": 2,
+          "title": "Human-written code",
+          "anchor": "human-written-code"
+        },
+        {
+          "depth": 3,
+          "title": "What is the fastest way to check code I just wrote?",
+          "anchor": "what-is-the-fastest-way-to-check-code-i-just-wrote"
+        },
+        {
+          "depth": 3,
+          "title": "Can I use kluster.ai for code reviews in pull requests?",
+          "anchor": "can-i-use-klusterai-for-code-reviews-in-pull-requests"
+        },
+        {
+          "depth": 3,
+          "title": "How do I trigger an on-demand review?",
+          "anchor": "how-do-i-trigger-an-on-demand-review"
+        },
+        {
+          "depth": 3,
+          "title": "Can I review code I didn't write?",
+          "anchor": "can-i-review-code-i-didnt-write"
+        },
+        {
+          "depth": 3,
+          "title": "Can I review a specific code block vs whole file?",
+          "anchor": "can-i-review-a-specific-code-block-vs-whole-file"
+        },
+        {
+          "depth": 3,
+          "title": "Can I review uncommitted changes?",
+          "anchor": "can-i-review-uncommitted-changes"
+        },
+        {
+          "depth": 3,
+          "title": "What is the difference between on-demand reviews and background auto reviews?",
+          "anchor": "what-is-the-difference-between-on-demand-reviews-and-background-auto-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "CLI",
+          "anchor": "cli"
+        },
+        {
+          "depth": 3,
+          "title": "Can I use kluster.ai from the command line without an IDE?",
+          "anchor": "can-i-use-klusterai-from-the-command-line-without-an-ide"
+        },
+        {
+          "depth": 3,
+          "title": "How do I automate reviews in my git workflow?",
+          "anchor": "how-do-i-automate-reviews-in-my-git-workflow"
+        },
+        {
+          "depth": 3,
+          "title": "Can I use kluster-cli in CI/CD pipelines?",
+          "anchor": "can-i-use-kluster-cli-in-cicd-pipelines"
+        },
+        {
+          "depth": 3,
+          "title": "Can I review files without a git repository?",
+          "anchor": "can-i-review-files-without-a-git-repository"
+        },
+        {
+          "depth": 2,
+          "title": "Repo reviews",
+          "anchor": "repo-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "What are repo reviews and how are they different from other review modes?",
+          "anchor": "what-are-repo-reviews-and-how-are-they-different-from-other-review-modes"
+        },
+        {
+          "depth": 3,
+          "title": "How long does a repo review take?",
+          "anchor": "how-long-does-a-repo-review-take"
+        },
+        {
+          "depth": 3,
+          "title": "Can I run repo reviews on private repositories?",
+          "anchor": "can-i-run-repo-reviews-on-private-repositories"
+        },
+        {
+          "depth": 3,
+          "title": "Where can I access repo reviews?",
+          "anchor": "where-can-i-access-repo-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "What do the Fix with AI, Snooze, and Ignore actions do?",
+          "anchor": "what-do-the-fix-with-ai-snooze-and-ignore-actions-do"
+        },
+        {
+          "depth": 2,
+          "title": "Activation codes",
+          "anchor": "activation-codes"
+        },
+        {
+          "depth": 3,
+          "title": "What are activation codes?",
+          "anchor": "what-are-activation-codes"
+        },
+        {
+          "depth": 3,
+          "title": "What do I need before redeeming an activation code?",
+          "anchor": "what-do-i-need-before-redeeming-an-activation-code"
+        },
+        {
+          "depth": 3,
+          "title": "How do I redeem an activation code?",
+          "anchor": "how-do-i-redeem-an-activation-code"
+        },
+        {
+          "depth": 3,
+          "title": "What if my activation code isn't working?",
+          "anchor": "what-if-my-activation-code-isnt-working"
+        }
+      ],
+      "stats": {
+        "word_count": 2384,
+        "token_estimate": 3614,
+        "headings": 48,
+        "sections_indexed": 48
+      },
+      "version_hash": "sha256:8474282e437d9bae965c44fec965da3070e52ed5e02fba3a4c09240d0fe13dc7",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-faq.md"
+    },
+    {
+      "id": "code-reviews-get-started-installation",
+      "title": "Install kluster.ai Code Reviews for Your IDE or CLI",
+      "slug": "code-reviews-get-started-installation",
+      "categories": [
+        "Basics"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-get-started-installation.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/get-started/installation/",
+      "preview": "Set up kluster.ai Code Reviews in minutes. Scan code for errors, vulnerabilities, and performance issues in Cursor, VS Code, JetBrains, and more.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Setup instructions",
+          "anchor": "setup-instructions"
+        },
+        {
+          "depth": 3,
+          "title": "IDE extensions",
+          "anchor": "ide-extensions"
+        },
+        {
+          "depth": 3,
+          "title": "Terminal tools",
+          "anchor": "terminal-tools"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 2544,
+        "token_estimate": 5006,
+        "headings": 5,
+        "sections_indexed": 5
+      },
+      "version_hash": "sha256:0cd4c26fe0e2037f3f8f0de4ace3127191b7785252371fa545ac22cc7389db61",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-get-started-installation.md"
+    },
+    {
+      "id": "code-reviews-get-started-pick-your-workflow",
+      "title": "Pick Your Code Review Workflow",
+      "slug": "code-reviews-get-started-pick-your-workflow",
+      "categories": [
+        "Basics"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-get-started-pick-your-workflow.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/get-started/pick-your-workflow/",
+      "preview": "Compare the supported Code Reviews modes—human-written, AI-generated, CLI, and repo-wide—and pick the workflow that fits how you write code.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Choose your mode",
+          "anchor": "choose-your-mode"
+        },
+        {
+          "depth": 2,
+          "title": "Human-written code",
+          "anchor": "human-written-code"
+        },
+        {
+          "depth": 2,
+          "title": "AI-generated code",
+          "anchor": "ai-generated-code"
+        },
+        {
+          "depth": 2,
+          "title": "CLI",
+          "anchor": "cli"
+        },
+        {
+          "depth": 2,
+          "title": "Repo reviews",
+          "anchor": "repo-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "Using multiple modes",
+          "anchor": "using-multiple-modes"
+        },
+        {
+          "depth": 2,
+          "title": "Enrich reviews with External Knowledge",
+          "anchor": "enrich-reviews-with-external-knowledge"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 1069,
+        "token_estimate": 1653,
+        "headings": 8,
+        "sections_indexed": 8
+      },
+      "version_hash": "sha256:4aacc383fb52d19c3d020e3ca7c99e095eeb8f952eee85ad7c5846457077d82c",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-get-started-pick-your-workflow.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-ai-generated-code-automatic-reviews",
+      "title": "Automatic reviews for AI-generated code",
+      "slug": "code-reviews-ide-reviews-ai-generated-code-automatic-reviews",
+      "categories": [
+        "Basics",
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-automatic-reviews.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/",
+      "preview": "Set up automatic code reviews and dependency checks for AI-generated code. Reviews run in real-time as your AI writes code.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "How automatic reviews work",
+          "anchor": "how-automatic-reviews-work"
+        },
+        {
+          "depth": 2,
+          "title": "Compatible with",
+          "anchor": "compatible-with"
+        },
+        {
+          "depth": 2,
+          "title": "Configuration",
+          "anchor": "configuration"
+        },
+        {
+          "depth": 2,
+          "title": "Dependency checks",
+          "anchor": "dependency-checks"
+        },
+        {
+          "depth": 3,
+          "title": "How dependency checks work",
+          "anchor": "how-dependency-checks-work"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 772,
+        "token_estimate": 1434,
+        "headings": 7,
+        "sections_indexed": 7
+      },
+      "version_hash": "sha256:b34ae3d8c947e3933699b72280dcc6ab524e08a6210581c8293119e600b4a509",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-automatic-reviews.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-ai-generated-code-examples",
+      "title": "AI-generated code review examples",
+      "slug": "code-reviews-ide-reviews-ai-generated-code-examples",
+      "categories": [
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/ai-generated-code/examples/",
+      "preview": "Real-world examples of AI-generated code reviews with kluster.ai, demonstrating how Code Reviews catches critical issues across different IDEs and frameworks.",
+      "outline": [],
+      "stats": {
+        "word_count": 162,
+        "token_estimate": 268,
+        "headings": 0,
+        "sections_indexed": 0
+      },
+      "version_hash": "sha256:4acb4da70d2d818815fc9c13d7dea1bfcad02d293520546e63d75f55d7560e19",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-ai-generated-code-examples-cursor-firebase-nextjs",
+      "title": "Cursor - Firebase Authentication with Next.js",
+      "slug": "code-reviews-ide-reviews-ai-generated-code-examples-cursor-firebase-nextjs",
+      "categories": [
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-cursor-firebase-nextjs.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/ai-generated-code/examples/cursor-firebase-nextjs/",
+      "preview": "See how Code Reviews catches critical issues in real-time while migrating from local storage to Firebase authentication.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Setup",
+          "anchor": "setup"
+        },
+        {
+          "depth": 2,
+          "title": "Next.js e-commerce",
+          "anchor": "nextjs-e-commerce"
+        },
+        {
+          "depth": 2,
+          "title": "The prompt and AI's plan",
+          "anchor": "the-prompt-and-ais-plan"
+        },
+        {
+          "depth": 2,
+          "title": "Plan vs. implementation outcomes",
+          "anchor": "plan-vs-implementation-outcomes"
+        },
+        {
+          "depth": 2,
+          "title": "Key issues caught by Code Reviews",
+          "anchor": "key-issues-caught-by-code-reviews"
+        },
+        {
+          "depth": 3,
+          "title": "Incomplete implementation",
+          "anchor": "incomplete-implementation"
+        },
+        {
+          "depth": 3,
+          "title": "Breaking changes",
+          "anchor": "breaking-changes"
+        },
+        {
+          "depth": 3,
+          "title": "Security vulnerabilities",
+          "anchor": "security-vulnerabilities"
+        },
+        {
+          "depth": 3,
+          "title": "Architecture regression",
+          "anchor": "architecture-regression"
+        },
+        {
+          "depth": 2,
+          "title": "Summary of results",
+          "anchor": "summary-of-results"
+        },
+        {
+          "depth": 2,
+          "title": "Key takeaways",
+          "anchor": "key-takeaways"
+        }
+      ],
+      "stats": {
+        "word_count": 1411,
+        "token_estimate": 2491,
+        "headings": 12,
+        "sections_indexed": 12
+      },
+      "version_hash": "sha256:b0db17793fd347166f09d162d0e666d725da88738a5fe538c615c835de59a993",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-cursor-firebase-nextjs.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-ai-generated-code-examples-vscode-admin-endpoint",
+      "title": "VS Code - Secure Admin Endpoints with Express",
+      "slug": "code-reviews-ide-reviews-ai-generated-code-examples-vscode-admin-endpoint",
+      "categories": [
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-vscode-admin-endpoint.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/",
+      "preview": "Learn how Code Reviews prevents critical security vulnerabilities when AI creates admin endpoints with hardcoded credentials.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Setup",
+          "anchor": "setup"
+        },
+        {
+          "depth": 2,
+          "title": "Express API with product management",
+          "anchor": "express-api-with-product-management"
+        },
+        {
+          "depth": 2,
+          "title": "The prompt and AI's response",
+          "anchor": "the-prompt-and-ais-response"
+        },
+        {
+          "depth": 2,
+          "title": "The implementation result",
+          "anchor": "the-implementation-result"
+        },
+        {
+          "depth": 2,
+          "title": "The critical security vulnerability",
+          "anchor": "the-critical-security-vulnerability"
+        },
+        {
+          "depth": 2,
+          "title": "Code Reviews catches the vulnerability",
+          "anchor": "code-reviews-catches-the-vulnerability"
+        },
+        {
+          "depth": 2,
+          "title": "The secure implementation",
+          "anchor": "the-secure-implementation"
+        },
+        {
+          "depth": 2,
+          "title": "Summary of results",
+          "anchor": "summary-of-results"
+        },
+        {
+          "depth": 2,
+          "title": "Key takeaways",
+          "anchor": "key-takeaways"
+        }
+      ],
+      "stats": {
+        "word_count": 1008,
+        "token_estimate": 1633,
+        "headings": 10,
+        "sections_indexed": 10
+      },
+      "version_hash": "sha256:2ad5ece0586dea1bea7a50c30fd9ab43ef08e5e092a0ae2fe31d33e38779a30a",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-vscode-admin-endpoint.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-ai-generated-code-on-demand-reviews",
+      "title": "On-demand reviews for AI-generated code",
+      "slug": "code-reviews-ide-reviews-ai-generated-code-on-demand-reviews",
+      "categories": [
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-on-demand-reviews.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/ai-generated-code/on-demand-reviews/",
+      "preview": "Ask your AI assistant to review existing code on demand. Audit files, check for security issues, or verify code quality.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "How it works",
+          "anchor": "how-it-works"
+        },
+        {
+          "depth": 2,
+          "title": "Compatible with",
+          "anchor": "compatible-with"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 373,
+        "token_estimate": 739,
+        "headings": 3,
+        "sections_indexed": 3
+      },
+      "version_hash": "sha256:531f779e093884288eebf8c64b34c22a4bd829eab35f11a36b54cb02867fa646",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-on-demand-reviews.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-human-written-code-automatic-reviews",
+      "title": "Automatic reviews for human-written code",
+      "slug": "code-reviews-ide-reviews-human-written-code-automatic-reviews",
+      "categories": [
+        "Basics",
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-automatic-reviews.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/human-written-code/automatic-reviews/",
+      "preview": "Enable automatic reviews to scan uncommitted changes after you stop typing. Learn how kluster.ai detects idle time and surfaces results.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Turn it on",
+          "anchor": "turn-it-on"
+        },
+        {
+          "depth": 2,
+          "title": "How it works",
+          "anchor": "how-it-works"
+        },
+        {
+          "depth": 2,
+          "title": "What gets reviewed",
+          "anchor": "what-gets-reviewed"
+        },
+        {
+          "depth": 2,
+          "title": "Where results appear",
+          "anchor": "where-results-appear"
+        },
+        {
+          "depth": 2,
+          "title": "Branch switching",
+          "anchor": "branch-switching"
+        },
+        {
+          "depth": 2,
+          "title": "Compatible with",
+          "anchor": "compatible-with"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 570,
+        "token_estimate": 1019,
+        "headings": 8,
+        "sections_indexed": 8
+      },
+      "version_hash": "sha256:b9dc7d8c2f5f396b99a433ed38f59a577ab6648e924d632e7556e6d718ee79de",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-automatic-reviews.md"
+    },
+    {
+      "id": "code-reviews-ide-reviews-human-written-code-on-demand-reviews",
+      "title": "On-demand reviews for human-written code",
+      "slug": "code-reviews-ide-reviews-human-written-code-on-demand-reviews",
+      "categories": [
+        "Basics",
+        "IDE Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-on-demand-reviews.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/ide-reviews/human-written-code/on-demand-reviews/",
+      "preview": "Trigger on-demand code reviews in your IDE using right-click, hint buttons, or pre-commit scanning to verify code quality on your own terms.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "How on-demand reviews work",
+          "anchor": "how-on-demand-reviews-work"
+        },
+        {
+          "depth": 2,
+          "title": "Sidebar review",
+          "anchor": "sidebar-review"
+        },
+        {
+          "depth": 2,
+          "title": "Code block review",
+          "anchor": "code-block-review"
+        },
+        {
+          "depth": 2,
+          "title": "Compatible with",
+          "anchor": "compatible-with"
+        },
+        {
+          "depth": 2,
+          "title": "Configuration",
+          "anchor": "configuration"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 900,
+        "token_estimate": 1600,
+        "headings": 7,
+        "sections_indexed": 7
+      },
+      "version_hash": "sha256:955fc09979beb0beb406b5c7ddfe96ffdd8e1b4ca0cdf71d9b5acd6079d8c4d2",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-on-demand-reviews.md"
+    },
+    {
+      "id": "code-reviews-pr-reviews-bitbucket",
+      "title": "Bitbucket PR Reviews Setup",
+      "slug": "code-reviews-pr-reviews-bitbucket",
+      "categories": [
+        "PR Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-bitbucket.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/pr-reviews/bitbucket/",
+      "preview": "Connect the kluster.ai bot to Bitbucket to automatically review every pull request. Set up the integration with an API token in a few steps.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Create an API token",
+          "anchor": "create-an-api-token"
+        },
+        {
+          "depth": 2,
+          "title": "Connect Bitbucket",
+          "anchor": "connect-bitbucket"
+        },
+        {
+          "depth": 2,
+          "title": "What happens after setup",
+          "anchor": "what-happens-after-setup"
+        },
+        {
+          "depth": 3,
+          "title": "On new pull requests",
+          "anchor": "on-new-pull-requests"
+        },
+        {
+          "depth": 3,
+          "title": "On new commits",
+          "anchor": "on-new-commits"
+        },
+        {
+          "depth": 3,
+          "title": "Prior review detection",
+          "anchor": "prior-review-detection"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 1145,
+        "token_estimate": 2005,
+        "headings": 8,
+        "sections_indexed": 8
+      },
+      "version_hash": "sha256:78f3a184e552a8855b36938a0abf42d80a665735ad2b04da6d7f9513928f1425",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-bitbucket.md"
+    },
+    {
+      "id": "code-reviews-pr-reviews-github",
+      "title": "GitHub PR Reviews Setup",
+      "slug": "code-reviews-pr-reviews-github",
+      "categories": [
+        "PR Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-github.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/pr-reviews/github/",
+      "preview": "Connect the kluster.ai bot to GitHub to automatically review every pull request. Authorize via OAuth and install the GitHub App in two steps.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Connect GitHub",
+          "anchor": "connect-github"
+        },
+        {
+          "depth": 2,
+          "title": "What happens after setup",
+          "anchor": "what-happens-after-setup"
+        },
+        {
+          "depth": 3,
+          "title": "On new pull requests",
+          "anchor": "on-new-pull-requests"
+        },
+        {
+          "depth": 3,
+          "title": "On new commits",
+          "anchor": "on-new-commits"
+        },
+        {
+          "depth": 3,
+          "title": "Prior review detection",
+          "anchor": "prior-review-detection"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 863,
+        "token_estimate": 1340,
+        "headings": 7,
+        "sections_indexed": 7
+      },
+      "version_hash": "sha256:504e8b4d6da751ce816f574167027f9c535dd91402261f71fbdf22b078785997",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-github.md"
+    },
+    {
+      "id": "code-reviews-pr-reviews-gitlab",
+      "title": "GitLab PR Reviews Setup",
+      "slug": "code-reviews-pr-reviews-gitlab",
+      "categories": [
+        "PR Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-gitlab.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/pr-reviews/gitlab/",
+      "preview": "Connect the kluster.ai bot to GitLab to automatically review every merge request. Set up the integration with an access token in a few steps.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "Create an access token",
+          "anchor": "create-an-access-token"
+        },
+        {
+          "depth": 2,
+          "title": "Connect GitLab",
+          "anchor": "connect-gitlab"
+        },
+        {
+          "depth": 2,
+          "title": "What happens after setup",
+          "anchor": "what-happens-after-setup"
+        },
+        {
+          "depth": 3,
+          "title": "On new merge requests",
+          "anchor": "on-new-merge-requests"
+        },
+        {
+          "depth": 3,
+          "title": "On new commits",
+          "anchor": "on-new-commits"
+        },
+        {
+          "depth": 3,
+          "title": "Prior review detection",
+          "anchor": "prior-review-detection"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 989,
+        "token_estimate": 1496,
+        "headings": 8,
+        "sections_indexed": 8
+      },
+      "version_hash": "sha256:4e7b4ca212d542bb6eba1fdd42e9b04380f20a82e9fcac18024fd5f1c9c1dbed",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-gitlab.md"
+    },
+    {
+      "id": "code-reviews-pr-reviews-quickstart",
+      "title": "PR Reviews Quickstart",
+      "slug": "code-reviews-pr-reviews-quickstart",
+      "categories": [],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-quickstart.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/pr-reviews/quickstart/",
+      "preview": "Automatically review every pull request with the kluster.ai bot. Get summary reports and inline comments on GitHub, GitLab, and Bitbucket.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "How it works",
+          "anchor": "how-it-works"
+        },
+        {
+          "depth": 3,
+          "title": "Summary comment",
+          "anchor": "summary-comment"
+        },
+        {
+          "depth": 3,
+          "title": "Inline comments",
+          "anchor": "inline-comments"
+        },
+        {
+          "depth": 2,
+          "title": "Get started",
+          "anchor": "get-started"
+        }
+      ],
+      "stats": {
+        "word_count": 663,
+        "token_estimate": 1009,
+        "headings": 4,
+        "sections_indexed": 4
+      },
+      "version_hash": "sha256:6fb903f00d48e180efae95bee73eab965c9abb13d30226aed2c36544abecb5c7",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-quickstart.md"
+    },
+    {
+      "id": "code-reviews-reference-mcp-tools",
+      "title": "MCP Tools Reference",
+      "slug": "code-reviews-reference-mcp-tools",
+      "categories": [
+        "Reference"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-reference-mcp-tools.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/reference/mcp-tools/",
+      "preview": "Learn how kluster.ai Code MCP tools work, including parameters, response formats, issue categories, and settings for real-time code reviews.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Available tools",
+          "anchor": "available-tools"
+        },
+        {
+          "depth": 2,
+          "title": "Parameters",
+          "anchor": "parameters"
+        },
+        {
+          "depth": 2,
+          "title": "Response format",
+          "anchor": "response-format"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 573,
+        "token_estimate": 1031,
+        "headings": 4,
+        "sections_indexed": 4
+      },
+      "version_hash": "sha256:f8225ffd93f2e51ef6fe60c33a5db0965110a42ca011c802d8289ee0d5c77769",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-reference-mcp-tools.md"
+    },
+    {
+      "id": "code-reviews-reference-response-schema",
+      "title": "Response Schema",
+      "slug": "code-reviews-reference-response-schema",
+      "categories": [
+        "Reference"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-reference-response-schema.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/reference/response-schema/",
+      "preview": "Understand the response format from kluster.ai Code Reviews—issue structure, severity levels, priority system, and suggested fixes.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Response fields",
+          "anchor": "response-fields"
+        },
+        {
+          "depth": 2,
+          "title": "Example response",
+          "anchor": "example-response"
+        },
+        {
+          "depth": 2,
+          "title": "Issue types",
+          "anchor": "issue-types"
+        },
+        {
+          "depth": 2,
+          "title": "Severity levels",
+          "anchor": "severity-levels"
+        },
+        {
+          "depth": 2,
+          "title": "Priority system",
+          "anchor": "priority-system"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 481,
+        "token_estimate": 1064,
+        "headings": 6,
+        "sections_indexed": 6
+      },
+      "version_hash": "sha256:4db257462b049ef7737138bad61526455ec7ba032c7be72fa0b536439a31b2a0",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-reference-response-schema.md"
+    },
+    {
+      "id": "code-reviews-repo-reviews-quickstart",
+      "title": "Repo Reviews Quickstart",
+      "slug": "code-reviews-repo-reviews-quickstart",
+      "categories": [
+        "Basics",
+        "Repo Reviews"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-repo-reviews-quickstart.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/repo-reviews/quickstart/",
+      "preview": "Learn how to run system-wide codebase analysis with kluster.ai Repo Reviews to find cross-module bugs that slip through PR-level reviews.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Prerequisites",
+          "anchor": "prerequisites"
+        },
+        {
+          "depth": 2,
+          "title": "How repo reviews work",
+          "anchor": "how-repo-reviews-work"
+        },
+        {
+          "depth": 2,
+          "title": "Running your first repo review",
+          "anchor": "running-your-first-repo-review"
+        },
+        {
+          "depth": 3,
+          "title": "1. Connect your repository",
+          "anchor": "1-connect-your-repository"
+        },
+        {
+          "depth": 3,
+          "title": "2. Scan repo",
+          "anchor": "2-scan-repo"
+        },
+        {
+          "depth": 3,
+          "title": "3. Review the results",
+          "anchor": "3-review-the-results"
+        },
+        {
+          "depth": 3,
+          "title": "4. Examine issue details",
+          "anchor": "4-examine-issue-details"
+        },
+        {
+          "depth": 3,
+          "title": "5. Take action",
+          "anchor": "5-take-action"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 743,
+        "token_estimate": 1285,
+        "headings": 9,
+        "sections_indexed": 9
+      },
+      "version_hash": "sha256:accaed64f0cd192a8542a3c13d60303c6a46d1c827c070ebfeb011185af98441",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-repo-reviews-quickstart.md"
+    },
+    {
+      "id": "code-reviews-review-modes",
+      "title": "Code Reviews - Modes, Features, and Setup",
+      "slug": "code-reviews-review-modes",
+      "categories": [
+        "Basics"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-review-modes.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/review-modes/",
+      "preview": "Learn how to use kluster.ai's Code Reviews to validate your code in real time—detecting bugs, security issues, and quality problems so you can ship safely.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Key features",
+          "anchor": "key-features"
+        },
+        {
+          "depth": 2,
+          "title": "Human-written code",
+          "anchor": "human-written-code"
+        },
+        {
+          "depth": 2,
+          "title": "AI-generated code",
+          "anchor": "ai-generated-code"
+        },
+        {
+          "depth": 2,
+          "title": "Repo reviews",
+          "anchor": "repo-reviews"
+        },
+        {
+          "depth": 2,
+          "title": "CLI",
+          "anchor": "cli"
+        },
+        {
+          "depth": 2,
+          "title": "External knowledge",
+          "anchor": "external-knowledge"
+        },
+        {
+          "depth": 2,
+          "title": "Next steps",
+          "anchor": "next-steps"
+        }
+      ],
+      "stats": {
+        "word_count": 914,
+        "token_estimate": 1567,
+        "headings": 7,
+        "sections_indexed": 7
+      },
+      "version_hash": "sha256:1da456c091e0fda3fafabee409ce4adf5114adbbaaa34b39d51973382fb5960d",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-review-modes.md"
+    },
+    {
+      "id": "code-reviews-troubleshooting",
+      "title": "Troubleshooting",
+      "slug": "code-reviews-troubleshooting",
+      "categories": [
+        "Troubleshooting"
+      ],
+      "resolved_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-troubleshooting.md",
+      "html_url": "https://docs.kluster.ai/code-reviews/troubleshooting/",
+      "preview": "Fix common problems with kluster.ai Code Reviews—from extension issues to CLI errors—across all supported IDEs and workflows.",
+      "outline": [
+        {
+          "depth": 2,
+          "title": "Installation",
+          "anchor": "installation"
+        },
+        {
+          "depth": 3,
+          "title": "Cannot find module './constants'",
+          "anchor": "cannot-find-module-constants"
+        },
+        {
+          "depth": 3,
+          "title": "Claude Code MCP server shows \"failed\"",
+          "anchor": "claude-code-mcp-server-shows-failed"
+        },
+        {
+          "depth": 3,
+          "title": "Debugging CLI installation issues",
+          "anchor": "debugging-cli-installation-issues"
+        },
+        {
+          "depth": 2,
+          "title": "kluster-cli (standalone CLI)",
+          "anchor": "kluster-cli-standalone-cli"
+        },
+        {
+          "depth": 3,
+          "title": "Command not found: kluster",
+          "anchor": "command-not-found-kluster"
+        },
+        {
+          "depth": 3,
+          "title": "Authentication failed",
+          "anchor": "authentication-failed"
+        },
+        {
+          "depth": 3,
+          "title": "Git hook not triggering",
+          "anchor": "git-hook-not-triggering"
+        },
+        {
+          "depth": 3,
+          "title": "Review times out on large diffs",
+          "anchor": "review-times-out-on-large-diffs"
+        },
+        {
+          "depth": 2,
+          "title": "Need help?",
+          "anchor": "need-help"
+        }
+      ],
+      "stats": {
+        "word_count": 566,
+        "token_estimate": 1068,
+        "headings": 10,
+        "sections_indexed": 10
+      },
+      "version_hash": "sha256:dfd31da4ce376ceb253ae861f3409919f7458b733c52792571ac5641283f6fc4",
+      "last_updated": "2026-03-27T17:26:06+00:00",
+      "token_estimator": "heuristic-v1",
+      "raw_md_url": "https://docs.kluster.ai/ai/pages/code-reviews-troubleshooting.md"
+    }
+  ],
+  "build_timestamp": "2026-03-27T17:27:40.236808+00:00"
+}

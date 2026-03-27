@@ -1,0 +1,144 @@
+---
+title: On-demand reviews for human-written code
+description: Trigger on-demand code reviews in your IDE using right-click, hint buttons, or pre-commit scanning to verify code quality on your own terms.
+categories:
+- Basics
+- IDE Reviews
+url: https://docs.kluster.ai/code-reviews/ide-reviews/human-written-code/on-demand-reviews/
+word_count: 900
+token_estimate: 1600
+version_hash: sha256:955fc09979beb0beb406b5c7ddfe96ffdd8e1b4ca0cdf71d9b5acd6079d8c4d2
+last_updated: '2026-03-27T17:26:06+00:00'
+---
+
+# On-demand reviews 
+
+With [kluster.ai](https://www.kluster.ai/){target=\_blank}, you can trigger reviews three ways: right-click any selection, use hint buttons, or scan uncommitted changes.
+
+!!! tip "Exclude files with .klusterignore"
+    If there are files or folders you never want kluster.ai to review (generated code, build output, vendored dependencies), add them to a [`.klusterignore`](/kluster-mkdocs/code-reviews/configuration/klusterignore/) file. On-demand IDE reviews respect `.klusterignore`.
+
+## Prerequisites
+
+Before getting started, ensure you have:
+
+- **A kluster.ai account**: Sign up on the [kluster.ai platform](https://platform.kluster.ai/signup){target=\_blank} if you don't have one.
+- **kluster.ai installed in your IDE**: Follow the [Installation guide](/kluster-mkdocs/code-reviews/get-started/installation/) to set it up in your favourite IDE.
+<div class="embed-container">
+    <iframe
+        src="https://www.youtube.com/embed/rpWt9sXAqWY"
+        title="Human-written code reviews with kluster.ai"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+
+## How on-demand reviews work
+
+1.  **You write code**: Work in your editor as usual.
+2.  **You trigger review**: Right-click, use a hint button, or click in the sidebar.
+3.  **kluster.ai analyzes**: Results appear with issues and suggested fixes.
+
+## Sidebar review
+
+Open the kluster.ai extension to access the **On-Demand Review** section in the sidebar. Use the **Mode** dropdown to choose what to review:
+
+- **Review current file**: Verifies only the file currently open in the editor.
+- **Review uncommitted changes**: Verifies all uncommitted changes across multiple files.
+- **Review all branch changes**: Verifies all changes compared against the selected base branch.
+
+![On-Demand Review section showing the Mode dropdown options](/kluster-mkdocs/images/code-reviews/ide-reviews/human-written-code/on-demand-reviews/manual-review-this-code-extension.webp)
+
+Then choose your analysis depth for your code reviews:
+
+- **Instant**: Completes in about five seconds. Detects most issues and is suited for fast review and iteration cycles.
+- **Deep**: Takes up to a few minutes. Conducts deeper analysis to uncover even subtle edge cases, ideal for critical code and final reviews.
+![On-Demand Review section showing Instant Review and Deep Review buttons](/kluster-mkdocs/images/code-reviews/ide-reviews/human-written-code/on-demand-reviews/manual-review-this-code-extension-deep-vs-instant.webp)
+
+!!! info "Accessing On-Demand Review"
+    You can also access On-Demand Review from the **Home** and **Git** tabs. Expand the kluster.ai section if collapsed.
+
+After the review completes, kluster.ai displays any issues found. For each issue, you have three actions:
+
+- **Fix with AI**: Generates an AI-powered fix suggestion that you can apply with one click.
+- **Snooze**: Temporarily hides the issue for a selected duration (1 day, 7 days, or 30 days). The issue reappears automatically after the snooze period expires.
+- **Ignore**: Permanently dismisses the issue. It will not reappear in future reviews.
+
+![Review results showing issues found with Fix with AI, Snooze, and Ignore actions](/kluster-mkdocs/images/code-reviews/ide-reviews/human-written-code/on-demand-reviews/manual-review-this-code-extension-results.webp)
+
+!!! tip "When to snooze vs. ignore"
+    Use **Snooze** for issues you plan to address later but don't want cluttering your current review. Use **Ignore** for false positives or accepted risks that don't need further attention.
+
+## Code block review
+
+Select any code in your editor, right-click, and choose **Review with kluster.ai** (or press `Ctrl+Shift+K`). This is useful for:
+
+- Verifying a specific function or block you just wrote.
+- Checking code during merge conflict resolution.
+- Getting a quick security check before moving on.
+
+![Right-click to review selected code](/kluster-mkdocs/images/code-reviews/ide-reviews/human-written-code/on-demand-reviews/manual-review-this-code.webp)
+
+!!! info "Hint button"
+    When you select code, a hint button also appears next to your selection to trigger the review. This hint button is not yet available in Cursor—use the right-click menu or keyboard shortcut instead.
+
+## Compatible with
+
+<div class="grid cards" markdown>
+
+-   :simple-cursor: **Cursor**
+
+    ---
+
+    AI-native code editor with built-in kluster.ai extension support.
+
+    [:octicons-arrow-right-24: Install for Cursor](/kluster-mkdocs/code-reviews/get-started/installation/)
+
+-   :material-microsoft-visual-studio-code: **VS Code**
+
+    ---
+
+    Lightweight editor with kluster.ai extension and Copilot integration.
+
+    [:octicons-arrow-right-24: Install for VS Code](/kluster-mkdocs/code-reviews/get-started/installation/)
+
+-   :simple-windsurf: **Windsurf**
+
+    ---
+
+    AI-powered IDE by Codeium with kluster.ai extension support.
+
+    [:octicons-arrow-right-24: Install for Windsurf](/kluster-mkdocs/code-reviews/get-started/installation/)
+
+-   :antigravity-antigravity: **Antigravity**
+
+    ---
+
+    Next-generation IDE with native MCP integration for kluster.ai.
+
+    [:octicons-arrow-right-24: Install for Antigravity](/kluster-mkdocs/code-reviews/get-started/installation/)
+
+-   :simple-jetbrains: **JetBrains**
+
+    ---
+
+    JetBrains IDEs (IntelliJ IDEA, WebStorm, and others) with kluster.ai plugin support.
+
+    [:octicons-arrow-right-24: Install for JetBrains](/kluster-mkdocs/code-reviews/get-started/installation/)
+
+</div>
+
+## Configuration
+
+You can customize how on-demand reviews work in your [configuration options](/kluster-mkdocs/code-reviews/configuration/options/):
+
+- **Analysis level**: Set default depth for Instant vs Deep reviews.
+- **Enabled tools**: Toggle Code Review and Dependency Analysis on/off.
+- **Sensitivity**: Adjust how strictly issues are flagged (Low → Critical).
+- **Bug check types**: Select which issue types to check (Security, Logic, Performance, etc.).
+
+## Next steps
+
+- **[MCP Tools Reference](/kluster-mkdocs/code-reviews/reference/mcp-tools/)**: Deep dive into all MCP tools and parameters.
+- **[Configuration Options](/kluster-mkdocs/code-reviews/configuration/options/)**: Customize Code Reviews behavior for your workflow.

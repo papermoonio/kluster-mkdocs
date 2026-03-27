@@ -1,0 +1,75 @@
+# kluster.ai
+
+> https://www.kluster.ai
+
+## How to Use This File
+This file lists URLs for resolved Markdown pages that complement the rendered pages on the documentation site. Use these Markdown files when prompting models to retain semantic context without HTML noise.
+
+## Metadata
+- Documentation pages: 30
+- Categories: 9
+- Build Timestamp: 2026-03-27T17:27:40.236808+00:00
+- Version Hash: sha256:52a0ff016ff5e89203e637411df46161e92d72b7a261a33393f5c293d330f241
+
+## Docs
+This section lists documentation pages by category. Each entry links to the resolved markdown version of the page and includes a short description.
+
+Docs: Basics
+- [CLI Installation](https://docs.kluster.ai/ai/pages/code-reviews-cli-installation.md): Install kluster-cli on macOS, Linux, or Windows. Set up shell completions, configure your PATH, and keep the CLI up to date.
+- [CLI Quickstart](https://docs.kluster.ai/ai/pages/code-reviews-cli-quickstart.md): Learn how to install kluster-cli, authenticate with your API key, and review your first changes. No IDE or CI pipeline required.
+- [.klusterignore](https://docs.kluster.ai/ai/pages/code-reviews-configuration-klusterignore.md): Exclude files and folders from kluster.ai Code Reviews with a .gitignore-compatible .klusterignore file, using patterns, wildcards, and negation.
+- [External Knowledge Quickstart for Reviews](https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-quickstart.md): Connect external sources like Jira to kluster.ai so code reviews can verify your code against real project requirements and specifications.
+- [Install kluster.ai Code Reviews for Your IDE or CLI](https://docs.kluster.ai/ai/pages/code-reviews-get-started-installation.md): Set up kluster.ai Code Reviews in minutes. Scan code for errors, vulnerabilities, and performance issues in Cursor, VS Code, JetBrains, and more.
+- [Pick Your Code Review Workflow](https://docs.kluster.ai/ai/pages/code-reviews-get-started-pick-your-workflow.md): Compare the supported Code Reviews modes—human-written, AI-generated, CLI, and repo-wide—and pick the workflow that fits how you write code.
+- [Automatic reviews for AI-generated code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-automatic-reviews.md): Set up automatic code reviews and dependency checks for AI-generated code. Reviews run in real-time as your AI writes code.
+- [Automatic reviews for human-written code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-automatic-reviews.md): Enable automatic reviews to scan uncommitted changes after you stop typing. Learn how kluster.ai detects idle time and surfaces results.
+- [On-demand reviews for human-written code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-on-demand-reviews.md): Trigger on-demand code reviews in your IDE using right-click, hint buttons, or pre-commit scanning to verify code quality on your own terms.
+- [Repo Reviews Quickstart](https://docs.kluster.ai/ai/pages/code-reviews-repo-reviews-quickstart.md): Learn how to run system-wide codebase analysis with kluster.ai Repo Reviews to find cross-module bugs that slip through PR-level reviews.
+- [Code Reviews - Modes, Features, and Setup](https://docs.kluster.ai/ai/pages/code-reviews-review-modes.md): Learn how to use kluster.ai's Code Reviews to validate your code in real time—detecting bugs, security issues, and quality problems so you can ship safely.
+
+Docs: CLI
+- [Git Hooks](https://docs.kluster.ai/ai/pages/code-reviews-cli-git-hooks.md): Automate kluster.ai code reviews with git hooks. Install pre-commit or pre-push hooks to catch issues before they reach your repository.
+- [CLI Installation](https://docs.kluster.ai/ai/pages/code-reviews-cli-installation.md): Install kluster-cli on macOS, Linux, or Windows. Set up shell completions, configure your PATH, and keep the CLI up to date.
+- [CLI Quickstart](https://docs.kluster.ai/ai/pages/code-reviews-cli-quickstart.md): Learn how to install kluster-cli, authenticate with your API key, and review your first changes. No IDE or CI pipeline required.
+- [CLI Reference](https://docs.kluster.ai/ai/pages/code-reviews-cli-reference.md): Reference for kluster.ai CLI commands, configuration options, and exit codes, with quick lookups for flags, config settings, and environment variables.
+- [Repo Reviews from CLI](https://docs.kluster.ai/ai/pages/code-reviews-cli-repo-reviews.md): Trigger and monitor system-wide repo reviews from your terminal using kluster-cli, with a terminal-first workflow for codebase analysis.
+- [Review Commands](https://docs.kluster.ai/ai/pages/code-reviews-cli-review-commands.md): Review staged changes, diffs, branches, and individual files with kluster-cli. Choose between instant and deep analysis modes.
+
+Docs: Configuration
+- [.klusterignore](https://docs.kluster.ai/ai/pages/code-reviews-configuration-klusterignore.md): Exclude files and folders from kluster.ai Code Reviews with a .gitignore-compatible .klusterignore file, using patterns, wildcards, and negation.
+- [Options](https://docs.kluster.ai/ai/pages/code-reviews-configuration-options.md): Configure kluster.ai Code Review settings, from analysis depth and sensitivity levels to issue types and enabled tools used to verify code across your workflow.
+- [Custom rules](https://docs.kluster.ai/ai/pages/code-reviews-configuration-rules.md): Learn how to define and manage custom code review rules to enforce consistent code quality, using manual rules or learned rules from GitHub repositories.
+
+Docs: External Knowledge
+- [Set Up Jira Integration for Code Reviews](https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-jira.md): Connect Jira to kluster.ai to review code against ticket requirements. Set up Jira Cloud or self-hosted Jira and learn how ticket context flows into reviews.
+- [External Knowledge Quickstart for Reviews](https://docs.kluster.ai/ai/pages/code-reviews-external-knowledge-quickstart.md): Connect external sources like Jira to kluster.ai so code reviews can verify your code against real project requirements and specifications.
+
+Docs: IDE Reviews
+- [Automatic reviews for AI-generated code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-automatic-reviews.md): Set up automatic code reviews and dependency checks for AI-generated code. Reviews run in real-time as your AI writes code.
+- [AI-generated code review examples](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples.md): Real-world examples of AI-generated code reviews with kluster.ai, demonstrating how Code Reviews catches critical issues across different IDEs and frameworks.
+- [Cursor - Firebase Authentication with Next.js](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-cursor-firebase-nextjs.md): See how Code Reviews catches critical issues in real-time while migrating from local storage to Firebase authentication.
+- [VS Code - Secure Admin Endpoints with Express](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-examples-vscode-admin-endpoint.md): Learn how Code Reviews prevents critical security vulnerabilities when AI creates admin endpoints with hardcoded credentials.
+- [On-demand reviews for AI-generated code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-ai-generated-code-on-demand-reviews.md): Ask your AI assistant to review existing code on demand. Audit files, check for security issues, or verify code quality.
+- [Automatic reviews for human-written code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-automatic-reviews.md): Enable automatic reviews to scan uncommitted changes after you stop typing. Learn how kluster.ai detects idle time and surfaces results.
+- [On-demand reviews for human-written code](https://docs.kluster.ai/ai/pages/code-reviews-ide-reviews-human-written-code-on-demand-reviews.md): Trigger on-demand code reviews in your IDE using right-click, hint buttons, or pre-commit scanning to verify code quality on your own terms.
+
+Docs: PR Reviews
+- [Bitbucket PR Reviews Setup](https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-bitbucket.md): Connect the kluster.ai bot to Bitbucket to automatically review every pull request. Set up the integration with an API token in a few steps.
+- [GitHub PR Reviews Setup](https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-github.md): Connect the kluster.ai bot to GitHub to automatically review every pull request. Authorize via OAuth and install the GitHub App in two steps.
+- [GitLab PR Reviews Setup](https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-gitlab.md): Connect the kluster.ai bot to GitLab to automatically review every merge request. Set up the integration with an access token in a few steps.
+
+Docs: Reference
+- [CLI Reference](https://docs.kluster.ai/ai/pages/code-reviews-cli-reference.md): Reference for kluster.ai CLI commands, configuration options, and exit codes, with quick lookups for flags, config settings, and environment variables.
+- [MCP Tools Reference](https://docs.kluster.ai/ai/pages/code-reviews-reference-mcp-tools.md): Learn how kluster.ai Code MCP tools work, including parameters, response formats, issue categories, and settings for real-time code reviews.
+- [Response Schema](https://docs.kluster.ai/ai/pages/code-reviews-reference-response-schema.md): Understand the response format from kluster.ai Code Reviews—issue structure, severity levels, priority system, and suggested fixes.
+
+Docs: Repo Reviews
+- [Repo Reviews from CLI](https://docs.kluster.ai/ai/pages/code-reviews-cli-repo-reviews.md): Trigger and monitor system-wide repo reviews from your terminal using kluster-cli, with a terminal-first workflow for codebase analysis.
+- [Repo Reviews Quickstart](https://docs.kluster.ai/ai/pages/code-reviews-repo-reviews-quickstart.md): Learn how to run system-wide codebase analysis with kluster.ai Repo Reviews to find cross-module bugs that slip through PR-level reviews.
+
+Docs: Troubleshooting
+- [Code Reviews Frequently Asked Questions](https://docs.kluster.ai/ai/pages/code-reviews-faq.md): Find answers to common questions about kluster.ai Code Review, covering setup, supported IDEs, review modes, security, and troubleshooting topics.
+- [Troubleshooting](https://docs.kluster.ai/ai/pages/code-reviews-troubleshooting.md): Fix common problems with kluster.ai Code Reviews—from extension issues to CLI errors—across all supported IDEs and workflows.
+
+Docs: Uncategorized
+- [PR Reviews Quickstart](https://docs.kluster.ai/ai/pages/code-reviews-pr-reviews-quickstart.md): Automatically review every pull request with the kluster.ai bot. Get summary reports and inline comments on GitHub, GitLab, and Bitbucket.

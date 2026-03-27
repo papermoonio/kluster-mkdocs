@@ -1,0 +1,123 @@
+---
+title: Code Reviews - Modes, Features, and Setup
+description: Learn how to use kluster.ai's Code Reviews to validate your code in real time—detecting bugs, security issues, and quality problems so you can ship safely.
+categories:
+- Basics
+url: https://docs.kluster.ai/code-reviews/review-modes/
+word_count: 914
+token_estimate: 1567
+version_hash: sha256:1da456c091e0fda3fafabee409ce4adf5114adbbaaa34b39d51973382fb5960d
+last_updated: '2026-03-27T17:26:06+00:00'
+---
+
+# Code Reviews
+
+Code Reviews analyzes your code for bugs, security vulnerabilities, and quality issues. It works for **human-written code**, **AI-generated code**, **repo reviews**, and the **standalone CLI**, with review modes tailored to each workflow.
+
+For in-editor reviews, the service integrates directly into your IDE or CLI (Cursor, VS Code, Windsurf, JetBrains, Claude Code, and others), analyzing code as you work. For terminal-based workflows, the standalone CLI provides reviews directly from the command line. For system-wide analysis, repo reviews scan your entire repository via the web dashboard or `kluster-cli`.
+
+<div class="embed-container">
+    <iframe
+        src="https://www.youtube.com/embed/KLZlNpYbD4g"
+        title="Code review modes with kluster.ai"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+
+## Key features
+
+- **Flexible review modes**: Reviews for human-written code, AI-generated code, and system-wide repo analysis.
+- **Comprehensive issue detection**: Analyzes 7 issue types — *Semantic, Intent, Logical, Security, Knowledge, Performance,* and *Quality*.
+- **Customizable sensitivity**: Configure detection sensitivity from *Low* to *Critical*.
+- **Dual analysis tools**: Real-time Code Review and Dependency Analysis for complete coverage.
+- **Instant fixes**: Apply suggested fixes with one click, or let your AI assistant handle them automatically.
+
+## Human-written code
+
+**For direct, in-editor reviews without AI.**
+
+Review code you write yourself with on-demand reviews—no AI assistant needed. Available features include:
+
+- **Code block review**: Review selected code snippets.
+- **Current file review**: Analyze the file you're working on.
+- **Uncommitted changes review**: Check all modified files before committing.
+
+**Compatible with**: Cursor, VS Code, Windsurf, Antigravity, JetBrains (IDEs only)
+
+[:octicons-arrow-right-24: Get started with human-written code reviews](/kluster-mkdocs/code-reviews/ide-reviews/human-written-code/on-demand-reviews/)
+
+## AI-generated code
+
+**For AI-assisted coding workflows.**
+
+When your AI coding assistant generates or modifies code, kluster.ai automatically reviews it in real-time. You can also ask your AI to review existing files on demand.
+
+**AI-generated code reviews also verify *intent*—ensuring your AI actually did what you asked**, not just that the code works. This context-aware check is only possible when kluster.ai sees your original prompt.
+
+- **Automatic reviews**: Triggered automatically when AI generates code.
+- **On-demand reviews**: Triggered when you ask your AI to review existing code.
+
+**Compatible with**: Cursor, VS Code, Windsurf, Antigravity, JetBrains (IDEs) and Claude Code, Codex CLI (CLIs)
+
+[:octicons-arrow-right-24: Get started with AI-generated code reviews](/kluster-mkdocs/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/)
+
+## Repo reviews
+
+**For system-wide codebase analysis.**
+
+Repo reviews analyze your entire repository as a system, uncovering bugs and risks that don't belong to any single change or PR. These issues only emerge when multiple parts of the code interact—problems that survive individual code reviews because they're invisible in isolation.
+
+Common issues found by repo reviews include:
+
+- **Cross-module bugs**: Code paths that look safe in isolation but break when exercised together.
+- **Silent error propagation**: Errors that propagate silently across modules and only surface in production.
+- **State inconsistencies**: State that becomes inconsistent under retries, partial failures, or restarts.
+- **Bypassed validation**: Security or validation checks applied in one place but bypassed in another.
+- **Assumption violations**: Logic that relies on assumptions enforced elsewhere in the codebase.
+
+Repo reviews complement PR-level reviews by revealing problems that already exist in your system—issues that would remain hidden until something breaks.
+
+**Available on**: Web dashboard and kluster-cli (requires GitHub, GitLab, or Bitbucket connection)
+
+[:octicons-arrow-right-24: Get started with repo reviews](/kluster-mkdocs/code-reviews/repo-reviews/quickstart/)
+
+## CLI
+
+**For command-line workflows and automation.**
+
+Review code directly from the terminal without an IDE or AI assistant. The kluster-cli tool provides full review functionality with git integration, automated hooks, and machine-readable output formats.
+
+- **On-demand reviews**: Review staged changes, diffs against branches, or individual files.
+- **Git hook automation**: Install pre-commit or pre-push hooks to catch issues automatically.
+- **Scriptable output**: JSON and text output formats for CI/CD integration.
+
+**Available on**: macOS, Linux, Windows
+
+[:octicons-arrow-right-24: Get started with CLI](/kluster-mkdocs/code-reviews/cli/quickstart/)
+
+## External knowledge
+
+**For context-aware reviews using your project management tools.**
+
+External Knowledge connects kluster to external sources like Jira, so code reviews can verify your implementation against real ticket requirements and specifications. Instead of reviewing code in isolation, kluster uses the context from your connected tools to make its analysis more accurate.
+
+**Available integrations**: Jira
+
+[:octicons-arrow-right-24: Set up External Knowledge](/kluster-mkdocs/code-reviews/external-knowledge/quickstart/)
+
+!!! tip "Need help choosing?"
+    See [Pick your workflow](/kluster-mkdocs/code-reviews/get-started/pick-your-workflow/) for a detailed comparison and decision guide.
+
+
+
+## Next steps
+
+- **[Installation](/kluster-mkdocs/code-reviews/get-started/installation/)**: Install kluster.ai in your IDE or CLI tool.
+- **[Human-written code](/kluster-mkdocs/code-reviews/ide-reviews/human-written-code/on-demand-reviews/)**: Get started with in-editor reviews.
+- **[AI-generated code](/kluster-mkdocs/code-reviews/ide-reviews/ai-generated-code/automatic-reviews/)**: Set up automatic and on-demand reviews.
+- **[Repo reviews](/kluster-mkdocs/code-reviews/repo-reviews/quickstart/)**: Analyze your entire codebase for system-wide issues.
+- **[CLI](/kluster-mkdocs/code-reviews/cli/quickstart/)**: Review code from the terminal with the standalone CLI.
+- **[External Knowledge](/kluster-mkdocs/code-reviews/external-knowledge/quickstart/)**: Connect kluster to Jira for context-aware reviews.
+- **[Pick your workflow](/kluster-mkdocs/code-reviews/get-started/pick-your-workflow/)**: Compare modes and find the right fit.
