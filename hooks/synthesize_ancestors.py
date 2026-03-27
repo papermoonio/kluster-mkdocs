@@ -127,10 +127,10 @@ def _dir_title(rel_dir, dir_name, docs_dir):
     if os.path.exists(nav_yml):
         try:
             with open(nav_yml, encoding="utf-8") as f:
-                data = yaml.safe_load(f) or {}
-            if "title" in data:
+                data = yaml.safe_load(f)
+            if isinstance(data, dict) and isinstance(data.get("title"), str):
                 return data["title"]
-        except OSError:
+        except (OSError, yaml.YAMLError):
             pass
     return _format_name(dir_name)
 
