@@ -19,11 +19,15 @@
         </a>
       </li>
     {% endif %}
-  {% else %}
+  {% elif nav_item.url %}
     <li class="md-path__item">
       <a href="{{ nav_item.url | url }}" class="md-path__link">
         {{ render_content(ref) }}
       </a>
+    </li>
+  {% else %}
+    <li class="md-path__item">
+      <span class="md-path__link">{{ render_content(ref) }}</span>
     </li>
   {% endif %}
 {% endmacro %}
