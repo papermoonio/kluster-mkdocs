@@ -563,7 +563,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 .md-footer__title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .md-social__link svg {
@@ -580,7 +580,10 @@ html .md-footer-meta.md-typeset .papermoon a {
   gap: 0.35rem;
 }
 
-.md-footer__title .md-ellipsis > .footer-title.twemoji > span[aria-hidden="true"] {
+.md-footer__title
+  .md-ellipsis
+  > .footer-title.twemoji
+  > span[aria-hidden="true"] {
   display: flex;
 }
 
