@@ -54,8 +54,8 @@
 }
 
 .nt-timeline-after {
-  height: 60px;
-  margin-bottom: 20px;
+  height: 24px;
+  margin-bottom: 0;
 }
 
 .nt-timeline.vertical.left .nt-timeline-after {
@@ -121,4 +121,12 @@
   font-size: 0.75rem;
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 1.2rem;
+}
+
+.nt-timeline.vertical.left .nt-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.nt-timeline.vertical.left .nt-timeline-item:last-child .nt-timeline-content {
+  margin-bottom: 0;
 }
