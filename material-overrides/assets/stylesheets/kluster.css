@@ -594,6 +594,11 @@ html .md-footer-meta.md-typeset .papermoon a {
 
 /* Mobile Footer styling */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+  .md-sidebar__scrollwrap,
+  .md-main {
+    padding-bottom: 4rem;
+  }
+
   .md-footer-meta__inner.md-grid {
     grid-template-columns: auto auto;
     justify-content: center;
@@ -608,7 +613,18 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .md-sidebar__scrollwrap,
+  .md-main {
+    padding-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  .md-main__inner {
+    padding-bottom: 7rem; /* footer stacks to 1 column, so taller */
+  }
+
   .md-footer-meta__inner.md-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -620,19 +636,6 @@ html .md-footer-meta.md-typeset .papermoon a {
     justify-content: center;
     row-gap: 0.5rem;
   }
-
-  .md-sidebar__scrollwrap,
-  .md-main,
-  .md-main__inner {
-    padding-bottom: 9rem;
-  }
-}
-
-/* Overall layout adjustments to keep the fixed footer from covering content */
-.md-sidebar__scrollwrap,
-.md-main,
-.md-main__inner {
-  padding-bottom: 6.5rem;
 }
 
 /* --- Left Navigation & TOC --- */
