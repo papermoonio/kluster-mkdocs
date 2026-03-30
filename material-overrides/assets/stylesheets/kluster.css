@@ -596,20 +596,23 @@ html .md-footer-meta.md-typeset .papermoon a {
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .md-sidebar__scrollwrap,
   .md-main {
-    padding-bottom: 4rem;
+    padding-bottom: 5.5rem;
   }
 
   .md-footer-meta__inner.md-grid {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
     justify-content: center;
-    row-gap: 0.75rem;
-    column-gap: 1.25rem;
+    row-gap: 0.2rem;
   }
 
   .md-footer__buttons {
     grid-column: 1 / -1;
     justify-content: center;
     padding: 0;
+  }
+
+  .md-footer__social {
+    justify-content: center;
   }
 }
 
