@@ -488,6 +488,10 @@
     gap: 1rem;
   }
 
+  .selector-preview {
+    order: -1;
+  }
+
   .md-typeset p {
     font-size: 0.7rem;
   }
@@ -508,7 +512,6 @@
   }
 
   .selector-preview {
-    order: -1;
     min-height: 200px;
   }
 
