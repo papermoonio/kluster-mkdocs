@@ -93,11 +93,7 @@ plugins:
   - macros:
       include_yaml:
         - kluster-docs/variables.yml
-  - ai_resources_page:
-      enabled: !ENV [ENABLED_LLMS_PLUGINS, True]
-  - ai_page_actions:
-      enabled: !ENV [ENABLED_LLMS_PLUGINS, True]
-  - resolve_md:
+  - ai_docs:
       llms_config: llms_config.json
       enabled: !ENV [ENABLED_LLMS_PLUGINS, True]
   - social:
