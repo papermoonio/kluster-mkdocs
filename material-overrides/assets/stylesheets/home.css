@@ -484,7 +484,12 @@
   }
 
   .selector-container {
+    grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .selector-preview {
+    order: -1;
   }
 
   .md-typeset p {
@@ -507,7 +512,6 @@
   }
 
   .selector-preview {
-    order: -1;
     min-height: 200px;
   }
 

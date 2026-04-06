@@ -522,33 +522,21 @@ input.md-search__input[placeholder="Search"]::placeholder {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-items: center;
   padding: 0.5rem;
   border: 1px solid var(--border-color);
   gap: 0.5rem;
 }
 
-.md-footer-meta__inner.md-grid > :first-child {
-  justify-content: flex-start;
-}
-
 .md-footer-meta__inner.md-grid > * {
   display: flex;
-  width: 100%;
 }
 
 .md-footer__center-column {
   flex-direction: column;
   align-items: center;
-  white-space: nowrap;
-}
-
-.md-footer-meta__inner.md-grid > :last-child {
-  justify-content: flex-end;
 }
 
 .md-footer__buttons {
-  display: flex;
   gap: 1rem;
   padding: 0 0.8rem;
 }
@@ -556,6 +544,7 @@ input.md-search__input[placeholder="Search"]::placeholder {
 .footer-nav-link {
   font-size: 0.7rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .papermoon {
@@ -574,11 +563,15 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 .md-footer__title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .md-social__link svg {
   fill: var(--primary-green-300);
+}
+
+.md-footer__social {
+  justify-content: flex-end;
 }
 
 .md-footer__title .md-ellipsis > .footer-title.twemoji {
@@ -587,7 +580,10 @@ html .md-footer-meta.md-typeset .papermoon a {
   gap: 0.35rem;
 }
 
-.md-footer__title .md-ellipsis > .footer-title.twemoji > span[aria-hidden="true"] {
+.md-footer__title
+  .md-ellipsis
+  > .footer-title.twemoji
+  > span[aria-hidden="true"] {
   display: flex;
 }
 
@@ -597,35 +593,51 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* Mobile Footer styling */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .md-sidebar__scrollwrap,
+  .md-main {
+    padding-bottom: 5.5rem;
+  }
+
+  .md-footer-meta__inner.md-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 0.2rem;
+  }
+
+  .md-footer__buttons {
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .md-footer__social {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .md-sidebar__scrollwrap,
+  .md-main {
+    padding-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .md-main__inner {
     padding-bottom: 7rem; /* footer stacks to 1 column, so taller */
   }
 
   .md-footer-meta__inner.md-grid {
-    display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
     justify-items: center;
     padding: 0.5rem;
   }
 
-  .md-footer-meta__inner.md-grid > *,
-  .md-footer-meta__inner.md-grid > :first-child,
-  .md-footer-meta__inner.md-grid > :last-child {
+  .md-footer__buttons {
+    flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .md-copyright__highlight {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* Overall layout adjustments to push footer to bottom */
-  .md-sidebar__scrollwrap,
-  .md-main {
-    padding-bottom: 3rem;
+    row-gap: 0.5rem;
   }
 }
 
