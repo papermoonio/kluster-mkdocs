@@ -161,6 +161,25 @@
             </p>
           </div>
         </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="4"
+             data-color="teal">
+          <span class="selector-icon selector-icon--teal">
+            {% include ".icons/material/source-pull.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Review every pull request
+            </div>
+            <p class="selector-desc">
+              Catch issues before they reach your main branch.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="selector-preview" id="preview-panel" role="tabpanel">
         <div class="selector-preview-inner">
@@ -238,7 +257,8 @@
         "{{ 'assets/images/homepage-manualreview.webm' | url }}",
         "{{ 'assets/images/homepage-aiautoreview.webm' | url }}",
         "{{ 'assets/images/homepage-reporeviews.webm' | url }}",
-        "{{ 'assets/images/homepage-klustercli.webm' | url }}"
+        "{{ 'assets/images/homepage-klustercli.webm' | url }}",
+        "{{ 'assets/images/homepage-reporeviews.webm' | url }}"
       ];
 
       items.forEach(function(item) {
