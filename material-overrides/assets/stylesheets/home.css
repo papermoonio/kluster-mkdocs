@@ -391,6 +391,13 @@
   background: rgba(139, 92, 246, 0.06);
 }
 
+.selector-item.active[data-color="teal"] {
+  border-left-color: #06b6d4;
+  border-left-color: oklch(0.746 0.16 232.661);
+  background: rgba(6, 182, 212, 0.06);
+  background: oklch(0.746 0.16 232.661 / 0.06);
+}
+
 .selector-icon {
   display: inline-flex;
   align-items: center;
@@ -426,6 +433,13 @@
 .selector-icon--purple {
   background: rgba(139, 92, 246, 0.15);
   color: #8b5cf6;
+}
+
+.selector-icon--teal {
+  background: rgba(6, 182, 212, 0.15);
+  background: oklch(0.746 0.16 232.661 / 0.15);
+  color: #06b6d4;
+  color: oklch(0.746 0.16 232.661);
 }
 
 .selector-text {

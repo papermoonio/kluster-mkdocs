@@ -129,25 +129,6 @@
              aria-controls="preview-panel"
              tabindex="0"
              data-index="2"
-             data-color="green">
-          <span class="selector-icon selector-icon--green">
-            {% include ".icons/material/source-repository.svg" %}
-          </span>
-          <div class="selector-text">
-            <div class="selector-title">
-              Scan your entire repository
-            </div>
-            <p class="selector-desc">
-              Find system-wide bugs across your full codebase.
-            </p>
-          </div>
-        </div>
-        <div class="selector-item"
-             role="tab"
-             aria-selected="false"
-             aria-controls="preview-panel"
-             tabindex="0"
-             data-index="3"
              data-color="purple">
           <span class="selector-icon selector-icon--purple">
             {% include ".icons/material/console.svg" %}
@@ -158,6 +139,44 @@
             </div>
             <p class="selector-desc">
               Integrate with git hooks and CI/CD pipelines.
+            </p>
+          </div>
+        </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="3"
+             data-color="teal">
+          <span class="selector-icon selector-icon--teal">
+            {% include ".icons/material/source-pull.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Review every pull request
+            </div>
+            <p class="selector-desc">
+              Catch issues before they reach your main branch.
+            </p>
+          </div>
+        </div>
+        <div class="selector-item"
+             role="tab"
+             aria-selected="false"
+             aria-controls="preview-panel"
+             tabindex="0"
+             data-index="4"
+             data-color="green">
+          <span class="selector-icon selector-icon--green">
+            {% include ".icons/material/source-repository.svg" %}
+          </span>
+          <div class="selector-text">
+            <div class="selector-title">
+              Scan your entire repository
+            </div>
+            <p class="selector-desc">
+              Find system-wide bugs across your full codebase.
             </p>
           </div>
         </div>
@@ -237,8 +256,9 @@
       var previews = [
         "{{ 'assets/images/homepage-manualreview.webm' | url }}",
         "{{ 'assets/images/homepage-aiautoreview.webm' | url }}",
-        "{{ 'assets/images/homepage-reporeviews.webm' | url }}",
-        "{{ 'assets/images/homepage-klustercli.webm' | url }}"
+        "{{ 'assets/images/homepage-klustercli.webm' | url }}",
+        "{{ 'assets/images/homepage-prreviews.webm' | url }}",
+        "{{ 'assets/images/homepage-reporeviews.webm' | url }}"
       ];
 
       items.forEach(function(item) {
