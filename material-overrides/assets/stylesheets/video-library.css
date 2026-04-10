@@ -214,3 +214,9 @@
   background-color: var(--info-blue-600);
   color: var(--light);
 }
+
+.md-typeset .video-library-badge--claude {
+  border-color: transparent;
+  background-color: #CC785C;
+  color: var(--light);
+}
