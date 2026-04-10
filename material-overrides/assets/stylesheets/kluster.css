@@ -599,26 +599,29 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* Mobile Footer styling */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 426px) {
   .md-sidebar__scrollwrap,
   .md-main {
-    padding-bottom: 5.5rem;
+    padding-bottom: 3rem;
   }
 
   .md-footer-meta__inner.md-grid {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    row-gap: 0.2rem;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.35rem;
   }
 
   .md-footer__buttons {
-    grid-column: 1 / -1;
-    justify-content: center;
-    padding: 0;
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 0 0.3rem 0 0;
+  }
+
+  .md-footer__center-column {
+    justify-self: center;
   }
 
   .md-footer__social {
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 
@@ -629,7 +632,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 425px) {
   .md-main__inner {
     padding-bottom: 7rem; /* footer stacks to 1 column, so taller */
   }
