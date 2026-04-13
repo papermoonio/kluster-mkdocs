@@ -1,7 +1,7 @@
 import re
 
 
-def on_page_markdown(markdown, page, config, files):
+def on_page_markdown(markdown, page, *, config, files, **kwargs):
     """Add data-search-exclude to raw HTML elements in markdown source.
 
     This targets only HTML tags explicitly written in .md files, not HTML
@@ -18,7 +18,7 @@ def on_page_markdown(markdown, page, config, files):
     return re.sub(r"<(?![\!/])[a-zA-Z][^>]*>", inject_attribute, markdown)
 
 
-def on_page_content(html, page, config, files):
+def on_page_content(html, page, *, config, files, **kwargs):
     """Add data-search-exclude to data-termynal elements in rendered HTML.
 
     Snippet files are resolved after on_page_markdown, so their HTML is only
