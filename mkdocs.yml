@@ -46,6 +46,7 @@ extra_javascript:
 hooks:
   - hooks/footer_nav.py
   - hooks/synthesize_ancestors.py
+  - hooks/search_exclude_html.py
 markdown_extensions:
   - admonition
   - attr_list

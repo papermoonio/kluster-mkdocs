@@ -442,6 +442,10 @@ input.md-search__input[placeholder="Search"]::placeholder {
   fill: var(--secondary-button-fg);
 }
 
+.md-search-result .md-typeset h2 {
+  text-align: left;
+}
+
 @media screen and (min-width: 60em) {
   .md-search__form {
     background-color: var(--secondary-button-bg);
