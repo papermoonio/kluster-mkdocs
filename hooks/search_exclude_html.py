@@ -10,12 +10,18 @@ def on_page_markdown(markdown, page, *, config, files, **kwargs):
     """
 
     def inject_attribute(match):
-        tag = match.group(0)
+        if match.group(1):  # code fence or inline code — leave untouched
+            return match.group(1)
+        tag = match.group(2)
         if "data-search-exclude" in tag:
             return tag
         return re.sub(r"(\s*/?>)$", r" data-search-exclude\1", tag)
 
-    return re.sub(r"<(?![\!/])[a-zA-Z][^>]*>", inject_attribute, markdown)
+    return re.sub(
+        r"(```[\s\S]*?```|`[^`]*`)|(<(?![\!/])[a-zA-Z][^>]*>)",
+        inject_attribute,
+        markdown,
+    )
 
 
 def on_page_content(html, page, *, config, files, **kwargs):
