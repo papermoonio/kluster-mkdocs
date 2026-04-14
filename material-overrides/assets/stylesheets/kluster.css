@@ -1051,6 +1051,7 @@ details.child {
 }
 
 /* FAQ admonition */
+.md-typeset details.interface.faq > summary h2,
 .md-typeset details.interface.faq > summary h3 {
   margin: 0.5em 0 0.5em;
   font-size: 18px;
@@ -1066,6 +1067,7 @@ details.child {
 }
 
 @media screen and (max-width: 60em) {
+  .md-typeset details.interface.faq > summary h2,
   .md-typeset details.interface.faq > summary h3 {
     margin: 0.5em 1em 0.5em;
   }
