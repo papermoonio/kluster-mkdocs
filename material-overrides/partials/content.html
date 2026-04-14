@@ -34,9 +34,6 @@
       {% set h2_content_start = h2_full.find('>') + 1 %}
       {% set h2_text = h2_full[h2_content_start:] %}
       {% set h2_attributes = h2_full[:h2_content_start-1] %}
-      {% set normalized_h2_text = h2_text | striptags | trim %}
-      {% set h2_attributes_lower = h2_attributes | lower %}
-      {% set is_excluded_h2 = normalized_h2_text == "Where to Go Next" or 'id="where-to-go-next"' in h2_attributes_lower %}
 
       {# Extract ID from h2 attributes #}
       {% set id_start = h2_attributes.find('id="') %}
@@ -51,24 +48,19 @@
       {% set h2_closing_tag_length = 5 %}
       {% set section_content = section[h2_end + h2_closing_tag_length:] %}
 
-      {% if is_excluded_h2 %}
-        <h2{{ h2_attributes | safe }}>{{ h2_text | safe }}</h2>
+      {% set details_id = ('faq-' ~ page.url ~ '-' ~ section_counter)
+        | replace('/', '-')
+        | replace('?', '')
+        | replace('#', '')
+        | replace('.', '-')
+        | replace(' ', '-')
+        | replace('--', '-') %}
+      <details class="interface faq" id="{{ details_id }}">
+        <summary>
+          <h2{% if h2_id %} id="{{ h2_id }}"{% endif %}>{{ h2_text | safe }}</h2>
+        </summary>
         {{ section_content | safe }}
-      {% else %}
-        {% set details_id = ('faq-' ~ page.url ~ '-' ~ section_counter)
-          | replace('/', '-')
-          | replace('?', '')
-          | replace('#', '')
-          | replace('.', '-')
-          | replace(' ', '-')
-          | replace('--', '-') %}
-        <details class="interface faq" id="{{ details_id }}">
-          <summary>
-            <h2{% if h2_id %} id="{{ h2_id }}"{% endif %}>{{ h2_text | safe }}</h2>
-          </summary>
-          {{ section_content | safe }}
-        </details>
-      {% endif %}
+      </details>
     {% endif %}
   {% endfor %}
 {% elif faq_mode == 'categorized' %}
@@ -90,64 +82,56 @@
       {% set h2_content_start = h2_full.find('>') + 1 %}
       {% set h2_text = h2_full[h2_content_start:] %}
       {% set h2_attributes = h2_full[:h2_content_start-1] %}
-      {% set normalized_h2_text = h2_text | striptags | trim %}
-      {% set h2_attributes_lower = h2_attributes | lower %}
-      {% set is_excluded_h2 = normalized_h2_text == "Where to Go Next" or 'id="where-to-go-next"' in h2_attributes_lower %}
 
       {% set h2_closing_tag_length = 5 %}
       {% set section_content = section[h2_end + h2_closing_tag_length:] %}
 
-      {% if is_excluded_h2 %}
-        <h2{{ h2_attributes | safe }}>{{ h2_text | safe }}</h2>
-        {{ section_content | safe }}
-      {% else %}
-        <h2{{ h2_attributes | safe }}>{{ h2_text | safe }}</h2>
+      <h2{{ h2_attributes | safe }}>{{ h2_text | safe }}</h2>
 
-        {% set h3_sections = section_content.split('<h3') %}
-        {% set category_intro = h3_sections[0] %}
+      {% set h3_sections = section_content.split('<h3') %}
+      {% set category_intro = h3_sections[0] %}
 
-        {% if category_intro %}
-          {{ category_intro | safe }}
-        {% endif %}
-
-        {% for j in range(1, h3_sections | length) %}
-          {% set faq_section = h3_sections[j] %}
-          {% set faq_counter = loop.index %}
-
-          {% set h3_end = faq_section.find('</h3>') %}
-          {% if h3_end != -1 %}
-            {% set h3_full = faq_section[:h3_end] %}
-            {% set h3_content_start = h3_full.find('>') + 1 %}
-            {% set h3_text = h3_full[h3_content_start:] %}
-            {% set h3_attributes = h3_full[:h3_content_start-1] %}
-
-            {% set id_start = h3_attributes.find('id="') %}
-            {% set h3_id = '' %}
-            {% if id_start != -1 %}
-              {% set id_start = id_start + 4 %}
-              {% set id_end = h3_attributes.find('"', id_start) %}
-              {% set h3_id = h3_attributes[id_start:id_end] %}
-            {% endif %}
-
-            {% set h3_closing_tag_length = 5 %}
-            {% set faq_content = faq_section[h3_end + h3_closing_tag_length:] %}
-
-            {% set details_id = ('faq-' ~ page.url ~ '-' ~ category_counter ~ '-' ~ faq_counter)
-              | replace('/', '-')
-              | replace('?', '')
-              | replace('#', '')
-              | replace('.', '-')
-              | replace(' ', '-')
-              | replace('--', '-') %}
-            <details class="interface faq" id="{{ details_id }}">
-              <summary>
-                <h3{% if h3_id %} id="{{ h3_id }}"{% endif %}>{{ h3_text | safe }}</h3>
-              </summary>
-              {{ faq_content | safe }}
-            </details>
-          {% endif %}
-        {% endfor %}
+      {% if category_intro %}
+        {{ category_intro | safe }}
       {% endif %}
+
+      {% for j in range(1, h3_sections | length) %}
+        {% set faq_section = h3_sections[j] %}
+        {% set faq_counter = loop.index %}
+
+        {% set h3_end = faq_section.find('</h3>') %}
+        {% if h3_end != -1 %}
+          {% set h3_full = faq_section[:h3_end] %}
+          {% set h3_content_start = h3_full.find('>') + 1 %}
+          {% set h3_text = h3_full[h3_content_start:] %}
+          {% set h3_attributes = h3_full[:h3_content_start-1] %}
+
+          {% set id_start = h3_attributes.find('id="') %}
+          {% set h3_id = '' %}
+          {% if id_start != -1 %}
+            {% set id_start = id_start + 4 %}
+            {% set id_end = h3_attributes.find('"', id_start) %}
+            {% set h3_id = h3_attributes[id_start:id_end] %}
+          {% endif %}
+
+          {% set h3_closing_tag_length = 5 %}
+          {% set faq_content = faq_section[h3_end + h3_closing_tag_length:] %}
+
+          {% set details_id = ('faq-' ~ page.url ~ '-' ~ category_counter ~ '-' ~ faq_counter)
+            | replace('/', '-')
+            | replace('?', '')
+            | replace('#', '')
+            | replace('.', '-')
+            | replace(' ', '-')
+            | replace('--', '-') %}
+          <details class="interface faq" id="{{ details_id }}">
+            <summary>
+              <h3{% if h3_id %} id="{{ h3_id }}"{% endif %}>{{ h3_text | safe }}</h3>
+            </summary>
+            {{ faq_content | safe }}
+          </details>
+        {% endif %}
+      {% endfor %}
     {% endif %}
   {% endfor %}
 {% else %}
