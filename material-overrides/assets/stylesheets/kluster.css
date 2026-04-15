@@ -599,7 +599,7 @@ html .md-footer-meta.md-typeset .papermoon a {
 }
 
 /* Mobile Footer styling */
-@media screen and (max-width: 1024px) and (min-width: 426px) {
+@media screen and (max-width: 1024px) and (min-width: 509px) {
   .md-sidebar__scrollwrap,
   .md-main {
     padding-bottom: 3rem;
@@ -611,13 +611,15 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 
   .md-footer__buttons {
-    min-width: 0;
-    justify-content: flex-start;
     padding: 0 0.3rem 0 0;
   }
 
   .md-footer__center-column {
     justify-self: center;
+  }
+
+  .md-copyright {
+    width: auto;
   }
 
   .md-footer__social {
@@ -632,7 +634,7 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 508px) {
   .md-main__inner {
     padding-bottom: 7rem; /* footer stacks to 1 column, so taller */
   }
@@ -640,7 +642,6 @@ html .md-footer-meta.md-typeset .papermoon a {
   .md-footer-meta__inner.md-grid {
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 0.5rem;
   }
 
   .md-footer__buttons {
