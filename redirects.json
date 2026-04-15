@@ -157,8 +157,16 @@
       "value": "/code-reviews/ide-reviews/human-written-code/on-demand-reviews/"
     },
     {
+      "key": "/code-reviews/reference/mcp-tools/",
+      "value": "/code-reviews/reference/"
+    },
+    {
+      "key": "/code-reviews/reference/response-schema/",
+      "value": "/code-reviews/reference/"
+    },
+    {
       "key": "/code-reviews/tools/",
-      "value": "/code-reviews/reference/mcp-tools/"
+      "value": "/code-reviews/reference/"
     },
     {
       "key": "/get-api-key/",
@@ -498,7 +506,7 @@
     },
     {
       "key": "/verify/tools/",
-      "value": "/code-reviews/reference/mcp-tools/"
+      "value": "/code-reviews/reference/"
     }
   ]
 }

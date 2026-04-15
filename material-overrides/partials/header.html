@@ -71,6 +71,14 @@
           </form>
         {% endif %}
       {% endif %}
+
+      <a
+        href="{{ '/code-reviews/video-library/' | url }}"
+        title="Video library"
+        class="md-header__button md-icon md-header__video-library"
+        aria-label="Video library">
+        {% include ".icons/material/movie-open-play-outline.svg" %}
+      </a>
     </div>
 
     {% if config.repo_url %}
