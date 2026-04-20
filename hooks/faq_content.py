@@ -15,12 +15,12 @@ from bs4.element import PageElement, Tag
 
 def on_page_content(html, page, *, config, files, **kwargs):
     faq = (getattr(page, "meta", {}) or {}).get("faq")
-    soup = BeautifulSoup(html, "html.parser")
     if faq is True:
-        return _wrap_heading_sections(soup, page.url, "h2")
-    if isinstance(faq, str):
-        if faq.lower() == "categorized":
-            return _wrap_categorized_sections(soup, page.url)
+        soup = BeautifulSoup(html, "html.parser")
+        return str(_wrap_heading_sections(soup, page.url, "h2"))
+    if isinstance(faq, str) and faq.lower() == "categorized":
+        soup = BeautifulSoup(html, "html.parser")
+        return _wrap_categorized_sections(soup, page.url)
     return html
 
 
@@ -35,14 +35,14 @@ def _wrap_categorized_sections(soup: BeautifulSoup, page_url: str) -> str:
 
         category_count += 1
         output.append(section.heading)
-        faq_html = _wrap_heading_sections(
+        faq_fragment = _wrap_heading_sections(
             soup,
             page_url,
             "h3",
             nodes=section.content,
             id_prefix=str(category_count),
         )
-        output.append(BeautifulSoup(faq_html, "html.parser"))
+        _append_all(output, list(faq_fragment.contents))
 
     return str(output)
 
@@ -54,7 +54,7 @@ def _wrap_heading_sections(
     *,
     nodes: list[PageElement] | None = None,
     id_prefix: str | None = None,
-) -> str:
+) -> BeautifulSoup:
     output = BeautifulSoup("", "html.parser")
     item_count = 0
 
@@ -77,7 +77,7 @@ def _wrap_heading_sections(
         _append_all(details, section.content)
         output.append(details)
 
-    return str(output)
+    return output
 
 
 class _Section:
