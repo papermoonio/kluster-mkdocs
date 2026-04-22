@@ -1066,8 +1066,12 @@ details.child {
   font-size: 18px;
 }
 
+.md-typeset details.interface.faq,
 .md-typeset details.interface.faq > summary h3[id] {
-  --md-scroll-margin: 3.9rem;
+  scroll-margin-top: 3.9rem;
+}
+
+.md-typeset details.interface.faq > summary h3[id] {
   margin-top: -1rem;
   padding-top: 1.5rem;
 }
