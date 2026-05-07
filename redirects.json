@@ -45,6 +45,10 @@
       "value": "/code-reviews/ide-reviews/ai-generated-code/examples/vscode-admin-endpoint/"
     },
     {
+      "key": "/code-reviews/changelogs/",
+      "value": "/changelogs/"
+    },
+    {
       "key": "/code-reviews/agent-mode/manual-agent-reviews/",
       "value": "/code-reviews/ide-reviews/ai-generated-code/on-demand-reviews/"
     },
