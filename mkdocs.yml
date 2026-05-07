@@ -39,7 +39,6 @@ theme:
         name: Switch to dark mode
 extra_css:
   - assets/stylesheets/ai-file-actions.css
-  - assets/stylesheets/nav.css
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
 extra_javascript:
@@ -84,7 +83,6 @@ plugins:
         - js/ai-file-actions.js
       css_files:
         - assets/stylesheets/ai-file-actions.css
-        - assets/stylesheets/nav.css
         - assets/stylesheets/terminal.css
         - assets/stylesheets/timeline-neoteroi.css
       scoped_css_templates:
