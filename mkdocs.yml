@@ -38,9 +38,10 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
 extra_css:
+  - assets/stylesheets/ai-file-actions.css
+  - assets/stylesheets/nav.css
   - assets/stylesheets/terminal.css
   - assets/stylesheets/timeline-neoteroi.css
-  - assets/stylesheets/ai-file-actions.css
 extra_javascript:
   - js/ai-file-actions.js
 hooks:
@@ -82,9 +83,10 @@ plugins:
       js_files:
         - js/ai-file-actions.js
       css_files:
+        - assets/stylesheets/ai-file-actions.css
+        - assets/stylesheets/nav.css
         - assets/stylesheets/terminal.css
         - assets/stylesheets/timeline-neoteroi.css
-        - assets/stylesheets/ai-file-actions.css
       scoped_css_templates:
         home.html:
           - assets/stylesheets/home.css
