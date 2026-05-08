@@ -755,6 +755,13 @@ html .md-footer-meta.md-typeset .papermoon a {
   }
 }
 
+/* Keep the top-level changelog visually separated in the primary nav. */
+.md-nav--primary > .md-nav__list > .md-nav__item:last-child {
+  border-top: 1px solid var(--nav-border-color);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
 @media screen and (max-width: 76.234375em) {
   .md-sidebar {
     width: 12.1rem;
