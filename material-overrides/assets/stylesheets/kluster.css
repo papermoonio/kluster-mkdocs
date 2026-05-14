@@ -503,11 +503,19 @@ input.md-search__input[placeholder="Search"]::placeholder {
   [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
     background-color: var(--search-input-bg-color);
   }
-
+  
   /* Keep compact utility controls visible when desktop search expands. */
   [data-md-toggle="search"]:checked ~ .md-header .md-header__option {
     max-width: 100%;
     opacity: 1;
+  }
+
+  [data-md-toggle="search"]:checked ~ .md-header .md-header__video-library,
+  [data-md-toggle="search"]:checked
+    ~ .md-header
+    .md-header__option[data-md-component="palette"]
+    .md-header__button {
+    z-index: 0;
   }
 }
 
