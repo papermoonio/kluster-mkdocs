@@ -349,6 +349,10 @@
   height: 28px;
 }
 
+.md-header__button.md-logo:hover {
+  background: transparent;
+}
+
 .md-header__buttons {
   display: flex;
   gap: 1em;
